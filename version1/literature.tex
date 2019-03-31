@@ -1,0 +1,59 @@
+\subsection{Decomposition-Based MOEAs}
+
+
+
+\subsection{Diversity in Evolutionary Algorithms}
+
+
+\subsection{Related Works}
+
+In the last decade few MOEAs were specifically designed to address the diversity in the decision variables space.
+%
+Although that the diversity in single-objectives EAs is a matter of importance refs, in multi-objective optimization usually the diversity in the variable space is ignored.
+%
+This might occurs, since the objectives are usually in conflict, therefore often is maintained a diversity level in the decision space.
+%
+Also, the decision space is disregarded, since that at the end of the optimization process the quality of the solutions relies only in the objective space.
+%
+In single-objective optimization, high quality solutions have been provided since that a balance between exploration and exploitation is reached through the optimization process refs.
+%
+In this way, the premature convergence, which is considered as a drawback, can be avoided.
+%
+Some strategies in single-objective optimization to avoid this drawback is explicitly induce a the diversity considering the criteria stop, thus at first stages the exploration levels are promoted and at the end the exploitation of the promising regions is induced.
+%
+A similar issue is addressed in multi-objective problems, in such a way that the evolutionary search is stagnated, and only are explored the same region.
+%
+Particularly, the idea to integrate decision space diversity into the optimization has been proposed in 1994 with the first NSGA work REF.
+%
+In this last work the decision vectors are considered into the fitness sharing procedure.
+%
+Thereafter, the most algorithms concentrated in the objectives space only.
+%
+Alternatively, several approaches with MOPs related directly in decision space has arisen.
+%
+These approaches, further as the usual MOPs, also aims to provide diverse solutions in the decision space.
+%
+Principally, based in that there exists a variety of problems where the image of the Pareto Front corresponds to several distributions in the Pareto Set.
+%
+
+In 2003 GDEA \cite{toffolo2003genetic} integrated diversity into the search as an additional objective.
+%
+This MOEA introduced by Toffolo and Benini invoked two selection criteria, non-dominated sorting as the primary one and a metric for decision space diversity as the secondary one.
+%
+In 2005, Chan and Ray \cite{chan2005evolutionary} suggested to use two selection operators in MOEAs; one encourages the diversity in the objective space and the other does so in the decision space.
+%
+They implemented KP1 and KP2, two algorithms using these two selection operators.
+%
+After that, in 2008, the Omni-optimizer \cite{deb2008omni} was developed, which extends the original idea of the NSGA. 
+%
+Particularly, the diversity measure take both the decision and the objective space diversity into account, Omni-optimizer first uses a rank procedure, were the objective space measure is always considered first, and only if there are ties the diversity in decision space is taken into consideration.
+%
+However, the drawback of this approach is that the diversity plays an inferior role and there is no possibility to change the tradeoff between the diversity measures.
+%
+In 2009, were proposed the  CMA-ES niching framework \cite{shir2009enhancing} , and the probabilistic Model-based Multi-objective Evolutionary Algorithm (MMEA)\cite{zhou2009approximating} .
+%
+The first, extend a niching framework to include the diversity in the space diversity.
+%
+The second, applies a clustering procedure in objective space and then builds a model from the solutions in these clusters.
+%
+In 2010, was proposed the Diversity Integrating Hypervolume-based Search Algorithm (DIVA) \cite{ulrich2010integrating}, this algorithm introduces a method to integrate decision space diversity into the hypervolume indicator, such that these two set measures can be optimized simultaneously.
