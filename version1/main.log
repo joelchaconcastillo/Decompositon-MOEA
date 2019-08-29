@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  29 AUG 2019 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  29 AUG 2019 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,13 +667,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--7
 []\OT1/ptm/m/n/10 ULTI-OBJECTIVE Op-ti-miza-tion Al-go-rithms
  []
 
-) (./literature.tex) [1
+) (./literature.tex
+Underfull \vbox (badness 1158) has occurred while \output is active []
+
+) [1
 
 
-] (./proposal.tex) (./experimentalvalidation.tex)
-(./conclusion.tex) (./main.bbl)
+]
+(./proposal.tex) (./experimentalvalidation.tex) (./conclusion.tex) (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 581.
- [2]
+[2]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 581.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 581.
@@ -685,10 +688,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 581.
 Here is how much of TeX's memory you used:
  15010 strings out of 493305
  268947 string characters out of 6139897
- 360266 words of memory out of 5000000
+ 361266 words of memory out of 5000000
  18206 multiletter control sequences out of 15000+600000
  29642 words of font info for 68 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  63i,15n,57p,477b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (2 pages, 26876 bytes).
+Output written on main.dvi (2 pages, 27236 bytes).
