@@ -1,4 +1,4 @@
-\IEEEPARstart{M}{ulti-objective} Optimization Algorithms (MOEAs) are one of the most popular approaches to deal with Multi-objective Optimization Problems (MOPs).
+\IEEEPARstart{M}{ulti-objective} Evolutionary Algorithms (MOEAs) are one of the most popular approaches to deal with Multi-objective Optimization Problems (MOPs).
 %
 MOEAs are usually employed in problems whose formulation is complicated or inaccessible.
 %
@@ -7,7 +7,7 @@ A continuous box-constrained minimization MOP involves two or more conflicting o
 \begin{equation}\label{eqn:main}
 \begin{split}
 &min \quad F(x) = (f_1(x), ..., f_M(x)) \\
-&s.t. \quad x \in \Omega,
+&s.t. \quad x \in \Omega.
 \end{split}
 \end{equation}
 
@@ -15,7 +15,7 @@ where $\Omega \subseteq \Re^D$ denotes the decision space, $F: \Omega \rightarro
 %
 Given two solutions $x_1, x_2 \in \Re^D$ is said that $x_1$ dominates $x_2$ denoted as $x_1 \prec x_2$ if and only if $f_i(x_1) \leq f_i(x_2)$ for all $i \in \{1,...,M\}$ and $f_i(x_1) < f_i(x_2)$ for at least one objective.
 %
-Therefore, $f_i(x_1)$ should be better or equal to $f_i(x_2)$ and $f_i(x_1)$ should be better for at least one objective.
+%Therefore, $f_i(x_1)$ should be better or equal to $f_i(x_2)$ and $f_i(x_1)$ should be better for at least one objective.
 %
 A solution $F(x^*)$ is called a Pareto-optimal solution if there does not exist $F(x) \in Y$ such that $x \prec x^*$.
 %
@@ -28,34 +28,70 @@ The Evolutionary Algorithms (EAs) are popular meta-heuristics to deal with MOPs 
 %
 In the last decade, several strategies that takes into account executions in long-term have been quite successfull mainly in the most complex problems REF.
 %
-These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to attain a properly balance between exploration and exploitation.
+These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to attain a properly balance between exploration and exploitation REFs.
 %
 
-The diversity managment strategies have turned to be essential to attain quality solutions.
+The mechanisms designed to deal with diversity have turned to be essential to attain quality solutions in single-EAs.
 %
-Also, the diversity has taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or popultions models REF6.
-
-
-
+Perhaps, one of the most critical issues of promoting diversity is that it provides a way to avoid premature convergence and stagnation.
+%
+Diversity can be taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or popultions models REF6.
+%
+Recently, several remarkable EAs are mainly designed with a simple replacement phase, which maintains a balance between exploration and exploitation.
+%
+Such transition is gradually imposed taking into account the stopping criterion and the elapsed time.
+%
+Those strategies that incorporate such as a simplistic replacement strategy provides remarkable results mainly in long-term executions.
+%
+For instance, in combinatorial domains new best-known solutions for some well-known variants of the frequency assignment problem REF7, and for a two-dimensional packing problem REF5.
+%
+In addition, this principle guided the design of the winning strategy ar the Second Wind Fram Layout Optimization Competition, that was held in the Genetic and Evolutionary Conference.
+%
+Recently, taking into consideration continuous domains such strategy has incorporated to Differential Evolution (DE) attained remakably superior results that the first places in the Congress of Evolutionary Computation (CEC).
+%
+Thus, the benefit attained with this simplistic strategy seems to be quite benefical.
+%
+Nevertheless is important to mention that the new found solutions required long-term executions, which seems to be more feasible with the constant growing of computational power.
 %
 
-In particular, the study of diversity is essential to 
-
-and it has taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or population model REF6.
+The usual design of MOEAs is especifically driven to attain well-spread solutions and to cover the entire PF (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
+%
+However, in some MOEAs the decision variable space has been disregarded and is not considered at all, although that MOEAs suffer the same drawbacks raisen in single-objective space, e.g. premature convergence and stagnation.
+%
+The latter issue occurs due that the effect of inducing diversity in the decision variable space does not guarantee diversity in the objective space.
+%
+Therefore, since that most MOEAs maintain diverse solutions in the objective space some degree of diversity in the decision variable space is promoted, thus complete convergence does not appear in the variable space.
+%
+Nevetheless, the implicit diversity induced in decision variable space by the objective space migh not be anough, thus the reproduction operators loses its exploratiory strength.
 %
 
+In spite of the amazing amount of MOEAs that have been developed, this paper proposes a novel MOEA, the Variable Space Diversity MOEA based in Decomposition (VSD-MOEA/D), which explicitly induces diversity in the variable space through several stages to induce a proper balance between exploration toward exploitation.
 %
-**EXPLANATION OF THE DIVERSITY RELEVANCE IN EAs STARTING BY MONO-OBJECTIVE.
-	--IN SOME INSIGHT DESCRIBE THE BALANCED ATTAINED BY EXPLORATION STRATEGIES.
-	--BRIEF DESCRIPTION OF THE COMPONENTS TAKEN INTO ACCOUNT TO PROMOTE DIVERSITY.
-	--THE USUAL STRATEGY THAT EMPLOYES STOPPING CRITERION, ELAPSES EVALUATIONS.
-	--TALK ABOUT SOME EXAMPLES AND THEIR SUCCESSFULL PROMOTING DIVERSITY
-**STABLISH THAT NOWDAYS THE MULTI-OBEJCTIVE ALGORITHMS ARE MAINLY DESIGNED TO IMPROVE THE OBJECTIVE SPACE.
-**IMPLICATIONS OF THE DIVERSITY PROMOTED IN THE OBJECTIVE SPACE.
-**
-	--
-++DESCRIBE SCHEDULLE OF THE WORK...
-
+Particularly, the MOEA/D-DE that attainde the first place in the CEC-09 is taken.
+%
+This MOEA is transformed incorporating a simplistic replacement phase which takes into consideration the stopping criterion and the number of function evaluations.
+%
+In this way, this algorithm grants more importance to the diversity of variable space in the initial stages, and as the function evaluations evolve, it gradually grants more importance to the diversity of the objective space.
+%
+Thus in the last functions evaluations the algorithm has a similar behavior than the state-of-the-art MOEAs.
+%
+In addition, VSD-MOEA/D employes three populations and deals with the diveristy issues caused by the Mating selection and Replacement Mechanisms.
+%
+Since that in the literature exists a broad kind of MOEAs based in decomposition the validation of our proposal is taking into consideration the classic MOEA/D, advanced MOEA/D-DE and R2-EMOA, being the latter based in indicators.
+%
+This paper clearly shows the remarkable benefits of properly taking into account the diversity of the variable space.
 
 The rest of this paper is organized as follows.
+%
+Section provides a reviwe of related paper.
+%
+Some relevant decomposition based MOEAs, and some key components related to diversity are discussed.
+%
+The VSD-MOEA/D proposal is detailed in section.
+%
+Section .. is devoted to the experimental validation of the novel proposal.
+%
+Finally, conclusions and some lines of future work are given in section ..
+%
+
 

@@ -4,6 +4,55 @@
 
 \subsection{Diversity in Evolutionary Algorithms}
 
+The proper balance between exploration and exploitation is one of the keys to designing a successful \EAS{}.
+%
+In the single-objective domain, it is known that properly managing the diversity of the variable space is a way to achieve this balance,
+and as a consequence, a large number of diversity management techniques have been devised~\cite{Mohan:14}.
+%
+Specifically, these methods are classified depending on the component(s) of the \EA{} that is modified to alter how much diversity is maintained.
+%
+A popular taxonomy identifies the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, 
+\textit{crossover/mutation-based}, \textit{fitness-based}, and \textit{replacement-based}.
+%
+Additionally, the methods are referred to as \textit{uniprocess-driven} when a single component is altered, whereas the term
+\textit{multiprocess-driven} is used to refer to those methods that act on more than one component.
+
+Among the previous proposals, the replacement-based methods have yielded very high-quality results in recent years~\cite{Segura:17}, so
+this alternative was selected with the aim of designing a novel \MOEA{} that explicitly incorporates a way to control the diversity 
+of the variable space.
+%
+The basic principle of these methods is to bias the level of exploration in successive generations by 
+controlling the diversity of the survivors~\cite{Segura:17}.
+%
+Since premature convergence is one of the most common drawbacks in the application of \EAS{}, 
+modifications are usually performed with the aim of slowing down the convergence.
+%
+One of the most popular proposals belonging to this group is the \textit{crowding} method, which
+is based on the principle that offspring should replace similar individuals from the previous generation~\cite{Mengshoel:14}.
+%
+Several replacement strategies that do not rely on crowding have also been devised.
+%
+In some methods, diversity is considered as an objective.
+%
+For instance, in the hybrid genetic search with adaptive diversity control (\HGSADC{})~\cite{Vidal:13}, individuals are sorted 
+by their contribution to diversity and by their original cost.
+%
+Then, the rankings of the individuals are used in the fitness assignment phase.
+%
+A more recent proposal~\cite{Segura:17} incorporates a penalty approach to gradually alter the amount of diversity 
+maintained in the population.
+%
+Specifically, the initial phases preserve a higher amount of diversity than the final phases of the optimization.
+%
+This last method has inspired the design of the novel proposal put forth in this paper for multi-objective optimization.
+%
+
+It is important to remark that in the case of multi-objective optimization, little work related to maintaining the 
+diversity of the variable space has been done.
+%
+The following section reviews some of the most important \MOEAS{} and introduces some of the works that consider
+the maintenance of diversity of the variable space.
+
 
 \subsection{Related Works}
 
