@@ -1,8 +1,8 @@
-\IEEEPARstart{M}{ulti-objective} Optimization Algorithms (MOEAs) have being converted in one of the most popular approaches to deal with Multi-objective Optimization Problems (MOPs).
+\IEEEPARstart{M}{ulti-objective} Optimization Algorithms (MOEAs) are one of the most popular approaches to deal with Multi-objective Optimization Problems (MOPs).
 %
-Perhaps, one of the most importants reasons of its applicability is the information required to solve a problem, which is the usual situation in practice with real problems REF-implementaciones.
+MOEAs are usually employed in problems whose formulation is complicated or inaccessible.
 %
-Particularly, a continuous box-constrained minimization MOP involves two or more conflicting objectives that can be defined in Eq. (\ref{eqn:main})
+A continuous box-constrained minimization MOP involves two or more conflicting objectives and are defined in Eq. (\ref{eqn:main})
 	%
 \begin{equation}\label{eqn:main}
 \begin{split}
@@ -17,20 +17,31 @@ Given two solutions $x_1, x_2 \in \Re^D$ is said that $x_1$ dominates $x_2$ deno
 %
 Therefore, $f_i(x_1)$ should be better or equal to $f_i(x_2)$ and $f_i(x_1)$ should be better for at least one objective.
 %
-A solution $F(x^*)$ is called a Pareto-optimal solution if there does not exist $x \in Y$ such that $x \prec x^*$.
+A solution $F(x^*)$ is called a Pareto-optimal solution if there does not exist $F(x) \in Y$ such that $x \prec x^*$.
 %
 The set of all $x^* \in Y$ is called the Pareto-optimal solution set (PS), and their image is the Pareto Front (PF).
 %
 The goal of the MOEAs is to find a set of solutions that are well-distributed and converged to the PF in the objective space REFERENCIA.
 %
 
-The Evolurionary Algorithms (EA) are popular meta-heuristics to deal with MOPs due its capability to approximate several solutions in a single run.
+The Evolutionary Algorithms (EAs) are popular meta-heuristics to deal with MOPs due its capability to approximate several solutions in a single run.
 %
 In the last decade, several strategies that takes into account executions in long-term have been quite successfull mainly in the most complex problems REF.
 %
-These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to properly balance between exploration and exploitation.
+These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to attain a properly balance between exploration and exploitation.
 %
-In particular, diversity is considered as the cornerstone and it is taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or population model REF6.
+
+The diversity managment strategies have turned to be essential to attain quality solutions.
+%
+Also, the diversity has taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or popultions models REF6.
+
+
+
+%
+
+In particular, the study of diversity is essential to 
+
+and it has taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or population model REF6.
 %
 
 %
