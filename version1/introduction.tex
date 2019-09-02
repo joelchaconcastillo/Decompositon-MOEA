@@ -21,46 +21,49 @@ A solution $F(x^*)$ is called a Pareto-optimal solution if there does not exist 
 %
 The set of all $x^* \in Y$ is called the Pareto-optimal solution set (PS), and their image is the Pareto Front (PF).
 %
-The goal of the MOEAs is to find a set of solutions that are well-distributed and converged to the PF in the objective space REFERENCIA.
+The goal of the MOEAs is to find a set of solutions that are well-distributed and converged to the PF in the objective space~\cite{trivedi2016survey}.
 %
 
 The Evolutionary Algorithms (EAs) are popular meta-heuristics to deal with MOPs due its capability to approximate several solutions in a single run.
 %
-In the last decade, several strategies that take into account executions in long-term have been quite successfull mainly in the most complex problems REF.
+In the last decade, several strategies that take into account executions in long-term have been quite successfull mainly in the most complex problems~\cite{segura2016improving}.
 %
-These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to attain a properly balance between exploration and exploitation REFs.
+These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to attain a properly balance between exploration and exploitation~\cite{segura2015novel}.
 %
 
 The mechanisms designed to deal with diversity have turned to be essential to attain quality solutions in single-EAs.
 %
-Perhaps, one of the most critical issues of promoting diversity is that it provides a way to avoid premature convergence and stagnation.
+Perhaps, one of the most critical issues of promoting diversity is that it provides a way to deal with premature convergence and stagnation.
 %
-Diversity can be taken into account in the design of several components such as in the variation stage REF3, REF4, replacement phase REF5 and/or popultions models REF6.
+Diversity can be taken into account in the design of several components such as in the variation stage~\cite{herrera2003fuzzy},~\cite{mitchell1998introduction}, replacement phase~\cite{segura2015novel} and/or popultions models~\cite{koumousis2006saw}.
 %
-Recently, several remarkable EAs are mainly designed with a simple replacement phase, which maintains a balance between exploration and exploitation.
+
+Recently, several remarkable EAs incorporates a replacement phase, which maintains a balance between exploration and exploitation.
 %
 Such transition is gradually imposed taking into account the stopping criterion and the elapsed time.
 %
-Those strategies that incorporate such as a simplistic replacement strategy provides remarkable results mainly in long-term executions.
+Those strategies that incorporate such replacement phase attained remarkable results, mainly in long-term executions.
 %
-For instance, in combinatorial domains new best-known solutions for some well-known variants of the frequency assignment problem REF7, and for a two-dimensional packing problem REF5.
+For instance, in combinatorial domains new best-known solutions for some well-known variants of the frequency assignment problem~\cite{segura2016improving}, and for a two-dimensional packing problem~\cite{de2010optimisation}.
 %
 In addition, this principle guided the design of the winning strategy ar the Second Wind Fram Layout Optimization Competition, that was held in the Genetic and Evolutionary Conference.
 %
-Recently, in the case of continuous domains such strategy has incorporated to Differential Evolution (DE) attained remakably superior results that the first places in the Congress of Evolutionary Computation (CEC) of the years 2016 and 2017.
+Recently, in the case of continuous domains such strategy has been incorporated to Differential Evolution (DE)~\cite{castillo2019differential}, which attained remakably superior results than the winners of the competition carried out in IEEE Congress of Evolutionary Computation (CEC) of the years 2016 and 2017.
 %
-Thus, the benefit attained with this simplistic strategy seems to be quite benefical.
+Thus, the benefit attained with this strategy seems to be relevant in both discrete and continuous.
 %
-Nevertheless, its important to mention that the new found solutions required long-term executions, which seems to be more feasible with the constant growing of computational power.
+Nevertheless, the new found solutions had to be configured with long-term executions, such scenario seems to be more feasible with the constant growing of computational power.
 %
 
 The usual design of MOEAs is especifically driven to attain well-spread solutions and to cover the entire PF (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
 %
 However, in some MOEAs the decision variable space has been disregarded and is not considered at all, although that MOEAs suffer the same drawbacks raisen in single-objective space, e.g. premature convergence and stagnation.
 %
-The latter issue occurs since that the effect of inducing diversity in the decision variable space does not guarantee diversity in the objective space.
+Therefore inducing diversity in the decision variable space does not guarantee diversity in the objective space.
 %
-Therefore, since that most MOEAs maintain diverse solutions in the objective space some degree of diversity in the decision variable space is promoted, thus complete convergence does not appear in the variable space.
+%The latter issue occurs since that the effect of inducing diversity in the decision variable space does not guarantee diversity in the objective space.
+%
+However, since that most MOEAs maintain diverse solutions in the objective space some degree of diversity in the decision variable space is promoted, thus complete convergence does not appear in the variable space.
 %
 Nevetheless, the implicit diversity induced in decision variable space by the objective space migh not be anough, thus the reproduction operators loses its exploratiory strength.
 %
