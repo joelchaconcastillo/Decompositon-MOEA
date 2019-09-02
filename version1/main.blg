@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -14,22 +14,22 @@ Warning--I didn't find a database entry for "Joel:Crepinsek"
 Warning--I didn't find a database entry for "Segura:17"
 Warning--I didn't find a database entry for "Mengshoel:14"
 Warning--I didn't find a database entry for "Vidal:13"
--- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
 You've used 16 entries,
-            4087 wiz_defined-function locations,
-            1327 strings with 18409 characters,
-and the built_in function-call counts, 13919 in all, are:
+            4039 wiz_defined-function locations,
+            1316 strings with 18339 characters,
+and the built_in function-call counts, 13870 in all, are:
 = -- 1156
 > -- 305
 < -- 148
 + -- 174
 - -- 44
 * -- 681
-:= -- 2034
+:= -- 2033
 add.period$ -- 35
 call.type$ -- 16
 change.case$ -- 15
@@ -38,7 +38,7 @@ cite$ -- 16
 duplicate$ -- 954
 empty$ -- 1056
 format.name$ -- 59
-if$ -- 3254
+if$ -- 3206
 int.to.chr$ -- 0
 int.to.str$ -- 16
 missing$ -- 150
