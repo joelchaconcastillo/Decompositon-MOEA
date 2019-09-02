@@ -42,59 +42,55 @@ Recently, several remarkable EAs incorporates a replacement phase, which maintai
 %
 Such transition is gradually imposed taking into account the stopping criterion and the elapsed time.
 %
-Those strategies that incorporate such replacement phase attained remarkable results, mainly in long-term executions.
+Those strategies that incorporate such replacement phase has attained remarkable results, mainly in long-term executions.
 %
 For instance, in combinatorial domains new best-known solutions for some well-known variants of the frequency assignment problem~\cite{segura2016improving}, and for a two-dimensional packing problem~\cite{de2010optimisation}.
 %
-In addition, this principle guided the design of the winning strategy ar the Second Wind Fram Layout Optimization Competition, that was held in the Genetic and Evolutionary Conference.
+In addition, this principle guided the design of the winning strategy at the Second Wind Fram Layout Optimization Competition, that was held in the Genetic and Evolutionary Conference.
 %
-Recently, in the case of continuous domains such strategy has been incorporated to Differential Evolution (DE)~\cite{castillo2019differential}, which attained remakably superior results than the winners of the competition carried out in IEEE Congress of Evolutionary Computation (CEC) of the years 2016 and 2017.
+Recently, in the case of continuous domains this replacement phase has been incorporated to Differential Evolution (DE)~\cite{castillo2019differential}, which attained remakably superior results than the winners of the competition carried out in IEEE Congress of Evolutionary Computation (CEC) of the years 2016 and 2017.
 %
-Thus, the benefit attained with this strategy seems to be relevant in both discrete and continuous.
+Therefore, this novel principle of incorporing the replacement phase to explicitly control the diversity has given quite good results in both discrete and continuous domains.
 %
-Nevertheless, the new found solutions had to be configured with long-term executions, such scenario seems to be more feasible with the constant growing of computational power.
-%
-
-The usual design of MOEAs is especifically driven to attain well-spread solutions and to cover the entire PF (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
-%
-However, in some MOEAs the decision variable space has been disregarded and is not considered at all, although that MOEAs suffer the same drawbacks raisen in single-objective space, e.g. premature convergence and stagnation.
-%
-Therefore inducing diversity in the decision variable space does not guarantee diversity in the objective space.
-%
-%The latter issue occurs since that the effect of inducing diversity in the decision variable space does not guarantee diversity in the objective space.
-%
-However, since that most MOEAs maintain diverse solutions in the objective space some degree of diversity in the decision variable space is promoted, thus complete convergence does not appear in the variable space.
-%
-Nevetheless, the implicit diversity induced in decision variable space by the objective space migh not be anough, thus the reproduction operators loses its exploratiory strength.
+Remarkably, the incorporation of this paradigm in EAs have allowed to discover new solutions in several NP-hard problems, which required long-term executions which tend to be even more feasible caused by the constatn growing of computational power.
 %
 
-In spite of the amazing amount of MOEAs that have been developed, this paper proposes a novel MOEA, the Variable Space Diversity MOEA based in Decomposition (VSD-MOEA/D), which explicitly induces diversity in the variable space through several stages to induce a proper balance between exploration toward exploitation.
+The usual design of MOEAs is especifically build to attain well-spread solutions and to cover the PF (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
 %
-Particularly, the MOEA/D-DE that attainde the first place in the CEC-09 is taken.
+However, most of the MOEAs disregard the variable space even though those algorithms can suffer the same drawbacks raisen in single-objective space, e.g. premature convergence and stagnation.
 %
-This MOEA is transformed incorporating a simplistic replacement phase which takes into consideration the stopping criterion and the number of function evaluations.
+Perhaps one of the main challenges to incorporate strategies to control the diversity in variable space is that in multi-objective spaces inducing diversity in variable spaces does not guarantee diversity in the objective space.
+%
+Following the goal of MOEAs where is desired to attain solutions well-spread in the objective space the MOEAs implicilty inherit some degree of diversity in the variable space, therefore convergence does not appear in the variable space.
+%
+Nevetheless, the implicit diversity induced in the variable space by the objective space might not be enough an the reproduction operators could lose its exploratiory strength.
+%
+
+In spite of the amazing amount of MOEAs that have been developed, this paper proposes a novel and different MOEA \textit{the Variable Space Diversity MOEA based in Decomposition} (VSD-MOEA/D), which explicitly induces diversity in the variable space through several stages to obtain a proper balance from exploration toward exploitation.
+%
+Particularly, the MOEA/D-DE that attained the first place in the CEC-09 is taken into account~\cite{zhang2009performance}.
+%
+This MOEA is transformed incorporating an original replacement phase that takes into consideration the stopping criterion and the number of function evaluations.
 %
 In this way, this algorithm grants more importance to the diversity of variable space in the initial stages, and as the function evaluations evolve, it gradually grants more importance to the diversity of the objective space.
 %
 Thus in the last functions evaluations the algorithm has a similar behavior than the state-of-the-art MOEAs.
 %
-In addition, VSD-MOEA/D employes three populations and deals with the diveristy issues caused by the Mating selection and Replacement Mechanisms.
+In addition, VSD-MOEA/D employes three populations and deals with the diveristy problems caused by the mating selection and replacement mechanisms of the MOEA/D-DE.
 %
-Since that in the literature exists a broad kind of MOEAs based in decomposition the validation of our proposal is taking into consideration the classic MOEA/D, advanced MOEA/D-DE and R2-EMOA, being the latter based in indicators.
+Since that in the literature exists a broad kind of MOEAs based in decomposition the validation of our proposal is carried out taking into consideration the  MOEA/D~\cite{zhang2007moea} and  MOEA/D-DE~\cite{zhang2009performance} that are based in decomposition and R2-EMOA that is based in indicators.
 %
 This paper clearly shows the remarkable benefits of properly taking into account the diversity of the variable space.
 
 The rest of this paper is organized as follows.
 %
-Section provides a reviwe of related paper.
+Section~\ref{Sec:LiteratureReview} provides a widely review of decomposition algorithms, diversity in EAs and related works.
 %
-Some relevant decomposition based MOEAs, and some key components related to diversity are discussed.
+The VSD-MOEA/D proposal is detailed in section~\ref{Sec:Proposal}.
 %
-The VSD-MOEA/D proposal is detailed in section.
+Section~\ref{Sec:ExperimentalValidation} is devoted to the experimental validation of the novel proposal.
 %
-Section .. is devoted to the experimental validation of the novel proposal.
-%
-Finally, conclusions and some lines of future work are given in section ..
+Finally, conclusions and some lines of future work are given in section~\ref{Sec:Conclusion}
 %
 
 
