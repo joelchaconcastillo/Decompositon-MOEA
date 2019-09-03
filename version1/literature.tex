@@ -1,34 +1,9 @@
-\subsection{Decomposition-Based MOEAs}
-
-Several \MOEAS{} have been proposed in the literature and can be classified in the following three categories~\cite{trivedi2016survey}:
-%
-\textit{Dominance-Based Framework}, \textit{Indicator-Based Framework}, and \textit{Decomposition-Based Framework}.
-%
-
-Particularly, decomposition based algorithms implement scalarizing functions to transform the \MOP{} into several sigle-objective optimization subproblems that are simultaneously solved in a single run.
-%
-The transformation can be in several ways, some of the most known are \textit{the Weighted Sum Approach}, \textit{the weighted Tchebycheff Approach} and \textit{the Penalty-Based Boundary Intersection Approach}.
-%
-
-
-One of the most popular decomposition-based algorithms is the one proposed by Zhang et. al~\cite{zhang2007moea}, however there are several antecedents of metaheuristics that implements the idea of decomposition for solving \MOPS{} REF10 and REF11.
-%
-In addition, several works stablished that the original \MOEAD{} has it origins in the cellular multi-objective genetic algorithm (C-MOEA) proposed by Murata and Gen REF11.
-%
-
-
-
-Previously that one of the most popular version of decomposition
-\subsubsection{Original MOEA/D Framework}
-
-
-
 \subsection{Diversity in Evolutionary Algorithms}
 
 The proper balance between exploration and exploitation is one of the keys to designing a successful \EAS{}.
 %
 In the single-objective domain, it is known that properly managing the diversity of the variable space is a way to achieve this balance,
-and as a consequence, a large number of diversity management techniques have been devised~\cite{Mohan:14}.
+and as a consequence, a large number of diversity management techniques have been devised~\cite{pandey2014comparative}.
 %
 Specifically, these methods are classified depending on the component(s) of the \EA{} that is modified to alter how much diversity is maintained.
 %
@@ -38,29 +13,29 @@ A popular taxonomy identifies the following groups~\cite{Joel:Crepinsek}: \texti
 Additionally, the methods are referred to as \textit{uniprocess-driven} when a single component is altered, whereas the term
 \textit{multiprocess-driven} is used to refer to those methods that act on more than one component.
 
-Among the previous proposals, the replacement-based methods have yielded very high-quality results in recent years~\cite{Segura:17}, so
+Among the previous proposals, the replacement-based methods have yielded very high-quality results in recent years~\cite{segura2016improving}, so
 this alternative was selected with the aim of designing a novel \MOEA{} that explicitly incorporates a way to control the diversity 
 of the variable space.
 %
 The basic principle of these methods is to bias the level of exploration in successive generations by 
-controlling the diversity of the survivors~\cite{Segura:17}.
+controlling the diversity of the survivors~\cite{segura2016improving}.
 %
 Since premature convergence is one of the most common drawbacks in the application of \EAS{}, 
 modifications are usually performed with the aim of slowing down the convergence.
 %
 One of the most popular proposals belonging to this group is the \textit{crowding} method, which
-is based on the principle that offspring should replace similar individuals from the previous generation~\cite{Mengshoel:14}.
+is based on the principle that offspring should replace similar individuals from the previous generation~\cite{mengshoel2014adaptive}.
 %
 Several replacement strategies that do not rely on crowding have also been devised.
 %
 In some methods, diversity is considered as an objective.
 %
-For instance, in the hybrid genetic search with adaptive diversity control (\HGSADC{})~\cite{Vidal:13}, individuals are sorted 
+For instance, in the hybrid genetic search with adaptive diversity control (\HGSADC{})~\cite{vidal2013hybrid}, individuals are sorted 
 by their contribution to diversity and by their original cost.
 %
 Then, the rankings of the individuals are used in the fitness assignment phase.
 %
-A more recent proposal~\cite{Segura:17} incorporates a penalty approach to gradually alter the amount of diversity 
+A more recent proposal~\cite{segura2016improving} incorporates a penalty approach to gradually alter the amount of diversity 
 maintained in the population.
 %
 Specifically, the initial phases preserve a higher amount of diversity than the final phases of the optimization.
@@ -127,3 +102,66 @@ The first, extend a niching framework to include the diversity in the space dive
 The second, applies a clustering procedure in objective space and then builds a model from the solutions in these clusters.
 %
 In 2010, was proposed the Diversity Integrating Hypervolume-based Search Algorithm (DIVA) \cite{ulrich2010integrating}, this algorithm introduces a method to integrate decision space diversity into the hypervolume indicator, such that these two set measures can be optimized simultaneously.
+
+\subsection{Decomposition-Based MOEAs}
+
+
+In the last decades \MOEAS{} have gained enough popularity dealing with \MOPS{}, given their outstanding performance a vast amount of variants have been designed.
+%
+To better classify the different schemes, several taxonomies have been proposed~\cite{bechikh2016recent}.
+%
+A well known classification can be based on Pareto dominance, indicators and/or decomposition~\cite{trivedi2016survey}.
+%
+The domination-based \MOEAS{} are based on the application of the Pareto dominance relation and techniques to promote the diversity in the objective space~\cite{deb2002fast}.
+%
+Similarly, the indicator-based \MOEAS{} incorporate a measure of quality of the approximations attained by the \MOEAS{}~\cite{beume2007sms}.
+%
+A recent \MOEA{} that belongs to this category is the R2-Indicator-Based Evolutionary Multi-objective Algorithm (\RMOEA{})~\cite{trautmann2013r2}, whose performance in \MOPS{} has been quite promising.
+%
+
+%
+Finally, the decomposition based algorithms which implements scalarizing functions to transform the \MOP{} into several single-objective optimization subproblems and are simultaneously solved in a single run.
+%
+The transformation can be in several ways, some of the most known are the weighted sum approach, the weighted tchebycheff approach and the penalty-based boundary intersection approach.
+%
+Therefore, a set of weight vectors defines different single-objective functions, which are optimized by the \MOEA{}.
+%
+In addition, the weight vectors are selected a priori with the aim to obtain well-spread solutions among the Pareto front, however the optimal selection of weights depends of each problem and its Pareto-Geometry.
+%
+
+
+Although that one of the most popular decomposition-based algorithms is the \MOEAD{} proposed by Zhang et. al~\cite{zhang2007moea} there are several antecedents of metaheuristics that implements the idea of decomposition for solving \MOPS{}~\cite{ishibuchi1998multi} and~\cite{murata2002cellular}.
+%
+Particularly, \MOEAD{} has its origins in the cellular multi-objective genetic algorithm (C-MOEA) proposed by Murata and Gen~\cite{murata2002cellular}.
+%
+One special feature of the \MOEAD{} is the definition of neighborhoods.
+%
+Each subproblem is associated with the $k$-nearest subproblems in terms of the distance to the weight vectors conforming a neighborhood.
+%
+Another feature of the \MOEAD{} is the mating selection and replacement mechanism incorporated in each neighborhood.
+%
+Those features have implications in the diversity preserved in the population by the algorithm.
+%
+Specifically, a single good solution can replace several inferior neighboring solutions that can result in deterioration of the population diversity~\cite{wang2015constrained}.
+%
+To alliviate the previous shortcomming and stablishing several improvements Li and Zhang proposed \MOEADDE{}~\cite{li2009multiobjective}.
+%
+The main changes imposed by the \MOEADDE{} are the incorporation of \DE{} operators, computational resource allocation strategy, mating selection and replacement mechanism.
+%
+In this decomposition algorithm, the simulated binary crossover (\SBX{}) that is employed in the general \MOEAD{} is replaced by the \DE{} operators.
+%
+However to promote variation in the population the polynomial mutation~\cite{deb2001multi} is still used.
+%
+This adjustment is given that the \DE{} operator can be invariant of any orthogonal coordinate rotation being ideal for dealing with complicated \PS{}.
+%
+In addition, in the \MOEAD{} all the subproblems are treated equally reciving the same computational effort by generation.
+%
+However, depending in the complexity and the Pareto shape of the functions, each subproblem might require a different computational effort, therefore \MOEADDE{} incorporates a computational resource allocation strategy.
+%
+In order, given that the replacement mechanism of the \MOEAD{} is too elitist, the \MOEADDE{} incorporates an extra measure for maintaining the population diversity in the mating selection, thus given a probability this mechanism selects three parent solutions from the neighborhood or the whole population, enhancing the exploration ability.
+%
+Finally, in the \MOEAD{} the maximal number of solutions replaced by a solution could be as large as the neighborhood size reducing dramatically the diversity among the population.
+%
+To overcome this shortcoming the \MOEADDE{} incorporates a parameter to limit the maximal number of solutions replaced by a child solution, avoiding to many copies in the population.
+%
+

@@ -1,0 +1,24 @@
+\begin{algorithm}[!t]
+\caption{MOEA/D-EVSD (First phase)}
+\label{alg:MOEAD_DVS}
+\begin{scriptsize}
+\begin{algorithmic}[1]
+        \STATE Initialize the weight vectors $\lambda^1, \lambda^2, ..., \lambda^N$ and neighborhoods $B(i)$ using the traditional MOEA/D approach.
+    %y applying the WS-transformation. Compute the Euclidean distances between any two weight vectors and then work out T closest weight vectors to each weight vector. For each \textit{ i= 1, ..., N}, set $B(i) = {i_1, ..., i_T }$, where $\lambda_1^i, ..., \lambda_T^i$ are the $T$ closest weight vectors to $\lambda_i$.
+    \STATE Generate an initial population $x^1, ..., x^N$ randomly.
+    \STATE Initialize $z = (z_1, ..., z_m)^T$ to a high value.
+  \WHILE {(not stopping criterion)}
+  \FOR{i=1,...,N}
+    \STATE \textbf{Mating Pool}:  Randomly fill a pool $P$ with $\alpha$ individuals, selecting each individual with replacement from neighborhood $B(i)$ with probability $\delta$ or from the entire population with probability $(1 - \delta)$.
+    \STATE \textbf{Reproduction}: Select the most distant individuals from $P$ and apply genetic operators to them to generate a new offspring (y).
+    \STATE \textbf{Update the reference $z$}: For each j = 1,..,m, if $z_j > f_j(y)$, then set $z_j = f_j(y)$
+
+    \STATE \textbf{Update of Neighboring solutions}: For each index $j \in B(i)$, if $g(y| \lambda^j, z) < g(x_j| \lambda^j, z)$, then set $x^j = y$
+    \ENDFOR
+   % \STATE $t = t + 1$
+    \STATE Update the value of $\delta$
+  \ENDWHILE
+\end{algorithmic}
+\end{scriptsize}
+\end{algorithm}
+
