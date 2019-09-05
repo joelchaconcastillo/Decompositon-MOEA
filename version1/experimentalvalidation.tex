@@ -1,2 +1,96 @@
+This section describes the experimental validation carried out to study the performance and
+gain a clear understanding of the specifics of \VSDMOEA{}.
+%
+Our results clearly show that controlling the diversity of the variable space provides a way to further improve the results
+obtained by the state-of-art \MOEAS{}.
+%
+First, we discuss some technical specifications involving the benchmark problems and algorithms implemented.
+%
+We then present a comparison between \VSDMOEA{} and state-of-the-art algorithms when used on the long-term.
+%
+Then, three additional experiments to fully validate \VSDMOEA{} are included.
+%
+These analyses are designed to test the scalability in the variable space, the performance with different stopping criteria,
+and the behavior with different initial penalty thresholds.
+
+This work takes into account some of the most popular and widely used benchmarks in the multi-objective field.
+%
+These problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} configured in a
+standard way.
+%
+The WFG test problems were used with two and three objectives and
+were configured with $24$ parameters, $20$ of them corresponding to distance parameters and $4$ to position parameters.
+%
+In the DTLZ test problems, the number of variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
+% 
+The UF benchmark comprises seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10).
+%
+All of them were configured with $30$ variables.
+%
+Note that the experiment used to analyze the scalability in the variables considers different numbers of variables.
+
+The experimental validation includes three well-known state-of-the-art \MOEAS{} and \VSDMOEA{}.
+%
+The \MOEAS{} that are considered are \NSGAII{}~\cite{Joel:jMetal}, \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode},
+which can be classified as dominance-based, decomposition-based, and indicator-based, respectively.
+%
+In the case of \MOEAD{}, several variants have been devised.
+%
+The \MOEAD{} implementation considered is the one that obtained first place in the Congress on Evolutionary Computation's
+2009 MOP Competition~\cite{zhang2009performance}.
+%
+The common configuration in all the experiments was as follows: the population size was set to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial
+mutation~\cite{Joel:SBX1994, Joel:Mutation}.
+%
+The crossover probability was set to $0.9$ and the crossover distribution index was set to $2$.
+%
+Similarly, the mutation probability and distribution index were fixed to $1/n$ and $50$, respectively.
+%
+The additional parameterization required by each algorithm is shown in Table~\ref{tab:Parametrization}.
+%
+Note that scalarization functions are required in \MOEAD{} and \RMOEA{}.
+%
+In both cases, the Tchebycheff approach is used.
+%
+The procedure for generating the weight vectors differs in \MOEAD{} and \RMOEA{}.
+%
+\RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives, respectively~\cite{trautmann2013r2}.
+%
+In contrast, \MOEAD{} requires the same number of weight vectors as the population size.
+%
+They were generated with the uniform design (UD) and the good lattice point (GLP) method~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+
+Given that all the algorithms considered are stochastic, each execution was repeated $35$ times with different seeds.
+%
+The hypervolume indicator (\HV{}) is used to compare the various schemes.
+%
+Note that in the supplementary material, the results are also compared in terms of the IGD+ metric, with the conclusions being quite similar.
+%
+The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point,
+as suggested in~\cite{ishibuchi2017reference}.
+%
+The normalized \HV{} is used to facilitate the interpretation of the results~\cite{li2015evolutionary},
+and the value reported is computed as the ratio between the normalized \HV{} obtained and the maximum attainable
+normalized \HV{}.
+%
+In this way, a value equal to one means a perfect approximation.
+%
+Note that a value equal to one is not attainable because \MOEAS{} yields a discrete approximation.
+%
+Finally, in order to statistically compare the \HV{} ratios, a guideline similar to that proposed in~\cite{Joel:StatisticalTest} was used.
+%
+First a Shapiro-Wilk test was performed to check if the values of the results followed a Gaussian distribution.
+%
+If so, the Levene test was used to check for the homogeneity of the variances.
+%
+If the samples had equal variance, an ANOVA test was done; if not, a Welch test was performed.
+%
+For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution.
+%
+An algorithm $X$ is said to beat algorithm $Y$ when the differences between them are statistically significant, and the mean and median \HV{} ratios
+obtained by $X$ are higher than the mean and median achieved by $Y$.
+
+
+
 \subsection{Comparison Against State-of-the-art}
 \subsection{Effect of the Initial Distance Factor}

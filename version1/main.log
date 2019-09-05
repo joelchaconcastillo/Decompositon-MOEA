@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  3 SEP 2019 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  5 SEP 2019 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,25 +663,25 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
 
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring ON on input line 380.
+Package hyperref Info: Link coloring ON on input line 382.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -691,16 +691,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 380.
-LaTeX Info: Redefining \pageref on input line 380.
-LaTeX Info: Redefining \nameref on input line 380.
+LaTeX Info: Redefining \ref on input line 382.
+LaTeX Info: Redefining \pageref on input line 382.
+LaTeX Info: Redefining \nameref on input line 382.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 479.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 481.
  (./introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--7
 []\OT1/ptm/m/n/10 ULTI-OBJECTIVE Evo-lu-tion-ary Al-go-rithms
@@ -709,41 +709,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--7
 [1
 
 
-]) (./literature.tex [2]
-! Undefined control sequence.
-l.153 ...g ideal for dealling with complicated \PS
-                                                  {}.
-? 
-! Interruption.
-<to be read again> 
-                   {
-l.153 ... ideal for dealling with complicated \PS{
-                                                  }.
-? 
+]) (./literature.tex [2]) (./proposal.tex [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 172.
+put line 61.
 
-Underfull \hbox (badness 1546) in paragraph at lines 186--187
-[] []\OT1/ptm/b/n/7 Update of Neigh-bor-ing so-lu-tions\OT1/ptm/m/n/7 : For eac
-h in-dex $\OML/cmm/m/it/7 j \OMS/cmsy/m/n/7 2 \OML/cmm/m/it/7 B\OT1/cmr/m/n/7 (
-\OML/cmm/m/it/7 i\OT1/cmr/m/n/7 )$\OT1/ptm/m/n/7 , if
+
+LaTeX Warning: Reference `alg:Density_Estimator' on page 4 undefined on input l
+ine 108.
+
+) (./experimentalvalidation.tex
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `Joel:WFG' on page 4 undefined on input line 18.
+
+
+LaTeX Warning: Citation `Joel:DTLZ' on page 4 undefined on input line 18.
+
+
+LaTeX Warning: Citation `Joel:CEC2009' on page 4 undefined on input line 18.
+
+
+LaTeX Warning: Citation `Joel:jMetal' on page 4 undefined on input line 34.
+
+
+LaTeX Warning: Citation `MOEADCode' on page 4 undefined on input line 34.
+
+
+LaTeX Warning: Citation `R2EMOACode' on page 4 undefined on input line 34.
+
+
+LaTeX Warning: Citation `Joel:SBX1994' on page 4 undefined on input line 43.
+
+
+LaTeX Warning: Citation `Joel:Mutation' on page 4 undefined on input line 43.
+
+
+LaTeX Warning: Reference `tab:Parametrization' on page 4 undefined on input lin
+e 49.
+
+
+LaTeX Warning: Citation `Joel:MOEAD_Uniform_Design' on page 4 undefined on inpu
+t line 61.
+
+
+LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 4 undefined on input line 6
+1.
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 32--62
+\OT1/ptm/m/n/10 are con-sid-ered are \OT1/ptm/m/sc/10 nsga-ii \OT1/ptm/m/n/10 [
+[]], \OT1/ptm/m/sc/10 moea/d \OT1/ptm/m/n/10 [[]], and \OT1/ptm/m/sc/10 r2-
  []
 
-! Interruption.
-l.1930839 
-   veryend Info: Empty hook `AtVeryEndDocument' on input line 616.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 616.
+[4]
+
+LaTeX Warning: Citation `ishibuchi2017reference' on page 5 undefined on input l
+ine 70.
+
+
+LaTeX Warning: Citation `li2015evolutionary' on page 5 undefined on input line 
+72.
+
+
+LaTeX Warning: Citation `Joel:StatisticalTest' on page 5 undefined on input lin
+e 80.
+
+) (./conclusion.tex) (./main.bbl [5])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 617.
+ [6
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 617.
+ (./main.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 617.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 617.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D28152BAC836C17CF7E5A0D5488F23D5;1068.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 616.
+(rerunfilecheck)             Checksum: B90610392111D1A075025EA51D0214E9;1101.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 617.
  ) 
 Here is how much of TeX's memory you used:
- 16755 strings out of 492983
- 317061 string characters out of 6134923
- 403792 words of memory out of 5000000
- 20039 multiletter control sequences out of 15000+600000
- 29642 words of font info for 68 fonts, out of 8000000 for 9000
+ 16788 strings out of 492983
+ 317483 string characters out of 6134923
+ 407419 words of memory out of 5000000
+ 20072 multiletter control sequences out of 15000+600000
+ 30288 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 62i,15n,56p,468b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,56p,468b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (4 pages, 67064 bytes).
+Output written on main.dvi (6 pages, 85316 bytes).
