@@ -1,52 +1,44 @@
-This section is devoted to describe a novel \textit{Variable Space Diversity \MOEA{} based in decomposition} (\VSDMOEAD{}) that improves further more the results attained by the-state-of-the-art \MOEAS{}.
+In this section a decomposition \MOEA{} that promotes diversity in the decision variable space is proposed.
 %
-\VSDMOEAD{} could give quite competittive results taking into account middle-term executions, however its best performance is attained in long-term executions.
+The idea behind our proposal is to attain a proper balance between exploration and exploitation.
 %
-Additionally, under minor changes, this \MOEA{} can be employed to discrete domains.
+In particular the \textit{Variable Space Diversity \MOEA{} based in Decomposition} (\VSDMOEAD{}) explores properly the search space changing dinamically the diversity requirements of the population in function of the elapsed generations and stopping criterion.
 %
-One of the goals in the development of our proposal is to provide a way to attain quality solutions in \MOPS{} incorporating the elapsed time and the stopping criterion.
+In this way, \VSDMOEAD{} explicitly and gradually promotes diversity to explore adequately the decision variable space.
+%
 
-
+The novelties of \VSDMOEAD{} are the incorporation of a sophisticated replacement phase and Elite population.
 %
-In inception, \MOEAD{}~\cite{zhang2007moea} incorporated an elitism design which provoked several diversity short-comings.
+While the former preserves diversity the latter records the best individual in each subproblem.
 %
-Given this, several improvements were stablished to overcome this drawback~\cite{trivedi2016survey}.
+Particularly, the Parent population $P$, Offspring population $Q$ and the Elite population $E$ are taken into consideration.
 %
-For instance, \MOEADDE{}~\cite{li2009multiobjective} incorporated several measures in the mating selection and replacement mechanism.
 %
-Nevertheless, those strategies suffered of overparametrization, being quite sensible to each problem.
+The role of the Parent population ($P$) is to provide diverse solutions at several stages in function of the elapsed time.
 %
-In contrast, \VSDMOEAD{} employes a mechanism to explicitly promote diversity to attain a balance from exploration towards exploitation among the execution.
+Therefore, the population $P$ is selected in the replacement phase to generate new solutions ($Q$).
 %
-This transition is gradually accomplished exploring adequately the decision variable space.
-%
-Although several \MOEAS{} have been proposed to promote diversity in the decision variable space (Section \ref{MOEAs:Diversity}), none of them have attained better results than the-state-of-the-art-\MOEAS{}.
-%
-Perhaps the main reason is that those \MOEAS{} do not employed a linear dynamical model to induce a balance between exploration towards exploitation.
+In contrast the Elite population ($E$) records the best values attained in each subproblem among all the optimization process.
 %
 
 
-The novelties of \VSDMOEAD{} is the incorporation of a sophisticated replacement phase and the Elite population, which participates in the mating selection.
+The general framework of the \VSDMOEAD{} is taken from \MOEADDE{}~\cite{li2009multiobjective} which employes \DE{} operators.
 %
-Particularly, the Parent population $P$, Child population $Q$ and the Elite population $E$ are taken into consideration.
+Algorithm \ref{alg:vsd-moea} shows the main procedure of \VSDMOEAD{}.
 %
-Each population is ordered by subproblem.
+Similarly than \MOEADDE{} the initialization consists in generate the Parent population, assign an adequately ideal vector $\mathbf{z}$ are build the neighbourhoods $B(i)$ of each subproblem $i$ (\ref{alg_1:1}).
 %
-The roll of the Parent population ($P$) is to maintain and generate diverse solutions ($Q$) to properly explore the search space to several stages.
-%
-In contrast the Elite population ($E$) records the best values attained by each subproblem among all the optimization process.
+Then 
 %
 
-In the literature several enhancements to the basic \MOEAD{} are proposed.
 %
-Mainly, a line of research related to the mating selection and the replacement mechanism was taken.
-%
-Particularly, this line is highly related to the diversity maintined in the population.
-%
-However, since that \VSDMOEAD{} incorporates a new replacement mechanism and based to several experiments the mating selection and replacement mechanism of the classic \MOEAD{} have been removed.
 
 
 
+\subsection{Replacement Phase of \VSDMOEAD{} }
+
+
+\subsection{ Additional considerations}
 
 
 *Describe some about the mating and the replacement and get in detail about the diversity drawbacks with the proposed strategies of the state-of-the-art algortihms.
@@ -61,22 +53,23 @@ However, since that \VSDMOEAD{} incorporates a new replacement mechanism and bas
         \caption{Main procedure of VSD-MOEA/D} 
         \begin{small}
 \begin{algorithmic}[1]
-	\STATE \textbf{Initialization}: Generate an initial population $P_0$ with $N$ individuals, initialize $z = (z_1, ..., z_m)^T$ far away from the front.
-	\STATE \textbf{Evaluation}: Evaluate all individuals of $P$ according the decomposition method.
-        \STATE Assign $t=0$
-        \WHILE{ (not stopping criterion)  }
-	   \FOR{i = 1,...,N}
-               \STATE \textbf{Mating selection}: Set $r_1 = i$ and randomly select two different indexes $r_2$ and $r_3$ from $P$.	       
+	\STATE \textbf{Initialization}: Generate an initial population $P^0$ with $N$ individuals, initialize $\mathbf{z} = (z_1, ..., z_m)^T$ far away from the front, initialize the weight vectors $\lambda^1, ..., \lambda^N $ and neighbourhoods $B(i)$. \label{alg_1:1}
+%	\STATE \textbf{Evaluation}: Evaluate all individuals of $P^0$ according to the Tchebycheff approach.
+        \STATE Assign $t=0$ \label{alg_1:2}
+        \WHILE{ (not stopping criterion)  } \label{alg_1:3}
+	   \FOR{ each subproblem $i \in N$}
+               \STATE \textbf{Mating selection}: Select randomly three indexes ($r_1 \neq r_2 \neq r_3 \neq i$) from neighborhood $B(i)$ with probability $\delta$ or from the entire population with probability $(1-\delta)$. \label{alg_1:4}
 %%	       Fill the mating pool by performing binary tournament selection on $P_t$, 
   %                   based on the non-dominated ranks (ties are broken randomly).
-	       \STATE \textbf{Variation}: Generate a solution $y$ from $P_{r_1}$, $P_{r_2}$ and $P_{r_3}$ by \DE{} operator, and perform a mutation operator on $y$ with probability $p_m$ to produce a new solution $Q_{r_1}$.
+	       \STATE \textbf{Variation}: Generate a solution $y$ from $P^t_{r_1}$, $P^t_{r_2}$ and $P^t_{r_3}$ by \DE{} operator, and perform a mutation operator on $y$ with probability $p_m$ to produce a new solution $Q^t_{i}$. \label{alg_1:5}
 	       %Apply SBX crossover and Polynomial mutation to the mating pool to create a child population $Q_t$.
-	       \STATE \textbf{Evaluation}: Evaluate $F(Q_{r_1})$.
-
-	       \STATE \textbf{Survivor selection}: Update the elite vectors
-               \STATE $t=t+1$
+	 %      \STATE \textbf{Evaluation}:  Evaluate individual $Q^t_i$.
+%Evaluate $F(Q^t_{i})$ and $g(x | \lambda, z)$according to the Tchebycheff approach.
+	       \STATE \textbf{Update reference} $\mathbf{z}$: For each $j=1, .., m$, set $z_j = min\{z_j, F_j(Q^t_i) \}$ \label{alg_1:6}
+	       \STATE \textbf{Survivor selection}: Update all the elite vectors ($E^t$) from the neighborhood $B(i)$ according $g(E^t_i | \lambda_i, z)$. \label{alg_1:6}
 	   \ENDFOR
-	   \STATE \textbf{Replacement}: Select the $P$ vectors according...
+	   \STATE \textbf{Replacement}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$ and $E^t$ as inputs. \label{alg_1:7}
+           \STATE $t=t+1$ \label{alg_1:8}
         \ENDWHILE
         \end{algorithmic}
         \end{small}
@@ -88,30 +81,30 @@ However, since that \VSDMOEAD{} incorporates a new replacement mechanism and bas
 
 \begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
-        \caption{Replacement Phase of VSD-MOEA}
+        \caption{Replacement Phase of VSD-MOEA/D}
 \begin{small}
 \begin{algorithmic}[1]
-\STATE Input: $P_t$ (Population of current generation), $Q_t$ (Offspring of current Generation)
-        \STATE Output: $P_{t+1}$
-        \STATE $R_t = P_t \cup Q_t$ \label{alg:1}
-        \STATE $P_{t+1} = \emptyset$ \label{alg:2}
+\STATE Input: $P^t$ (Parent population), $Q^t$ (Offspring population), $E^t$ (Elite population).
+        \STATE Output: $P^{t+1}$
+        \STATE $R^t = P^t \cup Q^t \cup E^t$ (Keeping their associated subproblems) \label{alg:1} 
+        \STATE $P^{t+1} = \emptyset$ \label{alg:2}
         \STATE $Penalized = \emptyset$ \label{alg:3}
-                                \STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg:4}
-        \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
-                                        \STATE Compute $DCS$ of individuals in $R_t$, using $P_{t+1}$ as a reference set \label{alg:7}
-                                        \STATE Move the individuals in $R_t$ with $DCS < D_t$ to $Penalized$ \label{alg:8}
-                \IF{$R_t$ is empty} \label{alg:9}
-                                                \STATE Compute $DCS$ of individuals in $Penalized$, using $P_{t+1}$ as a reference set \label{alg:10}
-                                                \STATE Move the individual in $Penalized$ with the largest $DCS$ to $R_t$ \label{alg:11}
+        \STATE $D^t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg:4}
+        \WHILE{ A subproblem is not assigned } \label{alg:6}
+            \STATE Compute $DCS$ of individuals in $R^t$, using $P^{t+1}$ as a reference set \label{alg:7}
+            \STATE Move the individuals in $R^t$ with $DCS < D^t$ to $Penalized$ \label{alg:8}
+                \IF{$R^t$ is empty} \label{alg:9}
+                    \STATE Compute $DCS$ of individuals in $Penalized$, using $P^{t+1}$ as a reference set \label{alg:10}
+                    \STATE Move the individual in $Penalized$ with the largest $DCS$ to $R^t$ \label{alg:11}
                 \ENDIF
-                                        \STATE Identify the first front ($F$) in $R_t \cup P_{t+1}$ with an individual $I \in R_t$ \label{alg:12}
-                                        \STATE Use the novel density estimator (Algorithm~\ref{alg:Density_Estimator}) to select a new survivor
-                                        from $F$ and move it to $P_{t+1}$\label{alg:13}
+		\STATE Select a new survivor from $R^t$ with the best function value (associated with its weigth vector) and move it to its related subproblem in $P^{t+1}$.
+		\STATE 
+	
         \ENDWHILE
-        \RETURN $P_{t+1}$ \label{alg:14}
+        \RETURN $P^{t+1}$ \label{alg:14}
         \end{algorithmic}
 \end{small}
-\label{alg:Replacement_Phase}
+\label{alg:replacement}
 \end{algorithm}
 
 
