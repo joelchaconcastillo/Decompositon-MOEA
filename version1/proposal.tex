@@ -1,24 +1,30 @@
 In this section a decomposition \MOEA{} that promotes diversity in the decision variable space is proposed.
 %
-The idea behind our proposal is to attain a proper balance between exploration and exploitation.
+Initially the main framework of the propose \MOEA{}, which follows the decomposition \MOEAS{} style is described.
 %
-In particular the \textit{Variable Space Diversity \MOEA{} based in Decomposition} (\VSDMOEAD{}) explores properly the search space changing dinamically the diversity requirements of the population in function of the elapsed generations and stopping criterion.
+Thereafter, the incorpored replacement phase to preserve diversity in decision variable space is explained in detail.
 %
-In this way, \VSDMOEAD{} explicitly and gradually promotes diversity to explore adequately the decision variable space.
+Finally, several considerations --probed empirically-- related to the \DE{} operator are disscused.
 %
 
-The novelties of \VSDMOEAD{} are the incorporation of a sophisticated replacement phase and Elite population.
+
+The idea behind our proposal is to boost a proper balance between exploration and exploitation.
 %
-While the former preserves diversity the latter records the best individual in each subproblem.
+In particular the \textit{Variable Space Diversity \MOEA{} based in Decomposition} (\VSDMOEAD{}) explores properly the search space decreasing gradually the diversity requirements of the population in function of the elapsed generations and stopping criterion.
 %
-Particularly, the Parent population $P$, Offspring population $Q$ and the Elite population $E$ are taken into consideration.
+In this way, \VSDMOEAD{} explicitly grants diversity in the variable space and preservers quality solutions in the objectives space.
+%
+
+The two novelties of \VSDMOEAD{} are the inclusion of a replacement phase and Elite population.
+%
+While the former preserves diversity keeping the neighbourhoods definitions, the latter records the best individual in each subproblem.
+%
+Particularly, the Parent population ($P$), Offspring population ($Q$) and the Elite population ($E$) are taken into consideration.
 %
 %
 The role of the Parent population ($P$) is to provide diverse solutions at several stages in function of the elapsed time.
 %
-Therefore, the population $P$ is selected in the replacement phase to generate new solutions ($Q$).
-%
-In contrast the Elite population ($E$) records the best values attained in each subproblem among all the optimization process.
+In contrast, the Elite population ($E$) records the best values attained in each subproblem among all the optimization process.
 %
 
 
@@ -26,12 +32,25 @@ The general framework of the \VSDMOEAD{} is taken from \MOEADDE{}~\cite{li2009mu
 %
 Algorithm \ref{alg:vsd-moea} shows the main procedure of \VSDMOEAD{}.
 %
-Similarly than \MOEADDE{} the initialization consists in generate the Parent population, assign an adequately ideal vector $\mathbf{z}$ are build the neighbourhoods $B(i)$ of each subproblem $i$ (\ref{alg_1:1}).
+Similarly than \MOEADDE{} the initialization create a random population, assign an adequately ideal vector $\mathbf{z}$, and the neighborhoods of each subproblem are associated (line \ref{alg_1:1}).
 %
-Then 
+Then iterativelly the generations evolve until the stopping criterion is met (lines \ref{alg_1:3} - \ref{alg_1:9}).
+%
+Particularly, in each generation and for each subproblem the following steps take place.
+%
+In the mating selection three different indexes ($r_1, r_2, r_3$) are randomly selected, those indexes belong to the neighborhood $B(i)$ with probability $\delta$ or to the entire population with probability $(1 - \delta)$ (line \ref{alg_1:4}).
+%
+In the variation stage (line \ref{alg_1:5}) a new solution $Q^t_i$ is created employing the individuals $P^t_{r_1}, P^t_{r_2}, P^t_{r_3}$ with the application of \DE{} and polynomial mutation CITA.
+%
+In line \ref{alg_1:6} the reference vector $\mathbf{z}$ is updated as the lowest objective values. 
+%
+Given the new individual $Q^t_i$ all the elite individuals belonging to the neighborhood $B(i)$ are updated according to the a specific approach i.e. Tchebycheff approach.
+%
+Finally, the Parents ($P^t$), Elite ($E_t$) and Offspring ($Q^t$) populations are joined to select the parents of the next generation ($P^{t+1}$)  in the replacement (line \ref{alg_1:7}).
+%
+Although that the three populations are joinned and treated in the replacement stage (detailed in the following section) the order of the individuals is important, therefore the parents $P^{t+1}$ of next generations preserves the order that is related with each subproblem.
 %
 
-%
 
 
 
@@ -70,7 +89,7 @@ Then
 	   \ENDFOR
 	   \STATE \textbf{Replacement}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$ and $E^t$ as inputs. \label{alg_1:7}
            \STATE $t=t+1$ \label{alg_1:8}
-        \ENDWHILE
+        \ENDWHILE \label{alg_1:9}
         \end{algorithmic}
         \end{small}
 \label{alg:vsd-moea}

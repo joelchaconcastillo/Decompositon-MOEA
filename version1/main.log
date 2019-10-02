@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  30 SEP 2019 18:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  1 OCT 2019 14:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,7 +676,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--7
 
 ]) (./literature.tex [2]) (./proposal.tex [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 51.
+put line 72.
 ) (./experimentalvalidation.tex
 
 LaTeX Warning: Citation `Joel:WFG' on page 4 undefined on input line 18.
@@ -687,31 +687,32 @@ LaTeX Warning: Citation `Joel:DTLZ' on page 4 undefined on input line 18.
 
 LaTeX Warning: Citation `Joel:CEC2009' on page 4 undefined on input line 18.
 
+[4]
 
-LaTeX Warning: Citation `Joel:jMetal' on page 4 undefined on input line 34.
-
-
-LaTeX Warning: Citation `MOEADCode' on page 4 undefined on input line 34.
+LaTeX Warning: Citation `Joel:jMetal' on page 5 undefined on input line 34.
 
 
-LaTeX Warning: Citation `R2EMOACode' on page 4 undefined on input line 34.
+LaTeX Warning: Citation `MOEADCode' on page 5 undefined on input line 34.
 
 
-LaTeX Warning: Citation `Joel:SBX1994' on page 4 undefined on input line 43.
+LaTeX Warning: Citation `R2EMOACode' on page 5 undefined on input line 34.
 
 
-LaTeX Warning: Citation `Joel:Mutation' on page 4 undefined on input line 43.
+LaTeX Warning: Citation `Joel:SBX1994' on page 5 undefined on input line 43.
 
 
-LaTeX Warning: Reference `tab:Parametrization' on page 4 undefined on input lin
+LaTeX Warning: Citation `Joel:Mutation' on page 5 undefined on input line 43.
+
+
+LaTeX Warning: Reference `tab:Parametrization' on page 5 undefined on input lin
 e 49.
 
 
-LaTeX Warning: Citation `Joel:MOEAD_Uniform_Design' on page 4 undefined on inpu
+LaTeX Warning: Citation `Joel:MOEAD_Uniform_Design' on page 5 undefined on inpu
 t line 61.
 
 
-LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 4 undefined on input line 6
+LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 5 undefined on input line 6
 1.
 
 
@@ -720,7 +721,6 @@ Underfull \hbox (badness 1460) in paragraph at lines 32--62
 []], \OT1/ptm/m/sc/10 moea/d \OT1/ptm/m/n/10 [[]], and \OT1/ptm/m/sc/10 r2-
  []
 
-[4]
 
 LaTeX Warning: Citation `ishibuchi2017reference' on page 5 undefined on input l
 ine 70.
@@ -733,7 +733,11 @@ LaTeX Warning: Citation `li2015evolutionary' on page 5 undefined on input line
 LaTeX Warning: Citation `Joel:StatisticalTest' on page 5 undefined on input lin
 e 80.
 
-) (./conclusion.tex) (./main.bbl [5])
+) (./conclusion.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./main.bbl [5])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 617.
  [6
 
@@ -754,12 +758,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 617.
  ) 
 Here is how much of TeX's memory you used:
- 15143 strings out of 493305
- 270398 string characters out of 6139897
- 366692 words of memory out of 5000000
- 18334 multiletter control sequences out of 15000+600000
+ 15144 strings out of 493305
+ 270407 string characters out of 6139897
+ 367745 words of memory out of 5000000
+ 18335 multiletter control sequences out of 15000+600000
  31835 words of font info for 74 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  63i,15n,57p,477b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (6 pages, 84888 bytes).
+Output written on main.dvi (6 pages, 88804 bytes).
