@@ -1,0 +1,35 @@
+
+
+Here are decribed five categories of algorithms for many-objective issues:
+1) Dominance modificaition, redefinition of dominance.
+2) Conveged related metric as secondary selection criteria.
+3) Indicators.
+4) Decomposition.
+5) Blend of convergence and diversity.
+
+Interesting references:
+16 - Poor Scalability of CIMOOs (MOEAs) is principally when attempting to solver MOEAs is the difficulty in balancing convergence and diversity.
+52 - Controlling dominance area of solutions (CDAS) 
+42 - Decomposition based optimizers survey ***
+56 - Localized-weighted sum LWS
+58 - Deb NSGA-II part I
+24 - Normal-boundary intersection
+44 - MOEA/DD
+61 - Efficient non-domination level update approach for steady-state evolutionary multiobjective optimization
+46 - Alternative to the traditional Pareto dominance relation
+Here are explained the algorithms:
+44, 36 - Reference points WFG
+35 - knee points can produce high hypervolume values
+1) SMPSO.
+2) KnEA.
+3) KnPSO.
+4) HypE.
+5) MOEA/D.
+6) dMOPSO.
+7) NSGA-III.
+8) MOEA/DD.
+
+Notes:
+knee points: These are solutions which can sightly improve a solution but deteriore the others objectives a lot.
+
+42, 44, 45, 24, 46, 58, 57
