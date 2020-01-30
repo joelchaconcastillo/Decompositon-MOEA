@@ -62,6 +62,9 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[noend]{algorithmic}
+\usepackage{mathtools}
+\usepackage{multirow}
+
 
 \newcommand{\COMB}{{\sc comb}}
 \newcommand{\PS}{{\sc ps}}
@@ -475,19 +478,21 @@ Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mex
 \begin{abstract}
 In the last decade the presence of Multi-Objective Evolutionary Algorithms (MOEAs) has grown remarkably.
 %
-The majority of MOEAs incorporate components to directly improve the quality in the objective space, thus the decision variable space is implicitly trated.
+Mostly, the MOEAs incorporate components to directly improve the quality in the objective space, which implicitly involves the decision variable space.
 %
-
+Nevertheless, to attain even better quality solutions, the decision variable space should be explicitly taken into account as part of the design process.
 %
-However, similarly than in single-objective optimization, the decision variable space has several .
+In this way the balance between exploration and intensification could be directly induced.
 %
-Perhaps, one of the most important drawbacks --mainly in long-term executions-- is the premature convergence.
+A quite popular strategy that provides such balance yields in the incorporation of a novel replacement operator.
 %
-A quite popular strategy in single-objective is to explicitly promote diversity in the decision variable space through different stages in accordance to the stopping criteria.
+This operator explictly promotes diversity in the decision variable space through several stages along the optimization process.
 %
-In this work a decomposition based MOEA, which explicitly promotes diversity in the decision variable space, is proposed.
+In this work a decomposition based MOEA (VSD-MOEA/D), which incorporates this replacement operator, is proposed.
 %
-The latter is achieved with the incorporation of a novel replacement operator which promotes diversity in the variable space and a sigthly modification to Differential Evolution (DE) operators.
+In addition, through several experiments, is empirically proved that as the number of obejctives is incresed, the diversity degree required in the decision variable space should be less.
+%
+Even more, our proposal attained better results than the state-of-the-art MOEAs increasing the number of decision variables.
 %
  
 

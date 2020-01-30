@@ -93,4 +93,48 @@ obtained by $X$ are higher than the mean and median achieved by $Y$.
 
 
 \subsection{Comparison Against State-of-the-art}
+\begin{table}[t]
+\centering
+\caption{ Parameterization applied to each MOEA}
+\label{tab:Parametrization}
+\begin{tabular}{c|c}
+\hline
+\textbf{Algorithm} & \textbf{Configuration} \\ \hline
+\multirow{3}{*}{\textbf{MOEA/D}} &Max. updates by sub-problem ($\eta_r$) = 2, \\
+ & tour selection = 10,   neighbor size = 10, \\
+ & period utility updating = 30 generations, \\
+ & local selection probability ($\delta$) = 0.9,\\ \hline
+\textbf{VSD-MOEA} & $D_I=0.4$ \\ \hline
+\textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
+\end{tabular}
+\end{table}
+
+
+\input{tablas/Table_HV_2obj.tex}
+\input{tablas/Tests_HV_2obj.tex}
+
+\input{tablas/Table_HV_2obj.tex}
+\input{tablas/Tests_HV_2obj.tex}
+
 \subsection{Effect of the Initial Distance Factor}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.85]{images/Graphic-Initial-Distance_tikz-figure0.eps} \\
+\caption{Mean of \HV{} values taking into account all the problems with several initial threshold values}\label{fig:Initial-distance-factor}
+\end{figure}
+
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.85]{images/Graphic-Scalability-2obj_tikz-figure0.eps}
+\caption{Mean of the \HV{} ratio for 35 runs for the two-objective problems considering different numbers of variables}\label{fig:variable-decision-scalability-2obj}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.85]{images/Graphic-Scalability-3obj_tikz-figure0.eps}
+\caption{Mean of the \HV{} ratio for 35 runs for the three-objective problems considering different numbers of variables} \label{fig:variable-decision-scalability-3obj}
+\end{figure}
+
