@@ -1,0 +1,3 @@
+population_size   max_generation  niche_size  replace_limit  selection_prob  diff_rate
+100              250000            150         10              0.9            0.5
+
