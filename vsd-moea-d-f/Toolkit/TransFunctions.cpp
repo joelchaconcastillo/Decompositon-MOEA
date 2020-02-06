@@ -222,6 +222,7 @@ double TransFunctions::r_nonsep( const std::vector< double >& y, const int A )
     for( int k = 0; k <= A-2; k++ )
     {
       numerator += fabs( y[j] - y[( j+k+1 ) % y_len] );
+      //numerator += fabs( y[j] - y[( k+1 ) % y_len] );
     }
   }
 

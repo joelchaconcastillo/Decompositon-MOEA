@@ -82,9 +82,14 @@ double CMOEAD::distance_obj( vector<double> &a, vector<double> &b)
 double CMOEAD::distance( vector<double> &a, vector<double> &b)
 {
 	double dist = 0 ;
+	double TElapsed = nfes;
+        double TEnd = max_nfes;
+
+        double ff = max(1.0 -  (TElapsed / (TEnd*Df)),0.0);
    for(int i = 0; i < a.size(); i++)
 	{
 	   double factor = (a[i]-b[i])/(vuppBound[i]-vlowBound[i]);
+//	   if(factor*factor< 0.01*ff) return 0.0;
 	   dist += factor*factor;
 	}
    return sqrt(dist);
@@ -452,7 +457,7 @@ void CMOEAD::exec_emo(int run)
 		update_parameterD();
 		evol_population();
 		accumulator += nfes - bef ;
-                //if(accumulator > 0.1*(max_nfes)  )
+        //        if(accumulator > 0.0001*(max_nfes)  )
 		{
 	           accumulator -= 0.1*(max_nfes);
 		   save_pos(filename1);

@@ -20,6 +20,7 @@
 #define NTAB 32
 #define NDIV (1+IMM1/NTAB)
 #define EPS 1.2e-50
+//#define EPS 1.2e-12
 #define RNMX (1.0-EPS)
 double rnd_uni(long *idum);
 //the random generator in [0,1)

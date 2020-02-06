@@ -95,6 +95,7 @@ vector< double > Transitions::WFG1_t1
   for( int i = k; i < n; i++ )
   {
     t.push_back( TransFunctions::s_linear( y[i], 0.35 ) );
+    //t.push_back(TransFunctions::s_linear( y[i], 0.5 ) );
   }
 
   return t;
