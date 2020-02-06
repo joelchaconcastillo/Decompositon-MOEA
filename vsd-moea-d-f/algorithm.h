@@ -131,6 +131,24 @@ void CMOEAD::replacement_phase()
         vector<int> penalized;//( Candidates.size(), 1);
 	vector<bool> active_subproblem(pops, true), idxpenalized(Candidates.size(), true);
 
+//		int idxindividual = rand()%Candidates.size();
+//                selected_pop.push_back(idxindividual);
+//		if(D>0.0)
+//		idxpenalized[idxindividual] = false;
+//                double bestf = 10000000;
+//		int idxsubproblem = rand()%pops;
+//	//	for(int i = 0; i < pops;i++)
+//  	//	{
+//	//		f1 = fitnessfunction( Candidates[idxindividual].y_obj , population[i].namda);
+//	//		if(f1<bestf)
+//	//		{
+//	//		 bestf = f1;
+//	//		 idxsubproblem = i;
+//	//		}
+//	//	}
+//		population[idxsubproblem].indiv = Candidates[idxindividual];
+//		active_subproblem[idxsubproblem] = false;
+     
 	while(!pq.empty())
 	{
 	   pair<double, pair<int, int> > data = pq.top();
