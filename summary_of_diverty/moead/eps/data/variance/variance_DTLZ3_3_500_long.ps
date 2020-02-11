@@ -1,0 +1,8203 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: eps/data/variance_DTLZ3_3_500_long.ps
+%%Creator: gnuplot 5.2 patchlevel 2
+%%CreationDate: Sat Jan 18 09:53:25 2020
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 410 302
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape false def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.1 (Oct 2015)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (eps/data/variance_DTLZ3_3_500_long.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.2 patchlevel 2)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Sat Jan 18 09:53:25 2020)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.050 0.050 scale
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
+1.000 UL
+LTb
+LCb setrgbcolor
+630 280 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 280 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 1050 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 1050 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 1820 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 1820 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.04)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 2590 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 2590 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.06)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 3359 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 3359 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.08)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 4129 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 4129 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.1)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 4899 M
+63 0 V
+6254 0 R
+-63 0 V
+stroke
+546 4899 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.12)]
+] -46.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+630 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1683 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+1683 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 2)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2736 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+2736 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 4)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+3789 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+3789 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 6)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+4841 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+4841 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 8)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+5894 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+5894 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 10)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 280 M
+0 63 V
+0 4556 R
+0 -63 V
+stroke
+6947 140 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 12)]
+] -46.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+630 4899 N
+630 280 L
+6317 0 V
+0 4619 V
+-6317 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+% Begin plot #1
+1.000 UL
+LTb
+0.58 0.00 0.83 C 1156 3471 M
+527 -24 V
+526 -2 V
+527 -1 V
+526 8 V
+527 -15 V
+526 7 V
+526 4 V
+527 5 V
+526 -21 V
+527 -2 V
+% End plot #1
+% Begin plot #2
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3458 M
+527 1070 V
+526 -58 V
+527 30 V
+526 -47 V
+527 11 V
+526 -18 V
+526 47 V
+527 -20 V
+526 -32 V
+527 -39 V
+% End plot #2
+% Begin plot #3
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3488 M
+1683 280 L
+526 0 V
+527 1 V
+526 0 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #3
+% Begin plot #4
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3413 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #4
+% Begin plot #5
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3409 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #5
+% Begin plot #6
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3402 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #6
+% Begin plot #7
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3475 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #7
+% Begin plot #8
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3411 M
+1683 282 L
+526 0 V
+527 -2 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #8
+% Begin plot #9
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3444 M
+1683 280 L
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #9
+% Begin plot #10
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3443 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #10
+% Begin plot #11
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3411 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #11
+% Begin plot #12
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3509 M
+1683 284 L
+526 -3 V
+527 -1 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #12
+% Begin plot #13
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3392 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #13
+% Begin plot #14
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3498 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #14
+% Begin plot #15
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3487 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #15
+% Begin plot #16
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3477 M
+1683 281 L
+526 0 V
+527 -1 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #16
+% Begin plot #17
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3519 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #17
+% Begin plot #18
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3413 M
+1683 280 L
+526 6 V
+527 -6 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #18
+% Begin plot #19
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3431 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #19
+% Begin plot #20
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3400 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #20
+% Begin plot #21
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3509 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #21
+% Begin plot #22
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3408 M
+1683 280 L
+526 15 V
+527 -15 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #22
+% Begin plot #23
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3459 M
+1683 283 L
+526 -3 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 5 V
+527 -5 V
+526 0 V
+527 0 V
+% End plot #23
+% Begin plot #24
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3380 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #24
+% Begin plot #25
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3467 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #25
+% Begin plot #26
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3392 M
+1683 283 L
+526 1 V
+527 -4 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+% End plot #26
+% Begin plot #27
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3356 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #27
+% Begin plot #28
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3462 M
+1683 280 L
+526 3 V
+527 -3 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #28
+% Begin plot #29
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3487 M
+1683 280 L
+526 6 V
+527 -1 V
+526 -5 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #29
+% Begin plot #30
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3403 M
+1683 280 L
+526 3 V
+527 2 V
+526 -5 V
+527 4 V
+526 -4 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #30
+% Begin plot #31
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3431 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #31
+% Begin plot #32
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3361 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #32
+% Begin plot #33
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3524 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #33
+% Begin plot #34
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3477 M
+1683 280 L
+526 1 V
+527 2 V
+526 -3 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #34
+% Begin plot #35
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3447 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #35
+% Begin plot #36
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3462 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #36
+% Begin plot #37
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3403 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #37
+% Begin plot #38
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3494 M
+1683 281 L
+526 3 V
+527 -2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #38
+% Begin plot #39
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3408 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #39
+% Begin plot #40
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3420 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #40
+% Begin plot #41
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3474 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #41
+% Begin plot #42
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3399 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #42
+% Begin plot #43
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3490 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #43
+% Begin plot #44
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3427 M
+1683 281 L
+526 1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #44
+% Begin plot #45
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3428 M
+1683 282 L
+526 -1 V
+527 2 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #45
+% Begin plot #46
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3486 M
+1683 280 L
+526 3 V
+527 -3 V
+526 2 V
+527 0 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #46
+% Begin plot #47
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3494 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #47
+% Begin plot #48
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3400 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #48
+% Begin plot #49
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3463 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #49
+% Begin plot #50
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3466 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #50
+% Begin plot #51
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3432 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #51
+% Begin plot #52
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3457 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+% End plot #52
+% Begin plot #53
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3478 M
+1683 281 L
+526 2 V
+527 -2 V
+526 -1 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #53
+% Begin plot #54
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3447 M
+1683 280 L
+526 4 V
+527 -4 V
+526 2 V
+527 1 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #54
+% Begin plot #55
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3452 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #55
+% Begin plot #56
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3491 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #56
+% Begin plot #57
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3417 M
+1683 280 L
+526 14 V
+527 -14 V
+526 2 V
+527 -2 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #57
+% Begin plot #58
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3454 M
+1683 282 L
+526 0 V
+527 -2 V
+526 0 V
+527 1 V
+526 0 V
+526 -1 V
+527 0 V
+526 0 V
+527 1 V
+% End plot #58
+% Begin plot #59
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3432 M
+1683 280 L
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #59
+% Begin plot #60
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3504 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #60
+% Begin plot #61
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3483 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #61
+% Begin plot #62
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3407 M
+1683 281 L
+526 -1 V
+527 3 V
+526 -3 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #62
+% Begin plot #63
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3431 M
+1683 280 L
+526 0 V
+527 0 V
+526 5 V
+527 -5 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #63
+% Begin plot #64
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3399 M
+1683 280 L
+526 4 V
+527 -2 V
+526 -2 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #64
+% Begin plot #65
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3495 M
+1683 281 L
+526 0 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #65
+% Begin plot #66
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3371 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+% End plot #66
+% Begin plot #67
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3468 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #67
+% Begin plot #68
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3408 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #68
+% Begin plot #69
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3510 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #69
+% Begin plot #70
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3441 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #70
+% Begin plot #71
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3494 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #71
+% Begin plot #72
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3433 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #72
+% Begin plot #73
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3395 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #73
+% Begin plot #74
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3415 M
+1683 284 L
+526 -4 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #74
+% Begin plot #75
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3544 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #75
+% Begin plot #76
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3424 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #76
+% Begin plot #77
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3439 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #77
+% Begin plot #78
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3360 M
+1683 286 L
+526 -6 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 0 V
+526 -1 V
+527 -2 V
+% End plot #78
+% Begin plot #79
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3465 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #79
+% Begin plot #80
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3380 M
+1683 280 L
+526 3 V
+527 -2 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #80
+% Begin plot #81
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3443 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #81
+% Begin plot #82
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3475 M
+1683 280 L
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #82
+% Begin plot #83
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3479 M
+1683 282 L
+526 -2 V
+527 0 V
+526 3 V
+527 -3 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #83
+% Begin plot #84
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3474 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #84
+% Begin plot #85
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3490 M
+1683 284 L
+526 -4 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #85
+% Begin plot #86
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3463 M
+1683 297 L
+526 -17 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #86
+% Begin plot #87
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3419 M
+1683 281 L
+526 2 V
+527 -3 V
+526 3 V
+527 -1 V
+526 -1 V
+526 -1 V
+527 2 V
+526 -2 V
+527 3 V
+% End plot #87
+% Begin plot #88
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3451 M
+1683 280 L
+526 0 V
+527 4 V
+526 -4 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #88
+% Begin plot #89
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3404 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #89
+% Begin plot #90
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3421 M
+1683 281 L
+526 -1 V
+527 1 V
+526 -1 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #90
+% Begin plot #91
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3402 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #91
+% Begin plot #92
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3445 M
+1683 283 L
+526 0 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #92
+% Begin plot #93
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3434 M
+1683 280 L
+526 2 V
+527 0 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #93
+% Begin plot #94
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3395 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #94
+% Begin plot #95
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3404 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #95
+% Begin plot #96
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3464 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #96
+% Begin plot #97
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3425 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #97
+% Begin plot #98
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3379 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #98
+% Begin plot #99
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3549 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #99
+% Begin plot #100
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3470 M
+1683 280 L
+526 3 V
+527 -2 V
+526 -1 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #100
+% Begin plot #101
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3477 M
+1683 282 L
+526 -2 V
+527 0 V
+526 2 V
+527 -2 V
+526 1 V
+526 0 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #101
+% Begin plot #102
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3492 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #102
+% Begin plot #103
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3404 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #103
+% Begin plot #104
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3498 M
+1683 281 L
+526 -1 V
+527 0 V
+526 3 V
+527 -1 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #104
+% Begin plot #105
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3436 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #105
+% Begin plot #106
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3461 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #106
+% Begin plot #107
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3506 M
+1683 281 L
+526 -1 V
+527 0 V
+526 1 V
+527 1 V
+526 -2 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #107
+% Begin plot #108
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3489 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #108
+% Begin plot #109
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3457 M
+1683 285 L
+526 -3 V
+527 -2 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #109
+% Begin plot #110
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3556 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 5 V
+526 -5 V
+527 0 V
+% End plot #110
+% Begin plot #111
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3426 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #111
+% Begin plot #112
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3463 M
+1683 281 L
+526 -1 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #112
+% Begin plot #113
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3432 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #113
+% Begin plot #114
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3392 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #114
+% Begin plot #115
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3505 M
+1683 281 L
+526 -1 V
+527 0 V
+526 3 V
+527 -3 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #115
+% Begin plot #116
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3356 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #116
+% Begin plot #117
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3446 M
+1683 281 L
+526 1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #117
+% Begin plot #118
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3428 M
+1683 281 L
+526 -1 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #118
+% Begin plot #119
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3453 M
+1683 282 L
+526 -2 V
+527 0 V
+526 1 V
+527 2 V
+526 0 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #119
+% Begin plot #120
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3465 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #120
+% Begin plot #121
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3455 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #121
+% Begin plot #122
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3384 M
+1683 280 L
+526 1 V
+527 -1 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #122
+% Begin plot #123
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3473 M
+1683 280 L
+526 3 V
+527 -1 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #123
+% Begin plot #124
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3454 M
+1683 281 L
+526 2 V
+527 -1 V
+526 -2 V
+527 0 V
+526 2 V
+526 -1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #124
+% Begin plot #125
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3505 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #125
+% Begin plot #126
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3489 M
+1683 283 L
+526 -1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #126
+% Begin plot #127
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3405 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #127
+% Begin plot #128
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3392 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #128
+% Begin plot #129
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3444 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #129
+% Begin plot #130
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3375 M
+1683 280 L
+526 1 V
+527 2 V
+526 -2 V
+527 1 V
+526 -2 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #130
+% Begin plot #131
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3531 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #131
+% Begin plot #132
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3484 M
+1683 280 L
+526 1 V
+527 -1 V
+526 2 V
+527 -1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #132
+% Begin plot #133
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3485 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 3 V
+526 -3 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #133
+% Begin plot #134
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3499 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #134
+% Begin plot #135
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3456 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #135
+% Begin plot #136
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3565 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #136
+% Begin plot #137
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3445 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #137
+% Begin plot #138
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3408 M
+1683 284 L
+526 -4 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #138
+% Begin plot #139
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3435 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #139
+% Begin plot #140
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3360 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #140
+% Begin plot #141
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3487 M
+1683 280 L
+526 2 V
+527 -2 V
+526 2 V
+527 0 V
+526 -2 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #141
+% Begin plot #142
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3484 M
+1683 280 L
+526 2 V
+527 0 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #142
+% Begin plot #143
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3498 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 3 V
+526 -5 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #143
+% Begin plot #144
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3482 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 5 V
+526 -4 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #144
+% Begin plot #145
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3448 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 0 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #145
+% Begin plot #146
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3435 M
+1683 280 L
+526 1 V
+527 -1 V
+526 1 V
+527 2 V
+526 -3 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #146
+% Begin plot #147
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3462 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #147
+% Begin plot #148
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3473 M
+1683 280 L
+526 0 V
+527 1 V
+526 2 V
+527 -3 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #148
+% Begin plot #149
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3579 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #149
+% Begin plot #150
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3467 M
+1683 282 L
+526 -1 V
+527 -1 V
+526 0 V
+527 4 V
+526 -4 V
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+% End plot #150
+% Begin plot #151
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3495 M
+1683 280 L
+526 1 V
+527 -1 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #151
+% Begin plot #152
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3622 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #152
+% Begin plot #153
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3402 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -1 V
+526 -1 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #153
+% Begin plot #154
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3335 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 1 V
+526 -2 V
+526 0 V
+527 4 V
+526 -4 V
+527 0 V
+% End plot #154
+% Begin plot #155
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3495 M
+1683 280 L
+526 3 V
+527 -1 V
+526 -2 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #155
+% Begin plot #156
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3443 M
+1683 280 L
+526 2 V
+527 0 V
+526 0 V
+527 -2 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #156
+% Begin plot #157
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3411 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #157
+% Begin plot #158
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3418 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #158
+% Begin plot #159
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3441 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #159
+% Begin plot #160
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3481 M
+1683 281 L
+526 2 V
+527 -1 V
+526 -1 V
+527 0 V
+526 2 V
+526 0 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #160
+% Begin plot #161
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3457 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 3 V
+526 -3 V
+526 3 V
+527 -1 V
+526 -2 V
+527 0 V
+% End plot #161
+% Begin plot #162
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3488 M
+1683 280 L
+526 3 V
+527 -1 V
+526 -2 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #162
+% Begin plot #163
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3508 M
+1683 282 L
+526 -2 V
+527 1 V
+526 3 V
+527 -4 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #163
+% Begin plot #164
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3417 M
+1683 283 L
+526 -1 V
+527 4 V
+526 -6 V
+527 0 V
+526 0 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #164
+% Begin plot #165
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3430 M
+1683 282 L
+526 -1 V
+527 -1 V
+526 4 V
+527 -4 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #165
+% Begin plot #166
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3456 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #166
+% Begin plot #167
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3523 M
+1683 280 L
+526 4 V
+527 -4 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #167
+% Begin plot #168
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3451 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 4 V
+526 -4 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #168
+% Begin plot #169
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3484 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 5 V
+526 -5 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #169
+% Begin plot #170
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3506 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #170
+% Begin plot #171
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3542 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #171
+% Begin plot #172
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3375 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #172
+% Begin plot #173
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3447 M
+1683 282 L
+526 0 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #173
+% Begin plot #174
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3463 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #174
+% Begin plot #175
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3385 M
+1683 280 L
+526 0 V
+527 1 V
+526 2 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #175
+% Begin plot #176
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3470 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #176
+% Begin plot #177
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3544 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #177
+% Begin plot #178
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3491 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #178
+% Begin plot #179
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3448 M
+1683 282 L
+526 -1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #179
+% Begin plot #180
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3465 M
+1683 282 L
+526 -2 V
+527 0 V
+526 3 V
+527 -1 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #180
+% Begin plot #181
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3423 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #181
+% Begin plot #182
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3449 M
+1683 281 L
+526 -1 V
+527 1 V
+526 -1 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #182
+% Begin plot #183
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3469 M
+1683 286 L
+526 -5 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #183
+% Begin plot #184
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3425 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #184
+% Begin plot #185
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3441 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 2 V
+526 -3 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #185
+% Begin plot #186
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3461 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #186
+% Begin plot #187
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3411 M
+1683 280 L
+526 1 V
+527 2 V
+526 -3 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #187
+% Begin plot #188
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3477 M
+1683 280 L
+526 2 V
+527 -1 V
+526 1 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #188
+% Begin plot #189
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3481 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #189
+% Begin plot #190
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3434 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #190
+% Begin plot #191
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3326 M
+1683 281 L
+526 0 V
+527 -1 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #191
+% Begin plot #192
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3502 M
+1683 285 L
+526 -5 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #192
+% Begin plot #193
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3362 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #193
+% Begin plot #194
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3418 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #194
+% Begin plot #195
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3420 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 1 V
+527 -1 V
+% End plot #195
+% Begin plot #196
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3463 M
+1683 282 L
+526 -2 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #196
+% Begin plot #197
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3474 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #197
+% Begin plot #198
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3439 M
+1683 285 L
+526 -5 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #198
+% Begin plot #199
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3499 M
+1683 280 L
+526 2 V
+527 1 V
+526 1 V
+527 -2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #199
+% Begin plot #200
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3549 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #200
+% Begin plot #201
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3448 M
+1683 281 L
+526 -1 V
+527 0 V
+526 2 V
+527 -2 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #201
+% Begin plot #202
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3496 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #202
+% Begin plot #203
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3475 M
+1683 286 L
+526 -5 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #203
+% Begin plot #204
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3503 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #204
+% Begin plot #205
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3408 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #205
+% Begin plot #206
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3476 M
+1683 280 L
+526 0 V
+527 3 V
+526 1 V
+527 -4 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #206
+% Begin plot #207
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3449 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #207
+% Begin plot #208
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3392 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #208
+% Begin plot #209
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3448 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #209
+% Begin plot #210
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3475 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #210
+% Begin plot #211
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3422 M
+1683 280 L
+526 1 V
+527 1 V
+526 -2 V
+527 2 V
+526 3 V
+526 -5 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #211
+% Begin plot #212
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3437 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #212
+% Begin plot #213
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3482 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 3 V
+% End plot #213
+% Begin plot #214
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3430 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #214
+% Begin plot #215
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3506 M
+1683 283 L
+526 -3 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #215
+% Begin plot #216
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3469 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #216
+% Begin plot #217
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3429 M
+1683 283 L
+526 -1 V
+527 -2 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #217
+% Begin plot #218
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3581 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #218
+% Begin plot #219
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3424 M
+1683 281 L
+526 1 V
+527 -2 V
+526 0 V
+527 4 V
+526 -4 V
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #219
+% Begin plot #220
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3470 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #220
+% Begin plot #221
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3472 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #221
+% Begin plot #222
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3480 M
+1683 280 L
+526 0 V
+527 4 V
+526 -4 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #222
+% Begin plot #223
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3582 M
+1683 280 L
+526 0 V
+527 4 V
+526 -2 V
+527 0 V
+526 -2 V
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+% End plot #223
+% Begin plot #224
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3424 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #224
+% Begin plot #225
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3451 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 5 V
+526 -5 V
+527 0 V
+% End plot #225
+% Begin plot #226
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3484 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #226
+% Begin plot #227
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3504 M
+1683 280 L
+526 2 V
+527 -2 V
+526 1 V
+527 -1 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #227
+% Begin plot #228
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3476 M
+1683 283 L
+526 -2 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #228
+% Begin plot #229
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3450 M
+1683 280 L
+526 0 V
+527 5 V
+526 -5 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #229
+% Begin plot #230
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3438 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 0 V
+526 1 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #230
+% Begin plot #231
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3473 M
+1683 280 L
+526 0 V
+527 0 V
+526 4 V
+527 -4 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #231
+% Begin plot #232
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3488 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #232
+% Begin plot #233
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3542 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #233
+% Begin plot #234
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3368 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+% End plot #234
+% Begin plot #235
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3491 M
+1683 281 L
+526 -1 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #235
+% Begin plot #236
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3569 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #236
+% Begin plot #237
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3468 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #237
+% Begin plot #238
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3508 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 5 V
+526 -5 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #238
+% Begin plot #239
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3482 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 0 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #239
+% Begin plot #240
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3521 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 1 V
+527 -1 V
+% End plot #240
+% Begin plot #241
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3458 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #241
+% Begin plot #242
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3430 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #242
+% Begin plot #243
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3432 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #243
+% Begin plot #244
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3416 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #244
+% Begin plot #245
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3619 M
+1683 280 L
+526 0 V
+527 7 V
+526 -7 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #245
+% Begin plot #246
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3446 M
+1683 280 L
+526 0 V
+527 5 V
+526 -5 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #246
+% Begin plot #247
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3447 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #247
+% Begin plot #248
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3406 M
+1683 282 L
+526 2 V
+527 -4 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #248
+% Begin plot #249
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3469 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 3 V
+526 -2 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #249
+% Begin plot #250
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3459 M
+1683 280 L
+526 7 V
+527 -6 V
+526 0 V
+527 -1 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #250
+% Begin plot #251
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3427 M
+1683 284 L
+526 -4 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #251
+% Begin plot #252
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3464 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #252
+% Begin plot #253
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3473 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #253
+% Begin plot #254
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3453 M
+1683 280 L
+526 1 V
+527 1 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #254
+% Begin plot #255
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3534 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #255
+% Begin plot #256
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3532 M
+1683 283 L
+526 -3 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #256
+% Begin plot #257
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3455 M
+1683 282 L
+526 -2 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #257
+% Begin plot #258
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3468 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #258
+% Begin plot #259
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3503 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #259
+% Begin plot #260
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3534 M
+1683 281 L
+526 -1 V
+527 0 V
+526 1 V
+527 2 V
+526 -3 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #260
+% Begin plot #261
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3460 M
+1683 283 L
+526 -2 V
+527 2 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #261
+% Begin plot #262
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3418 M
+1683 280 L
+526 0 V
+527 1 V
+526 1 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #262
+% Begin plot #263
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3633 M
+1683 281 L
+526 -1 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #263
+% Begin plot #264
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3346 M
+1683 280 L
+526 4 V
+527 -4 V
+526 0 V
+527 2 V
+526 -1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #264
+% Begin plot #265
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3431 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #265
+% Begin plot #266
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3471 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #266
+% Begin plot #267
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3439 M
+1683 280 L
+526 2 V
+527 0 V
+526 -2 V
+527 1 V
+526 2 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #267
+% Begin plot #268
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3442 M
+1683 282 L
+526 -2 V
+527 4 V
+526 -4 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #268
+% Begin plot #269
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3392 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #269
+% Begin plot #270
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3374 M
+1683 280 L
+526 5 V
+527 -3 V
+526 3 V
+527 -5 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #270
+% Begin plot #271
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3452 M
+1683 283 L
+526 -1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #271
+% Begin plot #272
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3401 M
+1683 281 L
+526 -1 V
+527 1 V
+526 -1 V
+527 1 V
+526 2 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #272
+% Begin plot #273
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3468 M
+1683 280 L
+526 0 V
+527 2 V
+526 0 V
+527 -1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #273
+% Begin plot #274
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3413 M
+1683 280 L
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #274
+% Begin plot #275
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3446 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #275
+% Begin plot #276
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3429 M
+1683 282 L
+526 -1 V
+527 1 V
+526 1 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #276
+% Begin plot #277
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3482 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #277
+% Begin plot #278
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3441 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 3 V
+526 -2 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #278
+% Begin plot #279
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3463 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #279
+% Begin plot #280
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3548 M
+1683 282 L
+526 0 V
+527 -1 V
+526 -1 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #280
+% Begin plot #281
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3498 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 2 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #281
+% Begin plot #282
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3449 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #282
+% Begin plot #283
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3469 M
+1683 282 L
+526 1 V
+527 -3 V
+526 3 V
+527 -3 V
+526 2 V
+526 -2 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #283
+% Begin plot #284
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3379 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #284
+% Begin plot #285
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3427 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #285
+% Begin plot #286
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3507 M
+1683 280 L
+526 1 V
+527 1 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #286
+% Begin plot #287
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3462 M
+1683 280 L
+526 4 V
+527 -3 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #287
+% Begin plot #288
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3327 M
+1683 283 L
+526 -3 V
+527 4 V
+526 -4 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #288
+% Begin plot #289
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3496 M
+1683 281 L
+526 -1 V
+527 3 V
+526 -3 V
+527 3 V
+526 -3 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #289
+% Begin plot #290
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3408 M
+1683 281 L
+526 -1 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #290
+% Begin plot #291
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3444 M
+1683 280 L
+526 1 V
+527 4 V
+526 -2 V
+527 0 V
+526 -3 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #291
+% Begin plot #292
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3368 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #292
+% Begin plot #293
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3442 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #293
+% Begin plot #294
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3426 M
+1683 280 L
+526 2 V
+527 -2 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #294
+% Begin plot #295
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3360 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #295
+% Begin plot #296
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3450 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #296
+% Begin plot #297
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3453 M
+1683 280 L
+526 1 V
+527 1 V
+526 -2 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #297
+% Begin plot #298
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3403 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #298
+% Begin plot #299
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3473 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #299
+% Begin plot #300
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3472 M
+1683 283 L
+526 -3 V
+527 3 V
+526 -1 V
+527 -2 V
+526 2 V
+526 -2 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #300
+% Begin plot #301
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3460 M
+1683 280 L
+526 2 V
+527 1 V
+526 -3 V
+527 4 V
+526 -4 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #301
+% Begin plot #302
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3440 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #302
+% Begin plot #303
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3403 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #303
+% Begin plot #304
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3538 M
+1683 282 L
+526 1 V
+527 -3 V
+526 2 V
+527 3 V
+526 -2 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #304
+% Begin plot #305
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3464 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #305
+% Begin plot #306
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3360 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 2 V
+526 -2 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #306
+% Begin plot #307
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3493 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #307
+% Begin plot #308
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3448 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #308
+% Begin plot #309
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3523 M
+1683 282 L
+526 -2 V
+527 2 V
+526 -1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #309
+% Begin plot #310
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3548 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #310
+% Begin plot #311
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3477 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #311
+% Begin plot #312
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3321 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #312
+% Begin plot #313
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3434 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #313
+% Begin plot #314
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3360 M
+1683 282 L
+526 -2 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #314
+% Begin plot #315
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3456 M
+1683 283 L
+526 -1 V
+527 0 V
+526 -2 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #315
+% Begin plot #316
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3507 M
+1683 280 L
+526 6 V
+527 -5 V
+526 0 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #316
+% Begin plot #317
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3444 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #317
+% Begin plot #318
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3449 M
+1683 291 L
+526 -10 V
+527 1 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #318
+% Begin plot #319
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3459 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #319
+% Begin plot #320
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3403 M
+1683 282 L
+526 -1 V
+527 4 V
+526 -5 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #320
+% Begin plot #321
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3434 M
+1683 283 L
+526 -3 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #321
+% Begin plot #322
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3410 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 5 V
+% End plot #322
+% Begin plot #323
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3552 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #323
+% Begin plot #324
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3435 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #324
+% Begin plot #325
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3406 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #325
+% Begin plot #326
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3515 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #326
+% Begin plot #327
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3494 M
+1683 285 L
+526 -4 V
+527 -1 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #327
+% Begin plot #328
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3402 M
+1683 282 L
+526 -1 V
+527 0 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #328
+% Begin plot #329
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3430 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 1 V
+526 2 V
+527 0 V
+526 -3 V
+527 0 V
+% End plot #329
+% Begin plot #330
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3423 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #330
+% Begin plot #331
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3440 M
+1683 285 L
+526 -3 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #331
+% Begin plot #332
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3518 M
+1683 283 L
+526 -1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 4 V
+526 -4 V
+527 0 V
+% End plot #332
+% Begin plot #333
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3480 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #333
+% Begin plot #334
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3495 M
+1683 282 L
+526 2 V
+527 -4 V
+526 0 V
+527 1 V
+526 -1 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #334
+% Begin plot #335
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3478 M
+1683 280 L
+526 1 V
+527 -1 V
+526 1 V
+527 -1 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 1 V
+% End plot #335
+% Begin plot #336
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3460 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #336
+% Begin plot #337
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3477 M
+1683 280 L
+526 0 V
+527 2 V
+526 -1 V
+527 -1 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #337
+% Begin plot #338
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3357 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+% End plot #338
+% Begin plot #339
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3441 M
+1683 280 L
+526 2 V
+527 -1 V
+526 1 V
+527 0 V
+526 0 V
+526 -2 V
+527 2 V
+526 -1 V
+527 -1 V
+% End plot #339
+% Begin plot #340
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3365 M
+1683 283 L
+526 0 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #340
+% Begin plot #341
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3369 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #341
+% Begin plot #342
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3491 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #342
+% Begin plot #343
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3459 M
+1683 281 L
+526 2 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #343
+% Begin plot #344
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3400 M
+1683 280 L
+526 5 V
+527 -5 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #344
+% Begin plot #345
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3440 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #345
+% Begin plot #346
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3551 M
+1683 280 L
+526 1 V
+527 -1 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #346
+% Begin plot #347
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3442 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #347
+% Begin plot #348
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3489 M
+1683 280 L
+526 1 V
+527 0 V
+526 2 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #348
+% Begin plot #349
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3539 M
+1683 280 L
+526 1 V
+527 3 V
+526 -4 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #349
+% Begin plot #350
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3458 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #350
+% Begin plot #351
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3543 M
+1683 282 L
+526 -2 V
+527 2 V
+526 1 V
+527 -2 V
+526 -1 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #351
+% Begin plot #352
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3490 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -1 V
+526 0 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #352
+% Begin plot #353
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3381 M
+1683 282 L
+526 -2 V
+527 0 V
+526 1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #353
+% Begin plot #354
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3434 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #354
+% Begin plot #355
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3386 M
+1683 283 L
+526 -3 V
+527 0 V
+526 1 V
+527 -1 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #355
+% Begin plot #356
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3380 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #356
+% Begin plot #357
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3406 M
+1683 283 L
+526 -3 V
+527 0 V
+526 1 V
+527 1 V
+526 -2 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #357
+% Begin plot #358
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3414 M
+1683 283 L
+526 0 V
+527 2 V
+526 -5 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #358
+% Begin plot #359
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3454 M
+1683 280 L
+526 3 V
+527 -1 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #359
+% Begin plot #360
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3464 M
+1683 285 L
+526 -4 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #360
+% Begin plot #361
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3445 M
+1683 280 L
+526 1 V
+527 12 V
+526 -12 V
+527 -1 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #361
+% Begin plot #362
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3433 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #362
+% Begin plot #363
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3510 M
+1683 281 L
+526 2 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #363
+% Begin plot #364
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3427 M
+1683 281 L
+526 0 V
+527 0 V
+526 0 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+% End plot #364
+% Begin plot #365
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3444 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #365
+% Begin plot #366
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3491 M
+1683 280 L
+526 6 V
+527 -1 V
+526 -5 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #366
+% Begin plot #367
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3411 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #367
+% Begin plot #368
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3350 M
+1683 280 L
+526 1 V
+527 2 V
+526 -3 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #368
+% Begin plot #369
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3373 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #369
+% Begin plot #370
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3421 M
+1683 281 L
+526 -1 V
+527 2 V
+526 -2 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #370
+% Begin plot #371
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3449 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #371
+% Begin plot #372
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3421 M
+1683 280 L
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #372
+% Begin plot #373
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3367 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #373
+% Begin plot #374
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3429 M
+1683 284 L
+526 -4 V
+527 3 V
+526 -3 V
+527 4 V
+526 -4 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #374
+% Begin plot #375
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3381 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #375
+% Begin plot #376
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3449 M
+1683 283 L
+526 3 V
+527 -2 V
+526 -4 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #376
+% Begin plot #377
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3450 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #377
+% Begin plot #378
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3421 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+% End plot #378
+% Begin plot #379
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3572 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #379
+% Begin plot #380
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3449 M
+1683 281 L
+526 -1 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #380
+% Begin plot #381
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3473 M
+1683 283 L
+526 0 V
+527 0 V
+526 -2 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #381
+% Begin plot #382
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3449 M
+1683 280 L
+526 2 V
+527 -2 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #382
+% Begin plot #383
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3491 M
+1683 284 L
+526 -4 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #383
+% Begin plot #384
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3412 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #384
+% Begin plot #385
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3453 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #385
+% Begin plot #386
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3470 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #386
+% Begin plot #387
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3490 M
+1683 281 L
+526 1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #387
+% Begin plot #388
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3498 M
+1683 284 L
+526 -4 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #388
+% Begin plot #389
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3483 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 4 V
+527 -4 V
+526 0 V
+527 0 V
+% End plot #389
+% Begin plot #390
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3576 M
+1683 281 L
+526 -1 V
+527 2 V
+526 -2 V
+527 0 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #390
+% Begin plot #391
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3468 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #391
+% Begin plot #392
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3496 M
+1683 282 L
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+526 -3 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #392
+% Begin plot #393
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3331 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #393
+% Begin plot #394
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3513 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #394
+% Begin plot #395
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3538 M
+1683 281 L
+526 -1 V
+527 2 V
+526 1 V
+527 0 V
+526 -3 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #395
+% Begin plot #396
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3513 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #396
+% Begin plot #397
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3450 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+% End plot #397
+% Begin plot #398
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3469 M
+1683 286 L
+526 -6 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #398
+% Begin plot #399
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3377 M
+1683 282 L
+526 -2 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #399
+% Begin plot #400
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3379 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #400
+% Begin plot #401
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3434 M
+1683 284 L
+526 -4 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #401
+% Begin plot #402
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3364 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #402
+% Begin plot #403
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3393 M
+1683 280 L
+526 1 V
+527 -1 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #403
+% Begin plot #404
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3438 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #404
+% Begin plot #405
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3362 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 2 V
+526 -2 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #405
+% Begin plot #406
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3433 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #406
+% Begin plot #407
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3442 M
+1683 280 L
+526 1 V
+527 -1 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #407
+% Begin plot #408
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3454 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+% End plot #408
+% Begin plot #409
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3395 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 3 V
+526 0 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #409
+% Begin plot #410
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3449 M
+1683 283 L
+526 2 V
+527 -5 V
+526 1 V
+527 -1 V
+526 1 V
+526 -1 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #410
+% Begin plot #411
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3429 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 3 V
+526 -3 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #411
+% Begin plot #412
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3463 M
+1683 280 L
+526 0 V
+527 1 V
+526 0 V
+527 -1 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #412
+% Begin plot #413
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3505 M
+1683 280 L
+526 2 V
+527 -2 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 4 V
+527 -4 V
+% End plot #413
+% Begin plot #414
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3479 M
+1683 281 L
+526 -1 V
+527 0 V
+526 2 V
+527 -1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #414
+% Begin plot #415
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3490 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 3 V
+527 -3 V
+526 0 V
+527 1 V
+% End plot #415
+% Begin plot #416
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3337 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #416
+% Begin plot #417
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3452 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #417
+% Begin plot #418
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3430 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #418
+% Begin plot #419
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3465 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #419
+% Begin plot #420
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3475 M
+1683 280 L
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #420
+% Begin plot #421
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3419 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #421
+% Begin plot #422
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3402 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #422
+% Begin plot #423
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3460 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #423
+% Begin plot #424
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3498 M
+1683 280 L
+526 7 V
+527 -7 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #424
+% Begin plot #425
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3486 M
+1683 280 L
+526 1 V
+527 -1 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #425
+% Begin plot #426
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3354 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 3 V
+526 -3 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #426
+% Begin plot #427
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3434 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 2 V
+526 1 V
+526 -3 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #427
+% Begin plot #428
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3450 M
+1683 283 L
+526 -3 V
+527 1 V
+526 -1 V
+527 0 V
+526 1 V
+526 2 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #428
+% Begin plot #429
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3544 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #429
+% Begin plot #430
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3392 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 2 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #430
+% Begin plot #431
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3530 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #431
+% Begin plot #432
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3402 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #432
+% Begin plot #433
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3453 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #433
+% Begin plot #434
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3418 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #434
+% Begin plot #435
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3458 M
+1683 280 L
+526 1 V
+527 -1 V
+526 3 V
+527 -3 V
+526 2 V
+526 -1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #435
+% Begin plot #436
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3451 M
+1683 281 L
+526 -1 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 1 V
+527 -1 V
+526 2 V
+527 -2 V
+% End plot #436
+% Begin plot #437
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3553 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 1 V
+526 -1 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #437
+% Begin plot #438
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3512 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #438
+% Begin plot #439
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3477 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #439
+% Begin plot #440
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3492 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 2 V
+526 -2 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #440
+% Begin plot #441
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3398 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #441
+% Begin plot #442
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3436 M
+1683 280 L
+526 4 V
+527 -4 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #442
+% Begin plot #443
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3469 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #443
+% Begin plot #444
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3419 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 2 V
+526 -2 V
+526 2 V
+527 -2 V
+526 1 V
+527 -1 V
+% End plot #444
+% Begin plot #445
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3506 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #445
+% Begin plot #446
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3469 M
+1683 283 L
+526 -3 V
+527 0 V
+526 3 V
+527 -3 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #446
+% Begin plot #447
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3471 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #447
+% Begin plot #448
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3376 M
+1683 280 L
+526 2 V
+527 0 V
+526 -2 V
+527 1 V
+526 -1 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #448
+% Begin plot #449
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3448 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #449
+% Begin plot #450
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3481 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #450
+% Begin plot #451
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3531 M
+1683 283 L
+526 -3 V
+527 1 V
+526 -1 V
+527 1 V
+526 2 V
+526 0 V
+527 -3 V
+526 0 V
+527 0 V
+% End plot #451
+% Begin plot #452
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3438 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+% End plot #452
+% Begin plot #453
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3479 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #453
+% Begin plot #454
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3512 M
+1683 280 L
+526 1 V
+527 1 V
+526 -2 V
+527 0 V
+526 3 V
+526 -3 V
+527 0 V
+526 0 V
+527 1 V
+% End plot #454
+% Begin plot #455
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3394 M
+1683 280 L
+526 0 V
+527 0 V
+526 3 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #455
+% Begin plot #456
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3541 M
+1683 281 L
+526 1 V
+527 0 V
+526 -1 V
+527 -1 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #456
+% Begin plot #457
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3429 M
+1683 283 L
+526 -2 V
+527 -1 V
+526 0 V
+527 0 V
+526 1 V
+526 -1 V
+527 4 V
+526 -4 V
+527 0 V
+% End plot #457
+% Begin plot #458
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3425 M
+1683 280 L
+526 2 V
+527 -2 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #458
+% Begin plot #459
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3489 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #459
+% Begin plot #460
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3477 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #460
+% Begin plot #461
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3514 M
+1683 284 L
+526 -4 V
+527 2 V
+526 -2 V
+527 0 V
+526 1 V
+526 -1 V
+527 0 V
+526 2 V
+527 -2 V
+% End plot #461
+% Begin plot #462
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3497 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 4 V
+526 -4 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #462
+% Begin plot #463
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3481 M
+1683 280 L
+526 3 V
+527 -3 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #463
+% Begin plot #464
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3366 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #464
+% Begin plot #465
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3492 M
+1683 281 L
+526 4 V
+527 -5 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #465
+% Begin plot #466
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3564 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #466
+% Begin plot #467
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3504 M
+1683 280 L
+526 2 V
+527 0 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #467
+% Begin plot #468
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3545 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #468
+% Begin plot #469
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3436 M
+1683 280 L
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #469
+% Begin plot #470
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3435 M
+1683 280 L
+526 1 V
+527 0 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #470
+% Begin plot #471
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3340 M
+1683 281 L
+526 -1 V
+527 3 V
+526 -3 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #471
+% Begin plot #472
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3544 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #472
+% Begin plot #473
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3459 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 1 V
+527 -1 V
+% End plot #473
+% Begin plot #474
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3417 M
+1683 281 L
+526 0 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #474
+% Begin plot #475
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3322 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #475
+% Begin plot #476
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3471 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #476
+% Begin plot #477
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3496 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #477
+% Begin plot #478
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3400 M
+1683 280 L
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #478
+% Begin plot #479
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3449 M
+1683 283 L
+526 -3 V
+527 1 V
+526 1 V
+527 -2 V
+526 0 V
+526 1 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #479
+% Begin plot #480
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3505 M
+1683 281 L
+526 -1 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #480
+% Begin plot #481
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3425 M
+1683 281 L
+526 1 V
+527 -2 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #481
+% Begin plot #482
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3408 M
+1683 281 L
+526 0 V
+527 -1 V
+526 2 V
+527 1 V
+526 -3 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #482
+% Begin plot #483
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3391 M
+1683 282 L
+526 -2 V
+527 3 V
+526 -3 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #483
+% Begin plot #484
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3486 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+% End plot #484
+% Begin plot #485
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3431 M
+1683 280 L
+526 0 V
+527 2 V
+526 0 V
+527 -2 V
+526 0 V
+526 0 V
+527 2 V
+526 -2 V
+527 0 V
+% End plot #485
+% Begin plot #486
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3458 M
+1683 281 L
+526 1 V
+527 0 V
+526 -2 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #486
+% Begin plot #487
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3464 M
+1683 280 L
+526 0 V
+527 1 V
+526 -1 V
+527 0 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #487
+% Begin plot #488
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3482 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 3 V
+526 -3 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #488
+% Begin plot #489
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3479 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 3 V
+526 -3 V
+527 0 V
+% End plot #489
+% Begin plot #490
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3486 M
+1683 283 L
+526 -3 V
+527 0 V
+526 0 V
+527 1 V
+526 -1 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #490
+% Begin plot #491
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3494 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #491
+% Begin plot #492
+stroke
+LTb
+0.90 0.62 0.00 C 1156 3486 M
+1683 281 L
+526 -1 V
+527 2 V
+526 1 V
+527 -3 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #492
+% Begin plot #493
+stroke
+LTb
+0.94 0.89 0.26 C 1156 3441 M
+1683 280 L
+526 2 V
+527 -2 V
+526 0 V
+527 0 V
+526 4 V
+526 -4 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #493
+% Begin plot #494
+stroke
+LTb
+0.00 0.45 0.70 C 1156 3521 M
+1683 280 L
+526 2 V
+527 -2 V
+526 1 V
+527 -1 V
+526 2 V
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #494
+% Begin plot #495
+stroke
+LTb
+0.90 0.12 0.06 C 1156 3454 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #495
+% Begin plot #496
+stroke
+LTb
+0.00 0.00 0.00 C 1156 3512 M
+1683 282 L
+526 -2 V
+527 0 V
+526 0 V
+527 0 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #496
+% Begin plot #497
+stroke
+LTb
+0.58 0.00 0.83 C 1156 3457 M
+1683 280 L
+526 2 V
+527 -2 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #497
+% Begin plot #498
+stroke
+LTb
+0.00 0.62 0.45 C 1156 3439 M
+1683 280 L
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+526 1 V
+526 0 V
+527 -1 V
+526 0 V
+527 0 V
+% End plot #498
+% Begin plot #499
+stroke
+LTb
+0.34 0.71 0.91 C 1156 3431 M
+1683 280 L
+526 0 V
+527 0 V
+526 2 V
+527 -2 V
+526 0 V
+526 0 V
+527 0 V
+526 0 V
+527 0 V
+% End plot #499
+stroke
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+630 4899 N
+630 280 L
+6317 0 V
+0 4619 V
+-6317 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
