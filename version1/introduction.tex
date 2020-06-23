@@ -1,9 +1,9 @@
-\IEEEPARstart{M}{ulti-objective} Evolutionary Algorithms (MOEAs) are one of the most popular approaches to deal with Multi-objective Optimization Problems (MOPs).
+\IEEEPARstart{M}{ulti-objective} Evolutionary Algorithms (\MOEAS{}) are one of the most popular approaches to deal with Multi-objective Optimization Problems (\MOPS{}).
 %
 MOEAs are usually employed in problems whose formulation is complicated or inaccessible.
 %
 A continuous box-constrained minimization MOP involves two or more conflicting objectives and are defined in Eq. (\ref{eqn:main})
-	%
+%
 \begin{equation}\label{eqn:main}
 \begin{split}
 &min \quad F(x) = (f_1(x), ..., f_M(x)) \\
@@ -15,70 +15,96 @@ where $\Omega \subseteq \Re^D$ denotes the decision space, $F: \Omega \rightarro
 %
 Given two solutions $x_1, x_2 \in \Re^D$ is said that $x_1$ dominates $x_2$ denoted as $x_1 \prec x_2$ if and only if $f_i(x_1) \leq f_i(x_2)$ for all $i \in \{1,...,M\}$ and $f_i(x_1) < f_i(x_2)$ for at least one objective.
 %
-%Therefore, $f_i(x_1)$ should be better or equal to $f_i(x_2)$ and $f_i(x_1)$ should be better for at least one objective.
+Therefore, $f_i(x_1)$ should be better or equal to $f_i(x_2)$ and $f_i(x_1)$ should be better for at least one objective.
 %
 A solution $F(x^*)$ is called a Pareto-optimal solution if there does not exist $F(x) \in Y$ such that $x \prec x^*$.
 %
-The set of all $x^* \in Y$ is called the Pareto-optimal solution set (PS), and their image is the Pareto Front (PF).
+The set of all $x^* \in Y$ is called the Pareto-optimal solution set (\PS{}), and their image is the Pareto Front (\PF{}).
 %
-The goal of the MOEAs is to find a set of solutions that are well-distributed and converged to the PF in the objective space~\cite{trivedi2016survey}.
+The goal of the \MOEAS{} is to find a set of solutions that are well-distributed and converged to the PF in the objective space~\cite{trivedi2016survey}.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
+
+The Evolutionary Algorithms (\EAS{}) are one of the most popular meta-heuristics employed to deal with \MOPS{} due its capability to approximate several solutions in a single run~\cite{das2011real, zhou2011multiobjective}.
+%
+Through the last decades, the development of \MOEAS{} has grown dramatically~\cite{van1998multiobjective, coello2007mop}, resulting in algorithms that can be efficient with problems of different characteristics.
+%
+Some of them can be multimodality, deceptiveness and separability~\cite{huband2006review}.
+%
+In spite of the huge quantity of designed \MOEAS{}, unlike single-objective, there are several paths that have not been fully explored, perhaps the main reason of this is the difficulty of dealing with multiple objectives provoking the unability of the direct incorporation of several single-objective strategies.
+%
+For instance, the mating restrictions and sharing strategies are similarly employed in single-objective than in multi-objective algorithms~\cite{fonseca1995multiobjective}, those strategies has been incorporated to the \MOEAD{}~\cite{zhang2007moea} and the \NSGAII{}~\cite{deb2002fast} respectively, two of the most popular \MOEAS{}~\cite{trivedi2016survey, zhou2011multiobjective}.
+%
+Nevertheless, the most representative \MOEAS{} still have similar drawbacks than in single-objective such as stagnation and premature convergence~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic},
 %
 
-The Evolutionary Algorithms (EAs) are popular meta-heuristics to deal with MOPs due its capability to approximate several solutions in a single run.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
+One of the most critical aspects of the \EAS{} is to achieve an efficient search through a single-run, in which it should explore the landscape as best as possible.
 %
-In the last decade, several strategies that take into account executions in long-term have been quite successfull mainly in the most complex problems~\cite{segura2016improving}.
+The latter could be achieved through an ideal balance between exploration and intensification~\cite{lin2009auto}.
 %
-These strategies explicitly preserves the diversity in the population incorporating the stopping criterion and elapsed time to attain a properly balance between exploration and exploitation~\cite{segura2015novel}.
+This balance is not easily carried out since it is a problem-dependent issue.
 %
-
-The mechanisms designed to deal with diversity have turned to be essential to attain quality solutions in single-EAs.
+In fact, several authors have pointed out that the diversity based techniques should be taken into account as the corner stone to attain such balance~\cite{vcrepinvsek2013exploration}.
 %
-Perhaps, one of the most critical issues of promoting diversity is that it provides a way to deal with premature convergence and stagnation.
-%
-Diversity can be taken into account in the design of several components such as in the variation stage~\cite{herrera2003fuzzy},~\cite{mitchell1998introduction}, replacement phase~\cite{segura2015novel} and/or popultions models~\cite{koumousis2006saw}.
+In this way, exploration and intensification could be diagnosed and managed through the diversity presented in the population.
 %
 
-Recently, several remarkable EAs incorporates a replacement phase, which maintains a balance between exploration and exploitation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
+The mechanisms designed to deal with diversity seems to be the key to attain quality solutions in single-\EAS{}.
 %
-Such transition is gradually imposed taking into account the stopping criterion and the elapsed time.
+Perhaps, one of the most important benefits of promoting diversity is that it provides a way to deal with premature convergence and stagnation.
 %
-Those strategies that incorporate such replacement phase has attained remarkable results, mainly in long-term executions.
+In fact, the diversity could be handled through several mechanisms such as the variation operator~\cite{herrera2003fuzzy},~\cite{mitchell1998introduction}, the replacement operator~\cite{segura2015novel} and/or population models~\cite{koumousis2006saw}.
+%
+Particularly, a version of the replacement operator which explicitly preserves diversity through several stages is one of the most promising~\cite{vcrepinvsek2013exploration}.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
+
+Recently, some algorithms that yields to single-objective optimization have altered their behaviour-search depending of the stopping criterion and the elapsed function evaluations~\cite{castillo2019differential}.
+%
+Therefore, the combination of the stopping criterion and diversity techniques in long-term executions have been quite successfull in the most complex problems, in fact such principles have allowed to discover better optimal solutions~\cite{segura2016improving}.
+%
+These strategies explicitly handle the diversity of the population in several stages which takes place in realtion with the function evaluations elapsed and the stopping criterion~\cite{segura2015novel}.
 %
 For instance, in combinatorial domains new best-known solutions for some well-known variants of the frequency assignment problem~\cite{segura2016improving}, and for a two-dimensional packing problem~\cite{de2010optimisation}.
 %
-In addition, this principle guided the design of the winning strategy at the Second Wind Fram Layout Optimization Competition, that was held in the Genetic and Evolutionary Conference.
+Similarly, this principle guided the design of the winning strategy at the Second Wind Fram Layout Optimization Competition, that was held in the Genetic and Evolutionary Conference~\cite{wilson2018evolutionary}.
 %
-Recently, in the case of continuous domains this replacement phase has been incorporated to Differential Evolution (DE)~\cite{castillo2019differential}, which attained remakably superior results than the winners of the competition carried out in IEEE Congress of Evolutionary Computation (CEC) of the years 2016 and 2017.
+Recently, in the case of continuous domains this replacement phase has been incorporated to Differential Evolution (\DE{})~\cite{castillo2019differential}, which attained remarkably superior results than the winners of the competition carried out in \IEEE{} Congress of Evolutionary Computation (\CEC{}) of the years 2016 and 2017.
 %
-Therefore, this novel principle of incorporing the replacement phase to explicitly control the diversity has given quite good results in both discrete and continuous domains.
+Therefore, this novel principle of incorporating the replacement operator with the aim of explicitly control the diversity has given quite good results in both discrete (\NP{}-hard problems) and continuous domains.
 %
-Remarkably, the incorporation of this paradigm in EAs have allowed to discover new solutions in several NP-hard problems, which required long-term executions which tend to be even more feasible caused by the constatn growing of computational power.
+However, the latter strategy requires long-term executions to attain the best benefits, in fact its application tends to be even more feasible given the constant growing of the computational power, which is not considerated in the most popular algorithms that might suffer some premature convergence or stagnation in long-term executions.
 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
 
-The usual design of MOEAs is especifically build to attain well-spread solutions and to cover the PF (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
+The usual design of \MOEAS{} is especifically build to attain well-spread solutions and to cover the \PF{} (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
 %
-However, most of the MOEAs disregard the variable space even though those algorithms can suffer the same drawbacks raisen in single-objective space, e.g. premature convergence and stagnation.
+However, most of the \MOEAS{} are quite immersed in the objective space and therefore the decision variable space is usually disregarded, nevertheless the latter space is crucial and should be taken into consideration along the evolutionary process.
 %
-Perhaps one of the main challenges to incorporate strategies to control the diversity in variable space is that in multi-objective spaces inducing diversity in variable spaces does not guarantee diversity in the objective space.
+In fact, preserving several levels of diversity in the variable space along the process might improve the final attained solutions.
 %
-Following the goal of MOEAs where is desired to attain solutions well-spread in the objective space the MOEAs implicilty inherit some degree of diversity in the variable space, therefore convergence does not appear in the variable space.
+Perhaps, one of the main challenges of promoting diversity in the \MOPS{} is that the diversity between spaces does not have an clear relation, i.e. inducing diversity in the variable space does not guarantee diversity and/or convergence in the objective space.
 %
-Nevetheless, the implicit diversity induced in the variable space by the objective space might not be enough an the reproduction operators could lose its exploratiory strength.
+In addition, attaining well-spread solutions in the objective space might implicitly inherit some degree of diversity in the variable space.
 %
+Nevetheless, this diversity might not be enough and the reproduction operators could lose its exploratiory strength at some point of the process~\cite{lu2002dynamic}.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
 
-In spite of the amazing amount of MOEAs that have been developed, this paper proposes a novel and different MOEA \textit{the Variable Space Diversity MOEA based in Decomposition} (VSD-MOEA/D), which explicitly induces diversity in the variable space through several stages to obtain a proper balance from exploration toward exploitation.
+In spite of the amazing amount of \MOEAS{} that have been developed, this paper proposes a novel and different \MOEA{} \textit{the Variable Space Diversity MOEA based in Decomposition} (\VSDMOEAD{}), which explicitly induces diversity in the variable space through several stages to obtain a proper balance from exploration towards intensification.
 %
-Particularly, the MOEA/D-DE that attained the first place in the CEC-09 is taken into account~\cite{zhang2009performance}.
+Particularly, the \VSDMOEAD{} is mainly based in a simplification of the \MOEADDE{} which attained the first place in the CEC-09~\cite{zhang2009performance}.
 %
-This MOEA is transformed incorporating an original replacement phase that takes into consideration the stopping criterion and the number of function evaluations.
+Specially, the \VSDMOEAD{} incorporates a replacement operator that takes into consideration the stopping criterion and the number of function evaluations.
 %
-In this way, this algorithm grants more importance to the diversity of variable space in the initial stages, and as the function evaluations evolve, it gradually grants more importance to the diversity of the objective space.
+In this way, this algorithm grants more importance to the diversity of the variable space at the initial stages and as the function evaluations evolve, it gradually grants less importance to the diversity of the variable space until a half of the total number of function evaluations.
 %
-Thus in the last functions evaluations the algorithm has a similar behavior than the state-of-the-art MOEAs.
+Therefore, after the half of the total number of function evaluations the algorithm has a similar behavior than the state-of-the-art \MOEAS{}.
 %
-In addition, VSD-MOEA/D employes three populations and deals with the diveristy problems caused by the mating selection and replacement mechanisms of the MOEA/D-DE.
-%
-Since that in the literature exists a broad kind of MOEAs based in decomposition the validation of our proposal is carried out taking into consideration the  MOEA/D~\cite{zhang2007moea} and  MOEA/D-DE~\cite{zhang2009performance} that are based in decomposition and R2-EMOA that is based in indicators.
+Since that in the literature exists a broad kind of \MOEAS{}, the validation of our proposal is carried out taking into consideration the \MOEADDE{}~\cite{zhang2009performance}, the \NSGAIII{} and \REMOA{} which are decomposition-based, dominance-based and indicator-based respectively.
 %
 This paper clearly shows the remarkable benefits of properly taking into account the diversity of the variable space.
 
@@ -88,7 +114,7 @@ Section~\ref{Sec:LiteratureReview} provides a widely review of decomposition alg
 %
 The VSD-MOEA/D proposal is detailed in section~\ref{Sec:Proposal}.
 %
-Section~\ref{Sec:ExperimentalValidation} is devoted to the experimental validation of the novel proposal.
+Section~\ref{Sec:ExperimentalValidation} is devoted to an extensive experimental validation of the novel proposal.
 %
 Finally, conclusions and some lines of future work are given in section~\ref{Sec:Conclusion}.
 %

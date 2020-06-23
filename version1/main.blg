@@ -25,47 +25,48 @@ Warning--I didn't find a database entry for "Joel:StatisticalTest"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in fonseca1995multiobjective
 
 Done.
-You've used 29 entries,
+You've used 42 entries,
             4087 wiz_defined-function locations,
-            1415 strings with 21017 characters,
-and the built_in function-call counts, 25199 in all, are:
-= -- 2099
-> -- 562
-< -- 270
-+ -- 319
-- -- 82
-* -- 1225
-:= -- 3666
-add.period$ -- 63
-call.type$ -- 29
-change.case$ -- 26
-chr.to.int$ -- 621
-cite$ -- 29
-duplicate$ -- 1727
-empty$ -- 1909
-format.name$ -- 109
-if$ -- 5909
+            1481 strings with 23830 characters,
+and the built_in function-call counts, 36472 in all, are:
+= -- 3008
+> -- 860
+< -- 379
++ -- 483
+- -- 132
+* -- 1768
+:= -- 5281
+add.period$ -- 93
+call.type$ -- 42
+change.case$ -- 39
+chr.to.int$ -- 879
+cite$ -- 43
+duplicate$ -- 2512
+empty$ -- 2773
+format.name$ -- 172
+if$ -- 8556
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 273
-newline$ -- 110
-num.names$ -- 29
-pop$ -- 571
+int.to.str$ -- 42
+missing$ -- 410
+newline$ -- 149
+num.names$ -- 42
+pop$ -- 883
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1961
+skip$ -- 2821
 stack$ -- 0
-substring$ -- 1472
-swap$ -- 1535
-text.length$ -- 63
+substring$ -- 2085
+swap$ -- 2212
+text.length$ -- 86
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 29
-warning$ -- 0
-while$ -- 129
-width$ -- 31
-write$ -- 314
-(There were 13 warnings)
+type$ -- 42
+warning$ -- 1
+while$ -- 186
+width$ -- 44
+write$ -- 441
+(There were 14 warnings)

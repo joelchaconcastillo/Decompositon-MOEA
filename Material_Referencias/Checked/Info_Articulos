@@ -1,0 +1,3 @@
+#1 An Enhanced MOEA/D-DE and Its Application to Multiobjective Analog Cell Sizing
+ *There are several possibilities to enhance the performance of the MOEA/D-DE framework. The first one is the population replacement. The goal is to call for a balance between information sharing and diversity maintenance.
+ *Replacement of Solutions: Explain briefly the diversity issues of moea/d

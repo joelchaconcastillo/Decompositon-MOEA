@@ -27,17 +27,79 @@ A.~Trivedi, D.~Srinivasan, K.~Sanyal, and A.~Ghosh, ``A survey of
   Transactions on Evolutionary Computation}, vol.~21, no.~3, pp. 440--462,
   2016.
 
-\bibitem{segura2016improving}
-C.~Segura, A.~Hern{\'a}ndez-Aguirre, F.~Luna, and E.~Alba, ``Improving
-  diversity in evolutionary algorithms: New best solutions for frequency
-  assignment,'' \emph{IEEE Transactions on Evolutionary Computation}, vol.~21,
-  no.~4, pp. 539--553, 2016.
+\bibitem{das2011real}
+S.~Das, S.~Maity, B.-Y. Qu, and P.~N. Suganthan, ``Real-parameter evolutionary
+  multimodal optimization—a survey of the state-of-the-art,'' \emph{Swarm and
+  Evolutionary Computation}, vol.~1, no.~2, pp. 71--88, 2011.
 
-\bibitem{segura2015novel}
-C.~Segura, C.~A.~C. Coello, E.~Segredo, and A.~H. Aguirre, ``A novel
-  diversity-based replacement strategy for evolutionary algorithms,''
-  \emph{IEEE Transactions on Cybernetics}, vol.~46, no.~12, pp. 3233--3246,
-  2015.
+\bibitem{zhou2011multiobjective}
+A.~Zhou, B.-Y. Qu, H.~Li, S.-Z. Zhao, P.~N. Suganthan, and Q.~Zhang,
+  ``Multiobjective evolutionary algorithms: A survey of the state of the art,''
+  \emph{Swarm and Evolutionary Computation}, vol.~1, no.~1, pp. 32--49, 2011.
+
+\bibitem{van1998multiobjective}
+D.~A. Van~Veldhuizen and G.~B. Lamont, ``Multiobjective evolutionary algorithm
+  research: A history and analysis,'' Citeseer, Tech. Rep., 1998.
+
+\bibitem{coello2007mop}
+C.~A.~C. Coello, G.~B. Lamont, and D.~A.~V. Veldhuizen, ``Mop evolutionary
+  algorithm approaches,'' \emph{Evolutionary Algorithms for Solving
+  Multi-Objective Problems: Second Edition}, pp. 61--130, 2007.
+
+\bibitem{huband2006review}
+S.~Huband, P.~Hingston, L.~Barone, and L.~While, ``A review of multiobjective
+  test problems and a scalable test problem toolkit,'' \emph{IEEE Transactions
+  on Evolutionary Computation}, vol.~10, no.~5, pp. 477--506, 2006.
+
+\bibitem{fonseca1995multiobjective}
+C.~M. Fonseca and P.~J. Fleming, ``Multiobjective genetic algorithms made easy:
+  selection sharing and mating restriction,'' 1995.
+
+\bibitem{zhang2007moea}
+Q.~Zhang and H.~Li, ``Moea/d: A multiobjective evolutionary algorithm based on
+  decomposition,'' \emph{IEEE Transactions on evolutionary computation},
+  vol.~11, no.~6, pp. 712--731, 2007.
+
+\bibitem{deb2002fast}
+K.~Deb, A.~Pratap, S.~Agarwal, and T.~Meyarivan, ``A fast and elitist
+  multiobjective genetic algorithm: Nsga-ii,'' \emph{IEEE transactions on
+  evolutionary computation}, vol.~6, no.~2, pp. 182--197, 2002.
+
+\bibitem{ishibuchi2006comparison}
+H.~Ishibuchi, Y.~Nojima, and T.~Doi, ``Comparison between single-objective and
+  multi-objective genetic algorithms: Performance comparison and performance
+  measures,'' in \emph{2006 IEEE International Conference on Evolutionary
+  Computation}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2006, pp.
+  1143--1150.
+
+\bibitem{castillo2017multi}
+J.~C. Castillo, C.~Segura, A.~H. Aguirre, G.~Miranda, and C.~Le{\'o}n, ``A
+  multi-objective decomposition-based evolutionary algorithm with enhanced
+  variable space diversity control,'' in \emph{Proceedings of the Genetic and
+  Evolutionary Computation Conference Companion}.\hskip 1em plus 0.5em minus
+  0.4em\relax ACM, 2017, pp. 1565--1571.
+
+\bibitem{buche2003self}
+D.~B{\"u}che, S.~M{\"u}ller, and P.~Koumoutsakos, ``Self-adaptation for
+  multi-objective evolutionary algorithms,'' in \emph{International Conference
+  on Evolutionary Multi-criterion Optimization}.\hskip 1em plus 0.5em minus
+  0.4em\relax Springer, 2003, pp. 267--281.
+
+\bibitem{lu2002dynamic}
+H.~Lu and G.~G. Yen, ``Dynamic population size in multiobjective evolutionary
+  algorithms,'' in \emph{Proceedings of the 2002 Congress on Evolutionary
+  Computation. CEC'02 (Cat. No. 02TH8600)}, vol.~2.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2002, pp. 1648--1653.
+
+\bibitem{lin2009auto}
+L.~Lin and M.~Gen, ``Auto-tuning strategy for evolutionary algorithms:
+  balancing between exploration and exploitation,'' \emph{Soft Computing},
+  vol.~13, no.~2, pp. 157--168, 2009.
+
+\bibitem{vcrepinvsek2013exploration}
+M.~{\v{C}}repin{\v{s}}ek, S.-H. Liu, and M.~Mernik, ``Exploration and
+  exploitation in evolutionary algorithms: A survey,'' \emph{ACM computing
+  surveys (CSUR)}, vol.~45, no.~3, pp. 1--33, 2013.
 
 \bibitem{herrera2003fuzzy}
 F.~Herrera and M.~Lozano, ``Fuzzy adaptive genetic algorithms: design,
@@ -48,11 +110,27 @@ F.~Herrera and M.~Lozano, ``Fuzzy adaptive genetic algorithms: design,
 M.~Mitchell, \emph{An introduction to genetic algorithms}.\hskip 1em plus 0.5em
   minus 0.4em\relax MIT press, 1998.
 
+\bibitem{segura2015novel}
+C.~Segura, C.~A.~C. Coello, E.~Segredo, and A.~H. Aguirre, ``A novel
+  diversity-based replacement strategy for evolutionary algorithms,''
+  \emph{IEEE Transactions on Cybernetics}, vol.~46, no.~12, pp. 3233--3246,
+  2015.
+
 \bibitem{koumousis2006saw}
 V.~K. Koumousis and C.~P. Katsaras, ``A saw-tooth genetic algorithm combining
   the effects of variable population size and reinitialization to enhance
   performance,'' \emph{IEEE Transactions on Evolutionary Computation}, vol.~10,
   no.~1, pp. 19--28, 2006.
+
+\bibitem{castillo2019differential}
+J.~C. Castillo and C.~Segura, ``Differential evolution with enhanced diversity
+  maintenance,'' \emph{Optimization Letters}, pp. 1--20, 2019.
+
+\bibitem{segura2016improving}
+C.~Segura, A.~Hern{\'a}ndez-Aguirre, F.~Luna, and E.~Alba, ``Improving
+  diversity in evolutionary algorithms: New best solutions for frequency
+  assignment,'' \emph{IEEE Transactions on Evolutionary Computation}, vol.~21,
+  no.~4, pp. 539--553, 2016.
 
 \bibitem{de2010optimisation}
 J.~De~Armas, C.~Leon, G.~Miranda, and C.~Segura, ``Optimisation of a
@@ -60,20 +138,17 @@ J.~De~Armas, C.~Leon, G.~Miranda, and C.~Segura, ``Optimisation of a
   algorithms,'' \emph{International Journal of Production Research}, vol.~48,
   no.~7, pp. 2011--2028, 2010.
 
-\bibitem{castillo2019differential}
-J.~C. Castillo and C.~Segura, ``Differential evolution with enhanced diversity
-  maintenance,'' \emph{Optimization Letters}, pp. 1--20, 2019.
+\bibitem{wilson2018evolutionary}
+D.~Wilson, S.~Rodrigues, C.~Segura, I.~Loshchilov, F.~Hutter, G.~L. Buenfil,
+  A.~Kheiri, E.~Keedwell, M.~Ocampo-Pineda, E.~{\"O}zcan \emph{et~al.},
+  ``Evolutionary computation for wind farm layout optimization,''
+  \emph{Renewable Energy}, vol. 126, pp. 681--691, 2018.
 
 \bibitem{zhang2009performance}
 Q.~Zhang, W.~Liu, and H.~Li, ``The performance of a new version of moea/d on
   cec09 unconstrained mop test instances,'' in \emph{Evolutionary Computation,
   2009. CEC'09. IEEE Congress on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2009, pp. 203--208.
-
-\bibitem{zhang2007moea}
-Q.~Zhang and H.~Li, ``Moea/d: A multiobjective evolutionary algorithm based on
-  decomposition,'' \emph{IEEE Transactions on evolutionary computation},
-  vol.~11, no.~6, pp. 712--731, 2007.
 
 \bibitem{pandey2014comparative}
 H.~M. Pandey, A.~Chaudhary, and D.~Mehrotra, ``A comparative review of
@@ -134,11 +209,6 @@ T.~Ulrich, J.~Bader, and E.~Zitzler, ``Integrating decision space diversity
 S.~Bechikh, R.~Datta, and A.~Gupta, \emph{Recent advances in evolutionary
   multi-objective optimization}.\hskip 1em plus 0.5em minus 0.4em\relax
   Springer, 2016, vol.~20.
-
-\bibitem{deb2002fast}
-K.~Deb, A.~Pratap, S.~Agarwal, and T.~Meyarivan, ``A fast and elitist
-  multiobjective genetic algorithm: Nsga-ii,'' \emph{IEEE transactions on
-  evolutionary computation}, vol.~6, no.~2, pp. 182--197, 2002.
 
 \bibitem{beume2007sms}
 N.~Beume, B.~Naujoks, and M.~Emmerich, ``Sms-emoa: Multiobjective selection
