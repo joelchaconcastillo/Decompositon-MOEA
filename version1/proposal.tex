@@ -1,6 +1,4 @@
-This section is devoted to describe our proposal the \textit{Variable Space Diversity \MOEA{} based in Decomposition} (\VSDMOEAD{}).
-%
-This algorithm might be categorized as a decomposition-based \MOEA{}.
+This section is devoted to describe our proposal the \textit{Variable Space Diversity \MOEA{} based in Decomposition} (\VSDMOEAD{}), which is categorized as a decomposition-based \MOEA{}.
 %
 In particular, the motivation behind \VSDMOEAD{} is the incorporation of techniques to improve further more the performance of decomposition-based algorithms in long-term executions.
 %
@@ -8,7 +6,7 @@ Although that \VSDMOEAD{} is inspired in the \MOEAD{}, its design is quite simil
 %
 The main reason of this is that \VSDMOEAD{} leaves out several representative components of the \MOEAD{}.
 %
-In fact, it follows similar ideas that belong to the \MOGA{} and \CMOGA{}~\cite{murata2002cellular}.
+In fact, it follows similar ideas found in the \MOGA{} and \CMOGA{}~\cite{murata2002cellular}.
 %
 In the \CMOGA{} each individual resides in a different cell, such cells belong to a spatially structure space formed in a $m$-dimensional weight space.
 %
@@ -16,11 +14,13 @@ Therefore, each cell has its own weight vector.
 %
 Equivally to \MOEAD{} and \CMOGA{}, \VSDMOEAD{} incorporates sub-problems where each one manages a different weight vector.
 %
-Thus, each sub-problem is associated to each individual of the population.
+Thus, each sub-problem is associated to each individual from the population.
 %
-However, \VSDMOEAD{} drop out the neighbourhoods definition, being perhaps the most representative characteristic of the \CMOGA{} and \MOEAD{}.
+However, \VSDMOEAD{} drop out the neighbourhoods definition, being perhaps the most representative characteristic of \CMOGA{} and \MOEAD{}.
 %
 Similarly than \MOGA{}, in \VSDMOEAD{} the mating and the replacement restrictions are applyied among the whole population.
+%
+Contrary to \MOGA{} where the weight vectors are randomly generated in each generation, in \VSDMOEAD{} the application of the weight vectors remains fixed along the whole execution.
 %
 
 Our proposal decomposes the \MOP{} in several single-objective problems.
@@ -29,7 +29,7 @@ Notwithstanding that any decomposition approach can be employed to decompose the
 %
 Let $\lambda_1, ..., \lambda_N$ a set of even spread weight vectors and $z^*$ be the reference point.
 %
-The decomposition into $N$ scalar optimization sub-problems by using the Tchebycheff approach and the objective function of the $j$th sub-problem is indicated in the Eq. (\ref{eqn:approach}).
+The decomposition into $N$ scalar optimization sub-problems by using the Tchebycheff approach and the objective function of the $j$-th sub-problem is indicated in the Eq. (\ref{eqn:approach}).
 %
 
 \begin{equation}\label{eqn:approach}
@@ -58,7 +58,7 @@ This pseudo-code integrates two populations; the parent population ($P$) and off
 %
 The role of the former is to explicitly maintain diverse individuals in several stages.
 %
-In particular, in line~\ref{alg_1:1} is initialized the first parent population $P^0$, i.e. are randomly generated $N$ individuals inside the decision variable space.
+Beginning, in line~\ref{alg_1:1} is initialized the first parent population $P^0$, i.e. are randomly generated $N$ individuals inside the decision variable space.
 %
 After that, a set of spread weight vectors are defined in line~\ref{alg_1:2}.
 %
@@ -68,7 +68,7 @@ Those evaluations are employed to built a reference vector $z^*$, which is compo
 %
 Then, iteratively (lines \ref{alg_1:5} - \ref{alg_1:13}) each $t$-th generation proceeds as follows.
 %
-First, the offspring population $Q^t$ is generated through the standard \DE{}, which involves the mating selection and the variation operators.
+First, the offspring population $Q^t$ is generated through the standard \DE{} strategy, which involves the mating selection and the variation operators.
 %
 Then, in the survivor selection stage (line \ref{alg_1:11}), are selected the survivors of the next generation $P^{t+1}$.
 %
@@ -182,7 +182,9 @@ The linear decrease of the required diversity is calculated such that after $50\
 %
 This means that in the first $50\%$ of the total generations, more exploration is induced and in the remaining generations \VSDMOEAD{} behaves similarly than in the habitual \MOEAS{}.
 %
-
+At this point it can be noted that the proposed replacement phase requires the level of diversity that is promoted initially $D_I$.
+%
+Nevertheless, in the next section is shown that this parameter can be set in a wide range of values without affecting the algorithmic performance.
 
 
 \begin{algorithm}[t]
