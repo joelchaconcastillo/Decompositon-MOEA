@@ -1,0 +1,45 @@
+\EAS{} have been one of the most popular approaches for dealing with complex optimization problems.
+%
+Their design is a highly complex task that requires defining several components.
+%
+Looking at the differences between single-objective and multi-objective optimizers, it is worth noting
+that several state-of-the-art single-objective optimizers explicitly consider the diversity of the variable space, particularly
+when dealing with long-term executions, whereas this is not the case for \MOEAS{}.
+
+This paper proposes a novel \MOEA{}, called \VSDMOEA{}, that takes into account the diversity of both decision variable space
+and objective function space.
+%
+The main novelty is that the importance given to the different diversities is adapted during the optimization process.
+%
+In particular, in \VSDMOEA{} more importance is given to the diversity of decision variable space at the initial stages,
+but at later stages of the evolutionary process, it gradually grants more importance to the diversity of 
+objective function space.
+%
+This is performed using a penalty method that is integrated into the replacement phase.
+%
+Also included is a novel density estimator based on IGD+ that is used to select from the non-penalized individuals.
+
+The experimental validation carried out shows a remarkable improvement in \VSDMOEA{} when compared 
+to state-of-the-art \MOEAS{} both in two-objective and three-objective problems.
+%
+Moreover, our proposal not only improves the state-of-the-art algorithms in long-term and medium-term executions,
+but it also offers a competitive performance in short-term executions.
+%
+The scalability analyses show that as the number of objectives and decision variables increases, 
+the implicit variable space maintained by state-of-the-art
+\MOEAS{} also increases.
+%
+Thus, for a large enough number of objectives and decision variables, explicitly considering the diversity of decision 
+variable space is not very helpful.
+%
+Finally, the analysis of the initial threshold distance, which is an additional parameter required by \VSDMOEA{}, 
+shows that finding a proper value for this parameter is not a difficult task.
+
+In the future, we plan to apply the principles studied in this paper to other categories of \MOEAS{}.
+%
+For instance, including the diversity management put forth in this paper in decomposition-based and indicator-based \MOEAS{} seems plausible.
+%
+Additionally, we would like to develop an adaptive scheme to avoid setting the initial threshold value.
+%
+Finally, in order to obtain even better results, these strategies are going to be incorporated into a multi-objective memetic algorithm.
+%

@@ -4,7 +4,7 @@ Specifically, in the literature can be found a few quantinty of \MOEAS{} that di
 %
 The majority of those algorithms are usually built to deal with a specific sort of \MOPS{} where each efficient point of the objective space corresponds to more than one Pareto-optimal solution in the decision variable space.
 %
-Therefore the algorithm should be able to find several Pareto-optimal solutions that corresponds to one efficient point~\cite{deb2008omni, cuate2019variation}.
+Therefore, the algorithm should be able to find several Pareto-optimal solutions that corresponds to one efficient point~\cite{deb2008omni, cuate2019variation}.
 %
 In contrast, this work is particularly developed to deal with the habitual \MOPS{}, where the performance of a \MOEA{} is only measured in terms of its approximation quality in the objective space.
 %
@@ -41,7 +41,7 @@ One of the most popular proposals belonging to this group is the \textit{crowdin
 %
 For instance, a quite popular strategy is the \textit{Restricted Tournament Selection} (\RTS{})~\cite{harik1995finding}.
 %
-In \RTS{} each new individual randomly competes for a place with the $k$-nearest individuals of the population using the traditional binary tournament selection.
+In \RTS{} each new individual randomly competes for a place with the nearest individual from a sampled sub-population using the traditional binary tournament selection.
 %
 Several replacement strategies that do not rely on crowding have also been devised.
 %
@@ -97,7 +97,7 @@ In contrast to single-objective optimization where the promotion of diversity ta
 %
 The main reason is that the relation between the diversity of the objective space and the decision variable space is different in each \MOP{}~\cite{shir2009enhancing}.
 %
-In the habitual \MOPS{}, this relation maintain an implicit diversity degree in the decision variable space, which might represent one or more optimal regions.
+In the habitual \MOPS{}, this relation maintains an implicit diversity degree in the decision variable space, which might represent one or more optimal regions.
 %
 Therefore, imposing a high level of diversity in the decision variable space might affect the convergence and/or spread of the Pareto-front approximation.
 %
@@ -181,7 +181,7 @@ Those sub-problems are solved in a simultaneously and colaborative way among the
 %
 Some of the most common scalarizing functions that are applied to transform the \MOP{} are the weighted sum approach, the weighted Tchebycheff approach and the penalty-based boundary intersection approach.
 %
-Particularly, each scalarizing function has its own properties that in combination with a weight vector define a single-objective function.
+Particularly, each scalarizing function has its own properties that in combination with a weight vector defines a single-objective function.
 %
 Those functions aim the search to a Pareto front region, which is implicitly outlined by a weight vector.
 %
@@ -189,7 +189,7 @@ Therefore, the \MOEA{} optimizes several single-objective functions through a se
 %
 Those weight vectors are selected with the intention of obtaining converged and well-spread solutions among the Pareto front.
 %
-However, the best distribution of weight vectors regards to each \MOP{} and its Pareto-greometry.
+However, the best distribution of weight vectors regards to each \MOP{} and its Pareto-geometry.
 %
 A popular \MOEA{} that belongs to this category is the \MOEAD{} proposed by Zhang et al.~\cite{zhang2007moea}.
 
@@ -218,7 +218,7 @@ The main modifications imposed in the \MOEADDE{} are the incorporation of \DE{} 
 %
 Initially, the \MOEADDE{} incorporates the \DE{} in combination with the polynomial mutation, droping out the \SBX{}-crossover  employed in the antecesor \MOEAD{}.
 %
-Additionally, in the \MOEAD{} all the sub-problems are treated equally reciving the same computational effort by each generation, however in some scenarios some sub-problems might converge faster than the remaining ones.
+Additionally, in the \MOEAD{} all the sub-problems are treated equally receiving the same computational effort by each generation, however in some scenarios some sub-problems might converge faster than the remaining ones.
 %
 To alliviate this the \MOEADDE{} employes a computational resource allocation strategy which grants different computational effort to each sub-problem which is based in its performance.
 %

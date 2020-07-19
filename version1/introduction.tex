@@ -2,7 +2,7 @@
 %
 MOEAs are usually employed in problems whose formulation is complicated or inaccessible.
 %
-A continuous box-constrained minimization MOP involves two or more conflicting objectives and are defined in Eq. (\ref{eqn:main})
+A continuous box-constrained minimization MOP involves two or more conflicting objectives and is defined in Eq. (\ref{eqn:main})
 %
 \begin{equation}\label{eqn:main}
 \begin{split}
@@ -31,11 +31,11 @@ Through the last decades, the development of \MOEAS{} has grown dramatically~\ci
 %
 Some of them can be multimodality, deceptiveness and separability~\cite{huband2006review}.
 %
-In spite of the huge quantity of designed \MOEAS{}, unlike single-objective, there are several paths that have not been fully explored, perhaps the main reason of this is the difficulty of dealing with multiple objectives provoking the unability of the direct incorporation of several single-objective strategies.
+In spite of the huge quantity of designed \MOEAS{}, unlike single-objective, there are several paths that have not been fully explored, perhaps the main reason of this are the effects of dealing with multiple objectives provoking the unability of the direct incorporation of several single-objective methods.
 %
-For instance, the mating restrictions and sharing strategies are similarly employed in single-objective than in multi-objective algorithms~\cite{fonseca1995multiobjective}, those strategies has been incorporated to the \MOEAD{}~\cite{zhang2007moea} and the \NSGAII{}~\cite{deb2002fast} respectively, two of the most popular \MOEAS{}~\cite{trivedi2016survey, zhou2011multiobjective}.
+For instance, the mating restrictions and sharing strategies are similarly employed in single-objective than in multi-objective algorithms~\cite{fonseca1995multiobjective}, those strategies has been incorporated to \MOEAD{}~\cite{zhang2007moea} and \NSGAII{}~\cite{deb2002fast} respectively, two of the most popular \MOEAS{}~\cite{trivedi2016survey, zhou2011multiobjective}.
 %
-Nevertheless, the most representative \MOEAS{} still have similar drawbacks than in single-objective such as stagnation and premature convergence~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic},
+Nevertheless, the most representative \MOEAS{} still have similar drawbacks than in single-objective such as stagnation and premature convergence~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic}.
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
@@ -43,7 +43,7 @@ One of the most critical aspects of the \EAS{} is to achieve an efficient search
 %
 The latter could be achieved through an ideal balance between exploration and intensification~\cite{lin2009auto}.
 %
-This balance is not easily carried out since it is a problem-dependent issue.
+This balance is not easily carried out since it depends of the \MOP{}.
 %
 In fact, several authors have pointed out that the diversity based techniques should be taken into account as the corner stone to attain such balance~\cite{vcrepinvsek2013exploration}.
 %
@@ -82,7 +82,9 @@ However, the latter strategy requires long-term executions to attain the best be
 
 The usual design of \MOEAS{} is especifically build to attain well-spread solutions and to cover the \PF{} (coverage), therefore some of them incorporate different mechanisms to achieve such goal.
 %
-However, most of the \MOEAS{} are quite immersed in the objective space and therefore the decision variable space is usually disregarded, nevertheless the latter space is crucial and should be taken into consideration along the evolutionary process.
+However, most of the \MOEAS{} are quite immersed in the objective space and therefore the decision variable space is usually disregarded.
+%
+Nevertheless the latter space is crucial and should be taken into consideration along the evolutionary process.
 %
 In fact, preserving several levels of diversity in the variable space along the process might improve the final attained solutions.
 %
@@ -96,7 +98,9 @@ Nevetheless, this diversity might not be enough and the reproduction operators c
 
 In spite of the amazing amount of \MOEAS{} that have been developed, this paper proposes a novel and different \MOEA{} \textit{the Variable Space Diversity MOEA based in Decomposition} (\VSDMOEAD{}), which explicitly induces diversity in the variable space through several stages to obtain a proper balance from exploration towards intensification.
 %
-Particularly, the \VSDMOEAD{} is mainly based in a simplification of the \MOEADDE{} which attained the first place in the CEC-09~\cite{zhang2009performance}.
+Particularly, the \VSDMOEAD{} is mainly based in a simplification of the \MOEADDE{}~\cite{zhang2009performance} and \CMOGA{}~\cite{murata2002cellular}.
+%
+While the former attained the first place in the CEC-09, the latter is one of the pioneer \MOEAS{} based in decomposition.
 %
 Specially, the \VSDMOEAD{} incorporates a replacement operator that takes into consideration the stopping criterion and the number of function evaluations.
 %
@@ -104,7 +108,7 @@ In this way, this algorithm grants more importance to the diversity of the varia
 %
 Therefore, after the half of the total number of function evaluations the algorithm has a similar behavior than the state-of-the-art \MOEAS{}.
 %
-Since that in the literature exists a broad kind of \MOEAS{}, the validation of our proposal is carried out taking into consideration the \MOEADDE{}~\cite{zhang2009performance}, the \NSGAIII{} and \REMOA{} which are decomposition-based, dominance-based and indicator-based respectively.
+Since that in the literature exists a broad kind of \MOEAS{}, the validation of our proposal is carried out taking into consideration the \MOEADDE{}~\cite{zhang2009performance}, the \NSGAII{}~\cite{deb2002fast}, \REMOA{}~\cite{trautmann2013r2} and \NSGAIII{}~\cite{deb2013evolutionary} which are decomposition-based, dominance-based, indicator-based and hybrid, respectively.
 %
 This paper clearly shows the remarkable benefits of properly taking into account the diversity of the variable space.
 
@@ -112,7 +116,7 @@ The rest of this paper is organized as follows.
 %
 Section~\ref{Sec:LiteratureReview} provides a widely review of decomposition algorithms, diversity in EAs and related works.
 %
-The VSD-MOEA/D proposal is detailed in section~\ref{Sec:Proposal}.
+The \VSDMOEAD{} proposal is detailed in section~\ref{Sec:Proposal}.
 %
 Section~\ref{Sec:ExperimentalValidation} is devoted to an extensive experimental validation of the novel proposal.
 %

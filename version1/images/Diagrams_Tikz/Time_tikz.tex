@@ -1,0 +1,33 @@
+\documentclass{article}
+%\usepackage{tikz}
+
+\usepackage{pgfplots,pgfplotstable}
+%\usepackage[pdftex]{graphicx} 
+% set up externalization
+\usetikzlibrary{external}
+
+\pgfplotsset{compat=1.3}
+
+\pgfplotstableread[col sep = comma]{CSV/Scalability_2obj.csv}\ScalabilityTwoObj
+\pgfplotstableread[col sep = comma]{CSV/Scalability_3obj.csv}\ScalabilityThreeObj
+\pgfplotstableread[col sep = comma]{CSV/Initial_Distance_Factor_HV.csv}\DIHV
+\pgfplotstableread[col sep = comma]{CSV/Initial_Distance_Factor_IGDP.csv}\DIIGDP
+\pgfplotstableread[col sep = comma]{CSV/Diversity2obj.csv}\DiversityTwoWFG
+\pgfplotstableread[col sep = comma]{CSV/Diversity3obj.csv}\DiversityThreeWFG
+%\pgfplotstableread[col sep = comma]{CSV/Diversity2objWFG5.csv}\DiversityTwoWFGFive
+%\pgfplotstableread[col sep = comma]{CSV/Diversity3objWFG5.csv}\DiversityThreeWFGFive
+%\pgfplotstableread[col sep = comma]{CSV/Diversity2objWFG6.csv}\DiversityTwoWFGSix
+%\pgfplotstableread[col sep = comma]{CSV/Diversity3objWFG6.csv}\DiversityThreeWFGSix
+\pgfplotstableread[col sep = comma]{CSV/PerformanceTime2obj.csv}\Performancetimetwo
+\pgfplotstableread[col sep = comma]{CSV/PerformanceTime3obj.csv}\Performancetimethree
+
+
+
+\tikzset{external/system call={latex \tikzexternalcheckshellescape -halt-on-error
+-interaction=batchmode -jobname "\image" "\texsource";
+dvips -o "\image".ps "\image".dvi;
+ps2eps "\image.ps"}}
+\tikzexternalize
+\begin{document}
+\input{Time.tex}
+\end{document}
