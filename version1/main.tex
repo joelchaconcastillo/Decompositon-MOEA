@@ -418,7 +418,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{A Multi-objective Decomposition Algorithm Based in Variable Space Diversity}
+\title{The Importance of the Diversity on Variable \\ Space in the Design of Multi-objective \\Evolutionary Algorithms}
 %
 %
 % author names and IEEE memberships
@@ -472,8 +472,8 @@ Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mex
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+\markboth{IEEE Transactions on Evolutionary Computation,~Vol.~XX, No.~X, Month~Year}{Chacon et al.:
+A Multi-objective Evolutionary Algorithm based on Decomposition with Explicit Management of Variable Space Diversity}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -505,32 +505,36 @@ Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mex
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-In the last decade the presence of Multi-Objective Evolutionary Algorithms (MOEAs) has grown remarkably.
+Most current Multi-objective Evolutionary Algorithms (MOEAs) do not directly manage 
+the population's diversity on variable space. 
 %
-Mostly, the MOEAs incorporate components to directly improve the quality in the objective space, which implicitly involves the decision variable space.
+Only when the aim is to attain diverse solutions in the variable space, these kinds
+of mechanisms are usually considered.
 %
-Nevertheless, to attain even better quality solutions, the decision variable space should be explicitly taken into account as part of the design process.
+This is a remarkable difference with respect to single-objective optimizers, where
+even when no diverse solutions are required, the benefits of integrating mechanisms to control
+diversity are well-known.
 %
-In this way the balance between exploration and intensification could be directly induced.
+The aim of this paper is to show that the quality of current MOEAs in terms of objective space metrics can be
+enhanced by integrating mechanisms to explicitly manage the diversity on the variable space.
 %
-A quite popular strategy that provides such balance yields in the incorporation of a novel replacement operator.
+The key is to consider the stopping criterion and elapsed period with the aim of dynamically altering the importance
+granted to the diversity on the objective space and variable space,
+which is an important difference with respect to niching-based MOEAs.
 %
-This operator explictly promotes diversity in the decision variable space through several stages along the optimization process.
+Particularly, more importance is given to the variable space at initial phases and the balance
+is moved towards the objective space as evolution progresses.
 %
-In this work a decomposition based MOEA (VSD-MOEA/D), which incorporates this replacement operator, is proposed.
+A novel MOEA based on decomposition (VSD-MOEA/D) that uses these principles through a novel replacement phase is
+devised.
 %
-In addition, through several experiments, is empirically proved that as the number of obejctives is increased, the diversity degree required in the decision variable space should be less.
-%
-Even more, our proposal attained better results than the state-of-the-art MOEAs increasing the number of decision variables.
-%
- 
-
-
+Extensive experimentation shows the clear benefits of our proposal against the state of the art.
 \end{abstract}
+
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Evolutionary Algorithms, Multi-objective, Decomposition, Diversity. 
+Diversity, Decomposition, Multi-objective Optimization, Evolutionary Algorithms. 
 \end{IEEEkeywords}
 
 
@@ -652,14 +656,13 @@ Dr. Segura is a {\em Member} of the IEEE and a member of the ACM. He is currentl
 was born in Irapuato, M\'exico, in 1991 and received his Bachelor's degree in Computer Science in the field of
 bioinformatic from the Instituto Tecnol\'ogico Superior de Irapuato, in 2014.
 In 2017 he recieved the master's degree in computer science in the field of multi-objective optimization from
-the Center for Reseach in Mathematics, M\'exico.
+the Center for Research in Mathematics, M\'exico.
 
 He has participated in several international conferences with works highly related to the management of diversity
 in evolutionary algorithms.
-
 %
-He is currently working toward the Ph.D. degree, and his current research interests are multi-objective optimization, memetic algorithms,
-and machine learning.
+He is currently working toward the Ph.D. degree, and his current research interests are multi-objective optimization, 
+memetic algorithms, and machine learning.
 %
 %recieved the master's degree in computer science from the Center for Research in Mathematics, M\'exico, in 2017, where he is currently working toward the Ph.D. degree.
 %%
