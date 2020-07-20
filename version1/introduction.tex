@@ -44,8 +44,8 @@ solutions whose images are well-distributed and close to the Pareto Front~\cite{
 In recent years, the development of \MOEAS{} has grown dramatically~\cite{van1998multiobjective, coello2007mop}, resulting 
 in effective and broadly applicable algorithms.
 %
-However, quite complex benchmarks have been defined~\cite{huband2006review} and it is known that some function features 
-provoke significant degradation on the performance of \MOEAS{}.
+However, some function features provoke significant degradation on the performance of \MOEAS{}~\cite{huband2006review}, 
+so better design principles are yet required.
 %
 %TODO: Citar tras taxonomies alguna clasificacion, preferiblemente la de decomposition, dominance, quality.
 Regarding the design of \MOEAS{}, several paths have been explored resulting in diverse taxonomies.
@@ -56,19 +56,23 @@ to design \MOEAS{}.
 Current state-of-the-art \MOEAS{} consider in some way the diversity on the objective space.
 %
 In some cases, this is done explicitly through density estimators, %TODO: Citar algun density estimator
-whereas in other cases, such as in
-decomposition-based methods this is done indirectly with the use of a diverse set of weights. %TODO: Citar MOEA/D
+whereas in other cases,
+%such as in decomposition-based methods 
+this is done indirectly. 
+%with the use of a diverse set of weights. %TODO: Citar MOEA/D
 %
 Since optimizing most objective space quality indicators implies attaining a well-spread set of solutions in the
-objective space, not considering this kind of diversity at all would result in quite ineffective optimizers.
+objective space, not considering this kind of diversity would result in quite ineffective optimizers.
 %
 A quite different condition appears with respect to diversity on the variable space.
 %
 Since objective space quality metrics do not consider at all the diversity on the variable space,
 most \MOEAS{} designers disregard this diversity.
 
-Differently, when looking at the best optimizers for other areas of optimization, such as the single-objective case,
-it is clear that several state-of-the-art methods introduce mechanisms to vary the trend of the 
+Differently, %when looking at the best optimizers for other areas of optimization, such as i
+%the single-objective case,
+%it is clear that 
+several state-of-the-art single-objective methods introduce mechanisms to vary the trend of the 
 diversity on the variable space even if obtaining a diverse
 set of solutions is not the aim of the optimization~\cite{Joel:Crepinsek}.
 %
@@ -79,7 +83,7 @@ In fact, the proper management of diversity is considered as one of the cornerst
 Thus, these differences between the design principles applied in single-objective and multi-objective evolutionary 
 algorithms are shocking.
 %
-Moreover, several authors have shown that modern \MOEAS{} suffer some drawbacks related to stagnation and premature 
+Moreover, practitioners have shown that modern \MOEAS{} suffer some drawbacks related to stagnation and premature 
 convergence in subset of variables~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic}.
 %
 As a result, this paper studies the hypothesis that incorporating mechanisms to manage the diversity on the decision space 
@@ -129,33 +133,33 @@ to design the winning strategy of the extended round of Google Hash Code
 %
 Thus, we decided to explore the incorporation of this principle in the design of \MOEAS{}.
 %
-Probably, one of the most important drawbacks of this design principle is that most discussed optimizers require long-term
-executions to excel.
+%Probably, one of the most important drawbacks of this design principle is that most discussed optimizers require long-term
+%executions to excel.
 %
-Even if this is the case for \MOEAS{}, there is a niche for these kinds of optimizers, so exploring them is important.
+%Even if this is the case for \MOEAS{}, there is a niche for these kinds of optimizers, so exploring them is important.
 %Toda la parte de detalles de Evolución Diferencial se me hacían demasiado largas, tal vez para la revisión de literatura sí
 %está bien.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
 
 One of the main difficulties for incorporating the previous principle to the design of \MOEAS{} is that
-two different diversities should be taken into account, i.e. the one on the variable space and the 
-one on the objective space, and the relation between them is problem-dependent.
+meassures of the variable space and objective space must be taken into account simultaneously.
+%and the relation between them is problem-dependent.
 %
-Note that the aforementioned design principle is based on reducing the importance of diversity on variable space as 
-generations evolve, so we maintain this decision and consequently increase the importance of diversity on objective space as
-the execution progresses.
+The discussed design principle is based on reducing the importance of diversity on variable space as 
+generations evolve, so we maintain this decision and indirectly increase the importance granted to diversity 
+and quality on objective space as the execution progresses.
 %
 %Esta es demasiado detalle asi que mejor para la propuesta
 %In fact, our proposal behaves as a traditional \MOEA{} during the last half of the optimization, in the sense
 %that the diversity on the variable space is disregarded.
 %
-In order to show the validity of our hypothesis, this paper proposes 
-\textit{the Variable Space Diversity MOEA based on Decomposition} (\VSDMOEAD{}).
+In order to show the validity of our hypothesis, this paper proposes the
+\textit{Variable Space Diversity MOEA based on Decomposition} (\VSDMOEAD{}).
 %, which explicitly manage the diversity in the 
 %variable space to properly balance from exploration towards intensification.
 %
-Particularly, \VSDMOEAD{} simplifies \MOEADDE{}~\cite{zhang2009performance} by deactivating the dynamical resource allocation
+\VSDMOEAD{} simplifies \MOEADDE{}~\cite{zhang2009performance} by deactivating the dynamical resource allocation
 scheme and the notion of neighborhood,
 %Lo de panmictic lo pasamos a la propuesta, para acortar aqui
 %, meaning that the more traditiona panmictic population is used, 
@@ -179,7 +183,8 @@ and some other related works.
 %
 The \VSDMOEAD{} proposal is detailed in section~\ref{Sec:Proposal}.
 %
-Section~\ref{Sec:ExperimentalValidation} is devoted to an extensive experimental validation of the novel proposal.
+Section~\ref{Sec:ExperimentalValidation} is devoted to an extensive experimental validation of the novel proposal and
+design principle.
 %
 Finally, conclusions and some lines of future work are given in section~\ref{Sec:Conclusion}.
 %
