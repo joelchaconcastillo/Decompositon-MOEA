@@ -12,14 +12,18 @@ involves two or more conflicting objectives as defined in (\ref{eqn:main})
 \begin{equation}\label{eqn:main}
 \begin{split}
 &min \quad F(x) = (f_1(x), ..., f_M(x)) \\
-&s.t. \quad x \in \Omega.
+&s.t. \quad x_i^{(L)} \leq x_i \leq x_i^{(U)}
+%&s.t. \quad x \in \Omega.
 \end{split}
 \end{equation}
 
 where 
-$\Omega \subseteq \Re^D$ denotes the decision or variable space, 
-$F: \Omega \rightarrow Y \subseteq \Re^M$ consists of $M$ objectives and 
-$Y$ is the objective space.
+each decision variable $x_i \in \Re^D$ is constrained by $x_i^{(L)}$ and $x_i^{(U)}$, 
+i.e. the lower bound and the upper bound.
+%$\Omega \subseteq \Re^D$ denotes the decision or variable space, 
+The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$.
+Each solution is mapped to the \textit{objective space} $Y$ with the function $F: \Omega \rightarrow Y \subseteq \Re^M$, 
+which consists of $M$ real-valued objective functions.
 %
 %
 %Decidir quitar estas definiciones porque la introduccion está muy larga
@@ -48,17 +52,17 @@ However, some function features provoke significant degradation on the performan
 so better design principles are yet required.
 %
 %TODO: Citar tras taxonomies alguna clasificacion, preferiblemente la de decomposition, dominance, quality.
-Regarding the design of \MOEAS{}, several paths have been explored resulting in diverse taxonomies.
+Regarding the design of \MOEAS{}, several paths have been explored resulting in diverse taxonomies~\cite{trivedi2016survey}.
 %
 For instance, principles related to decomposition, dominance and quality metrics are used
 to design \MOEAS{}.
 %
 Current state-of-the-art \MOEAS{} consider in some way the diversity on the objective space.
 %
-In some cases, this is done explicitly through density estimators, %TODO: Citar algun density estimator
+In some cases, this is done explicitly through density estimators~\cite{beume2007sms}, %TODO: Citar algun density estimator
 whereas in other cases,
 %such as in decomposition-based methods 
-this is done indirectly. 
+this is done indirectly~\cite{zhang2007moea}. 
 %with the use of a diverse set of weights. %TODO: Citar MOEA/D
 %
 Since optimizing most objective space quality indicators implies attaining a well-spread set of solutions in the
@@ -90,7 +94,7 @@ As a result, this paper studies the hypothesis that incorporating mechanisms to 
 might bring important benefits to the field of multi-objective optimization.
 %
 %TODO: citar ejemplos significativos de niching-based MOEAS{}.
-Note that differently to other proposals, such as niching-based \MOEAS{}, we are not interested in obtaining
+Note that differently to other proposals, such as niching-based \MOEAS{}~\cite{mahfoud1995niching, srinivas1994muiltiobjective}, we are not interested in obtaining
 a diverse set of solutions in the decision space.
 %
 Instead, we state that the quality of the results in terms of objective-space indicators can be improved further with these
