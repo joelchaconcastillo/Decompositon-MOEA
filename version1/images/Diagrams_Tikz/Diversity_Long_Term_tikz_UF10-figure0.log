@@ -2,9 +2,9 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**\def\tikzexternalrealjob{Diversity_Long_Term_tikz_WFG1}\input{Diversity_Long_
-Term_tikz_WFG1}
-(./Diversity_Long_Term_tikz_WFG1.tex (/usr/share/texlive/texmf-dist/tex/latex/b
+**\def\tikzexternalrealjob{Diversity_Long_Term_tikz_UF10}\input{Diversity_Long_
+Term_tikz_UF10}
+(./Diversity_Long_Term_tikz_UF10.tex (/usr/share/texlive/texmf-dist/tex/latex/b
 ase/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -460,11 +460,11 @@ Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zexternalshared.code.tex))
-PGFPlots: reading {CSV/Diversity_HV_Long_Term_WFG1.csv}
+PGFPlots: reading {CSV/Diversity_HV_Long_Term_UF10.csv}
 No auxiliary output files.
 
 \w@pgfexternal@auxout=\write4
-No file Diversity_Long_Term_tikz_WFG1-figure0.aux.
+No file Diversity_Long_Term_tikz_UF10-figure0.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
@@ -481,12 +481,12 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.15} (current compat level: 1.3).
 
-\openout4 = `Diversity_Long_Term_tikz_WFG1-figure0.dpth'.
+\openout4 = `Diversity_Long_Term_tikz_UF10-figure0.dpth'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 49.
+(Font)              <7> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 49.
+(Font)              <5> on input line 43.
 [1
 
 ]
@@ -494,13 +494,13 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
  ) 
 Here is how much of TeX's memory you used:
- 21782 strings out of 492983
- 595463 string characters out of 6134923
- 761525 words of memory out of 5000000
- 25026 multiletter control sequences out of 15000+600000
+ 21739 strings out of 492983
+ 594169 string characters out of 6134923
+ 751705 words of memory out of 5000000
+ 24983 multiletter control sequences out of 15000+600000
  4646 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,16n,100p,809b,2234s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,16n,100p,809b,2214s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Diversity_Long_Term_tikz_WFG1-figure0.dvi (1 page, 34412 byte
+Output written on Diversity_Long_Term_tikz_UF10-figure0.dvi (1 page, 23628 byte
 s).

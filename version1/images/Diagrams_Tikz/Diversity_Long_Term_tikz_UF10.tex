@@ -8,7 +8,7 @@
 
 \pgfplotsset{compat=1.3}
 
-\pgfplotstableread[col sep = comma]{CSV/Diversity_HV_Long_Term_UF5.csv}\data
+\pgfplotstableread[col sep = comma]{CSV/Diversity_HV_Long_Term_UF10.csv}\data
 
 \tikzset{external/system call={latex \tikzexternalcheckshellescape -halt-on-error
 -interaction=batchmode -jobname "\image" "\texsource";
@@ -22,7 +22,7 @@ ps2eps "\image.ps"}}
 \begin{axis}[
 height=0.35\textwidth,
  width=0.8\textwidth,
-title={\textit{\textbf{On Convergence of Distance Variables in UF5}}},
+title={\textit{\textbf{On Convergence of Distance Variables in UF10}}},
 %  xlabel=Function Evaluations,
   ylabel=ADI,
 xticklabels={,,},
@@ -32,21 +32,14 @@ ytick={0.0, 0.5, 1.0, 1.5, 2.0, 2.5},
     {cells={anchor=east},legend pos=outer north east,}, nodes={scale=0.8, transform shape}    ,
   xtick=data]
  
-\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_D_Distance,x=X]{\data};
-	\addlegendentry{VSD-MOEA/D}
+\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_D_Distance_0,x=X]{\data};
+	\addlegendentry{$D_I = 0.0$}
 
-\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D_DE_Distance,x=X]{\data};
-	\addlegendentry{MOEA/D-DE}
+\addplot[black,dotted,mark=pentagon*] table [y= VSD_MOEA_D_Distance_0_4,x=X]{\data};
+	\addlegendentry{$D_I = 0.4$}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_Distance,x=X]{\data};
-	\addlegendentry{NSGA-II}
-
-\addplot[orange,dotted,mark=otimes*] table[y= NSGA_III_Distance,x=X]{\data};
-	\addlegendentry{NSGA-III}
-	
-\addplot[brown,dotted,mark=diamond*] table [y= R2_EMOA_Distance,x=X]{\data};
-	\addlegendentry{R2-EMOA}
-
+\addplot[blue,dotted,mark=triangle*] table[y= VSD_MOEA_D_Distance_1_0,x=X]{\data};
+	\addlegendentry{$D_I = 1.0$}
 \end{axis}
 \end{tikzpicture}
 
@@ -66,20 +59,14 @@ height=0.35\textwidth,
   xticklabels from table={\data}{mean},xtick=data]
 
  
-\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_D_HV,x=X]{\data};
+\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_D_HV_0,x=X]{\data};
 %	\addlegendentry{VSD-MOEA/D}
 
-\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D_DE_HV,x=X]{\data};
+\addplot[black,dotted,mark=pentagon*] table [y= VSD_MOEA_D_HV_0_4,x=X]{\data};
 %	\addlegendentry{MOEA/D-DE}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_HV,x=X]{\data};
+\addplot[blue,dotted,mark=triangle*] table[y= VSD_MOEA_D_HV_1_0,x=X]{\data};
 %	\addlegendentry{NSGA-II}
-
-\addplot[orange,dotted,mark=otimes*] table[y= NSGA_III_HV,x=X]{\data};
-%	\addlegendentry{NSGA-III}
-	
-\addplot[brown,dotted,mark=diamond*] table [y= R2_EMOA_HV,x=X]{\data};
-%	\addlegendentry{R2-EMOA}
 
 \end{axis}
 \end{tikzpicture}
