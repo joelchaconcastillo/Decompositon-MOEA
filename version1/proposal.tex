@@ -1,87 +1,72 @@
 
-Given the success of this methodology, exploring its application to other areas of optimization seems really promising.
-
-
-This section is devoted to describe our proposal the \textit{Variable Space Diversity \MOEA{} based in Decomposition} (\VSDMOEAD{}), which is categorized as a decomposition-based \MOEA{}.
+This section is devoted to describe our proposal, the \textit{Variable Space Diversity \MOEA{} based on Decomposition} (\VSDMOEAD{}).
 %
-In particular, the motivation behind \VSDMOEAD{} is the incorporation of techniques to improve further more the performance of decomposition-based algorithms in long-term executions.
+The main novelty and motivation behind \VSDMOEAD{} is the incorporation of an explicit management of the diveristy on variable space
+with the aim of improving the behaviour in terms of objective space metrics specially in long-term executions, which is the
+environment where diversity-aware techniques have excelled.
 %
-Although that \VSDMOEAD{} is inspired in the \MOEAD{}, its design is quite similar to some older \MOEAS{}.
+Although \VSDMOEAD{} is inspired in \MOEAD{}, it was simplified so in some ways it resembles more mature
+decomposition-based \MOEAS{}, such as \MOGA{}.
 %
-The main reason of this is that \VSDMOEAD{} leaves out several representative components of the \MOEAD{}.
+For instance, the notion of subproblem neighborhood is not used and the dynamic resource allocation usually applied in modern variants
+of \MOEAD{} is deactivated.
 %
-In fact, it follows similar ideas found in the \MOGA{} and \CMOGA{}~\cite{murata2002cellular}.
-%
-In the \CMOGA{} each individual resides in a different cell, such cells belong to a spatially structure space formed in a $m$-dimensional weight space.
-%
-Therefore, each cell has its own weight vector.
-%
-Equivally to \MOEAD{} and \CMOGA{}, \VSDMOEAD{} incorporates sub-problems where each one manages a different weight vector.
-%
-Thus, each sub-problem is associated to each individual from the population.
-%
-However, \VSDMOEAD{} drop out the neighbourhoods definition, being perhaps the most representative characteristic of \CMOGA{} and \MOEAD{}.
-%
-Similarly than \MOGA{}, in \VSDMOEAD{} the mating and the replacement restrictions are applyied among the whole population.
-%
-Contrary to \MOGA{} where the weight vectors are randomly generated in each generation, in \VSDMOEAD{} the application of the weight vectors remains fixed along the whole execution.
-%
+The main reason for the simplification is to show that even a simple \MOEA{} incorporating our design principles can
+improve further state-of-the-art algorithms.
 
 Our proposal decomposes the \MOP{} in several single-objective problems.
 %
-Notwithstanding that any decomposition approach can be employed to decompose the \MOP{}, in this work is incorporated the Tchebycheff approach.
+Notwithstanding that any scalarization approach can be employed, out strategy applies the Tchebycheff approach, which has shown
+some of the most effective results in recent years.
 %
-Let $\lambda_1, ..., \lambda_N$ a set of even spread weight vectors and $z^*$ be the reference point.
-%
-The decomposition into $N$ scalar optimization sub-problems by using the Tchebycheff approach and the objective function of the $j$-th sub-problem is indicated in the Eq. (\ref{eqn:approach}).
+Let $\lambda_1, ..., \lambda_N$ be a set of weight vectors and $z^*$ a reference point,
+the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (\ref{eqn:approach}).
 %
 
 \begin{equation}\label{eqn:approach}
 \displaystyle{
-g^{te}(x| \lambda_j, z^*) = \max_{ 1 \leq i \leq m} \{ \lambda_{j,i} | f_i(x) - z_i^*|\}
+g^{te}(x| \lambda_j, z^*) = \max_{ 1 \leq i \leq M} \{ \lambda_{j,i} | f_i(x) - z_i^*|\}
 }
 \end{equation}
 
 
-The main contribution of the \VSDMOEAD{} is the incorporation of a survivor selection scheme.
+The main novelty of \VSDMOEAD{} appears in the  survivor selection scheme.
 %
-This selection aims to explorate the decision variable space through differents stages.
+Following some of the most successful single-objective diversity-aware algorithms~\cite{segura2016improving}, the 
+replacement strategy relates the degree of diversity on variable space to the stopping criterion
+and elapsed generations.
 %
-Such goal is achieved incorporating the stopping criterion and elapsed generations.
+The aim of this relation is to gradually bias the search from exploration to explotation as the
+optimization evolves.
 %
-In this way, the search is gradually driven from exploration to exploitation.
+In particular, the diversity is explicitly promoted in a decreasing way until half of total generations. 
 %
-Mainly, the diversity is explicitly promoted until a half of total generations. 
-%
-In the remaining generations the \VSDMOEAD{} has a similar behavior than the habitual \MOEAS{}.
-%
+Then, in the remaining generations the \VSDMOEAD{} has a similar behavior than most popular
+\MOEAS{}, i.e. the diversity on the variable space is not used at all.
 
-The main procedure of the \VSDMOEAD{} is shown in the Algorithm~\ref{alg:vsd-moead}.
+The main procedure of the \VSDMOEAD{} is shown in Algorithm~\ref{alg:vsd-moead}.
 %
-This pseudo-code integrates two populations; the parent population ($P$) and offspring population ($Q$).
+The mating and variation components are similar to those used in typical \MOEAS{}.
 %
-The role of the former is to explicitly maintain diverse individuals in several stages.
+Particularly, in the $t$ generation, the population $P^t$ is used to generate
+the offspring $Q^t$ with $N$ individuals by randomly selecting at each step three indivuals
+to apply the $DE/rand/1/bin$ operator.
 %
-Beginning, in line~\ref{alg_1:1} is initialized the first parent population $P^0$, i.e. are randomly generated $N$ individuals inside the decision variable space.
+Then, polynomial mutation is applied to the output of the $DE$ operator.
 %
-After that, a set of spread weight vectors are defined in line~\ref{alg_1:2}.
+%TODO: cómo se generaron los pesos?
+As in most current \MOEAD{} variants, the initial population is generated randomly,
+the number of weight vector is equal to the population size,
+and the reference vector $z^*$ used for the Tchebycheff decomposition is composed by the best attained 
+objective values.
 %
-Then, in line~\ref{alg_1:3} the individuals of the initial population $P^0$ are evaluated.
+Finally, the survivor selection stage is applied.
 %
-Those evaluations are employed to built a reference vector $z^*$, which is composed by the best attained objective values (line \ref{alg_1:4}).
+This is quite different to traditional techniques, in the sense that $P^t$ and $Q^t$ are merged, meaning
+that differently than in \MOEAD{} the position of each individual is not important, and a diversity-aware
+selection is performed.
 %
-Then, iteratively (lines \ref{alg_1:5} - \ref{alg_1:13}) each $t$-th generation proceeds as follows.
-%
-First, the offspring population $Q^t$ is generated through the standard \DE{} strategy, which involves the mating selection and the variation operators.
-%
-Then, in the survivor selection stage (line \ref{alg_1:11}), are selected the survivors of the next generation $P^{t+1}$.
-%
-Particularly, are merged $P^t$ and $Q^t$ picking up $N$ individuals.
-%
-At this point is clear that the main framework of the \VSDMOEAD{} is quite common.
-%
-Therefore, its main contribution appears in the replacement phase which takes its part inside the survivor selection and is explained in the following section.
-%
+Since this is the novelty of the paper, its working operation is given in detail.
 
 \begin{algorithm}[!t]
 \algsetup{linenosize=\tiny}
@@ -108,88 +93,66 @@ Therefore, its main contribution appears in the replacement phase which takes it
 
 
 %
-\subsection{Novel Replacement Phase Incorporated to \VSDMOEAD{} }
+\subsection{Novel Replacement Phase of \VSDMOEAD{} }
 
+The purpose of the replacement phase (see Algorithm~\ref{alg:replacement}) is to select the set of survivors of the next generation.
+%
+The survivor selection described in this work incorporates similar design principles to those applied in 
+the diversity-aware single-objective optimizer \textsc{de-edm}~\cite{castillo2019differential}.
+%
+It operates as follows.
+%
+First, the parent and offspring populations are merged in a multi-set to establish the candidate set ($R^t$).
+%
+A key of the scheme is to promote the selection of individuals with a large enough contribution to diversity
+on variable space.
+%
+Particularly, the contribution of an individual $x$ is calculated as $\displaystyle{\min_{p \in P^{t+1}}\ Distance(x, p)}$, 
+where $P^{t+1}$ is the multi-set of the already picked survivors and the normalized Euclidean distance
+specified in (\ref{eqn:distance}) is applied.
+%
+Note that in the pseudocode the tag \DCS{} (Distance to Closest Solution) is used to denote the contribution to diversity.
 
-The purpose of the replacement phase is the selection of individuals in the current generation that will survive in the next generation.
-%
-The survivor selection described in this work incorporates the same principle that the one applied in single-objective optimization~\cite{castillo2019differential}.
-%
-The survivor selection scheme is explained as follows.
-%
-First, the parent set and offspring set are merged in a multi-set, better known as the candidate set.
-%
-Then, iteratively an individual from the candidate set that better fulfills some requirements is moved to the survivor set.
-%
-In particular, the next two requirements are taken into account.
-%
-The contribution to the diversity in the decision variable space and the scalarizing function value in the objective space.
-%
-In spite that the former can be computed in several ways, in this work we define the Distance to Closest Survivor (\DCS{}).
-%
-This definition quantifies the contribution to the diversity of an individual if it were introduced into a reference set.
-%
-A formal definition is $\displaystyle{\min_{p \in P}\ Distance(x, p)}$, where $P$ is the multi-set of the already picked survivors and $x$ is the individual whose contribution is being computed.
-%
-Without loss of generality, we integrate the normalized Euclidean distance, which is specified in the Eq. (\ref{eqn:distance}).
-%
-This equation measures the distance between two individuals $A$ and $B$.
-%
 \begin{equation}\label{eqn:distance}
 Distance(A, B) =   \left ( \frac{1}{n}  \sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(L)}} \right )^2  \right)^{1/2}
 \end{equation}
 
-This survivor selection scheme is governed by a gradual transition between exploration to exploitation.
+In order to promote the selection of distant individuals, a threshold $D^t$ is calculated and non-selected individuals with a $DCS$
+lower than $D^t$ are moved from $R^t$ to the $Penalized$ set.
 %
-Such transition can be achieved requiring a \DCS{} value among the population in each generation.
+Note that the calculation of $D^t$ (line 7) depends on an initial threshold value ($D_I$), which is a parameter of our proposal,
+on the number of generations that have evolved ($G_{Elapsed}$) and on the stopping criterion ($G_{End}$).
 %
-Accordingly, the selection of survivors with larger \DCS{} values contribute more significantly to the exploration.
+Particularly, the value is decreased linearly as generations evolve.
 %
-Otherwise, shorter \DCS{} values might induce exploitation.
+Since survivors with larger \DCS{} values, provoke exploration steps, this linear decrease promotes
+a gradual transition between exploration to exploitation.
 %
-Therefore, in this heuristic to promote high levels of exploration, the candidates with a \DCS{} value below a threshold are penalized.
-%
-Then, each individal from the non-penalized set is associated with an available weight vector whose scalarizing function value is the best.
-%
-Finally, the individual with the best scalarizing function value among the non-penalized set is moved to the survivor set disabling its associated weight vector.
-%
-Note that it might occurs that all individuals are penalized, in such case the individual with the largest \DCS{} is selected to survive.
+Also note that after $50\%$ of the total number of generations, the $D^t$ value is below 0, 
+meaning that no penalties are applied and a more traditional strategy focused only on the objectives values
+is used to perform the selection steps.
 
+The strategy iteratively selects an individual from the candidate set ($R^t$) to generate the new population ($P^{t+1}$) with
+$N$ individuals.
 %
-The pseudo-code of the replacement phase is shown in the Algorithm~\ref{alg:replacement}.
+In particular, the aim is to select a proper individual for each weight vector.
 %
-First, at the $t$-th generation the parent set $P^t$ and the offspring set $Q^t$ are merged in the candidate multi-set $R^t$ (line \ref{alg_2:1}).
+The set of weight vectors considered by our strategy are initial placed in $\lambda^{t}$.
 %
-At each iteration, the candidate set $R^t$ represents the individuals that are non-penalized and might be selected to survive.
+In each iteration the individual in $R^t$ with the best scalarizing function for any of the weight vectors in
+$\lambda^{t}$ is identified (line 14).
 %
-In lines \ref{alg_2:2} - \ref{alg_2:4}, the survivor set $P^{t+1}$, the penalized set and a weight vector set $\lambda^{t+1}$ are initialized to the empty set.
+Then, such an individual is selected as a survivor (line 15) and the used weight vector is transferred to the
+weight vector set of the next population (line 16).
 %
-Then, the threshold value $D^t$ that is used to penalize individuals that are too close is calculated in line \ref{alg_2:5}.
+Note that $N$ individuals are selected, meaning that each weight vector is used to select a single individual.
 %
-Note that the required diversity that is promoted through this threshold is decreased linearly.
+Also note that it maight happen that $R^t$ is empty prior to selecting $N$ individuals.
 %
-In addition, the diversity that is initially promoted is indicated by $D_I$, which is the initial threshold value, $G_{Elapsed}$ is the number of generations that have evolved, and $G_{End}$ is the stopping criterion.
+This means that the diversity is lower than expected.
 %
-Then, iteratively the selection is performed until the survivor set contains $N$ individuals.
-%
-Particularly, each survivor is picked up as follows (lines \ref{alg_2:6} - \ref{alg_2:16}).
-%
-First, the most close individuals from the candidate set $R^t$ are moved to the penalized set (lines \ref{alg_2:7} - \ref{alg_2:8}).
-%
-Among the non-penalized set $R^t$, each individual is paired with each available weight vector $\lambda^t$, selecting the individual with the best scalarizing function value (lines \ref{alg_2:13} - \ref{alg_2:14}).
-%
-Finally, the associated weight vector is temporally disabled, i.e. it is moved to the set of the next generation $\lambda^{t+1}$ (line \ref{alg_2:15}).
-%
-In the case in which all the individuals are penalized, then is selected the one with the best contribution to the diversity and is moved to the survivor set $P^{t+1}$.
-%
-The linear decrease of the required diversity is calculated such that after $50\%$ of the total number of generations, the $D^t$ value is below 0, meaning that no penalties are applied.
-%
-This means that in the first $50\%$ of the total generations, more exploration is induced and in the remaining generations \VSDMOEAD{} behaves similarly than in the habitual \MOEAS{}.
-%
-At this point it can be noted that the proposed replacement phase requires the level of diversity that is promoted initially $D_I$.
-%
-Nevertheless, in the next section is shown that this parameter can be set in a wide range of values without affecting the algorithmic performance.
-
+In such a case, the individual with a larger \DCS{} value is selected to survive (lines 11 - 13) with the aim of
+increasing the exploration level.
 
 \begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
