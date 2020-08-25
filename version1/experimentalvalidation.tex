@@ -63,7 +63,7 @@ The specific parameterization required by each algorithm is shown in Table~\ref{
 %
 Note that scalarization functions are required in \MOEADDE{}, \RMOEA{}, \NSGAIII{} and \VSDMOEAD{}.
 %
-In all those cases, the Tchebycheff approach is used.
+In all those cases, the \ASF{} approach is used.
 %
 Nevertheless, the weight vectors employed in \RMOEA{} are distinct that in the remaining algorithms.
 %
@@ -225,6 +225,10 @@ This might occurs since that \RMOEA{} takes into account a greater number of wei
 Nevertheless, the mean \HV{} ratio value attained by \VSDMOEAD{} is quite superior than the remaining methods.
 %
 In fact the \HV{} ratio values attained by \VSDMOEAD{} in each problem is not worst than the reported by \MOEADDE{} and \NSGAIII{} with three objectives, such methods incorporated the same number of weight vectors.
+%
+To prove those arguments, in the supplementary material is shown a variant of our proposal \AVSDMOEAD{} in which is incorporated an external archive based in the \RR{} indicator.
+%
+\AVSDMOEAD{} was remarkable superior than the state-of-the-art \MOEAS{} with two and three objectives in both total deterioration ($0.153$ and $0.006$) and term of total wins and loses ($80$ and $73$ wins).
 %
 %Although that the performance of \VSDMOEAD{} can be affected by the distribution of the weight vectors, its overall \HV{} ratio values are quite better.
 %

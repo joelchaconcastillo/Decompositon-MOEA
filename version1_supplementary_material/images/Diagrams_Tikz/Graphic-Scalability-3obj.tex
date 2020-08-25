@@ -1,0 +1,50 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+ymin=0.0,
+title={\textit{\textbf{Scalability with Three Objectives}}},
+    xlabel=Number of Decision Variables,
+  ylabel=Mean HV,
+%  xlabel style={yshift=-0.2cm},
+  xticklabel style = {rotate=30},
+  legend style=
+    {cells={anchor=east},legend pos=outer north east,},
+  xticklabels from table={\ScalabilityThreeObj}{mean},xtick=data]
+  
+\addplot[red,solid,mark=square*] 
+table [y=VSD_MOEA_D,x=X]{\ScalabilityThreeObj};
+\addlegendentry{VSD-MOEA/D}
+%\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{\ScalabilityThreeObj};
+%\addlegendentry{NSGA-II}]
+%		
+%\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityThreeObj};
+%\addlegendentry{R2-EMOA}]
+    
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityThreeObj};
+\addlegendentry{MOEA/D-DE}]
+\end{axis}
+\end{tikzpicture}
+%\begin{tikzpicture}[scale=0.8]
+%\begin{axis}[
+%ymin=0.0,
+%title={\textit{\textbf{Scalability UF10}}},
+%    xlabel=Number of Decision Variables,
+%  ylabel=Mean HV,
+%  xticklabel style = {rotate=30},
+%  legend style=
+%    {cells={anchor=east},legend pos=outer north east,},
+%  xticklabels from table={\ScalabilityUFTenThreeObj}{mean},xtick=data]
+%  
+%\addplot[red,solid,mark=square*] 
+%table [y=VSD_MOEA,x=X]{\ScalabilityUFTenThreeObj};
+%\addlegendentry{VSD-MOEA}
+%\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{\ScalabilityUFTenThreeObj};
+%\addlegendentry{NSGA-II}]
+%		
+%\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityUFTenThreeObj};
+%\addlegendentry{R2-MOEA}]
+%    
+%\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityUFTenThreeObj};
+%\addlegendentry{MOEA/D}]
+%\end{axis}
+%\end{tikzpicture}
+%\caption{Mean of the \HV{} (35 runs) considering three objectives.}

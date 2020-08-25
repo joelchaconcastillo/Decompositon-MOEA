@@ -16,8 +16,8 @@ improve further more complex state-of-the-art algorithms.
 
 Our proposal decomposes the \MOP{} in several single-objective problems.
 %
-Notwithstanding that any scalarization approach can be employed, out strategy applies the Tchebycheff approach, which has shown
-some of the most effective results in recent years.
+Notwithstanding that any scalarization approach can be employed, our strategy applies the achievement scalarizing function (\ASF{}), which has shown
+some of the most effective results in recent years~\cite{deb2013evolutionary, hernandez2015improved}.
 %
 Let $\lambda_1, ..., \lambda_N$ be a set of weight vectors and $z^*$ a reference vector,
 the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (\ref{eqn:approach}).
@@ -25,7 +25,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
 
 \begin{equation}\label{eqn:approach}
 \displaystyle{
-g^{te}(x| \lambda_j, z^*) = \max_{ 1 \leq i \leq M} \{ \lambda_{j,i} | f_i(x) - z_i^*|\}
+ g^{te}(x| \lambda_j, z^*) = \max_{ 1 \leq i \leq M} \left \{ \frac{ | f_i(x) - z_i^*|}{\lambda_{j,i}} \right \} 
 }
 \end{equation}
 
@@ -83,7 +83,7 @@ Then, polynomial mutation is applied to the output of the $DE$ operator.
 %TODO: cómo se generaron los pesos?
 As in most current \MOEAD{} variants, the initial population is generated randomly,
 the number of weight vectors is equal to the population size,
-and the reference vector $z^*$ used for the Tchebycheff scalarization is composed by the best attained 
+and the reference vector $z^*$ used for \ASF{} is composed by the best attained 
 objective values.
 %
 Finally, the survivor selection stage is applied.

@@ -1,18 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Literature Review}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Diversity in Evolutionary Algorithms}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{moeas and Diversity in Decision Variable Space}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Decomposition-Based MOEAs}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Diversity-aware Single-objective Optimizers}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Diversity on Variable Space in moeas}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Multi-objective State-of-the-art Algorithms}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Proposal}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Replacement Phase of vsd-moea/d }{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{ Additional considerations}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Experimental Validation}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Comparison Against State-of-the-art}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Effect of the Initial Distance Factor}{section.4}% 11
+\BOOKMARK [2][-]{subsection.3.1}{Novel Replacement Phase of vsd-moea/d }{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Experimental Validation}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Performance of moeas in long-term executions}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Decision Variable Scalability Analysis}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Analysis of the Initial Threshold Value}{section.4}% 11
 \BOOKMARK [1][-]{section.5}{Conclusion}{}% 12
-\BOOKMARK [1][-]{section*.1}{Appendix A: Proof of the First Zonklar Equation}{}% 13
-\BOOKMARK [1][-]{section*.2}{Appendix B}{}% 14
-\BOOKMARK [1][-]{section*.4}{References}{}% 15
-\BOOKMARK [1][-]{IEEEbiography.0}{Biographies}{}% 16
-\BOOKMARK [2][-]{IEEEbiography.1}{Carlos Segura}{IEEEbiography.0}% 17
-\BOOKMARK [2][-]{IEEEbiography.2}{Joel Chac\363n}{IEEEbiography.0}% 18
+\BOOKMARK [1][-]{section*.2}{References}{}% 13
+\BOOKMARK [1][-]{IEEEbiography.0}{Biographies}{}% 14
+\BOOKMARK [2][-]{IEEEbiography.1}{Carlos Segura}{IEEEbiography.0}% 15
+\BOOKMARK [2][-]{IEEEbiography.2}{Joel Chac\363n}{IEEEbiography.0}% 16
+\BOOKMARK [2][-]{IEEEbiography.3}{Oliver Sch\374tze}{IEEEbiography.0}% 17
