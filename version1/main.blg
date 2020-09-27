@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -9,64 +9,51 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex/bib/IEEEabrv.bib
 Database file #2: bibtex/bib/References.bib.bib
-Warning--I didn't find a database entry for "Joel:WFG"
-Warning--I didn't find a database entry for "Joel:DTLZ"
-Warning--I didn't find a database entry for "Joel:CEC2009"
-Warning--I didn't find a database entry for "Joel:jMetal"
-Warning--I didn't find a database entry for "MOEADCode"
-Warning--I didn't find a database entry for "R2EMOACode"
-Warning--I didn't find a database entry for "Joel:SBX1994"
-Warning--I didn't find a database entry for "Joel:Mutation"
-Warning--I didn't find a database entry for "Joel:MOEAD_Uniform_Design"
-Warning--I didn't find a database entry for "Joel:Kuhn_Munkres"
-Warning--I didn't find a database entry for "ishibuchi2017reference"
-Warning--I didn't find a database entry for "li2015evolutionary"
-Warning--I didn't find a database entry for "Joel:StatisticalTest"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty journal in fonseca1995multiobjective
+Warning--empty journal in zhang2008multiobjective
 
 Done.
-You've used 42 entries,
+You've used 48 entries,
             4087 wiz_defined-function locations,
-            1481 strings with 23830 characters,
-and the built_in function-call counts, 36472 in all, are:
-= -- 3008
-> -- 860
-< -- 379
-+ -- 483
-- -- 132
-* -- 1768
-:= -- 5281
-add.period$ -- 93
-call.type$ -- 42
-change.case$ -- 39
-chr.to.int$ -- 879
-cite$ -- 43
-duplicate$ -- 2512
-empty$ -- 2773
-format.name$ -- 172
-if$ -- 8556
+            1487 strings with 24515 characters,
+and the built_in function-call counts, 41582 in all, are:
+= -- 3430
+> -- 952
+< -- 430
++ -- 538
+- -- 142
+* -- 2005
+:= -- 6013
+add.period$ -- 106
+call.type$ -- 48
+change.case$ -- 48
+chr.to.int$ -- 1014
+cite$ -- 49
+duplicate$ -- 2861
+empty$ -- 3203
+format.name$ -- 187
+if$ -- 9774
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 410
-newline$ -- 149
-num.names$ -- 42
-pop$ -- 883
+int.to.str$ -- 48
+missing$ -- 460
+newline$ -- 171
+num.names$ -- 49
+pop$ -- 1002
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2821
+skip$ -- 3230
 stack$ -- 0
-substring$ -- 2085
-swap$ -- 2212
-text.length$ -- 86
+substring$ -- 2408
+swap$ -- 2502
+text.length$ -- 92
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 42
+type$ -- 48
 warning$ -- 1
-while$ -- 186
-width$ -- 44
-write$ -- 441
-(There were 14 warnings)
+while$ -- 210
+width$ -- 50
+write$ -- 503
+(There was 1 warning)
