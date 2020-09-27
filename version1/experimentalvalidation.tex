@@ -1,129 +1,179 @@
-This section is devoted to carry out the validation of our proposal against state-of-the-art \MOEAS{}.
+This section is devoted to carry out the validation of our proposal against state-of-the-art \MOEAS{} and
+to explain the reasons behind the superiority of \VSDMOEA{}.
 %
-Particularly, is shown that controlling the diversity of the decision variables can be benefical to attain better approximations to the Pareto front.
+%Esto lo pasamos a las conclusiones
+%Particularly, it is shown that controlling the diversity of the decision variables is benefical to attain better 
+%approximations to the Pareto front.
 %
-The latter is proven employing long-term executions with some of the most popular \MOEAS{}.
+Since methods including strategies to delay convergence in an explicit way usually require additional computational
+resources to excel, analyses in the long-term are presented.
 %
-Although that this principle can be incorporated into any multi-objective paradigm, the benefits of promoting diversity are only confirmed with a decomposition-based algorithm.
+In order to attain proper conclusions, three experiments were carried out.
 %
-To have a clear insight of the performance of each selected algorithm, this section is arranged as follows.
+%First, the technical parameterization that governs the common comparison is presented.
+First, a comparison between \VSDMOEA{} and four state-of-the-art \MOEAS{} is included.
 %
-At first, the technical parameterization that governs the common comparison is presented.
+This comparison focuses on showing the benefits of \VSDMOEA{} for benchmarks 
+configured in standard ways.
 %
-Then, a quite common and representative comparison between all the \MOEAS{} in long-term executions is shown.
+Second, an analysis to test the scalability on the number of decision variables is carried out.
 %
-In order, to have a better understanding of the scalability and stability, three more experiments are driven.
+Finally, the robustness of \VSDMOEA{} in terms of the initial penalty threshold is analyzed.
 %
-These experiments are designed to test the scalability of the decision variables, analyze the impact of diversity among the execution, and robustness of \VSDMOEAD{} with different initial penalty thresholds.
+Note that in order to test the quality of the approximations, the hypervolume is used.
 %
-The latter seeks to illustrate the effects of promoting diversity with different initial levels.
+However, our analyses also include some studies to better understand
+the implications of \VSDMOEA{} on the diversity on variable space.
 %
+These analyses allow to better understand the reasons behind the proper performance of \VSDMOEA{}
+and to highlight the significant differences between \VSDMOEA{} and other strategies in terms of the dynamics
+of the population.
 
-The validation of the \MOEAS{} takes into account three of the most popular benchmarks in multi-objective optimization.
+
+
+Our validation takes into account three of the most popular benchmarks in multi-objective optimization:
+\WFG{}~\cite{huband2006review}, \DTLZ{}~\cite{deb2005scalable}, and \UF{}~\cite{zhang2008multiobjective}.
 %
-These problems are the \WFG{}~\cite{huband2006review}, \DTLZ{}~\cite{deb2005scalable}, and \UF{}~\cite{zhang2008multiobjective}, whose selected configuration is taken from the literature.
+Except otherwise stated, they were configured in a standard way.
 %
-Specifically, the \WFG{} test problems were used with two and three objectives configured with $24$ parameters\footnote{In the \WFG{} context the term \textit{parameters} is equivalent to variables.}, $20$ of them corresponding to distance parameters and $4$ to position parameters.
+Specifically, the \WFG{} test problems were used with two and three objectives with $24$ 
+parameters\footnote{In the \WFG{} context the term \textit{parameter} is equivalent to variable.}, 
+$20$ of them corresponding to distance parameters and $4$ to position parameters.
 %
-In the \DTLZ{} test problems, the number of variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
+The \DTLZ{} test problems were also used with two and three objectives and the number of variables in each
+case was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
 % 
 The \UF{} benchmark comprises seven problems with two objectives (\UF{}1-7) and three problems with three objectives (\UF{}8-10).
 %
 This last set of problems were configured with $30$ variables.
-%
 
-The state-of-the-art \MOEAS{} that are taken into account are four of the most popular in multi-objective optimization.
+Regarding our comparisons, the set of state-of-the-art \MOEAS{} used to validate our proposals is comprised of four 
+popular and complementary \MOEAS{}: \NSGAII{}~\cite{deb2002fast}, \MOEADDE{}~\cite{zhang2009performance}, \RMOEA{}~\cite{trautmann2013r2} 
+and \NSGAIII{}~\cite{deb2013evolutionary}.
 %
-Those algorithms are \NSGAII{}~\cite{deb2002fast}, \MOEADDE{}~\cite{zhang2009performance}, \RMOEA{}~\cite{trautmann2013r2} and \NSGAIII{}~\cite{deb2013evolutionary}.
 %
-While the former three can be classified as dominance-based, decomposition-based and indicator-based, the latter might be considered as an hybrid, since that it introduces the main framework of \NSGAII{} and utilizes a set of weight vectors as reference points~\cite{trivedi2016survey}.
+%Note that \MOEADDE{} is the variant of \MOEAD{} that obtained the first place in the Congress on Evolutionary 
+%Computation 2009~\cite{zhang2009performance}, which is considered as a quite effective \MOEA{}.
 %
-In a similar way than some of the most popular \MOEAS{}, \MOEAD{} has been taken as a representative based-decomposition algorithm, which has inspired the development a vast quantity of algorithms in its category.
-%
-Particularly, in this analyses is included the \MOEADDE{}, which obtained the first place in the Congress on Evolutionary Computation 2009 (\CEC{}-2009)~\cite{zhang2009performance}.
-%
-
-Each experiment that was run in this section is configured with a population size of $100$ individuals.
-%
-Moreover, the variation operators integrated in all the \MOEAS{} is the classic binomial \DE{} scheme better known as DE/rand/1/bin.
-%
-In addition, \MOEAD{} and \VSDMOEAD{} incorporate the polynomial mutation with probability and distribuion index fixed to $1/n$ and $50$, respectively.
-%
-To have a fair comparison, for each \MOEA{} the crossover probability ($CR$) and mutation factor ($F$) values were chosen by grid-search.
-%
-Particularly, we have tested $20$ combinations of four values of $F$ (i.e. 0.25, 0.5, 0.75 and 1.0) and five values of $CR$ (i.e. 0.0, 0.25, 0.5, 0.75, 1.0) with two and three objectives.
-%
-The performance of each combination was measured taking into account the whole set of problems and a stopping criterion of  $2.5 \times 10^{6}$ function evaluations.
-%
-In this way each \MOEA{} was set with the values whose performance was the best, such values are reported in Table~\ref{tab:tunning}. Note that a detailed information can be found in the supplementary material.
-%
-
-%
-The specific parameterization required by each algorithm is shown in Table~\ref{tab:Parametrization}.
-%
-Note that scalarization functions are required in \MOEADDE{}, \RMOEA{}, \NSGAIII{} and \VSDMOEAD{}.
-%
-In all those cases, the \ASF{} approach is used.
-%
-Nevertheless, the weight vectors employed in \RMOEA{} are distinct that in the remaining algorithms.
-%
-According to the author's code, \RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives, respectively~\cite{trautmann2013r2}.
-%
-In contrast, to have the same quantity of weight vectors than the population size, the remaining algorithms incorporate a different distribution of weight vectors.
-%
-Those weight vectors were generated with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}.
-%
-Given that all the algorithms are stochastic, each execution was repeated $35$ times with different seeds.
+Given that all the algorithms are stochastic, each execution was repeated $35$ times in all the experiments.
 %
 The hypervolume indicator (\HV{}) is used to compare the various schemes.
 %
-The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point, as suggested in~\cite{ishibuchi2017reference}.
+The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) 
+than the nadir point, as suggested in~\cite{ishibuchi2017reference}.
 %
-The normalized \HV{} is used to facilitate the interpretation of the results~\cite{li2014evolutionary}, and the value reported is computed as the ratio between the normalized \HV{} obtained and the maximum attainable normalized \HV{}.
+The normalized \HV{} is used to facilitate the interpretation of the results~\cite{li2014evolutionary}, 
+and the value reported is computed as the ratio between the normalized \HV{} obtained and the maximum attainable normalized \HV{}.
 %
 In this way, a value equal to one means a perfect approximation.
 %
-Note that such value is not attainable because \MOEAS{} yields a discrete approximation.
+Note that such value is not attainable because \MOEAS{} yields discrete approximations.
+%
+Finally, to statistically compare the \HV{} ratios, a guideline similar to that proposed in~\cite{durillo2010study} was used, 
+which implies the use of the Shapiro-Wilk, Levene, ANOVA, Welch and Kruskal-Wallis tests.
+%
+An algorithm $X$ is said to beat algorithm $Y$ when the differences between them are statistically significant, 
+and the mean and median \HV{} ratios obtained by $X$ are higher than the mean and median achieved by $Y$.
+
+%
+%First a Shapiro-Wilk test was performed to check if the values of the results followed a Gaussian distribution.
+%
+%If so, the Levene test was used to check for the homogeneity of the variances.
+%
+%If the samples had equal variance, an ANOVA test was done; if not, a Welch test was performed.
+%
+%For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution.
 %
 
-Finally, to statistically compare the \HV{} ratios, a guideline similar to that proposed in~\cite{durillo2010study} was used.
+An important step to perform fair comparisons is the parameterization of algorithms.
 %
-First a Shapiro-Wilk test was performed to check if the values of the results followed a Gaussian distribution.
+Note that the variation operators used in each algorithm in their original variants differ.
 %
-If so, the Levene test was used to check for the homogeneity of the variances.
+Using the original variation operators to perform comparisons is not fair and probably would offer more concluions 
+about the effectiveness of the operators than about the general framework proposed in each \MOEA{}.
 %
-If the samples had equal variance, an ANOVA test was done; if not, a Welch test was performed.
+However, there might also be a dependency between the general framework and the proper variation operators.
 %
-For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution.
+Thus, we decided to use a common simple framework for the variation step but allow different parameterization
+for each algorithm.
 %
-An algorithm $X$ is said to beat algorithm $Y$ when the differences between them are statistically significant, and the mean and median \HV{} ratios
-obtained by $X$ are higher than the mean and median achieved by $Y$.
+Particularly, the variation phase first applies the classic \DE{} scheme known as DE/rand/1/bin with parameters $F$
+and $CR$, and then it applies polynomial mutation with probability $p_m$
+and distribution index equal to $50$.
+%
+Note that the use of the additional mutation in variants based on \MOEAD{} is quite important~\cite{zhang2009performance}.
+%
+The additional common parameter is the population size.
+%
+Since the hypervolume highly depends on the number of solutions used to approximate the Pareto front,
+all \MOEAS{} were configured with a common population size equal to $100$ individuals.
+
+\begin{table}[t]
+\centering
+\caption{Parameterizaon of the variation phase applied in each \MOEA{}}
+\label{tab:tunning}
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|c|c|c|c|c|c}
+\hline
+\multirow{2}{*}{}   & \multicolumn{3}{c|}{\textbf{2 objectives}} & \multicolumn{3}{c}{\textbf{3 objectives}} \\ \cline{2-7} 
+                    & $CR$                 & $F$                 & $p_m$                & $CR$                 & $F$              & $p_m$             \\ \hline
+\textbf{VSD-MOEA/D} & 0.0                  & 0.75                & $1 / {D}$            & 0.0                  & 0.75             & $1 / D$           \\ \hline
+\textbf{MOEA/D-DE}  & 0.75                 & 0.75                & $1 / {D}$            & 0.5                  & 0.5              & $1 / {D}$         \\ \hline
+\textbf{R2-EMOA}    & 0.75                 & 0.5                 & $0$                  & 0.5                  & 0.5              & $0$               \\ \hline
+\textbf{NSGA-II}    & 0.75                 & 0.5                 & $0$                  & 0.0                  & 0.5              & $0$               \\ \hline
+\textbf{NSGA-III}   & 0.5                  & 0.5                 & $0$                  & 0.5                  & 0.5              & $0$               \\ \hline
+\end{tabular}%
+%}
+\end{table}
+
+In order to set the $CR$, $F$ and $p_m$ parameters, 40 parameterizations were tested for each algorithm.
+%
+They were generated by combining four values of $F$ (0.25, 0.5, 0.75 and 1.0), five values of $CR$ (0.0, 0.25, 0.5, 0.75, 1.0) 
+and two values of $p_m$ (0.0, $1\over{D}$).
+%
+These configurations were executed by setting the stopping criterion to $2.5 \times 10^{6}$ function evaluations
+will all the aforementioned benchmarks and the mean attained hypervolume value were calculated independently
+for the problems with two and three objectives.
+%
+Then, in the following experiments the parameter configuration that attained the largest mean is used.
+%
+Table~\ref{tab:tunning} reports the configuration selected for each of the \MOEAS{}.
+%
+Note that in the case of \VSDMOEAD{}, $CR$ was set to 0 which reduces the strength of the perturbation performed
+by \DE{}.
+%
+The reason behind this is that \VSDMOEAD{} maintains a larger degree of diversity than other methods, so disruptive
+operators are not so helpful.
+
+Note also that there are also some additional parameters that are specific of some of the \MOEAS{}.
+%
+They were set to typical values used in literature. 
+%
+Table~\ref{tab:Parametrization} shows this additional parameterization.
+%
+Note also that scalarization functions are used in \MOEADDE{}, \RMOEA{}, \NSGAIII{} and \VSDMOEAD{}.
+%
+In all those cases, the \ASF{} approach is used.
+%
+However, the weight vectors employed in \RMOEA{} are distinct that in the remaining algorithms because in \RMOEA{} using
+a larger number of weight vectors than the population size is beneficial.
+%
+As in the official code, \RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives, 
+respectively~\cite{trautmann2013r2}.
+%
+In the remaining case, the number of weight vectors is equal to the population size and they were generated
+with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}.
+%
+
 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 % \usepackage{graphicx}
-\begin{table}[t]
-\centering
-\caption{\DE{} parameterizaon applied to each \MOEA{}}
-\label{tab:tunning}
-%\resizebox{\textwidth}{!}{%
-\begin{tabular}{c|c|c|c|c}
-\hline
-\multirow{2}{*}{}   & \multicolumn{2}{c|}{\textbf{2 objectives}} & \multicolumn{2}{c}{\textbf{3 objectives}} \\ \cline{2-5} 
-                    & $CR$                 & $F$                 & $CR$                 & $F$                 \\ \hline
-\textbf{AVSD-MOEA/D} & 0.0                  & 0.75                & 0.0                  & 0.75                \\ \hline
-\textbf{MOEA/D-DE}  & 0.75                 & 0.75                & 0.5                  & 0.5                 \\ \hline
-\textbf{R2-EMOA}    & 0.75                 & 0.5                 & 0.5                  & 0.5                 \\ \hline
-\textbf{NSGA-II}    & 0.75                 & 0.5                 & 0.0                  & 0.25                 \\ \hline
-\textbf{NSGA-III}   & 0.75                  & 0.25                 & 0.0                  & 0.75                 \\ \hline
-\end{tabular}%
-%}
-\end{table}
 
 \begin{table}[t]
 \centering
-\caption{ Parameterization applied to each MOEA}
+\caption{Configuration of specific parameters of each MOEA}
 \label{tab:Parametrization}
 \begin{tabular}{c|c}
 \hline
@@ -132,9 +182,9 @@ obtained by $X$ are higher than the mean and median achieved by $Y$.
 \textbf{MOEA/D-DE}} & Max. updates by sub-problem ($\eta_r$) = 2, \\
  & tour selection = 10,   neighbor size = 20, \\
  & period utility updating = 50 generations, \\
- & local selection probability ($\delta$) = 0.9,\\ \hline
+ & local selection probability ($\delta$) = 0.9\\ \hline
 \textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
-\textbf{AVSD-MOEA/D} & $D_I=0.4$ \\ \hline
+\textbf{VSD-MOEA/D} & $D_I=0.4$ \\ \hline
 \end{tabular}
 \end{table}
 
@@ -226,12 +276,12 @@ Nevertheless, the mean \HV{} ratio value attained by \VSDMOEAD{} is quite superi
 %
 In fact the \HV{} ratio values attained by \VSDMOEAD{} in each problem is not worst than the reported by \MOEADDE{} and \NSGAIII{} with three objectives, such methods incorporated the same number of weight vectors.
 %
+%Although that the performance of \VSDMOEAD{} can be affected by the distribution of the weight vectors, its overall \HV{} ratio values are quite better.
+%
 To prove those arguments, in the supplementary material is shown a variant of our proposal \AVSDMOEAD{} in which is incorporated an external archive based in the \RR{} indicator.
 %
 \AVSDMOEAD{} was remarkable superior than the state-of-the-art \MOEAS{} with two and three objectives in both total deterioration ($0.153$ and $0.006$) and term of total wins and loses ($80$ and $73$ wins).
-%
-%Although that the performance of \VSDMOEAD{} can be affected by the distribution of the weight vectors, its overall \HV{} ratio values are quite better.
-%
+
 
 
 
