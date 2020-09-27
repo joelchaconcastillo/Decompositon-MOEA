@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  21 JUL 2020 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  27 SEP 2020 15:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -496,11 +496,11 @@ isable this.
 Here is how much of TeX's memory you used:
  21782 strings out of 492983
  595451 string characters out of 6134923
- 763307 words of memory out of 5000000
+ 763448 words of memory out of 5000000
  25026 multiletter control sequences out of 15000+600000
  4646 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,16n,100p,807b,2236s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Diversity_Long_Term_tikz_UF5-figure0.dvi (1 page, 35316 bytes
+Output written on Diversity_Long_Term_tikz_UF5-figure0.dvi (1 page, 35456 bytes
 ).
