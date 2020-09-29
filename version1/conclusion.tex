@@ -9,20 +9,22 @@ This strategy relies in the incorporation of a replacement operator.
 In this way, the most complex problems can be approximated quite good.
 %
 
-This paper proposes a decomposition-based \MOEA{}, that take sinto account the diversity of both decision varaible space and objective function space.
+This paper proposes a decomposition-based \MOEA{}, that takes into account the diversity of both decision varaible space and objective function space.
+%
+The latter space is better refined through the incorporation of an external archive which is guided by the R2-indicator.
 %
 The main novelty is that the convergence is managed to different levels through several diversities which are adapted during the optimization process.
 %
-In particular, in \VSDMOEA{} more importance is given to the diversity of decision variable space at the initial stages, but at later stages of the evolutionary process, it gradually grants more importance to the diversity of  objective function space.
+In particular, in \AVSDMOEAD{} more importance is given to the diversity of decision variable space at the initial stages, but at later stages of the evolutionary process, it gradually grants more importance to the diversity of  objective function space.
 %
 This is performed using a penalty method that is integrated into the replacement phase.
 %
 
-The experimental validation carried out shows a remarkable improvement in \VSDMOEA{} when it is compared to state-of-the-art \MOEAS{} both in two-objective and three-objective problems.
+The experimental validation carried out shows a remarkable improvement in \AVSDMOEAD{} when it is compared to state-of-the-art \MOEAS{} both in two-objective and three-objective problems.
 %
 The scalability analyses shows that as the number of objectives and decision variables increases, the implicit variable space maintained by state-of-the-art \MOEAS{} also increases.
 %
-Finally, the analysis of the initial threshold distance, which is an additional parameter required by \VSDMOEA{}, shows that finding a proper value for this parameter is not a difficult task.
+Finally, the analysis of the initial threshold distance, which is an additional parameter required by \AVSDMOEAD{}, shows that finding a proper value for this parameter is not a difficult task.
 %
 
 In the future, we plan to apply the principles studied in this paper to other categories of \MOEAS{}.

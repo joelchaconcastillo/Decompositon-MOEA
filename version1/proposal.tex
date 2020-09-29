@@ -1,11 +1,11 @@
 
-This section is devoted to describe our proposal, the \textit{Variable Space Diversity \MOEA{} based on Decomposition} (\VSDMOEAD{}).
+This section is devoted to describe our proposal, the \textit{Archived Variable Space Diversity \MOEA{} based on Decomposition} (\AVSDMOEAD{}).
 %
-The main novelty and motivation behind \VSDMOEAD{} is the incorporation of an explicit management of the diveristy on variable space
+The main novelty and motivation behind \AVSDMOEAD{} is the incorporation of an explicit management of the diveristy on variable space
 with the aim of improving the behaviour in terms of objective space metrics specially in long-term executions, which is the
 environment where diversity-aware techniques have excelled.
 %
-Although \VSDMOEAD{} is inspired in \MOEAD{}, it was simplified so in some ways it resembles more mature
+Although \AVSDMOEAD{} is inspired in \MOEAD{}, it was simplified so in some ways it resembles more mature
 decomposition-based \MOEAS{}, such as \MOGA{}.
 %
 For instance, the notion of subproblem neighborhood is not used and the dynamic resource allocation usually applied in modern variants
@@ -13,6 +13,8 @@ of \MOEAD{} is deactivated.
 %
 The main reason for the simplification is to show that even a simple \MOEA{} incorporating our design principles can
 improve further more complex state-of-the-art algorithms.
+%
+In addition, \AVSDMOEAD{} incorporates an external archive, whose density estimator is guided by the principle of the R2-indicator~\cite{trautmann2013r2}.
 
 Our proposal decomposes the \MOP{} in several single-objective problems.
 %
@@ -31,7 +33,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
 
 \begin{algorithm}[!t]
 \algsetup{linenosize=\tiny}
-        \caption{Main procedure of \VSDMOEAD{}}
+        \caption{Main procedure of \AVSDMOEAD{}}
         \begin{small}
 \begin{algorithmic}[1]
         \STATE \textbf{Initialization}: Generate an initial population $P^0$ with $N$ individuals \label{alg_1:1}
@@ -46,6 +48,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
            \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$ and $z^*$ as input \label{alg_1:11}
+	   \STATE \textbf{Update Archive}: Update $A^{t+1}$ using $Q^t$ following the R2-indicator criterion.
            \STATE $t=t+1$ \label{alg_1:12}
         \ENDWHILE \label{alg_1:13}
         \end{algorithmic}
@@ -54,7 +57,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
 \end{algorithm}
 
 
-The main novelty of \VSDMOEAD{} appears in the  survivor selection scheme.
+The main novelty of \AVSDMOEAD{} appears in the  survivor selection scheme.
 %
 Following some of the most successful single-objective diversity-aware algorithms~\cite{segura2016improving}, the 
 replacement strategy relates the degree of diversity on variable space to the stopping criterion
@@ -65,10 +68,10 @@ optimization evolves.
 %
 In particular, the diversity is explicitly promoted in a decreasing way until half of total generations. 
 %
-Then, in the remaining generations \VSDMOEAD{} has a similar behavior than most popular
+Then, in the remaining generations \AVSDMOEAD{} has a similar behavior than most popular
 \MOEAS{}, i.e. the diversity on the variable space is not considered explicitly.
 
-The main procedure of \VSDMOEAD{} is shown in Algorithm~\ref{alg:vsd-moead}.
+The main procedure of \AVSDMOEAD{} is shown in Algorithm~\ref{alg:vsd-moead}.
 %
 Its general template is quite standard.
 %
@@ -96,7 +99,7 @@ Since this is the novelty of the paper, its working operation is given in detail
 
 \begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
-        \caption{Replacement Phase of \VSDMOEAD{}}
+        \caption{Replacement Phase of \AVSDMOEAD{}}
 \begin{small}
 \begin{algorithmic}[1]
 \STATE Input: $P^t$ (Parent of current generation), $Q^t$ (Offspring of current generation), $\lambda^t$ (a set of weight vectors) and $z^*$ (Reference vector)
@@ -130,7 +133,7 @@ Since this is the novelty of the paper, its working operation is given in detail
 
 
 %
-\subsection{Novel Replacement Phase of \VSDMOEAD{} }
+\subsection{Novel Replacement Phase of \AVSDMOEAD{} }
 
 The purpose of the replacement phase (see Algorithm~\ref{alg:replacement}) is to select the set of survivors of the next generation.
 %
