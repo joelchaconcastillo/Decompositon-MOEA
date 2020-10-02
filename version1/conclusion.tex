@@ -1,37 +1,54 @@
-Multi-objective Evolutionary Algorithms are one popular strategy to deal with complex optimization problems.
+Premature convergence is one of the most typical drawbacks of \EAS{}.
 %
-However, one of the most critical drawbacks of \EAS{} is quite present in long-term executions where a fast and uncontrolled convergence might comes up, resulting in a waste of computational resources.
+In many \MOPS{}, \MOEAS{} promote indirectly the preservation of diversity on variable space
+because of the explicit maintenance of diversity on objective space.
 %
-A quite popular strategy to manage the convergence of a \EA{} is to explicitly control de diversity in the population.
+However, for many problems the degree of maintained diversity is not enough to keep the exploration
+power and locate the optimal regions.
 %
-This strategy relies in the incorporation of a replacement operator.
+In single-objective optimization, many of the state-of-the-art algorithms consider an explicit control of
+diversity.
 %
-In this way, the most complex problems can be approximated quite good.
+Particularly, those schemes to relate the degree of diversity with the elapsed period and stopping criterion
+have excelled.
+%
+This paper shows that this design principle is also important for the multi-objective optimization area,
+where the optimization of many of the most complex popular benchmark problems can be improved further
+by introducing this design principle.
+
+In order to prove previous hipothesis, a novel replacement operator based on the aforementioned design principle
+is integrated to generate a decomposition-based \MOEA{} that takes into account the diversity of both variable 
+space and objective function space.
+%
+This is performed using a dynamic penalty method. 
+%
+Note that since the aim of the approach is to improve the results when considering metrics of the objective space,
+the importance given to the diversity on the variable space is reduced as the evolution progress, meaning that
+al later phases our proposal behaves more similarly to traditional \MOEAS{}.
+%
+Additionally, taking into account some of the recent advances in the area, an external archive based on the
+R2-indicator is incorporated.
+%
+As a result our proposal is referred to as \AVSDMOEAD{}.
 %
 
-This paper proposes a decomposition-based \MOEA{}, that takes into account the diversity of both decision varaible space and objective function space.
+The experimental validation carried out shows the remarkable improvement provided by \AVSDMOEAD{} in comparison to
+state-of-the-art \MOEAS{} both in two-objective and three-objective problems.
 %
-The latter space is better refined through the incorporation of an external archive which is guided by the R2-indicator.
+The scalability analyses shows that as the number of decision variables increases the benefits of including
+a proper management of diversity is even more important, so the differences in performance increases.
 %
-The main novelty is that the convergence is managed to different levels through several diversities which are adapted during the optimization process.
+Additionally, the analysis of the initial threshold distance, which is an additional parameter required by \AVSDMOEAD{}, 
+shows that the method is quite robust so finding a proper parameter value is not a difficult task.
 %
-In particular, in \AVSDMOEAD{} more importance is given to the diversity of decision variable space at the initial stages, but at later stages of the evolutionary process, it gradually grants more importance to the diversity of  objective function space.
-%
-This is performed using a penalty method that is integrated into the replacement phase.
-%
+Finally, in order to better understand the reasons behind the huge superiority of the proposal, some analyses regarding
+the dynamics of the populations are provided.
 
-The experimental validation carried out shows a remarkable improvement in \AVSDMOEAD{} when it is compared to state-of-the-art \MOEAS{} both in two-objective and three-objective problems.
-%
-The scalability analyses shows that as the number of objectives and decision variables increases, the implicit variable space maintained by state-of-the-art \MOEAS{} also increases.
-%
-Finally, the analysis of the initial threshold distance, which is an additional parameter required by \AVSDMOEAD{}, shows that finding a proper value for this parameter is not a difficult task.
-%
-
-In the future, we plan to apply the principles studied in this paper to other categories of \MOEAS{}.
+In the future we plan to apply the principles studied in this paper to other categories of \MOEAS{}.
 %
 For instance, including the diversity management put forth in this paper in decomposition-based and indicator-based \MOEAS{} seems plausible.
 %
 Additionally, we would like to develop an adaptive scheme to avoid setting the initial threshold value.
 %
-Finally, in order to obtain even better results, these strategies are going to be incorporated into a multi-objective memetic algorithm.
-%
+Finally, in order to obtain even better results, these strategies are going to be incorporated with continuation and/or individual
+improvement methods.
