@@ -109,7 +109,7 @@ Since this is the novelty of the paper, its working operation is given in detail
         \STATE $Penalized = \emptyset$ \label{alg_2:3}
 	\STATE $\lambda^{t+1} = \emptyset$ \label{alg_2:4}
         \STATE $D^t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg_2:5} 
-        \WHILE{ $|P^{t+1}| \leq  N$} \label{alg_2:6}
+        \WHILE{ $|P^{t+1}| <  N$} \label{alg_2:6}
             \STATE Compute $DCS$ in $R^t$ using $P^{t+1}$ as reference set \label{alg_2:7}
             \STATE Move the individuals in $R^t$ with $DCS < D^t$ to $Penalized$ \label{alg_2:8}
 %	   \STATE Compute the diversity-contribution of each candidate $i \in R^t$ to the survivor set $P^{t+1}$\label{alg:7}
@@ -130,6 +130,27 @@ Since this is the novelty of the paper, its working operation is given in detail
 \end{small}
 \label{alg:replacement}
 \end{algorithm}
+
+\begin{algorithm}[!t]
+\algsetup{linenosize=\tiny}
+        \caption{R2-Indicator procedure}
+        \begin{small}
+\begin{algorithmic}[1]
+	\STATE Input: $A^t$ (External archive at the current generation), $Q^t$ (Offspring of current generation), $\lambda^t$ (a set of weight vectors and $z^*$ (Reference vector)
+	\STATE Output: $A^{t+1}$
+	\STATE $R^t= A^t \cup Q^t$
+	\STATE $A^{t+1} = \emptyset$
+	\WHILE{ $|A^{t+1}| < N$ }
+	\STATE $\forall x \in R^t : r(x) = R2(A^{t+1} \cup \{x\}; \lambda, z^*)$
+	\STATE $x^* = argmin(r(x):x \in R^t)$ 
+	\STATE $A^{t+1} = A^{t+1} \cup x$
+	\STATE $R^t = R^t \setminus \{ x^* \}$ 
+  	\ENDWHILE
+        \end{algorithmic}
+        \end{small}
+\label{alg:r2_Indicator}
+\end{algorithm}
+
 
 
 %
