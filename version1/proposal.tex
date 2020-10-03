@@ -143,7 +143,7 @@ Since this is the novelty of the paper, its working operation is given in detail
 	\WHILE{ $|A^{t+1}| < N$ }
 	\STATE $\forall x \in R^t : r(x) = R2(A^{t+1} \cup \{x\}; \lambda, z^*)$
 	\STATE $x^* = argmax(r(x):x \in R^t)$ 
-	\STATE $A^{t+1} = A^{t+1} \cup x$
+	\STATE $A^{t+1} = A^{t+1} \cup \{x^*\}$
 	\STATE $R^t = R^t \setminus \{ x^* \}$ 
   	\ENDWHILE
         \end{algorithmic}
