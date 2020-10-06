@@ -5,7 +5,7 @@ i.e., for cases where distant solutions in terms of variable space are desired~\
 %
 Such kinds of \MOEAS{} must maintain a large degree of diversity on variable space during the whole optimization process.
 %
-In contrast, our work analyses the hyphotesis that state-of-the-art techniques can be advanced further by explicitly managing
+In contrast, our work analyses the hypothesis that state-of-the-art techniques can be advanced further by explicitly managing
 the diversity on the variable space, even if the performance is measured in terms of metrics that only take into account 
 the objective space.
 %
@@ -21,13 +21,13 @@ state-of-the-art \MOEAS{} are summarized.
 
 \subsection{Diversity-aware Single-objective Optimizers}
 
-Attaining a proper balance between exploration and exploitation is one of the keys of sucessfull single-objective
+Attaining a proper balance between exploration and exploitation is one of the keys of successful single-objective
 \EAS{}~\cite{lin2009auto}.
 %
-Several strategies to acomplish this aim have been explored and one of the most promising is to alter the trend
+Several strategies to accomplish this aim have been explored and one of the most promising is to alter the trend
 of diversity in an explicit or implicit way~\cite{Joel:Crepinsek}.
 %
-This principle has encouraged the development of a vast quantinty of diversity managment techniques~\cite{pandey2014comparative}.
+This principle has encouraged the development of a vast quantity of diversity management techniques~\cite{pandey2014comparative}.
 %
 A popular classification of these methods is based on the sort of components modified in the \EA{}.
 %
@@ -46,22 +46,22 @@ Several variants of this strategy have been devised, such as the \textit{Restric
 %
 A more recent approach that has shown to be quite effective in a wide quantity of single-objective problems~\cite{segura2016improving}
 is based on the principle of biasing the decisions taken in the replacement phase by taking into consideration the 
-stopping criterion and elepased period.
+stopping criterion and elapsed period.
 %
-This design principle has been successfull in continuous problems~\cite{castillo2019differential} and discrete 
+This design principle has been successful in continuous problems~\cite{castillo2019differential} and discrete 
 problems~\cite{segura2016improving,romero2018memetic}, including the problem proposed for Google Hash Code 2020, where the most
 effective optimizer was designed using this design principle.
 %
 Specifically, initial phases of the optimization explicitly preserve a higher amount of diversity than final phases and the
-change between these behaviours is gradual.
+change between these behaviors is gradual.
 %
 Given the success of this methodology in the single-objective case, we adopt it to design our novel \MOEA{}.
 
 
 \subsection{Diversity on Variable Space in \MOEAS{}}\label{MOEAs:Diversity}
 
-In spite of the vast quantinty of proposed \MOEAS{}, none of state-of-the-art techniques involve
-explictly managing the diversity in the variable space, which is a remarkable difference with respect
+In spite of the vast quantity of proposed \MOEAS{}, none of state-of-the-art techniques involve
+explicitly managing the diversity in the variable space, which is a remarkable difference with respect
 to single-objective optimizers.
 %
 One of the main reasons behind this difference is probably that there is a relation between the diversity on the objective 
@@ -78,7 +78,7 @@ that including the successful principles of single-objective optimizers might re
 %
 Most current \MOEAS{} that take into account diversity on the variable space are devoted to multimodal multi-objective optimization.
 %
-However, some attemps to apply these mechanisms in traditional multi-objective optimization have also been done.
+However, some attempts to apply these mechanisms in traditional multi-objective optimization have also been done.
 
 The Non-Dominated Sorting Genetic Algorithm (\NSGA{}) developed in 1995~\cite{srinivas1994muiltiobjective} 
 was one of the first \MOEAS{} that employed diversity on the variable space.
@@ -95,11 +95,11 @@ The performance of \NSGA{} is not even close to current \MOEAS{} and one
 of the reason is precisely not considering the diversity on objective space.
 
 In 2003, the \GDEA{}~\cite{toffolo2003genetic} proposed by Toffolo and Benini integrated the diversity into the search 
-as an additional objective, which modifies the ranking of the indiviuals and favors maintaining distant indidivuals
+as an additional objective, which modifies the ranking of the individuals and favors maintaining distant individuals
 during the whole optimization process.
 %
 In 2005, Chan and Ray \cite{chan2005evolutionary} proposed the application of selection operators to
-encorage the preservation of distant solutions both in objective and decision space.
+encourage the preservation of distant solutions both in objective and decision space.
 %
 %They implemented \KPone{} and \KPtwo{}, two algorithms using these two selection operators.
 %
@@ -120,7 +120,7 @@ the convergence to a diverse Pareto-front approximation.
 Following this insight, the \CMAES{} niching framework was proposed~\cite{shir2009enhancing}.
 %
 Estimation of Distribution Algorithms have also considered the information of the decision space
-to attain better aproximations of the Pareto set~\cite{zhou2009approximating}.
+to attain better approximations of the Pareto set~\cite{zhou2009approximating}.
 %
 Finally, the Diversity Integrating Hypervolume-based Search Algorithm (\DIVA{})~\cite{ulrich2010integrating}
 weights the hypervolume contribution with the diversity of the decision variable space.
@@ -130,7 +130,7 @@ Note that from the discussed methods the only one that shows some improvements i
 However, results attained by \GDEA{} are not as competitive as the ones attained by modern solvers so it is not currently
 considered as an state-of-the-art \MOEA{} but as an easily applicable and general approach.
 %
-The rest of the methods focuses on showing that solutions with a higher level of diversiy on the variable space
+The rest of the methods focuses on showing that solutions with a higher level of diversity on the variable space
 can be obtained without a too negative effect
 on the approximation of the Pareto Front.
 
@@ -156,14 +156,14 @@ optimization, they are considered quite effective for optimization problems with
 Non-Dominated Sorting Genetic Algorithm-II (\NSGAII{}) is the most popular technique belonging to this group~\cite{deb2002fast}.
 %
 \NSGAIII{}~\cite{deb2013evolutionary} extends \NSGAII{} by replacing the crowing selection with an strategy 
-based on generating distributed reference points that implicitly descompose the objective space~\cite{trivedi2016survey}.
+based on generating distributed reference points that implicitly decompose the objective space~\cite{trivedi2016survey}.
 %
 While this method is aimed at many-objective optimization, it also provides some benefits for problems with three objectives.
 
 Indicator-based \MOEAS{} incorporate a measure of quality over sets of solutions to alter some components such as the 
 selection and/or replacement~\cite{beume2007sms}.
 %
-Indicators take into account both the convergence and coverage, so no additional techniques to promove diversity
+Indicators take into account both the convergence and coverage, so no additional techniques to promote diversity
 in the objective space are required.
 %
 A quite effective \MOEA{} that belongs to this category is the R2-Indicator-Based Evolutionary Multi-objective 
@@ -175,7 +175,7 @@ but it uses the computationally expensive hypervolume indicator, meaning that it
 Finally, decomposition-based \MOEAS{}~\cite{ishibuchi1998multi} incorporate scalarizing functions to transform the \MOP{} 
 into several single-objective optimization sub-problems.
 %
-Those sub-problems are then solved in a simultaneously and colaborative way.
+Those sub-problems are then solved in a simultaneously and collaborative way.
 %
 The weighted Tchebycheff scalarizing approach has shown a remarkable performance.
 %

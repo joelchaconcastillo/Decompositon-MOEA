@@ -1,8 +1,8 @@
 
 This section is devoted to describe our proposal, the \textit{Archived Variable Space Diversity \MOEA{} based on Decomposition} (\AVSDMOEAD{}).
 %
-The main novelty and motivation behind \AVSDMOEAD{} is the incorporation of an explicit management of the diveristy on variable space
-with the aim of improving the behaviour in terms of objective space metrics specially in long-term executions, which is the
+The main novelty and motivation behind \AVSDMOEAD{} is the incorporation of an explicit management of the diversity on variable space
+with the aim of improving the behavior in terms of objective space metrics specially in long-term executions, which is the
 environment where diversity-aware techniques have excelled.
 %
 Although \AVSDMOEAD{} is inspired in \MOEAD{}, it was simplified so in some ways it resembles more mature
@@ -14,12 +14,11 @@ of \MOEAD{} is deactivated.
 The main reason for the simplification is to show that even a simple \MOEA{} incorporating our design principles can
 improve further more complex state-of-the-art algorithms.
 %
-In addition, \AVSDMOEAD{} incorporates an external archive, whose density estimator is guided by the principle of the R2-indicator~\cite{trautmann2013r2}.
 
 Our proposal decomposes the \MOP{} in several single-objective problems.
 %
-Notwithstanding that any scalarization approach can be employed, our strategy applies the achievement scalarizing function (\ASF{}), which has shown
-some of the most effective results in recent years~\cite{deb2013evolutionary, hernandez2015improved}.
+Notwithstanding that any scalarization approach can be employed, our strategy applies the achievement scalarizing function (\ASF{}), 
+which has reported some of the most effective results in recent years~\cite{deb2013evolutionary, hernandez2015improved}.
 %
 Let $\lambda_1, ..., \lambda_N$ be a set of weight vectors and $z^*$ a reference vector,
 the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (\ref{eqn:approach}).
@@ -36,9 +35,14 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
         \caption{Main procedure of \AVSDMOEAD{}}
         \begin{small}
 \begin{algorithmic}[1]
+				\STATE Input: $N$ (Population and Archive Size), $\lambda$ (a set of $N$ weight vectors for decomposition in the population),
+				$\Lambda$ (a set of weight vectors for the R2-based archive).
+        \STATE Output: $A^{t}$ (Archive with $N$ solutions)
+
         \STATE \textbf{Initialization}: Generate an initial population $P^0$ with $N$ individuals \label{alg_1:1}
-        \STATE Let $\lambda = \{\lambda_1, ..., \lambda_N \}$ be a set of evenly spread weight vectors \label{alg_1:2}
+%        \STATE Let $\lambda = \{\lambda_1, ..., \lambda_N \}$ be a set of evenly spread weight vectors \label{alg_1:2}
         \STATE \textbf{Evaluation}: Evaluate each individual in $P^0$ and assemble the reference vector $z^*$ with the best objective values \label{alg_1:3}
+				\STATE \textbf{Archive Initialization:} $A^0 = P^0$
         \STATE Assign $t=0$ \label{alg_1:4}
         \WHILE{ (not stopping criterion)  } \label{alg_1:5}
            \FOR{ each individual $P_i^t \in P^t$} \label{alg_1:6}
@@ -48,9 +52,10 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
            \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$ and $z^*$ as input \label{alg_1:11}
-	   \STATE \textbf{Update Archive}: Update $A^{t+1}$ using $Q^t$ following the R2-indicator criterion.
+	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ by considering $A^{t}$, $Q^t$ and $\Lambda$ following Algorithm~\ref{alg:r2_Indicator}. 
            \STATE $t=t+1$ \label{alg_1:12}
         \ENDWHILE \label{alg_1:13}
+        \RETURN $A^{t}$ 
         \end{algorithmic}
         \end{small}
 \label{alg:vsd-moead}
@@ -63,7 +68,7 @@ Following some of the most successful single-objective diversity-aware algorithm
 replacement strategy relates the degree of diversity on variable space to the stopping criterion
 and elapsed generations.
 %
-The aim of this relation is to gradually bias the search from exploration to explotation as the
+The aim of this relation is to gradually bias the search from exploration to exploitation as the
 optimization evolves.
 %
 In particular, the diversity is explicitly promoted in a decreasing way until half of total generations. 
@@ -78,16 +83,19 @@ Its general template is quite standard.
 The mating and variation components are similar to those used in typical \MOEAS{}.
 %
 Particularly, in the $t$ generation, the population $P^t$ is used to generate
-the offspring $Q^t$ with $N$ individuals by randomly selecting at each step three indivuals
+the offspring $Q^t$ with $N$ individuals by randomly selecting at each step three individuals
 to apply the $DE/rand/1/bin$ operator.
 %
 Then, polynomial mutation is applied to the output of the $DE$ operator.
 %
 %TODO: cómo se generaron los pesos?
 As in most current \MOEAD{} variants, the initial population is generated randomly,
-the number of weight vectors is equal to the population size,
+the number of weight vectors ($\lambda$) is equal to the population size,
 and the reference vector $z^*$ used for \ASF{} is composed by the best attained 
 objective values.
+%
+Particularly, the weight vectors were generated
+with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}
 %
 Finally, the survivor selection stage is applied.
 %
@@ -102,12 +110,12 @@ Since this is the novelty of the paper, its working operation is given in detail
         \caption{Replacement Phase of \AVSDMOEAD{}}
 \begin{small}
 \begin{algorithmic}[1]
-\STATE Input: $P^t$ (Parent of current generation), $Q^t$ (Offspring of current generation), $\lambda^t$ (a set of weight vectors) and $z^*$ (Reference vector)
+\STATE Input: $P^t$ (Parent of current generation), $Q^t$ (Offspring of current generation), $\lambda$ (a set of weight vectors) and $z^*$ (Reference vector)
         \STATE Output: $P^{t+1}$
         \STATE $R^t = P^t \cup Q^t$\label{alg_2:1} 
         \STATE $P^{t+1} = \emptyset$ \label{alg_2:2}
         \STATE $Penalized = \emptyset$ \label{alg_2:3}
-	\STATE $\lambda^{t+1} = \emptyset$ \label{alg_2:4}
+				\STATE $r\lambda = \lambda$
         \STATE $D^t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg_2:5} 
         \WHILE{ $|P^{t+1}| <  N$} \label{alg_2:6}
             \STATE Compute $DCS$ in $R^t$ using $P^{t+1}$ as reference set \label{alg_2:7}
@@ -120,10 +128,10 @@ Since this is the novelty of the paper, its working operation is given in detail
 %		    \STATE Compute the diversity-contribution of each individual in $Penalized$ to the survivor set $P^{t+1}$\label{alg:10}
 %                    \STATE Move the most suitable individual from $Penalized$ to the survivor set $R^t$; the one with the highest diversity-contribution to $R^t$ \label{alg:11}
                 \ENDIF \label{alg_2:12}
-            \STATE Identify the non-penalized individual $R_i^t$ and the weight vector $\lambda_i^t$ with the best scalarizing function value according to $g^{te}(R_i^t | \lambda_j^t, z^*)$ \label{alg_2:13}
+            \STATE Identify the pair of non-penalized individual $R_i^t$ and weight vector $r\lambda_j$ with the best scalarizing function value according to $g^{te}(R_i^t | r\lambda_j, z^*)$ \label{alg_2:13}
 %	    \STATE $\displaystyle{ R_i^t, \lambda_i = \max_{k \in |R^t|, l \in |\Lambda|} g(R_k^t | \lambda_l, \mathbf{z})}$ 
-	    \STATE Move the non-penalized individual $R_i^t$ to $P^{t+1}$ \label{alg_2:14}
-            \STATE Move the associated weight vector $\lambda^t_j$ to $\lambda^{t+1}$ \label{alg_2:15}
+	    \STATE Move individual $R_i^t$ to $P^{t+1}$ \label{alg_2:14}
+            \STATE Erase the weight vector r$\lambda_j$ from r$\lambda$ \label{alg_2:15}
         \ENDWHILE \label{alg_2:16}
         \RETURN $P^{t+1}$ \label{alg_2:17}
         \end{algorithmic}
@@ -136,12 +144,12 @@ Since this is the novelty of the paper, its working operation is given in detail
         \caption{R2-Indicator procedure}
         \begin{small}
 \begin{algorithmic}[1]
-	\STATE Input: $A^t$ (External archive at the current generation), $Q^t$ (Offspring of current generation), $\lambda^t$ (a set of weight vectors and $z^*$ (Reference vector)
+	\STATE Input: $A^t$ (External archive at the current generation), $Q^t$ (Offspring of current generation), $\Lambda$ (weight vectors for $R2$), $z^*$ (Reference vector)
 	\STATE Output: $A^{t+1}$
 	\STATE $R^t= A^t \cup Q^t$
 	\STATE $A^{t+1} = \emptyset$
 	\WHILE{ $|A^{t+1}| < N$ }
-	\STATE $\forall x \in R^t : r(x) = R2(A^{t+1} \cup \{x\}; \lambda, z^*)$
+	\STATE $\forall x \in R^t : r(x) = R2(A^{t+1} \cup \{x\}; \Lambda, z^*)$
 	\STATE $x^* = argmin(r(x):x \in R^t)$ 
 	\STATE $A^{t+1} = A^{t+1} \cup \{x^*\}$
 	\STATE $R^t = R^t \setminus \{ x^* \}$ 
@@ -151,7 +159,27 @@ Since this is the novelty of the paper, its working operation is given in detail
 \label{alg:r2_Indicator}
 \end{algorithm}
 
-
+Note that \AVSDMOEAD{} incorporates an external archive to keep the best solutions.
+%
+While in \MOEAD{} this is considered to be optional, in our approach is quite important because the penalty approach
+might provoke discarding elite solutions for some weight vectors.
+%
+Since methods based on the R2 indicator~\cite{trautmann2013r2} has reported quite high-quality solutions, our
+archive is based on the R2 indicator.
+%
+The archive selects at each iteration $N$ candidate solutions by combining its contents with the offspring of each 
+generation (see line~\ref{alg_1:12} in Algorithm~\ref{alg:vsd-moead}).
+%
+This is done by following a simple greedy approach (Algorithm~\ref{alg:r2_Indicator}).
+%
+Particularly, it selects iteratively the individual that minimizes the $R2$ (lines 6-9) considering
+the already selected individuals with ties broken randomly.
+%
+Note that since $R2$ is weekly Pareto-compliance, it might happen that some dominated individuals do not contribute
+to $R2$, so incorporating more complex archiving strategies might be helpful.
+%
+However, our preliminary experiments showed that this it not so important for proper performance, so we decided to maintain
+its simplicity.
 
 %
 \subsection{Novel Replacement Phase of \AVSDMOEAD{} }
@@ -201,19 +229,19 @@ it is filled with $N$ individuals (lines 8-16).
 In particular, the aim is to select a proper individual for each weight vector but at the same time fulfilling
 the condition imposed for the contribution to diversity on variable space.
 %
-In order to fulfil this last condition, non-selected individuals with a $DCS$
+In order to fulfill this last condition, non-selected individuals with a $DCS$
 lower than $D^t$ are moved from $R^t$ to the $Penalized$ set (lines 9-10) and at each iteration
 an individual belonging to $R^t$ is picked up to survive.
 %
-The set of weight vectors considered by our strategy are initially placed in $\lambda^{t}$.
+The set of weight vectors considered by our strategy are initially placed in $r\lambda$.
 %
 At each iteration the individual in $R^t$ with the best scalarizing function for any of the weight vectors in
-$\lambda^{t}$ is identified (line 14).
+$r\lambda$ is identified (line 14).
 %
-Then, such an individual is selected as a survivor (line 15) and the used weight vector is transferred to the
-weight vector set of the next population (line 16).
+Then, such an individual is selected as a survivor (line 15) and the used weight vector is erased
+from $r\lambda$ (line 16).
 %
-Note that $N$ individuals are selected, meaning that each weight vector is used to select a single individual.
+Note that $N$ individuals are selected, meaning that each weight vector is used to select exactly one individual.
 %
 Also note that it might happen that $R^t$ is empty prior to selecting $N$ individuals.
 %
