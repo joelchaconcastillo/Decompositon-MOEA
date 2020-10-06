@@ -6,7 +6,7 @@ i.e., for cases where distant solutions in terms of variable space are desired~\
 Such kinds of \MOEAS{} must maintain a large degree of diversity on variable space during the whole optimization process.
 %
 In contrast, our work analyses the hyphotesis that state-of-the-art techniques can be advanced further by explicitly managing
-the diversity on the variable space, even if the performance is only measured in terms of metrics that only take into account 
+the diversity on the variable space, even if the performance is measured in terms of metrics that only take into account 
 the objective space.
 %
 Since our aim is different, using multimodal multi-objective optimizers that maintain a large diversity 
@@ -29,14 +29,14 @@ of diversity in an explicit or implicit way~\cite{Joel:Crepinsek}.
 %
 This principle has encouraged the development of a vast quantinty of diversity managment techniques~\cite{pandey2014comparative}.
 %
-A common classification of these methods is based on the sort of components modified in the \EA{}.
+A popular classification of these methods is based on the sort of components modified in the \EA{}.
 %
-A popular taxonomy identifies the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, \textit{crossover/mutation-based}, \textit{fitness-based}, and \textit{replacement-based}.
+It identifies the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, \textit{crossover/mutation-based}, \textit{fitness-based}, and \textit{replacement-based}.
 %
 Additionally it defines the categories \textit{uniprocess-driven} and \textit{multiprocess-driven}, depending on the number
 of components that are altered.
 
-\textit{Replacement-based} methods have yielded quite promising results in the last years.
+\textit{Replacement-based} methods have yielded quite promising results in recent years.
 %
 One of the most popular proposals belonging to this group is the \textit{crowding} method, 
 in which each new individual should replace similar individuals from the previous generation~\cite{mengshoel2014adaptive}.
@@ -109,7 +109,7 @@ This algorithm is designed as a generic multi-objective, multi-optima optimizer.
 %
 In the multi-objective case it is an extension of \NSGAII{} where the crowding distance considers both the objective and variable space.
 %
-Since it first uses the typical rank procedure considering only the objective space, more importance is given to this space. 
+Since it first uses the typical rank procedure considering only the objective space, more importance is given to this space 
 and the diversity plays an inferior role.
 %
 Unfortunately, there is no way to easily alter the importance given to each space.
@@ -150,7 +150,7 @@ In domination-based \MOEAS{}, the Pareto dominance relation is applied to bias t
 Although this relation stimulates convergence to the Pareto front, additional techniques to promote
 diversity in the objective space must be integrated.
 %
-Several of the most traditional \MOEAS{} belong to this group, and while they face some difficulties for many-objective
+Several traditional \MOEAS{} belong to this group, and while they face some difficulties for many-objective
 optimization, they are considered quite effective for optimization problems with two and three objectives.
 %
 Non-Dominated Sorting Genetic Algorithm-II (\NSGAII{}) is the most popular technique belonging to this group~\cite{deb2002fast}.
@@ -177,11 +177,11 @@ into several single-objective optimization sub-problems.
 %
 Those sub-problems are then solved in a simultaneously and colaborative way.
 %
-The weighted Tchebycheff scalarizing approach have shown a remarkable performance.
+The weighted Tchebycheff scalarizing approach has shown a remarkable performance.
 %
 The most popular \MOEA{} that belongs to this category is \MOEAD{}, which was proposed by Zhang et al.~\cite{zhang2007moea}.
 %
-A distinctive feature of the \MOEAD{} is the application of neighborhoods at the level of each sub-problem.
+A distinctive feature of \MOEAD{} is the application of neighborhoods at the level of each sub-problem.
 %
 The mating selection and replacement operator takes into account this neighborhood to promote collaboration
 between similar subproblems.
