@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  2 OCT 2020 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  8 OCT 2020 11:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -493,20 +493,20 @@ enefit from \pgfplotsset{compat=1.15} (current compat level: 1.3).
 
 Missing character: There is no ] in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 24.
+(Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 24.
+(Font)              <5> on input line 25.
 [1
 
 ]) ) 
 Here is how much of TeX's memory you used:
  22017 strings out of 492983
  603648 string characters out of 6134923
- 750526 words of memory out of 5000000
+ 748713 words of memory out of 5000000
  25245 multiletter control sequences out of 15000+600000
  4345 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,16n,100p,809b,2169s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,16n,100p,809b,2167s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Graphic-Scalability-3obj_tikz-figure0.dvi (1 page, 14904 byte
+Output written on Graphic-Scalability-3obj_tikz-figure0.dvi (1 page, 13976 byte
 s).
