@@ -318,10 +318,10 @@ problems with three objective functions.
 \begin{figure}[t]
 \centering
 \begin{tabular}{l}
- \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG1-figure0.eps}\\[0cm]%[-0.14cm] 
- \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG1-figure1.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG5-figure0.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG5-figure1.eps}\\[0cm]%[-0.14cm] 
 \end{tabular}
-\caption{Diversity of distance variables (first row) and mean of \HV{} values (second row) vs. elapsed time in the bi-objective WFG1 test problem. The reported results are taken from $35$ runs.}\label{fig:WFG1_Diversity}
+\caption{Diversity of distance variables (first row) and mean of \HV{} values (second row) vs. elapsed time in the bi-objective WFG5 test problem. The reported results are taken from $35$ runs.}\label{fig:WFG5_Diversity}
 \end{figure}
 
 
@@ -346,9 +346,9 @@ that dominates $x$, is equivalent to $x$, or is dominated by $x$.
 Differently, if $x_i$ is a position variable, modifying $x_i$ in $x$ always results in a vector that is 
 incomparable or equivalent to $x$~\cite{huband2006review}.
 %
-In order to show the behavior of the different schemes we selected WFG1 and UF5.
+In order to show the behavior of the different schemes we selected WFG5 and UF5.
 %
-WFG1 is unimodal but its optimal region has some features that provoke stagnation in some \MOEAS{}~\cite{castillo2017multi}.
+WFG5 is unimodal but its optimal region has some features that provoke stagnation in some \MOEAS{}~\cite{castillo2017multi}.
 %
 In contrast, the UF5 is a quite complex problem whose optimal regions are isolated in the decision variable 
 space.
@@ -361,10 +361,10 @@ by considering only the distance variables.
 The reason to consider only the distance variables is that in some cases premature convergence on these kinds of 
 variables appear~\cite{castillo2017multi}.
 %
-Figures~\ref{fig:WFG1_Diversity} and~\ref{fig:UF5_Diversity} show the evolution of the ADI (top) and the mean of \HV{} (bottom) 
-for the WFG1 and UF5, respectively.
+Figures~\ref{fig:WFG5_Diversity} and~\ref{fig:UF5_Diversity} show the evolution of the ADI (top) and the mean of \HV{} (bottom) 
+for the WFG5 and UF5, respectively.
 %
-In the WFG1 problem, the distance variables of the state-of-the-art \MOEAS{} converged to a small region 
+In the WFG5 problem, the distance variables of the state-of-the-art \MOEAS{} converged to a small region 
 approximately after the $10\%$ of the total execution.
 %
 Thus, the differential evolution operator loses it exploration power and as a result,
@@ -406,7 +406,7 @@ This analysis shows that the dynamics of the population depends on the problem a
 The behavior of \AVSDMOEAD{} for problems where there is a distinction between distance and position variables 
 were similar to those already presented.
 %
-Cases where the optimal regions consists of constant values for the distance variables behaves as WFG1, whereas
+Cases where the optimal regions consists of constant values for the distance variables behaves as WFG5, whereas
 the behavior for the cases where the optimal regions consist of non-constant values for the distance variables are
 more similar to the UF5 case.
 %
