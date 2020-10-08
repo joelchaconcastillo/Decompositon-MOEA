@@ -25,6 +25,11 @@ height=0.35\textwidth,
 title={\textit{\textbf{On Convergence of Distance Variables in WFG5}}},
 %  xlabel=Function Evaluations,
   ylabel=ADI,
+tick label style={
+                /pgf/number format/fixed,
+                /pgf/number format/fixed zerofill,
+                /pgf/number format/precision=1
+            },
 xticklabels={,,},
 %  xticklabel style = {rotate=30},
   legend style=
@@ -48,16 +53,17 @@ xticklabels={,,},
 
 \end{axis}
 \end{tikzpicture}
-
 \begin{tikzpicture}[scale=0.8]
 \begin{axis}[
 height=0.35\textwidth,
  width=0.8\textwidth,
+xmin=0.0,
 ymin=0.86,
 %title={\textit{\textbf{Diversity of Distance Variables with two objectives}}},
   xlabel=Function Evaluations,
   ylabel=Mean HV,
   xticklabel style = {rotate=30},
+%   yticklabel style={/pgf/number format/.cd,fixed,precision=2},
 %  xlabel style={yshift=-0.2cm},
 %  legend style=
 %    {cells={anchor=east},legend pos=outer north east,}, nodes={scale=0.8, transform shape}    ,

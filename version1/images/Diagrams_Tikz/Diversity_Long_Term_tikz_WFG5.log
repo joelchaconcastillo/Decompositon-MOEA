@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  8 OCT 2020 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  8 OCT 2020 16:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -483,8 +483,33 @@ Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zexternalshared.code.tex))
 PGFPlots: reading {CSV/Diversity_HV_Long_Term_WFG5.csv}
-\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
 
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '12'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '13'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '14'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '15'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '16'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
 
 No file Diversity_Long_Term_tikz_WFG5.aux.
 \openout1 = `Diversity_Long_Term_tikz_WFG5.aux'.
@@ -545,17 +570,21 @@ _Term_tikz_WFG5-figure1".ps "Diversity_Long_Term_tikz_WFG5-figure1".dvi; ps2eps
 \openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
 
 File: Diversity_Long_Term_tikz_WFG5-figure1.ps Graphic file (type eps)
-<Diversity_Long_Term_tikz_WFG5-figure1.ps> [1
+<Diversity_Long_Term_tikz_WFG5-figure1.ps>
+Overfull \hbox (163.05594pt too wide) in paragraph at lines 21--92
+[][] [] 
+ []
 
-]
-(./Diversity_Long_Term_tikz_WFG5.aux) ) 
+[1
+
+] (./Diversity_Long_Term_tikz_WFG5.aux) ) 
 Here is how much of TeX's memory you used:
- 21340 strings out of 492983
- 582680 string characters out of 6134923
+ 21385 strings out of 492983
+ 584015 string characters out of 6134923
  745612 words of memory out of 5000000
- 24580 multiletter control sequences out of 15000+600000
+ 24625 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,5n,96p,750b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Diversity_Long_Term_tikz_WFG5.dvi (1 page, 5224 bytes).
+Output written on Diversity_Long_Term_tikz_WFG5.dvi (1 page, 5216 bytes).
