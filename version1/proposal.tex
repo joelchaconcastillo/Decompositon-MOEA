@@ -36,7 +36,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
         \begin{small}
 \begin{algorithmic}[1]
 				\STATE Input: $N$ (Population and Archive Size), $\lambda$ (a set of $N$ weight vectors for decomposition in the population),
-				$\Lambda$ (a set of weight vectors for the R2-based archive).
+				$\Lambda$ (a set of weight vectors for the R2-based archive), $D_I$ (Initial Penaly Threshold).
         \STATE Output: $A^{t}$ (Archive with $N$ solutions)
 
         \STATE \textbf{Initialization}: Generate an initial population $P^0$ with $N$ individuals \label{alg_1:1}
@@ -51,8 +51,8 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
 							 \STATE \textbf{Mutation}: Apply polynomial mutation to $Q^t_{i}$ with probability $p_m$
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
-           \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$ and $z^*$ as input \label{alg_1:11}
-	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ by considering $A^{t}$, $Q^t$ and $\Lambda$ following Algorithm~\ref{alg:r2_Indicator}. 
+           \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$, $z^*$ and $D_I$ as input \label{alg_1:11}
+	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$ and $\Lambda$ as input. \label{alg_1:11bis}
            \STATE $t=t+1$ \label{alg_1:12}
         \ENDWHILE \label{alg_1:13}
         \RETURN $A^{t}$ 
@@ -95,7 +95,7 @@ and the reference vector $z^*$ used for \ASF{} is composed by the best attained
 objective values.
 %
 Particularly, the weight vectors were generated
-with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}
+with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}.
 %
 Finally, the survivor selection stage is applied.
 %
@@ -105,12 +105,31 @@ selection is performed.
 %
 Since this is the novelty of the paper, its working operation is given in detail.
 
+\begin{algorithm}[!t]
+\algsetup{linenosize=\tiny}
+        \caption{Procedure to update the R2-based archive}
+        \begin{small}
+\begin{algorithmic}[1]
+	\STATE Input: $A^t$ (External archive at the current generation), $Q^t$ (Offspring of current generation), $\Lambda$ (weight vectors for $R2$), $z^*$ (Reference vector)
+	\STATE Output: $A^{t+1}$
+	\STATE $R^t= A^t \cup Q^t$
+	\STATE $A^{t+1} = \emptyset$
+	\WHILE{ $|A^{t+1}| < N$ }
+	\STATE $\forall x \in R^t : r(x) = R2(A^{t+1} \cup \{x\}; \Lambda, z^*)$
+	\STATE $x^* = argmin(r(x):x \in R^t)$ 
+	\STATE $A^{t+1} = A^{t+1} \cup \{x^*\}$
+	\STATE $R^t = R^t \setminus \{ x^* \}$ 
+  	\ENDWHILE
+        \end{algorithmic}
+        \end{small}
+\label{alg:r2_Indicator}
+\end{algorithm}
 \begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
         \caption{Replacement Phase of \AVSDMOEAD{}}
 \begin{small}
 \begin{algorithmic}[1]
-\STATE Input: $P^t$ (Parent of current generation), $Q^t$ (Offspring of current generation), $\lambda$ (a set of weight vectors) and $z^*$ (Reference vector)
+\STATE Input: $P^t$ (Population of current generation), $Q^t$ (Offspring of current generation), $\lambda$ (a set of weight vectors) and $z^*$ (Reference vector)
         \STATE Output: $P^{t+1}$
         \STATE $R^t = P^t \cup Q^t$\label{alg_2:1} 
         \STATE $P^{t+1} = \emptyset$ \label{alg_2:2}
@@ -139,43 +158,25 @@ Since this is the novelty of the paper, its working operation is given in detail
 \label{alg:replacement}
 \end{algorithm}
 
-\begin{algorithm}[!t]
-\algsetup{linenosize=\tiny}
-        \caption{R2-Indicator procedure}
-        \begin{small}
-\begin{algorithmic}[1]
-	\STATE Input: $A^t$ (External archive at the current generation), $Q^t$ (Offspring of current generation), $\Lambda$ (weight vectors for $R2$), $z^*$ (Reference vector)
-	\STATE Output: $A^{t+1}$
-	\STATE $R^t= A^t \cup Q^t$
-	\STATE $A^{t+1} = \emptyset$
-	\WHILE{ $|A^{t+1}| < N$ }
-	\STATE $\forall x \in R^t : r(x) = R2(A^{t+1} \cup \{x\}; \Lambda, z^*)$
-	\STATE $x^* = argmin(r(x):x \in R^t)$ 
-	\STATE $A^{t+1} = A^{t+1} \cup \{x^*\}$
-	\STATE $R^t = R^t \setminus \{ x^* \}$ 
-  	\ENDWHILE
-        \end{algorithmic}
-        \end{small}
-\label{alg:r2_Indicator}
-\end{algorithm}
+
 
 Note that \AVSDMOEAD{} incorporates an external archive to keep the best solutions.
 %
 While in \MOEAD{} this is considered to be optional, in our approach is quite important because the penalty approach
-might provoke discarding elite solutions for some weight vectors.
+included in the replacement phase might discard elite solutions for some weight vectors.
 %
 Since methods based on the R2 indicator~\cite{trautmann2013r2} has reported quite high-quality solutions, our
-archive is based on the R2 indicator.
+archive is based on the R2 indicator applying the achievement scalarizing functions to generate the utility functions.
 %
 The archive selects at each iteration $N$ candidate solutions by combining its contents with the offspring of each 
-generation (see line~\ref{alg_1:12} in Algorithm~\ref{alg:vsd-moead}).
+generation (see line~\ref{alg_1:11bis} in Algorithm~\ref{alg:vsd-moead}).
 %
 This is done by following a simple greedy approach (Algorithm~\ref{alg:r2_Indicator}).
 %
 Particularly, it selects iteratively the individual that minimizes the $R2$ (lines 6-9) considering
 the already selected individuals with ties broken randomly.
 %
-Note that since $R2$ is weekly Pareto-compliance, it might happen that some dominated individuals do not contribute
+Note that since $R2$ is weekly Pareto-compliance, it might happen that some non-dominated individuals do not contribute
 to $R2$, so incorporating more complex archiving strategies might be helpful.
 %
 However, our preliminary experiments showed that this it not so important for proper performance, so we decided to maintain
@@ -209,7 +210,7 @@ Distance(A, B) =   \left ( \frac{1}{D}  \sum_{i=1}^D \left ( \frac{A_i - B_i}{x_
 In order to promote the selection of distant individuals, a threshold $D^t$ is dynamically calculated (line 7) and 
 individuals with a $DCS$ value lower than the threshold are considered as undesirable individuals.
 %
-Note that the calculation of $D^t$ depends on an initial threshold value ($D_I$), which is a parameter of our proposal,
+Note that the calculation of $D^t$ depends on an initial penalty threshold ($D_I$), which is a parameter of our proposal,
 on the number of generations that have evolved ($G_{Elapsed}$) and on the stopping criterion ($G_{End}$), i.e., the number of
 generations to evolve.
 %

@@ -11,7 +11,7 @@ the objective space.
 %
 Since our aim is different, using multimodal multi-objective optimizers that maintain a large diversity 
 for the whole optimization process is counter-productive, 
-so more advanced ways of integrating the control of diversity are required.
+so more advanced ways of integrating the management of diversity are required.
 %
 Thus, this section reviews some of the most important advances on diversity-aware techniques that motivated the
 design of \AVSDMOEAD{}, which are a set of methods that were adopted to single-objective optimization.
@@ -65,7 +65,7 @@ explicitly managing the diversity in the variable space, which is a remarkable d
 to single-objective optimizers.
 %
 One of the main reasons behind this difference is probably that there is a relation between the diversity on the objective 
-space and the diversity on the decision variable space, so even if the diversity on decision space is not controlled explicitly,
+space and the diversity on the decision variable space, so even if the diversity on decision space is not managed explicitly,
 not so negative effects as in single-objective optimization usually appear.
 %
 %Additionally, it is easy to proof that enforcing a minimum threshold for diversity on variable space for the whole optimization
@@ -76,7 +76,8 @@ not so negative effects as in single-objective optimization usually appear.
 However, the relation between the two different diversities depend on each \MOP{}~\cite{shir2009enhancing}, meaning
 that including the successful principles of single-objective optimizers might result in more robust \MOEAS{}.
 %
-Most current \MOEAS{} that take into account diversity on the variable space are devoted to multimodal multi-objective optimization.
+Most current \MOEAS{} that take into account diversity on the variable space are devoted to multimodal 
+multi-objective optimization~\cite{deb2008omni, cuate2019variation}.
 %
 However, some attempts to apply these mechanisms in traditional multi-objective optimization have also been done.
 
@@ -114,7 +115,7 @@ and the diversity plays an inferior role.
 %
 Unfortunately, there is no way to easily alter the importance given to each space.
 %
-In 2009, Shir et al. showed that the diversity in the decision variable space can be significantly enhanced without hampering 
+In 2009, Shir et al. showed that in many cases the diversity in the decision variable space can be significantly enhanced without hampering 
 the convergence to a diverse Pareto-front approximation.
 %
 Following this insight, the \CMAES{} niching framework was proposed~\cite{shir2009enhancing}.
@@ -155,7 +156,7 @@ optimization, they are considered quite effective for optimization problems with
 %
 Non-Dominated Sorting Genetic Algorithm-II (\NSGAII{}) is the most popular technique belonging to this group~\cite{deb2002fast}.
 %
-\NSGAIII{}~\cite{deb2013evolutionary} extends \NSGAII{} by replacing the crowing selection with an strategy 
+\NSGAIII{}~\cite{deb2013evolutionary} extends \NSGAII{} by replacing the crowding selection with an strategy 
 based on generating distributed reference points that implicitly decompose the objective space~\cite{trivedi2016survey}.
 %
 While this method is aimed at many-objective optimization, it also provides some benefits for problems with three objectives.
@@ -177,7 +178,8 @@ into several single-objective optimization sub-problems.
 %
 Those sub-problems are then solved in a simultaneously and collaborative way.
 %
-The weighted Tchebycheff scalarizing approach has shown a remarkable performance.
+The weighted Tchebycheff scalarizing and its variant the achievement scalarizing function (\ASF{})~\cite{hernandez2015improved,Pescador:17}
+have shown a remarkable performance.
 %
 The most popular \MOEA{} that belongs to this category is \MOEAD{}, which was proposed by Zhang et al.~\cite{zhang2007moea}.
 %

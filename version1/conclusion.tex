@@ -1,12 +1,12 @@
 Premature convergence is one of the most typical drawbacks of \EAS{}.
 %
-In many \MOPS{}, \MOEAS{} promote indirectly the preservation of diversity on variable space
+\MOEAS{} promote indirectly the preservation of diversity on variable space
 because of the explicit maintenance of diversity on objective space.
 %
 However, for many problems the degree of diversity maintained is not enough to keep the exploration
 power and locate the optimal regions.
 %
-In single-objective optimization, many of the state-of-the-art algorithms consider an explicit control of
+In single-objective optimization, many of the state-of-the-art algorithms consider an explicit management of
 diversity.
 %
 Particularly, those schemes that relate the degree of diversity with the elapsed period and stopping criterion
@@ -14,7 +14,7 @@ have excelled.
 %
 This paper shows that this design principle is also helpful for the multi-objective optimization area,
 where the optimization of many of the most complex popular benchmark problems can be improved further
-by introducing this design principle.
+by aplying this design principle.
 
 In order to prove previous hypothesis, a novel replacement operator based on the aforementioned design principle
 is integrated to generate a decomposition-based \MOEA{} that takes into account the diversity of both variable 
@@ -36,12 +36,12 @@ As a result our proposal is referred to as \AVSDMOEAD{}.
 The experimental validation carried out shows the remarkable improvement provided by \AVSDMOEAD{} in comparison to
 state-of-the-art \MOEAS{} both in two-objective and three-objective problems.
 %
-The scalability analyses shows that as the number of decision variables increases the benefits of including
+The scalability analyses show that as the number of decision variables increases the benefits of including
 a proper management of diversity is even more important, so the differences in performance increases.
 %
 In fact, the most remarkable benefits appear for the most complex cases.
 %
-Additionally, the analysis of the initial threshold distance, which is an additional parameter required by \AVSDMOEAD{}, 
+Additionally, the analysis of the initial penalty threshold, which is an additional parameter required by \AVSDMOEAD{}, 
 shows that the method is quite robust so finding a proper parameter value is not a difficult task.
 %
 Finally, in order to better understand the reasons behind the huge superiority of the proposal, some analyses regarding
