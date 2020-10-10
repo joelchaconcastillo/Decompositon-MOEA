@@ -1,6 +1,6 @@
 \MOEAS{} that take into account the diversity on variable space are not novel.
 %
-Particularly, these kinds of techniques have been applied for multimodal multi-objective optimization~\cite{Liang:16},
+These kinds of techniques have been specially usefull for multimodal multi-objective optimization~\cite{Liang:16},
 i.e., for cases where distant solutions in terms of variable space are desired~\cite{deb2008omni, cuate2019variation}.
 %
 Such kinds of \MOEAS{} must maintain a large degree of diversity on variable space during the whole optimization process.
@@ -65,7 +65,7 @@ explicitly managing the diversity in the variable space, which is a remarkable d
 to single-objective optimizers.
 %
 One of the main reasons behind this difference is probably that there is a relation between the diversity on the objective 
-space and the diversity on the decision variable space, so even if the diversity on decision space is not managed explicitly,
+space and the diversity on the variable space, so even if the diversity on variable space is not managed explicitly,
 not so negative effects as in single-objective optimization usually appear.
 %
 %Additionally, it is easy to proof that enforcing a minimum threshold for diversity on variable space for the whole optimization
@@ -162,7 +162,7 @@ based on generating distributed reference points that implicitly decompose the o
 While this method is aimed at many-objective optimization, it also provides some benefits for problems with three objectives.
 
 Indicator-based \MOEAS{} incorporate a measure of quality over sets of solutions to alter some components such as the 
-selection and/or replacement~\cite{beume2007sms}.
+selection and/or replacement~\cite{zitzler2004indicator}.
 %
 Indicators take into account both the convergence and coverage, so no additional techniques to promote diversity
 in the objective space are required.
@@ -170,7 +170,7 @@ in the objective space are required.
 A quite effective \MOEA{} that belongs to this category is the R2-Indicator-Based Evolutionary Multi-objective 
 Algorithm (\RMOEA{})~\cite{trautmann2013r2}.
 %
-\textsc{sms-emoa}~\cite{Joel:SMSEMOA} is also quite effective 
+\textsc{sms-emoa}~\cite{beume:07} is also quite effective 
 but it uses the computationally expensive hypervolume indicator, meaning that it is not so generally applicable as \RMOEA{}.
 
 Finally, decomposition-based \MOEAS{}~\cite{ishibuchi1998multi} incorporate scalarizing functions to transform the \MOP{} 

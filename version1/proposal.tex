@@ -3,10 +3,10 @@ This section is devoted to describe our proposal, the \textit{Archived Variable 
 %
 The main novelty and motivation behind \AVSDMOEAD{} is the incorporation of an explicit management of the diversity on variable space
 with the aim of improving the behavior in terms of objective space metrics specially in long-term executions, which is the
-environment where diversity-aware techniques have excelled.
+environment where diversity-aware techniques have excelled~\cite{segura2015novel}.
 %
 Although \AVSDMOEAD{} is inspired in \MOEAD{}, it was simplified so in some ways it resembles more mature
-decomposition-based \MOEAS{}, such as \MOGA{}.
+decomposition-based \MOEAS{}, such as \textsc{wbga}~\cite{Hajela:93}.
 %
 For instance, the notion of subproblem neighborhood is not used and the dynamic resource allocation usually applied in modern variants
 of \MOEAD{} is deactivated.
@@ -26,7 +26,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
 
 \begin{equation}\label{eqn:approach}
 \displaystyle{
- g^{te}(x| \lambda_j, z^*) = \max_{ 1 \leq i \leq M} \left \{ \frac{ | f_i(x) - z_i^*|}{\lambda_{j,i}} \right \} 
+ g^{asf}(x| \lambda_j, z^*) = \max_{ 1 \leq i \leq M} \left \{ \frac{ | f_i(x) - z_i^*|}{\lambda_{j,i}} \right \} 
 }
 \end{equation}
 
@@ -52,7 +52,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
            \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$, $z^*$ and $D_I$ as input \label{alg_1:11}
-	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$ and $\Lambda$ as input. \label{alg_1:11bis}
+	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$, $\Lambda$, and $D_I$ as input. \label{alg_1:11bis}
            \STATE $t=t+1$ \label{alg_1:12}
         \ENDWHILE \label{alg_1:13}
         \RETURN $A^{t}$ 
@@ -82,7 +82,7 @@ Its general template is quite standard.
 %
 The mating and variation components are similar to those used in typical \MOEAS{}.
 %
-Particularly, in the $t$ generation, the population $P^t$ is used to generate
+Particularly, in generation number $t$, the population $P^t$ is used to generate
 the offspring $Q^t$ with $N$ individuals by randomly selecting at each step three individuals
 to apply the $DE/rand/1/bin$ operator.
 %
@@ -129,7 +129,7 @@ Since this is the novelty of the paper, its working operation is given in detail
         \caption{Replacement Phase of \AVSDMOEAD{}}
 \begin{small}
 \begin{algorithmic}[1]
-\STATE Input: $P^t$ (Population of current generation), $Q^t$ (Offspring of current generation), $\lambda$ (a set of weight vectors) and $z^*$ (Reference vector)
+\STATE Input: $P^t$ (Population of current generation), $Q^t$ (Offspring of current generation), $\lambda$ (a set of weight vectors), $z^*$ (Reference vector), and $D_I$ (Initial Penalty Threshold).
         \STATE Output: $P^{t+1}$
         \STATE $R^t = P^t \cup Q^t$\label{alg_2:1} 
         \STATE $P^{t+1} = \emptyset$ \label{alg_2:2}
@@ -147,7 +147,7 @@ Since this is the novelty of the paper, its working operation is given in detail
 %		    \STATE Compute the diversity-contribution of each individual in $Penalized$ to the survivor set $P^{t+1}$\label{alg:10}
 %                    \STATE Move the most suitable individual from $Penalized$ to the survivor set $R^t$; the one with the highest diversity-contribution to $R^t$ \label{alg:11}
                 \ENDIF \label{alg_2:12}
-            \STATE Identify the pair of non-penalized individual $R_i^t$ and weight vector $r\lambda_j$ with the best scalarizing function value according to $g^{te}(R_i^t | r\lambda_j, z^*)$ \label{alg_2:13}
+            \STATE Identify the pair of non-penalized individual $R_i^t$ and weight vector $r\lambda_j$ with the best scalarizing function value according to $g^{asf}(R_i^t | r\lambda_j, z^*)$ \label{alg_2:13}
 %	    \STATE $\displaystyle{ R_i^t, \lambda_i = \max_{k \in |R^t|, l \in |\Lambda|} g(R_k^t | \lambda_l, \mathbf{z})}$ 
 	    \STATE Move individual $R_i^t$ to $P^{t+1}$ \label{alg_2:14}
             \STATE Erase the weight vector r$\lambda_j$ from r$\lambda$ \label{alg_2:15}
@@ -163,10 +163,10 @@ Since this is the novelty of the paper, its working operation is given in detail
 Note that \AVSDMOEAD{} incorporates an external archive to keep the best solutions.
 %
 While in \MOEAD{} this is considered to be optional, in our approach is quite important because the penalty approach
-included in the replacement phase might discard elite solutions for some weight vectors.
+included to pick up the survivors of the population in the replacement phase might discard elite solutions for some weight vectors.
 %
 Since methods based on the R2 indicator~\cite{trautmann2013r2} has reported quite high-quality solutions, our
-archive is based on the R2 indicator applying the achievement scalarizing functions to generate the utility functions.
+archive is based on the R2 indicator applying the \ASF{} to generate the utility functions.
 %
 The archive selects at each iteration $N$ candidate solutions by combining its contents with the offspring of each 
 generation (see line~\ref{alg_1:11bis} in Algorithm~\ref{alg:vsd-moead}).

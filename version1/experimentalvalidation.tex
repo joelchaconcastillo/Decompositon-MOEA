@@ -23,7 +23,7 @@ Finally, the robustness of \AVSDMOEAD{} in terms of the initial penalty threshol
 Note that in order to test the quality of the approximations, the hypervolume is used.
 %
 Additionally, our analyses also include some studies to better understand
-the implications of \AVSDMOEAD{} for the diversity on variable space.
+the implications of \AVSDMOEAD{} on the diversity on variable space.
 %
 These analyses allow to better understand the reasons behind the proper performance of \AVSDMOEAD{}
 and to highlight the significant differences between \AVSDMOEAD{} and other strategies in terms of the dynamics
@@ -82,8 +82,8 @@ The hypervolume indicator (\HV{}) is used to compare the various schemes.
 The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) 
 than the nadir point, as suggested in~\cite{ishibuchi2017reference}.
 %
-The normalized \HV{} is used to facilitate the interpretation of the results~\cite{li2014evolutionary}, 
-and the value reported is computed as the ratio between the normalized \HV{} obtained and the maximum attainable normalized \HV{}.
+The value reported is computed as the ratio between the attained normalized \HV{}~\cite{li2014evolutionary} 
+and the maximum attainable normalized \HV{}.
 %
 In this way, a value equal to one means a perfect approximation.
 %
@@ -210,8 +210,7 @@ It considers the same weight vectors than \RMOEA{}.
 
 \subsection{Performance of \MOEAS{} in long-term executions}
 
-
-One of the aim behind the design of \AVSDMOEAD{} is to profit from long-term executions.
+One of the aims behind the design of \AVSDMOEAD{} is to profit from long-term executions.
 %
 Therefore, in this section the results attained by the different algorithms is shown by setting 
 the stopping criterion to $2.5 \times 10^7$ function evaluations.
@@ -254,7 +253,7 @@ Note also that in terms of standard deviation, \AVSDMOEAD{} attains much lower v
 it is quite robust.
 
 
-In order to better clarify these findings, pair-wise statistical tests were done among each method tested in each test problem.
+In order to better clarify these findings, pair-wise statistical tests were applied between each method tested in each test problem.
 %
 For the two-objective cases, Table~\ref{tab:Tests_HV_2obj} shows the number of times that each method statistically won 
 (column~$\uparrow$), lost (column~$\downarrow$) or tied (column~$\leftrightarrow$).
@@ -297,7 +296,7 @@ statistical tests.
 %
 In fact, its deterioration considering the whole set of problems is just $0.006$.
 %
-Beating all the state of the art algorithms in a so large number of problem benchmarks is a quite important attainment that shows
+Beating all the state of the art algorithms in a so large number of problem benchmarks is a quite significant attainment that shows
 the robustness of \AVSDMOEAD{}.
 %This might occurs since that \RMOEA{} takes into account a greater number of weight vectors, in some problems it allows the allocation of solutions in regions that contributes in a better way to \HV{}.
 %
@@ -387,7 +386,7 @@ As expected, promoting diversity in an explicit way is also beneficial for probl
 Attending to the data shown in Figure~\ref{fig:UF5_Diversity}, the advantage of promoting diversity in the UF5 test 
 problem is clear.
 %
-In this case, most state-of-the-art algorithms maintain some degree of diversity in the distance variables for
+In this case, state-of-the-art algorithms maintain some degree of diversity in the distance variables for
 the whole search.
 %
 However, a large degree of diversity is required to reach the 21 optimal solutions and these \MOEAS{} do not maintain
@@ -409,7 +408,7 @@ Then, some additional increase was attained due to the intensification in the lo
 %
 This analysis shows that the dynamics of the population depends on the problem at hand.
 %
-The behavior of \AVSDMOEAD{} for problems where there is a distinction between distance and position variables 
+The behavior of \AVSDMOEAD{} for all the tested problems 
 were similar to those already presented.
 %
 Cases where the optimal regions consists of constant values for the distance variables behaves as WFG5, whereas
@@ -432,7 +431,7 @@ Note however, that in these cases, different levels of diversity are required, s
 
 \subsection{Analysis of Scalability in the Decision Variables}
 
-In order to have a better insight of the benefits of our proposal, an analysis of the scalability in terms of the number 
+In order to have a better insight on the benefits of our proposal, an analysis of the scalability in terms of the number 
 of decision variables is presented.
 %
 Given the computational cost associated to this experimentation, it was carried out considering only 
@@ -443,7 +442,7 @@ but considering $50$, $100$, $250$ and $500$ variables.
 %
 Note that in the WFG test problems, the number of position variables and distance variables must be specified.
 %
-Specifically, the number of distance variables was set to $42$, $84$, $210$ and $418$ when using $50$, $100$, $250$ and $500$ 
+The number of distance variables was set to $42$, $84$, $210$ and $418$ when using $50$, $100$, $250$ and $500$ 
 variables, respectively.
 %
 The rest of the decision variables were position variables, meaning that they were $8$, $16$, $40$ and $82$, respectively.
@@ -510,7 +509,7 @@ of $D_I$.
 %
 As in previous experiments, the stopping criterion was set to $2.5 \times 10^7$ function evaluations.
 %
-Since normalized distances are used (see~\ref{eqn:distance}), the maximum attainable distance is $1.0$.
+Since normalized distances are used, the maximum attainable distance is $1.0$.
 %
 Also note that setting $D_I$ to $0$ implies not promoting diversity in the variable space.
 %
@@ -532,8 +531,8 @@ meaning that the behavior of \AVSDMOEAD{} is quite robust.
 %
 Thus, properly setting this parameter is not a complex task.
 
-In order to better understand the implications of $D_I$ on the dynamics of the population Figure~\ref{fig:WFG9_Diversity}
-shows for \AVSDMOEAD{} the evolution of diversity for \textsc{wfg9} on the distance variables for three different values of $D_I$.
+In order to better understand the implications of $D_I$ on the dynamics of the population, Figure~\ref{fig:WFG9_Diversity}
+shows for \AVSDMOEAD{} the evolution of diversity on the distance variables in the \textsc{wfg9} case for three different values of $D_I$.
 %
 When using $D_I = 0$, the diversity is reduced quite fastly which results in premature convergence.
 %
@@ -542,7 +541,7 @@ Thus, a not too high hypervolume is attained.
 However, when using $D_I = 0.4$ and $D_I = 1$ the loss of diversity is slowed down and quite a large hypervolume
 is attained.
 %
-Note that the setting of $D_I = 1$ promotes a larger diversity so the hypervolume increases slower than when using
+Note that setting $D_I = 1$ promotes a larger diversity so the hypervolume increases slower than when using
 $D_I = 0.4$.
 %
 However, the exploration degree in both cases is enough to reach high-quality solutions.
