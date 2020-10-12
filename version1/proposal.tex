@@ -80,22 +80,23 @@ The main procedure of \AVSDMOEAD{} is shown in Algorithm~\ref{alg:vsd-moead}.
 %
 Its general template is quite standard.
 %
-The mating and variation components are similar to those used in typical \MOEAS{}.
+The variation step is similar to those used in typical \MOEAS{}, i.e.
+it is based on crossover and mutation and any operators might be used.
 %
-Particularly, in generation number $t$, the population $P^t$ is used to generate
-the offspring $Q^t$ with $N$ individuals by randomly selecting at each step three individuals
+Particularly, $N$ individuals are created at each generation by randomly selecting at each step three individuals
 to apply the $DE/rand/1/bin$ operator.
+%
+Note that each member of the population is used as the target vector one time.
 %
 Then, polynomial mutation is applied to the output of the $DE$ operator.
 %
-%TODO: cómo se generaron los pesos?
 As in most current \MOEAD{} variants, the initial population is generated randomly,
-the number of weight vectors ($\lambda$) is equal to the population size,
+the number of weight vectors ($|\lambda|$) is equal to the population size,
 and the reference vector $z^*$ used for \ASF{} is composed by the best attained 
 objective values.
 %
-Particularly, the weight vectors were generated
-with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}.
+The weight vectors used in this paper are based on an uniform design strategy and are
+specified in the experimental validation section.
 %
 Finally, the survivor selection stage is applied.
 %
@@ -166,7 +167,7 @@ While in \MOEAD{} this is considered to be optional, in our approach is quite im
 included to pick up the survivors of the population in the replacement phase might discard elite solutions for some weight vectors.
 %
 Since methods based on the R2 indicator~\cite{trautmann2013r2} have reported quite high-quality solutions, our
-archive is based on the R2 indicator applying the \ASF{} to generate the utility functions.
+archive is based on the R2 indicator applying the \ASF{} and the weights $\Lambda$ to generate the utility functions.
 %
 The archive selects at each iteration $N$ candidate solutions by combining its contents with the offspring of each 
 generation (see line~\ref{alg_1:11bis} in Algorithm~\ref{alg:vsd-moead}).
@@ -181,6 +182,7 @@ to $R2$, so incorporating more complex archiving strategies might be helpful.
 %
 However, our preliminary experiments showed that this it not so important for proper performance, so we decided to maintain
 its simplicity.
+%
 
 %
 \subsection{Novel Replacement Phase of \AVSDMOEAD{} }
