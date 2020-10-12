@@ -1,7 +1,8 @@
 Premature convergence is one of the most typical drawbacks of \EAS{}.
 %
 \MOEAS{} promote indirectly the preservation of diversity on variable space
-because of the explicit maintenance of diversity on objective space.
+because of the implicit relation between the diversity maintained on the objective space and the
+one maintained on the variable space.
 %
 However, for many problems the degree of diversity maintained is not enough to keep the exploration
 power and locate the optimal regions.
@@ -17,16 +18,16 @@ where the optimization of many of the most complex popular benchmark problems ca
 by applying this design principle.
 
 In order to prove previous hypothesis, a novel replacement operator based on the aforementioned design principle
-is integrated to generate a decomposition-based \MOEA{} that takes into account the diversity of both variable 
-space and objective function space.
+is applied to generate a decomposition-based \MOEA{} that takes into account the diversity on both variable 
+space and objective space.
 %
 This is performed using a dynamic penalty method. 
 %
-Note that since the aim of the approach is to improve the results when considering metrics of the objective space,
+Note that since the aim of the approach is to improve the results when considering metrics on the objective space,
 the importance given to the diversity on the variable space is reduced as the evolution progresses, meaning that
 at later phases our proposal behaves more similarly to traditional \MOEAS{}.
 %
-Additionally, taking into account some of the recent advances in the area and that our proposal might not maintain
+Additionally, taking into account recent advances and that our proposal might not maintain
 some high-quality solutions in the population because of the penalty scheme, an external archive based on the
 R2-indicator is incorporated.
 %

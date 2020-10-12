@@ -17,8 +17,8 @@ improve further more complex state-of-the-art algorithms.
 
 Our proposal decomposes the \MOP{} in several single-objective problems.
 %
-Notwithstanding that any scalarization approach can be employed, our strategy applies the achievement scalarizing function (\ASF{}), 
-which has reported some of the most effective results in recent years~\cite{deb2013evolutionary, hernandez2015improved}.
+Notwithstanding that any scalarization approach can be employed, our strategy applies the \ASF{}, 
+which has reported some of the most effective results in recent years~\cite{hernandez2015improved}.
 %
 Let $\lambda_1, ..., \lambda_N$ be a set of weight vectors and $z^*$ a reference vector,
 the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (\ref{eqn:approach}).
@@ -52,7 +52,7 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
            \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$, $z^*$ and $D_I$ as input \label{alg_1:11}
-	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$, $\Lambda$, and $D_I$ as input. \label{alg_1:11bis}
+	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$, $\Lambda$, and $z^*$ as input. \label{alg_1:11bis}
            \STATE $t=t+1$ \label{alg_1:12}
         \ENDWHILE \label{alg_1:13}
         \RETURN $A^{t}$ 
@@ -165,7 +165,7 @@ Note that \AVSDMOEAD{} incorporates an external archive to keep the best solutio
 While in \MOEAD{} this is considered to be optional, in our approach is quite important because the penalty approach
 included to pick up the survivors of the population in the replacement phase might discard elite solutions for some weight vectors.
 %
-Since methods based on the R2 indicator~\cite{trautmann2013r2} has reported quite high-quality solutions, our
+Since methods based on the R2 indicator~\cite{trautmann2013r2} have reported quite high-quality solutions, our
 archive is based on the R2 indicator applying the \ASF{} to generate the utility functions.
 %
 The archive selects at each iteration $N$ candidate solutions by combining its contents with the offspring of each 
@@ -216,7 +216,7 @@ generations to evolve.
 %
 Particularly, the value is decreased linearly as generations evolve.
 %
-Since survivors with larger \DCS{} values, provoke exploration steps, while survivors with short \DCS{} values promote
+Since survivors with larger \DCS{} values provoke exploration steps, while survivors with short \DCS{} values promote
 intensification steps, this linear decrease promotes
 a gradual transition from exploration to exploitation.
 %

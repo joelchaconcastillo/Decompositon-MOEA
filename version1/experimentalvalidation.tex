@@ -154,8 +154,6 @@ by \DE{}.
 Since \AVSDMOEAD{} maintains a larger degree of diversity than other methods, low disruptive
 operators seems to be more helpful.
 
-
-
 Note also that there are some additional parameters that are specific of some of the \MOEAS{}.
 %
 They were set to typical values used in literature. 
@@ -173,11 +171,11 @@ As in the official code, \RMOEA{} was applied with $501$ and $496$ weight vector
 respectively~\cite{trautmann2013r2}.
 %
 In the remaining cases --- including \AVSDMOEAD{} --- the number of weight vectors is equal to the population size and they were generated
-with the Uniform Design (\UD{}) and the Good Lattice Point (\GLP{}) method~\cite{tan2013moea1, tan2013moea2}.
+with the uniform design strategy described in~\cite{wagner:13}.
 %
 Note that in the case of \AVSDMOEAD{} a second set of weight vectors is considered for the external archive.
 %
-It considers the same weight vectors than \RMOEA{}.
+Since the archive is based on $R2$, it considers the same weight vectors than \RMOEA{}.
 
 \begin{table}[t]
 \centering
@@ -245,7 +243,7 @@ In fact, the difference between the mean \HV{} ratio attained by the best method
 However, in all the other methods there were several problems where the distance with respect to the best approach
 were larger than $0.1$.
 %
-Specifically, it happened in $4$, $4$, $4$ and $5$ problems for \RMOEA{}, \MOEADDE{}, \NSGAII{} and \NSGAIII{} respectively.
+Specifically, it happened in $4$, $4$, $4$ and $5$ problems for \RMOEA{}, \MOEADDE{}, \NSGAII{} and \NSGAIII{}, respectively.
 %
 This means that \AVSDMOEAD{} wins in most cases and that when it loses, its difference is always small.
 %
@@ -270,7 +268,7 @@ The data confirms that although \AVSDMOEAD{} loses in some pair-wise tests, the 
 losses clearly favors \AVSDMOEAD{}.
 %
 More importantly, the total deterioration is quite lower in the case of \AVSDMOEAD{}, confirming that when \AVSDMOEAD{} loses, 
-the differences are low.
+differences are low.
 
 \input{tablas/Table_HV_3obj.tex}
 \input{tablas/Tests_HV_3obj.tex}
@@ -323,7 +321,7 @@ problems with three objective functions.
  \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG5-figure0.eps}\\[0cm]%[-0.14cm] 
  \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG5-figure1.eps}\\[0cm]%[-0.14cm] 
 \end{tabular}
-\caption{Diversity of distance variables (top) and mean of \HV{} values (bottom) vs. elapsed time in the bi-objective WFG5 test problem. The reported results are taken from $35$ runs.}\label{fig:WFG5_Diversity}
+\caption{Diversity of distance variables (top) and mean of \HV{} ratios (bottom) vs. elapsed time in the bi-objective WFG5 test problem. The reported results are taken from $35$ runs.}\label{fig:WFG5_Diversity}
 \end{figure}
 
 
@@ -333,7 +331,7 @@ problems with three objective functions.
  \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_UF5-figure0.eps}\\[0cm]%[-0.14cm] 
  \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_UF5-figure1.eps}\\[0cm]%[-0.14cm] 
 \end{tabular}
-\caption{Diversity of distance variables (top) and mean of \HV{} values (bottom) vs. elapsed time in the bi-objective UF5 test problem. The reported results are taken from $35$ runs.}\label{fig:UF5_Diversity}
+\caption{Diversity of distance variables (top) and mean of \HV{} ratios (bottom) vs. elapsed time in the bi-objective UF5 test problem. The reported results are taken from $35$ runs.}\label{fig:UF5_Diversity}
 \end{figure}
 
 In order to better understand the reasons behind the benefits of \AVSDMOEAD{} against the state-of-the-art \MOEAS{},
@@ -357,7 +355,7 @@ In order to show the behavior of the different schemes we selected WFG5 and UF5.
 They are complementary in the sense that in the WFG5, all the Pareto solutions present constant 
 values in the distant variables, whereas this is not the case in UF5.
 %
-Moreover, in the UF5 the optimal regions are isolated in the decision variable 
+Moreover, in the UF5 the optimal regions are isolated on the variable 
 space, meaning that more diversity is required.
 %
 In fact its Pareto optimal front is discrete and consists of $21$ points.
@@ -491,7 +489,7 @@ This section provides a more detailed study on the implications of this paramete
  \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG9-figure0.eps}\\[0cm]%[-0.14cm] 
  \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG9-figure1.eps}\\[0cm]%[-0.14cm] 
 \end{tabular}
-\caption{Diversity of distance variables (top) and mean of \HV{} values (bottom) vs. elapsed time in the two-objective WFG9 test problem. The reported results are taken from $35$ runs.}\label{fig:WFG9_Diversity}
+\caption{Diversity of distance variables (top) and mean of \HV{} ratios (bottom) vs. elapsed time in the two-objective WFG9 test problem. The reported results are taken from $35$ runs.}\label{fig:WFG9_Diversity}
 \end{figure}
 
 
@@ -509,7 +507,7 @@ of $D_I$.
 %
 As in previous experiments, the stopping criterion was set to $2.5 \times 10^7$ function evaluations.
 %
-Since normalized distances are used, the maximum attainable distance is $1.0$.
+Since normalized distances are used, the maximum attainable distance between pairs of individuals is $1.0$.
 %
 Also note that setting $D_I$ to $0$ implies not promoting diversity in the variable space.
 %
