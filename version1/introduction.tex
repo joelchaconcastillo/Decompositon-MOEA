@@ -1,5 +1,5 @@
-\IEEEPARstart{M}{ulti-objective} Evolutionary Algorithms (\MOEAS{}) are one of the most popular approaches 
-to deal with Multi-objective Optimization Problems (\MOPS{})~\cite{das2011real, zhou2011multiobjective}.
+\IEEEPARstart{M}{ulti-Objective} Evolutionary Algorithms (\MOEAS{}) are one of the most popular approaches 
+for dealing with Multi-Objective Optimization Problems (\MOPS{})~\cite{das2011real, zhou2011multiobjective}.
 %
 \MOEAS{} are usually employed in complex problems where more traditional optimization techniques are not 
 applicable~\cite{Lootsma:99}.
@@ -48,16 +48,16 @@ solutions whose images are well-distributed and close to the Pareto Front~\cite{
 In recent years, the development of \MOEAS{} has grown dramatically~\cite{van1998multiobjective, coello2007mop}, resulting 
 in effective and broadly applicable algorithms.
 %
-However, some function features provoke significant degradation on the performance of \MOEAS{}~\cite{huband2006review}, 
-so better design principles are yet required.
+However, some function features provoke significant degradation of the performance of \MOEAS{}~\cite{huband2006review}, 
+meaning better design principles are still required.
 %
 %TODO: Citar tras taxonomies alguna clasificacion, preferiblemente la de decomposition, dominance, quality.
-Regarding the design of \MOEAS{}, several paths have been explored resulting in diverse taxonomies~\cite{trivedi2016survey}.
+Regarding the design of \MOEAS{}, several paths have been explored, resulting in diverse taxonomies~\cite{trivedi2016survey}.
 %
 For instance, principles related to decomposition, dominance and quality metrics are used
 to design \MOEAS{}.
 %
-Current state-of-the-art \MOEAS{} consider in some way the diversity on the objective space.
+Current state-of-the-art \MOEAS{} consider in some way the diversity in the objective space.
 %
 In some cases, this is done explicitly through density estimators~\cite{beume:07}, %TODO: Citar algun density estimator
 whereas in other cases,
@@ -66,43 +66,41 @@ this is done indirectly~\cite{zhang2007moea}.
 %with the use of a diverse set of weights. %TODO: Citar MOEA/D
 %
 Since optimizing most objective space quality indicators implies attaining a well-spread set of solutions in the
-objective space, not considering this kind of diversity would result in quite ineffective optimizers.
+objective space, not considering this kind of diversity would result in fairly ineffective optimizers.
 %
-A quite different condition appears with respect to diversity on the variable space.
+A quite different condition appears with respect to diversity in the variable space.
 %
-Since objective space quality metrics do not consider at all the diversity on the variable space,
-most \MOEAS{} designers disregard this diversity.
+Since objective space quality metrics do not consider at all the diversity in the variable space,
+most \MOEA{} designers disregard this diversity.
 
-Differently, %when looking at the best optimizers for other areas of optimization, such as i
+Alternatively, %when looking at the best optimizers for other areas of optimization, such as i
 %the single-objective case,
 %it is clear that 
 several state-of-the-art single-objective methods introduce mechanisms to vary the trend of the 
-diversity on the variable space even if obtaining a diverse
+diversity in the variable space, even if obtaining a diverse
 set of solutions is not the aim of the optimization~\cite{Joel:Crepinsek}.
 %
 Instead, this is done to induce a better balance between exploration and exploitation.
 %
-In fact, the proper management of diversity is considered as one of the cornerstones for proper performance~\cite{Herrera-Poyatos:17}.
+In fact, the proper management of diversity is considered one of the cornerstones for proper performance~\cite{Herrera-Poyatos:17}.
 %
 Thus, these differences between the design principles applied in single-objective and multi-objective evolutionary 
 algorithms are surprising.
 %
-Moreover, practitioners have shown that modern \MOEAS{} suffer some drawbacks related to stagnation and premature 
-convergence in subset of variables~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic}.
+Moreover, practitioners have shown that modern \MOEAS{} suffer some drawbacks involving stagnation and premature 
+convergence in subsets of variables~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic}.
 %
-As a result, this paper studies the hypothesis that incorporating mechanisms to manage the diversity on the variable space 
-might bring important benefits to the field of multi-objective optimization.
+As a result, this paper studies the hypothesis that incorporating mechanisms to manage the diversity in the variable space 
+might yield important benefits to the field of multi-objective optimization.
 %
 %TODO: citar ejemplos significativos de niching-based MOEAS{}.
-Note that differently to other proposals, such as niching-based \MOEAS{}~\cite{mahfoud1995niching, srinivas1994muiltiobjective}, we are not interested in obtaining
-a diverse set of solutions in the variable space.
-%
-Instead, we state that the quality of the results in terms of objective-space indicators can be improved further with these
+Note that unlike other proposals, such as niching-based \MOEAS{}~\cite{mahfoud1995niching, srinivas1994muiltiobjective}, we are not interested in obtaining
+a diverse set of solutions in the variable space; rather, we state that the quality of the results in terms of objective-space indicators can be improved further with these
 kinds of mechanisms.
 
-Since controlling diversity on the variable space to attain a proper balance between exploration and intensification has been considered 
-so important in single-objective domains~\cite{lin2009auto},
-quite a large amount of related methods have been devised~\cite{Joel:Crepinsek}. 
+Since controlling diversity in the variable space is 
+so important in single-objective domains to attain a proper balance between exploration and intensification~\cite{lin2009auto},
+a large number of related methods have been devised~\cite{Joel:Crepinsek}. 
 %
 %Esto esta interesante, pero muy largo, lo pasare a la parte de literatura
 %Note that in most cases, similar principles have been used to devise niching methods that try to locate
@@ -123,19 +121,19 @@ quite a large amount of related methods have been devised~\cite{Joel:Crepinsek}.
 %fitness-based~\cite{Cioppa:07}, 
 %and replacement-based~\cite{segura2015novel}.
 %
-Recent research in single-objective optimization has shown that important advances are attained when the
-balance between exploration and intensification is managed by relating the amount of maintained population's diversity to 
-the stopping criterion and elapsed period of execution.
+Recent research on single-objective optimization has shown that important advances can be achieved when the
+balance between exploration and intensification is managed by relating the diversity of the population to 
+the stopping criterion and the elapsed execution time.
 %
-Particularly, these methods reduce the importance given to the preservation of diversity as the end of the optimization
+Specifically, these methods reduce the importance given to preserving diversity as the end of the optimization
 is approached.
 %
 This principle has been used to find new best-known solutions for the Frequency Assignment Problem 
 (FAP)~\cite{segura2016improving}, to improve further continuous optimizers~\cite{castillo2019differential} and
-to design the winning strategy of the extended round of Google Hash Code 
-2020\footnote{https://codingcompetitions.withgoogle.com/hashcode/}, with more than $100,000$ participants.
+to design the winning strategy in the extended round of Google Hash Code 
+2020\footnote{https://codingcompetitions.withgoogle.com/hashcode/}, which featured over $100,000$ participants.
 %
-Thus, we decided to explore the incorporation of this principle in the design of \MOEAS{}.
+Thus, we decided to explore the incorporation of this principle into the design of \MOEAS{}.
 %
 %Probably, one of the most important drawbacks of this design principle is that most discussed optimizers require long-term
 %executions to excel.
@@ -146,13 +144,13 @@ Thus, we decided to explore the incorporation of this principle in the design of
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
 
-One of the main difficulties for incorporating the previous principle to the design of \MOEAS{} is that
-measures of the variable space and objective space must be taken into account simultaneously.
+One of the main problems in incorporating the above principle into the design of \MOEAS{} is that
+measures of the variable and objective spaces must be considered simultaneously.
 %and the relation between them is problem-dependent.
 %
-The discussed design principle is based on reducing the importance of diversity on variable space as 
+This design principle is based on reducing the importance of diversity in the variable space as 
 generations evolve, so we maintain this decision and indirectly increase the importance granted to diversity 
-and quality on objective space as the execution progresses.
+and quality in the objective space as the execution progresses.
 %
 %Esta es demasiado detalle asi que mejor para la propuesta
 %In fact, our proposal behaves as a traditional \MOEA{} during the last half of the optimization, in the sense
@@ -164,13 +162,10 @@ In order to show the validity of our hypothesis, this paper proposes the
 %variable space to properly balance from exploration towards intensification.
 %
 \AVSDMOEAD{} simplifies \MOEADDE{}~\cite{zhang2009performance} by deactivating the dynamical resource allocation
-scheme and disregarding the notion of neighborhood,
-%Lo de panmictic lo pasamos a la propuesta, para acortar aqui
-%, meaning that the more traditiona panmictic population is used, 
-and at the same
-time extends it by including a novel replacement strategy that applies the discussed design principles.
+scheme and disregarding the notion of neighborhood;
+ at the same time, it is extended by including a novel replacement strategy that applies the design principles discussed.
 %
-Validation of our proposal is carried out taking into consideration 
+Our proposal is validated by taking into consideration 
 \MOEADDE{}~\cite{zhang2009performance}, 
 \NSGAII{}~\cite{deb2002fast}, 
 \REMOA{}~\cite{trautmann2013r2} and 
@@ -178,17 +173,17 @@ Validation of our proposal is carried out taking into consideration
 %Esto lo pasamos para la validación con el fin de acortar
 %which are popular representatives of decomposition-based, dominance-based, indicator-based and hybrid \MOEAS{}, respectively.
 %
-Remarkable benefits are attained in terms of robustness and scalability.
+Remarkable benefits are achieved in terms of robustness and scalability.
 
 The rest of this paper is organized as follows.
 %
 Section~\ref{Sec:LiteratureReview} provides a review of \MOEAS{}, diversity management 
-and some other related works.
+and other related works.
 %
 The \AVSDMOEAD{} proposal is detailed in section~\ref{Sec:Proposal}.
 %
 Section~\ref{Sec:ExperimentalValidation} is devoted to an extensive experimental validation of the novel proposal and
 design principle.
 %
-Finally, conclusions and some lines of future work are given in section~\ref{Sec:Conclusion}.
+Finally, conclusions and some lines of future work are presented in section~\ref{Sec:Conclusion}.
 %

@@ -1,11 +1,11 @@
 
-This section is devoted to describe our proposal, the \textit{Archived Variable Space Diversity \MOEA{} based on Decomposition} (\AVSDMOEAD{}).
+This section describes our proposal, the \textit{Archived Variable Space Diversity \MOEA{} based on Decomposition} (\AVSDMOEAD{}).
 %
-The main novelty and motivation behind \AVSDMOEAD{} is the incorporation of an explicit management of the diversity on variable space
-with the aim of improving the behavior in terms of objective space metrics specially in long-term executions, which is the
+The main novelty and motivation behind \AVSDMOEAD{} is the incorporation of an explicit way to manage diversity in the variable space,
+the goal being to improve the behavior in terms of objective space metrics, especially in long-term executions, which is the
 environment where diversity-aware techniques have excelled~\cite{segura2015novel}.
 %
-Although \AVSDMOEAD{} is inspired in \MOEAD{}, it was simplified so in some ways it resembles more mature
+Although \AVSDMOEAD{} is inspired by \MOEAD{}, it has been simplified, so in some ways it resembles more mature
 decomposition-based \MOEAS{}, such as \textsc{wbga}~\cite{Hajela:93}.
 %
 For instance, the notion of subproblem neighborhood is not used and the dynamic resource allocation usually applied in modern variants
@@ -15,13 +15,13 @@ The main reason for the simplification is to show that even a simple \MOEA{} inc
 improve further more complex state-of-the-art algorithms.
 %
 
-Our proposal decomposes the \MOP{} in several single-objective problems.
+Our proposal decomposes the \MOP{} into several single-objective problems.
 %
 Notwithstanding that any scalarization approach can be employed, our strategy applies the \ASF{}, 
 which has reported some of the most effective results in recent years~\cite{hernandez2015improved}.
 %
-Let $\lambda_1, ..., \lambda_N$ be a set of weight vectors and $z^*$ a reference vector,
-the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (\ref{eqn:approach}).
+Let $\lambda_1, ..., \lambda_N$ be a set of weight vectors and $z^*$ a reference vector.
+The \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (\ref{eqn:approach}).
 %
 
 \begin{equation}\label{eqn:approach}
@@ -47,12 +47,12 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
         \WHILE{ (not stopping criterion)  } \label{alg_1:5}
            \FOR{ each individual $P_i^t \in P^t$} \label{alg_1:6}
     %           \STATE \textbf{Mating selection}: Select randomly three indexes ($r_1 \neq r_2 \neq r_3 \neq i$) from the entire population. \label{alg_1:7}
-               \STATE \textbf{DE variation}: Generate solution $Q^t_{i}$ by applying DE/rand/1/bin using $P_{i}^t$ as target vector \label{alg_1:8}
+               \STATE \textbf{DE variation}: Generate solution $Q^t_{i}$ by applying DE/rand/1/bin using $P_{i}^t$ as the target vector \label{alg_1:8}
 							 \STATE \textbf{Mutation}: Apply polynomial mutation to $Q^t_{i}$ with probability $p_m$
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
-           \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in  Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$, $z^*$ and $D_I$ as input \label{alg_1:11}
-	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$, $\Lambda$, and $z^*$ as input. \label{alg_1:11bis}
+           \STATE \textbf{Survivor selection}: Generate $P^{t+1}$ by applying the replacement scheme described in Algorithm \ref{alg:replacement}, using $P^t$, $Q^t$, $\lambda$, $z^*$ and $D_I$ as input \label{alg_1:11}
+	   \STATE \textbf{Update Archive}: Create $A^{t+1}$ by applying Algorithm~\ref{alg:r2_Indicator} using $A^{t}$, $Q^t$, $\Lambda$, and $z^*$ as input. \label{alg_1:11bis}
            \STATE $t=t+1$ \label{alg_1:12}
         \ENDWHILE \label{alg_1:13}
         \RETURN $A^{t}$ 
@@ -62,46 +62,46 @@ the \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
 \end{algorithm}
 
 
-The main novelty of \AVSDMOEAD{} appears in the  survivor selection scheme.
+The main novelty of \AVSDMOEAD{} appears in the survivor selection scheme.
 %
-Following some of the most successful single-objective diversity-aware algorithms~\cite{segura2016improving}, the 
-replacement strategy relates the degree of diversity on variable space to the stopping criterion
+In keeping with some of the most successful single-objective diversity-aware algorithms~\cite{segura2016improving}, the 
+replacement strategy relates the degree of diversity in the variable space to the stopping criterion
 and elapsed generations.
 %
-The aim of this relation is to gradually bias the search from exploration to exploitation as the
+The aim of this relationship is to gradually bias the search from exploration to exploitation as the
 optimization evolves.
 %
-In particular, the diversity is explicitly promoted in a decreasing way until half of total generations. 
+Specifically, diversity is explicitly promoted less and less until half of the total generations. 
 %
-Then, in the remaining generations \AVSDMOEAD{} has a similar behavior than most popular
-\MOEAS{}, i.e. the diversity on the variable space is not considered explicitly.
+Then, in the remaining generations, \AVSDMOEAD{} behaves similarly to most popular
+\MOEAS{}, i.e. the diversity in the variable space is not considered explicitly.
 
 The main procedure of \AVSDMOEAD{} is shown in Algorithm~\ref{alg:vsd-moead}.
 %
 Its general template is quite standard.
 %
-The variation step is similar to those used in typical \MOEAS{}, i.e.
+The variation step is similar to those used in typical \MOEAS{}, meaning
 it is based on crossover and mutation and any operators might be used.
 %
-Particularly, $N$ individuals are created at each generation by randomly selecting at each step three individuals
+Specifically, $N$ individuals are created in each generation by randomly selecting at each step three individuals
 to apply the $DE/rand/1/bin$ operator.
 %
-Note that each member of the population is used as the target vector one time.
+Note that each member of the population is used as the target vector once.
 %
 Then, polynomial mutation is applied to the output of the $DE$ operator.
 %
 As in most current \MOEAD{} variants, the initial population is generated randomly,
 the number of weight vectors ($|\lambda|$) is equal to the population size,
-and the reference vector $z^*$ used for \ASF{} is composed by the best attained 
-objective values.
+and the reference vector $z^*$ used for \ASF{} consists of the best 
+objective values achieved.
 %
 The weight vectors used in this paper are based on an uniform design strategy and are
 specified in the experimental validation section.
 %
 Finally, the survivor selection stage is applied.
 %
-This is quite different to traditional techniques, in the sense that $P^t$ and $Q^t$ are merged, meaning
-that differently than in \MOEAD{} the position of each individual is not important, and a diversity-aware
+This is quite different from traditional techniques, in the sense that $P^t$ and $Q^t$ are merged, meaning
+that unlike in \MOEAD{}, the position of each individual is not important, and a diversity-aware
 selection is performed.
 %
 Since this is the novelty of the paper, its working operation is given in detail.
@@ -111,7 +111,7 @@ Since this is the novelty of the paper, its working operation is given in detail
         \caption{Procedure to update the R2-based archive}
         \begin{small}
 \begin{algorithmic}[1]
-	\STATE Input: $A^t$ (External archive at the current generation), $Q^t$ (Offspring of current generation), $\Lambda$ (weight vectors for $R2$), $z^*$ (Reference vector)
+	\STATE Input: $A^t$ (External archive in the current generation), $Q^t$ (Offspring of current generation), $\Lambda$ (weight vectors for $R2$), $z^*$ (Reference vector)
 	\STATE Output: $A^{t+1}$
 	\STATE $R^t= A^t \cup Q^t$
 	\STATE $A^{t+1} = \emptyset$
@@ -161,26 +161,26 @@ Since this is the novelty of the paper, its working operation is given in detail
 
 
 
-Note that \AVSDMOEAD{} incorporates an external archive to keep the best solutions.
+Note that \AVSDMOEAD{} incorporates an external archive to store the best solutions.
 %
-While in \MOEAD{} this is considered to be optional, in our approach is quite important because the penalty approach
+While in \MOEAD{} this is considered optional, in our approach it is quite important because the penalty approach
 included to pick up the survivors of the population in the replacement phase might discard elite solutions for some weight vectors.
 %
 Since methods based on the R2 indicator~\cite{trautmann2013r2} have reported quite high-quality solutions, our
 archive is based on the R2 indicator applying the \ASF{} and the weights $\Lambda$ to generate the utility functions.
 %
-The archive selects at each iteration $N$ candidate solutions by combining its contents with the offspring of each 
+In each iteration, the archive selects $N$ candidate solutions by combining its contents with the offspring of each 
 generation (see line~\ref{alg_1:11bis} in Algorithm~\ref{alg:vsd-moead}).
 %
 This is done by following a simple greedy approach (Algorithm~\ref{alg:r2_Indicator}).
 %
-Particularly, it selects iteratively the individual that minimizes the $R2$ (lines 6-9) considering
-the already selected individuals with ties broken randomly.
+Specifically, it iteratively selects the individual that minimizes the $R2$ (lines 6-9) considering
+the individuals already selected with ties broken randomly.
 %
-Note that since $R2$ is weekly Pareto-compliance, it might happen that some non-dominated individuals do not contribute
+Note that since $R2$ is weakly Pareto-compliant, it might happen that some non-dominated individuals do not contribute
 to $R2$, so incorporating more complex archiving strategies might be helpful.
 %
-However, our preliminary experiments showed that this it not so important for proper performance, so we decided to maintain
+However, our preliminary experiments have shown that this it not overly important for proper performance, so we decided to maintain
 its simplicity.
 %
 
@@ -197,13 +197,13 @@ It operates as follows.
 First, the parent and offspring populations are merged in a multi-set to establish the candidate set $R^t$ (line 3).
 %
 A key of the scheme is to promote the selection of individuals with a large enough contribution to diversity
-on variable space.
+in the variable space.
 %
-Particularly, the contribution of an individual $x$ is calculated as $\displaystyle{\min_{p \in P^{t+1}}\ Distance(x, p)}$, 
+Specifically, the contribution of an individual $x$ is calculated as $\displaystyle{\min_{p \in P^{t+1}}\ Distance(x, p)}$, 
 where $P^{t+1}$ is the multi-set of the already picked survivors and the normalized Euclidean distance
 specified in (\ref{eqn:distance}) is applied.
 %
-Note that in the pseudocode the tag \DCS{} (Distance to Closest Solution) is used to denote the contribution to diversity.
+Note that in the pseudocode, the tag \DCS{} (Distance to Closest Solution) is used to denote the contribution to diversity.
 
 \begin{equation}\label{eqn:distance}
 Distance(A, B) =   \left ( \frac{1}{D}  \sum_{i=1}^D \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(L)}} \right )^2  \right)^{1/2}
@@ -216,38 +216,38 @@ Note that the calculation of $D^t$ depends on an initial penalty threshold ($D_I
 on the number of generations that have evolved ($G_{Elapsed}$) and on the stopping criterion ($G_{End}$), i.e., the number of
 generations to evolve.
 %
-Particularly, the value is decreased linearly as generations evolve.
+Specifically, the value is decreased linearly as generations evolve.
 %
 Since survivors with larger \DCS{} values provoke exploration steps, while survivors with short \DCS{} values promote
 intensification steps, this linear decrease promotes
 a gradual transition from exploration to exploitation.
 %
 Also note that after $50\%$ of the total number of generations, the $D^t$ value is below 0, 
-meaning that no penalties are applied and a more traditional strategy focused only on the objectives values
+meaning that no penalties are applied and a more traditional strategy focused only on the objective values
 is used to perform the selection steps.
 
 The strategy iteratively selects an individual from the candidate set ($R^t$) to enter the new population ($P^{t+1}$) until
 it is filled with $N$ individuals (lines 8-16).
 %
-In particular, the aim is to select a proper individual for each weight vector but at the same time fulfilling
-the condition imposed for the contribution to diversity on variable space.
+In particular, the aim is to select a proper individual for each weight vector, while at the same time fulfilling
+the condition imposed for the contribution to diversity in the variable space.
 %
-In order to fulfill this last condition, non-selected individuals with a $DCS$
-lower than $D^t$ are moved from $R^t$ to the $Penalized$ set (lines 9-10) and at each iteration
-an individual belonging to $R^t$ is picked up to survive.
+In order to satisfy this last condition, non-selected individuals with a $DCS$
+lower than $D^t$ are moved from $R^t$ to the $Penalized$ set (lines 9-10), and in each iteration
+an individual belonging to $R^t$ is selected to survive.
 %
 The set of weight vectors considered by our strategy are initially placed in $r\lambda$.
 %
-At each iteration the individual in $R^t$ with the best scalarizing function for any of the weight vectors in
+In each iteration, the individual in $R^t$ with the best scalarizing function for any of the weight vectors in
 $r\lambda$ is identified (line 14).
 %
-Then, such an individual is selected as a survivor (line 15) and the used weight vector is erased
+Then, this individual is selected as a survivor (line 15) and the weight vector used is erased
 from $r\lambda$ (line 16).
 %
 Note that $N$ individuals are selected, meaning that each weight vector is used to select exactly one individual.
 %
 Also note that it might happen that $R^t$ is empty prior to selecting $N$ individuals.
 %
-This means that the diversity is lower than expected so
-with the aim of increasing the exploration degree, the individual with the largest \DCS{} value in
+This means that the diversity is lower than expected, so
+in order to increase the amount of exploration, the individual with the largest \DCS{} value in
 the $Penalized$ set is selected to survive (lines 11 - 13).

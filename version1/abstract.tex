@@ -1,24 +1,23 @@
-Most current Multi-objective Evolutionary Algorithms (MOEAs) do not directly manage 
-the population's diversity on variable space.
+Most current Multi-Objective Evolutionary Algorithms (MOEAs) do not directly manage 
+the population's diversity in the variable space.
 %
-Usually, only when the aim is to attain diverse solutions on the variable space, these kinds
-of mechanisms are considered.
+Usually, these kinds of mechanisms are only considered when the aim is to attain diverse solutions 
+in the variable space.
 %
 This is a remarkable difference with respect to single-objective optimizers, where
 even when no diverse solutions are required, the benefits of diversity-aware 
 techniques are well-known.
 %
 The aim of this paper is to show that the quality of current MOEAs in terms of objective space metrics can be
-enhanced by integrating mechanisms to explicitly manage the diversity on the variable space.
+enhanced by integrating mechanisms to explicitly manage the diversity in the variable space.
 %
-The key is to consider the stopping criterion and elapsed period with the aim of dynamically altering the importance
-granted to the diversity on the variable space and to the quality and diversity on the objective space,
+The key is to consider the stopping criterion and elapsed period in order to dynamically alter the importance
+granted to the diversity in the variable space and to the quality and diversity in the objective space,
 which is an important difference with respect to niching-based MOEAs.
 %
-Particularly, more importance is given to the variable space at initial phases and the balance
-is moved towards the objective space as evolution progresses.
+Specifically, more importance is given to the variable space in the initial phases, a balance
+that is shifted towards the objective space as the evolution progresses.
 %
-A novel MOEA based on decomposition (AVSD-MOEA/D) that uses these principles through a novel replacement phase is
-devised.
+This paper presents a novel MOEA based on decomposition (AVSD-MOEA/D) that relies on these principles by means of a novel replacement phase.
 %
 Extensive experimentation shows the clear benefits provided by our design principle. 
