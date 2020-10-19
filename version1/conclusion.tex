@@ -5,12 +5,13 @@ because of the implicit relationship between the diversity maintained in the obj
 one maintained in the variable space.
 %
 However, for many problems the degree of diversity maintained is not sufficient to ensure the exploratory
-power and locate the optimal regions.
+power of genetic operators and locate the optimal regions.
 %
 In single-objective optimization, many of the state-of-the-art algorithms explicitly manage
 diversity.
 %
-Specifically, those schemes that relate the degree of diversity to the time elapsed and to the stopping criterion
+Specifically, those schemes that relate the degree of diversity to the elapsed period of execution 
+and to the stopping criterion
 have excelled.
 %
 This paper shows that this design principle is also helpful in the area of multi-objective optimization,
@@ -28,11 +29,10 @@ the importance given to the diversity in the variable space is reduced as the ev
 in the later phases, our proposal behaves more similarly to traditional \MOEAS{}.
 %
 Additionally, taking into account recent advances, and to ensure that our proposal maintains
-some high-quality solutions in the population despite the penalty scheme, an external archive based on the
+high-quality solutions despite the penalty scheme, an external archive based on the
 R2-indicator is incorporated.
 %
-Because of this, we refer to our proposal as \AVSDMOEAD{}.
-%
+Because of this, we refer to our proposal as \textit{Archived Variable Space Diversity MOEA based on Decomposition} (\AVSDMOEAD{}).
 
 The experimental validation carried out shows the remarkable improvement provided by \AVSDMOEAD{} in comparison to
 state-of-the-art \MOEAS{} with both two-objective and three-objective problems.
@@ -47,6 +47,8 @@ shows that the method is quite robust, which makes finding a proper parameter va
 %
 Finally, in order to better understand the reasons behind the huge superiority of our proposal, some analyses involving
 the dynamics of the populations are provided.
+%
+In comparison to state-of-the-art algorithms, our proposal clearly slows down convergence.
 
 In the future, we plan to apply the principles studied in this paper to other categories of \MOEAS{}.
 %

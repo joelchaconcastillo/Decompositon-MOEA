@@ -36,7 +36,8 @@ The \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
         \begin{small}
 \begin{algorithmic}[1]
 				\STATE Input: $N$ (Population and Archive Size), $\lambda$ (a set of $N$ weight vectors for decomposition in the population),
-				$\Lambda$ (a set of weight vectors for the R2-based archive), $D_I$ (Initial Penalty Threshold).
+				$\Lambda$ (a set of weight vectors for the R2-based archive), $D_I$ (Initial Penalty Threshold), $CR$ (Crossover Rate),
+				$F$ (Scale Factor), $p_m$ (mutation probability)
         \STATE Output: $A^{t}$ (Archive with $N$ solutions)
 
         \STATE \textbf{Initialization}: Generate an initial population $P^0$ with $N$ individuals \label{alg_1:1}
@@ -47,7 +48,7 @@ The \MOP{} is decomposed into $N$ scalar optimization sub-problems as shown in (
         \WHILE{ (not stopping criterion)  } \label{alg_1:5}
            \FOR{ each individual $P_i^t \in P^t$} \label{alg_1:6}
     %           \STATE \textbf{Mating selection}: Select randomly three indexes ($r_1 \neq r_2 \neq r_3 \neq i$) from the entire population. \label{alg_1:7}
-               \STATE \textbf{DE variation}: Generate solution $Q^t_{i}$ by applying DE/rand/1/bin using $P_{i}^t$ as the target vector \label{alg_1:8}
+               \STATE \textbf{DE variation}: Generate solution $Q^t_{i}$ by applying DE/rand/1/bin with $F$ as the mutation scale factor and $CR$ as the crossover rate, using $P_{i}^t$ as the target vector \label{alg_1:8}
 							 \STATE \textbf{Mutation}: Apply polynomial mutation to $Q^t_{i}$ with probability $p_m$
                \STATE \textbf{Evaluation}: Evaluate the new individual $Q^t_{i}$ and update the reference vector $z^*$ with the best objective values. \label{alg_1:9}
            \ENDFOR \label{alg_1:10}
