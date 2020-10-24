@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  23 OCT 2020 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  23 OCT 2020 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -747,7 +747,12 @@ Underfull \hbox (badness 4403) in paragraph at lines 176--196
 n/10 s [[]] in-cor-po-rate
  []
 
-) (./proposal.tex [3]
+) (./proposal.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+[][][][][][][][]\OT1/ptm/m/n/7 The source code in C++ is freely avail-able at
+ []
+
+[3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 35.
 
@@ -800,10 +805,7 @@ File: images/Diversity_Long_Term_tikz_WFG9-figure0.eps Graphic file (type eps)
 <images/Diversity_Long_Term_tikz_WFG9-figure0.eps>
 File: images/Diversity_Long_Term_tikz_WFG9-figure1.eps Graphic file (type eps)
 
-<images/Diversity_Long_Term_tikz_WFG9-figure1.eps>) (./conclusion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
+<images/Diversity_Long_Term_tikz_WFG9-figure1.eps>) (./conclusion.tex)
 Underfull \vbox (badness 1701) has occurred while \output is active []
 
  [10]
@@ -843,10 +845,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 694.
 Here is how much of TeX's memory you used:
  17526 strings out of 492983
  330403 string characters out of 6134923
- 471998 words of memory out of 5000000
+ 472998 words of memory out of 5000000
  20760 multiletter control sequences out of 15000+600000
  31517 words of font info for 74 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  62i,15n,56p,660b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (12 pages, 190324 bytes).
+Output written on main.dvi (12 pages, 191304 bytes).
