@@ -1,0 +1,201 @@
+\MOEAS{} that take into account the diversity in the variable space are not new.
+%
+These kinds of techniques have been especially useful for multimodal multi-objective optimization~\cite{Liang:16},
+i.e., for cases where distant solutions in terms of the variable space are desired~\cite{deb2008omni, cuate2019variation}.
+%
+These types of \MOEAS{} must maintain a large degree of diversity in the variable space during the entire optimization process.
+%
+In contrast, our work analyzes the hypothesis that state-of-the-art techniques can be advanced further by explicitly managing
+the diversity in the variable space, even if the performance is measured in terms of metrics that only take into account 
+the objective space.
+%
+Since our aim is different, using multimodal multi-objective optimizers that maintain a large diversity 
+for the entire optimization process is counter-productive, 
+so more advanced ways of integrating diversity management are required.
+%
+This section reviews some of the most important advances in diversity-aware techniques that motivated the
+design of \AVSDMOEAD{}, which are a set of methods that were applied in single-objective optimization.
+%
+Also summarized are \MOEAS{} that in some way consider the diversity in the variable space, as well as
+state-of-the-art \MOEAS{}.
+
+\subsection{Diversity-aware Single-objective Optimizers}
+
+Striking a proper balance between exploration and exploitation is one of the keys for successful single-objective
+\EAS{}~\cite{lin2009auto}.
+%
+Several strategies for accomplishing this aim have been explored, and one of the most promising is to alter the trend
+in the diversity, whether explicitly or implicitly~\cite{Joel:Crepinsek}.
+%
+This principle has encouraged the development of a vast quantity of diversity management techniques~\cite{pandey2014comparative}.
+%
+A popular classification of these methods is based on the sort of components modified in the \EA{}.
+%
+It identifies the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, \textit{crossover/mutation-based}, \textit{fitness-based}, and \textit{replacement-based}.
+%
+Additionally, it defines \textit{uniprocess-driven} and \textit{multiprocess-driven} categories, depending on the number
+of components that are altered.
+
+\textit{Replacement-based} methods have yielded quite promising results in recent years.
+%
+One of the most popular proposals belonging to this group is the \textit{crowding} method, 
+in which each new individual should replace similar individuals from the previous generation~\cite{mengshoel2014adaptive}.
+%
+Several variants of this strategy have been devised, such as the \textit{Restricted Tournament Selection} 
+(\RTS{})~\cite{harik1995finding}.
+%
+A more recent approach that has been shown to be quite effective in a large variety of single-objective problems~\cite{segura2016improving}
+is based on the principle of biasing the decisions made in the replacement phase by considering the 
+stopping criterion and elapsed time.
+%
+This design principle has been successful in continuous problems~\cite{castillo2019differential} and discrete 
+problems~\cite{segura2016improving,romero2018memetic}, including the problem proposed for Google Hash Code 2020, where the most
+effective optimizer was designed using this principle.
+%
+Specifically, the initial phases of the optimization explicitly preserve a greater amount of diversity than the final phases, with a
+gradual shift between these behaviors.
+%
+Given the success of this methodology in the single-objective case, we have adopted it to design our novel \MOEA{}.
+
+
+\subsection{Diversity in the Variable Space in \MOEAS{}}\label{MOEAs:Diversity}
+
+In spite of the vast quantity of \MOEAS{} proposed, none of the state-of-the-art techniques involve
+explicitly managing the diversity in the variable space, which is a remarkable difference with respect
+to single-objective optimizers.
+%
+One of the main reasons behind this difference is probably that there is a relationship between the diversity maintained in the objective 
+space and the diversity maintained in the variable space, so even if the diversity in the variable space is not managed explicitly,
+any negative effects that do appear are usually not as bad as in single-objective optimization.
+%
+%Additionally, it is easy to proof that enforcing a minimum threshold for diversity on variable space for the whole optimization
+%is not in general a good idea.
+%
+%In fact, we can imagine a problem where all Pareto Optimal solutions are close to each other in the variable space, meaning
+%that enforcing diversity on variable space would provoke a degradation on performance on such kinds of problems.
+However, the relationship between the two different diversities depend on each \MOP{}~\cite{shir2009enhancing}, meaning
+that including the successful principles of single-objective optimizers might result in more robust \MOEAS{}.
+%
+Most current \MOEAS{} that take the diversity in the variable space into account are devoted to multimodal 
+multi-objective optimization~\cite{deb2008omni, cuate2019variation}.
+%
+However, some attempts to apply these mechanisms in traditional multi-objective optimization have also been made.
+
+The Non-Dominated Sorting Genetic Algorithm (\NSGA{}) developed in 1995~\cite{srinivas1994muiltiobjective} 
+was one of the first \MOEAS{} that employed diversity in the variable space.
+%
+Specifically, it relies on fitness sharing to discriminate between solutions in the same front.
+%
+%However, this decision was at the cost of not considering the diversity on the objective space.
+%
+In a way, this method was designed in an opposite way to current methods: the diversity
+in the variable space is considered, but at the cost of disregarding the information on the diversity
+in the objective space.
+%
+The performance of \NSGA{} is not even close to that of current \MOEAS{}, and one 
+of the reasons is precisely that it does not consider the diversity in the objective space.
+
+In 2003, the \GDEA{}~\cite{toffolo2003genetic} proposed by Toffolo and Benini integrated the diversity into the search 
+as an additional objective, which modifies the ranking of the individuals and favors maintaining distant individuals
+during the entire optimization process.
+%
+In 2005, Chan and Ray \cite{chan2005evolutionary} proposed the application of selection operators to
+encourage the preservation of distant solutions in both the objective and variable spaces.
+%
+%They implemented \KPone{} and \KPtwo{}, two algorithms using these two selection operators.
+%
+Later, Deb and Tiwari proposed the Omni-optimizer~\cite{deb2008omni}.
+%
+This algorithm is designed as a generic multi-objective, multi-optima optimizer. %  , which extends the original idea of the \NSGA{}.
+%
+In the multi-objective case, it is an extension of \NSGAII{} where the crowding distance considers both the objective and variable spaces.
+%
+Since it first uses the typical rank procedure considering only the objective space, more importance is given to this space, 
+and the diversity plays an inferior role.
+%
+Unfortunately, there is no way to easily alter the importance given to each space.
+%
+In 2009, Shir et al. showed that in many cases the diversity in the variable space can be significantly enhanced without hampering 
+the convergence to a diverse Pareto front approximation.
+%
+Following this insight, the \CMAES{} niching framework was proposed~\cite{shir2009enhancing}.
+%
+Estimation of Distribution Algorithms have also considered the information in the variable space
+to attain better approximations of the Pareto set~\cite{zhou2009approximating}.
+%
+Finally, the Diversity Integrating Hypervolume-based Search Algorithm (\DIVA{})~\cite{ulrich2010integrating}
+weighs the contribution from the hypervolume against the diversity in the variable space.
+
+Note that of the methods discussed, the only one that shows any improvements in terms of objective-space metrics is \GDEA{}.
+%
+However, the results attained by \GDEA{} are not as competitive as those attained by modern solvers, so it is not currently
+considered as a state-of-the-art \MOEA{}, but rather as an easily applicable and general approach.
+%
+The remaining methods focus on showing that solutions with a higher level of diversity in the variable space
+can be obtained without an overly negative effect
+on the approximation of the Pareto front.
+
+
+\subsection{Multi-objective State-of-the-art Algorithms}
+
+Given the large number of \MOEAS{} proposed in the last decades, several taxonomies have been defined~\cite{bechikh2016recent}.
+%
+Most current techniques consider in some way at least one of the following concepts~\cite{trivedi2016survey}:
+Pareto dominance, indicators and/or decomposition.
+%
+Note that several \MOEAS{} use more than one of these principles, but most practitioners make the effort to classify
+proposals as domination-based, indicator-based or decomposition-based.
+
+In domination-based \MOEAS{}, the Pareto dominance relationship is applied to bias the decisions of the optimizer.
+%
+Although this relationship stimulates convergence to the Pareto front, additional techniques to promote
+diversity in the objective space must be integrated.
+%
+Several traditional \MOEAS{} belong to this group, and while they face some difficulties for many-objective
+optimization, they are considered quite effective for optimization problems with two and three objectives.
+%
+Non-Dominated Sorting Genetic Algorithm-II (\NSGAII{}) is the most popular technique belonging to this group~\cite{deb2002fast}.
+%
+\NSGAIII{}~\cite{deb2013evolutionary} extends \NSGAII{} by replacing the crowding selection with a strategy 
+based on generating distributed reference points that implicitly decompose the objective space~\cite{trivedi2016survey}.
+%
+While this method is aimed at many-objective optimization, it also provides some benefits for problems with three objectives.
+
+Indicator-based \MOEAS{} incorporate a measure of quality over sets of solutions to alter some components, such as the 
+selection and/or replacement~\cite{zitzler2004indicator}.
+%
+Most indicators take into account both the convergence and coverage, so no additional techniques to promote diversity
+in the objective space are required.
+%
+A highly effective \MOEA{} that belongs to this category is the R2-Indicator-Based Evolutionary Multi-objective 
+Algorithm (\RMOEA{})~\cite{trautmann2013r2}.
+%
+\textsc{sms-emoa}~\cite{beume:07} is also quite effective 
+but it uses the computationally expensive hypervolume indicator, meaning that it is not as generally applicable as \RMOEA{}.
+
+Finally, decomposition-based \MOEAS{}~\cite{ishibuchi1998multi} incorporate scalarizing functions to transform the \MOP{} 
+into several single-objective optimization sub-problems.
+%
+Those sub-problems are then solved simultaneously and collaboratively.
+%
+The weighted Tchebycheff scalarizing and its variant, the achievement scalarizing function (\ASF{})~\cite{hernandez2015improved,Pescador:17},
+have shown remarkable performance.
+%
+The most popular \MOEA{} belonging to this category is \MOEAD{}, which was proposed by Zhang et al.~\cite{zhang2007moea}.
+%
+A distinctive feature of \MOEAD{} is the application of neighborhoods at the level of each sub-problem.
+%
+The mating selection and replacement operator takes into account this neighborhood to promote collaboration
+between similar subproblems.
+%
+\MOEAD{} has gained a significant popularity in the last decade, and many extensions have been devised as a result.
+%
+Specifically, the \MOEADDE{}~\cite{li2009multiobjective} --- winner of some optimization competitions --- provides
+important advances by incorporating \DE{} operators, polynomial mutation, a dynamic computational resource allocation strategy, 
+mating restrictions and a modified replacement operator to prevent the excessive replication of individuals. 
+
+Since practitioners compare algorithms under different conditions, it is not easy to clearly identify the most effective ones.
+%
+Given the complementary properties contributed by the different methodologies discussed, our comparisons include \MOEAS{} belonging
+to each category. Specifically, \NSGAII{}, \NSGAIII{}, \RMOEA{} and \MOEADDE{} are the set of state-of-the-art algorithms used
+to validate our proposal.

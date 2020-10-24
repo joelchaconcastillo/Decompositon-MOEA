@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Literature Review}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Diversity-aware Single-objective Optimizers}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Diversity in the Variable Space in moeas}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Multi-objective State-of-the-art Algorithms}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Proposal}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Novel Replacement Phase of avsd-moea/d }{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Experimental Validation}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Performance of moeas in long-term executions}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Analysis of Scalability in the Decision Variables}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Analysis of the Initial Penalty Threshold}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 12
+\BOOKMARK [1][-]{section*.2}{References}{}% 13
+\BOOKMARK [1][-]{IEEEbiography.0}{Biographies}{}% 14
+\BOOKMARK [2][-]{IEEEbiography.1}{Carlos Segura}{IEEEbiography.0}% 15
+\BOOKMARK [2][-]{IEEEbiography.2}{Joel Chac\363n}{IEEEbiography.0}% 16
+\BOOKMARK [2][-]{IEEEbiography.3}{Oliver Sch\374tze}{IEEEbiography.0}% 17

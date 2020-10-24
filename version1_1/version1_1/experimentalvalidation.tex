@@ -1,0 +1,574 @@
+In this section, we provide the validation of our proposal against state-of-the-art \MOEAS{} and
+explain the reasons behind the superiority of \AVSDMOEAD{}.
+%
+%Esto lo pasamos a las conclusiones
+%Particularly, it is shown that controlling the diversity of the decision variables is benefical to attain better 
+%approximations to the Pareto front.
+%
+Since methods that include strategies to explicitly delay convergence usually require additional computational
+resources to excel, long-term analyses are presented.
+%
+In order to draw proper conclusions, three experiments were carried out.
+%
+%First, the technical parameterization that governs the common comparison is presented.
+First, a comparison between \AVSDMOEAD{} and four state-of-the-art \MOEAS{} is presented.
+%
+This comparison focuses on showing the benefits of \AVSDMOEAD{} for benchmarks 
+configured in standard ways.
+%
+Second, an analysis to test the scalability on the number of decision variables is carried out.
+%
+Finally, the robustness of \AVSDMOEAD{} in terms of the initial penalty threshold ($D_I$) is analyzed.
+%
+Note that in order to test the quality of the approximations, the hypervolume is used.
+%
+Additionally, our analyses also include some studies to better understand
+the implications of \AVSDMOEAD{} on the diversity in the variable space.
+%
+These analyses provide a better understanding of the reasons behind the proper performance of \AVSDMOEAD{}
+and highlight the significant differences between \AVSDMOEAD{} and other strategies in terms of the dynamics
+of the population.
+
+
+
+Our validation takes into account three of the most popular benchmarks in multi-objective optimization:
+\WFG{}~\cite{huband2006review}, \DTLZ{}~\cite{deb2005scalable}, and \UF{}~\cite{zhang2008multiobjective}.
+%
+Unless otherwise stated, standard configurations were used.
+%
+Specifically, the \WFG{} test problems were used with two and three objectives with $24$ 
+parameters\footnote{In the \WFG{} context, the term \textit{parameter} is equivalent to variable.}, 
+$20$ of them corresponding to distance parameters and $4$ to position parameters.
+%
+The \DTLZ{} test problems were also used with two and three objectives, and the number of variables in each
+case was set to $D=M+r-1$, where $r=\{5, 10, 20\}$ for \DTLZ{}1, \DTLZ{}2 to \DTLZ{}6 and \DTLZ{}7, respectively.
+% 
+The \UF{} benchmark comprises seven problems with two objectives (\UF{}1-7) and three problems with three objectives (\UF{}8-10).
+%
+This last set of problems was configured with $30$ variables.
+
+\begin{table}[t]
+\centering
+\caption{Parameterization of the variation phase applied in each \MOEA{}}
+\label{tab:tunning}
+%\resizebox{\textwidth}{!}{%
+\begin{scriptsize}
+\begin{tabular}{c|c|c|c|c}
+\hline
+\multirow{2}{*}{} &\multicolumn{2}{c|}{ \textbf{2 objectives} }& \multicolumn{2}{c}{\textbf{3 objectives} }\\ \cline{2-5} 
+ & $CR$ & $F$ & $CR$ & $F$ \\ \hline
+\textbf{AVSD-MOEA/D} & 0.0 & 0.75 & 0.0 & 0.75 \\ \hline
+\textbf{MOEA/D-DE} & 0.75 & 0.75 & 0.5 & 0.5 \\ \hline
+\textbf{R2-EMOA} & 0.75 & 0.5 & 0.5 & 0.5 \\ \hline
+\textbf{NSGA-II} & 0.75 & 0.5 & 0.0 & 0.25 \\ \hline
+\textbf{NSGA-III} & 0.75 & 0.25 & 0.5 & 0.75 \\ \hline
+\end{tabular}%
+\end{scriptsize}
+%}
+\end{table}
+
+Regarding our comparisons, the set of state-of-the-art \MOEAS{} used to validate our proposals is comprised of four 
+popular and complementary \MOEAS{}: \NSGAII{}~\cite{deb2002fast}, \MOEADDE{}~\cite{zhang2009performance}, \RMOEA{}~\cite{trautmann2013r2} 
+and \NSGAIII{}~\cite{deb2013evolutionary}.
+%
+%
+%Note that \MOEADDE{} is the variant of \MOEAD{} that obtained the first place in the Congress on Evolutionary 
+%Computation 2009~\cite{zhang2009performance}, which is considered as a quite effective \MOEA{}.
+%
+Given that all the algorithms are stochastic, each execution was repeated $35$ times in every experiment.
+%
+The hypervolume indicator (\HV{}) is used to compare the various schemes.
+%
+The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) 
+than the nadir point, as suggested in~\cite{ishibuchi2017reference}.
+%
+The value reported is computed as the ratio between the normalized \HV{} attained~\cite{li2014evolutionary} 
+and the maximum attainable normalized \HV{}.
+%
+This way, a value equal to one means a perfect approximation.
+%
+Note that this value is not attainable because \MOEAS{} yield discrete approximations.
+%
+Finally, to statistically compare the \HV{} ratios, a guideline similar to that proposed in~\cite{durillo2010study} was used, 
+which entails the use of the Shapiro-Wilk, Levene, ANOVA, Welch and Kruskal-Wallis tests.
+%
+An algorithm $A1$ is said to beat an algorithm $A2$ when the differences between the HV ratios attained are statistically significant, 
+and the mean and median \HV{} ratios obtained by $A1$ are higher than the mean and median achieved by $A2$.
+
+%
+%First a Shapiro-Wilk test was performed to check if the values of the results followed a Gaussian distribution.
+%
+%If so, the Levene test was used to check for the homogeneity of the variances.
+%
+%If the samples had equal variance, an ANOVA test was done; if not, a Welch test was performed.
+%
+%For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution.
+%
+
+An important step to perform fair comparisons is the parameterization of algorithms.
+%
+Note that the variation operators used in each algorithm in their original variants differ.
+%
+Using the original variation operators to perform comparisons is not fair, and probably would offer more conclusions 
+about the effectiveness of the operators than about the general framework proposed in each \MOEA{}.
+%
+However, there might also be a dependency between the general framework and the proper variation operators.
+%
+We thus decided to use a common simple framework for the variation step, but to allow a different parameterization
+for each algorithm.
+%
+Specifically, the variation phase first applies the classic \DE{} scheme known as DE/rand/1/bin with parameters $F$
+and $CR$, and then it applies polynomial mutation with probability $p_m$
+and a distribution index equal to $50$.
+%
+Note that the use of the additional mutation in variants based on \MOEAD{} is quite important~\cite{zhang2009performance}.
+%
+The additional common parameter is the population size.
+%
+Since the hypervolume is highly dependent on the number of solutions used to approximate the Pareto front,
+all the \MOEAS{} were configured with a common population size equal to $100$ individuals.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+
+In order to set the $CR$, $F$ and $p_m$ parameters, 40 parameterizations were tested for each algorithm.
+%
+They were generated by combining four values of $F$ (0.25, 0.5, 0.75 and 1.0), five values of $CR$ (0.0, 0.25, 0.5, 0.75, 1.0) 
+and two values of $p_m$ (0.0, $1\over{D}$).
+%
+These configurations were executed by setting the stopping criterion to $2.5 \times 10^{6}$ function evaluations, 
+with all the aforementioned benchmarks.
+%
+The mean of the resulting hypervolume ratios were calculated independently for the problems with two and three objectives.
+%
+Then, in the experiments that followed, the parameter configuration that attained the largest mean was used.
+%
+Table~\ref{tab:tunning} shows the configuration of $CR$ and $F$ selected for each \MOEA{}.
+%
+Note that all of them yielded better results when mutation was enabled, so the benefits reported in~\cite{zhang2009performance}
+also appeared for other \MOEAS{}.
+%
+Note that in the case of \AVSDMOEAD{}, $CR$ was set to 0, which reduces the strength of the perturbation performed
+by \DE{}.
+%
+Since \AVSDMOEAD{} maintains a larger degree of diversity than other methods, low disruptive
+operators seem to be more helpful.
+
+Note also that there are some additional parameters that are specific to some of the \MOEAS{}.
+%
+They were set to typical values used in literature. 
+%
+Table~\ref{tab:Parametrization} shows this additional parameterization.
+%
+Note also that scalarization functions are used in \MOEADDE{}, \RMOEA{}, \NSGAIII{} and \AVSDMOEAD{}.
+%
+In all those cases, the \ASF{} approach is used.
+%
+However, the weight vectors employed in \RMOEA{} are different from those in the remaining algorithms because in \RMOEA{}, using
+a larger number of weight vectors than the population size is beneficial.
+%
+As in the official code, \RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives, 
+respectively~\cite{trautmann2013r2}.
+%
+In the remaining cases --- including \AVSDMOEAD{} --- the number of weight vectors was equal to the population size, and they were generated
+with the uniform design strategy described in~\cite{wagner:13}.
+%
+Note that in the case of \AVSDMOEAD{}, a second set of weight vectors ($\Lambda$) was considered for the external archive.
+%
+Since the archive is based on $R2$, it considers the same weight vectors as \RMOEA{}.
+
+\begin{table}[t]
+\centering
+\caption{Configuration of the specific parameters of each MOEA}
+\label{tab:Parametrization}
+\begin{scriptsize}
+\begin{tabular}{c|c}
+\hline
+\textbf{Algorithm} & \textbf{Configuration} \\ \hline
+\multirow{3}{*}{
+\textbf{MOEA/D-DE}} & Max. updates by sub-problem ($\eta_r$) = 2, \\
+ & tour selection = 10,   neighbor size = 20, \\
+ & period utility updating = 50 generations, \\
+ & local selection probability ($\delta$) = 0.9\\ \hline
+\textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
+\textbf{AVSD-MOEA/D} & $D_I=0.4$ \\ \hline
+\end{tabular}
+\end{scriptsize}
+\end{table}
+
+\input{tablas/Table_HV_2obj.tex}
+\input{tablas/Tests_HV_2obj.tex}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{graphicx}
+
+
+
+\subsection{Performance of \MOEAS{} in long-term executions}
+
+One of the aims behind the design of \AVSDMOEAD{} is to profit from long-term executions.
+%
+Therefore, in this section we present the results attained by the different algorithms when setting 
+the stopping criterion to $2.5 \times 10^7$ function evaluations.
+%
+Table~\ref{tab:StatisticsHV_2obj} shows the \HV{} ratios obtained for the benchmark functions with two objectives.
+%
+For each method and problem, the best, mean and standard deviation of the \HV{} ratio values are reported.
+%
+Furthermore, in order to summarize the results attained by each method, the last row shows the mean for the whole set 
+of problems.
+%
+For each test problem, the method that yielded the largest mean and those that were not statistically inferior to the 
+best are shown in \textbf{boldface}.
+%
+Similarly, the method that yielded the best \HV{} value among all the runs is {\ul underlined}.
+%
+From here on, the methods shown in {\bf boldface} for a given problem are referred to as the winning methods.
+%
+\AVSDMOEAD{}, \RMOEA{}, \MOEADDE{}, \NSGAIII{} and \NSGAII{} belonged to the winning methods in 
+$17$, $6$, $2$, $2$ and $0$ problems, respectively.
+%
+The superiority of \AVSDMOEAD{} is clear both in terms of this metric and in terms of the mean \HV{}.
+%
+Particularly, \AVSDMOEAD{} attained a value equal to $0.976$, while all the remaining methods attained values between
+$0.931$ and $0.937$.
+%
+A careful inspection of the data shows that in those cases where \AVSDMOEAD{} loses, the difference with respect to the best 
+method is low.
+%
+In fact, the difference between the mean \HV{} ratio attained by the best method and by \AVSDMOEAD{} is never greater than $0.1$.
+%
+However, in all the other methods, there were several problems where the distance with respect to the best approach
+was greater than $0.1$.
+%
+Specifically, it happened in $4$, $4$, $4$ and $5$ problems for \RMOEA{}, \MOEADDE{}, \NSGAII{} and \NSGAIII{}, respectively.
+%
+This means that \AVSDMOEAD{} wins in most cases and that when it loses, the difference is always small.
+%
+Note also that in terms of standard deviation, \AVSDMOEAD{} yields much lower values than all the other algorithms, meaning
+it is quite robust.
+
+
+In order to better clarify these findings, pair-wise statistical tests were applied between each method tested in each test problem.
+%
+For the two-objective cases, Table~\ref{tab:Tests_HV_2obj} shows the number of times that each method statistically won 
+(column~$\uparrow$), lost (column~$\downarrow$) or tied (column~$\leftrightarrow$).
+%
+The \textbf{Score} column shows the difference between the number of times that each method won and the number of times that each 
+method lost.
+%
+Additionally, for each method $M$, we calculated the sum of the differences between the mean \HV{} ratio attained by the best method 
+(the ones with the highest mean) and method $M$, for each problem where $M$ was not in the group of winning methods.
+%
+This value is shown in the \textit{Deterioration} column.
+%
+The data confirm that although \AVSDMOEAD{} loses in some pair-wise tests, the overall numbers of wins and 
+losses clearly favor \AVSDMOEAD{}.
+%
+More importantly, the total deterioration is much lower in the case of \AVSDMOEAD{}, confirming that when \AVSDMOEAD{} loses, 
+the differences are low.
+
+\input{tablas/Table_HV_3obj.tex}
+\input{tablas/Tests_HV_3obj.tex}
+
+
+Tables~\ref{tab:StatisticsHV_3obj} and~\ref{tab:Tests_HV_3obj} shows the same information for the problems with three objectives.
+%
+In this case, the number of times that each method belonged to the winning groups were $17$, $2$, $0$, $0$ and $0$ 
+for \AVSDMOEAD{}, \RMOEA{}, \MOEADDE{}, \NSGAIII{} and \NSGAII{}, respectively.
+%
+Thus, \AVSDMOEAD{} yielded quite superior results.
+%
+Considering the whole set of problems, \AVSDMOEAD{} obtained a much larger mean \HV{} ratio than the other ones.
+%
+Moreover, the difference between the mean \HV{} ratio obtained by the best method and by \AVSDMOEAD{} was never greater than $0.1$.
+%
+However, all the other methods exhibited a deterioration in excess of $0.1$ in several cases.
+%
+In particular, this happened in $2$, $2$, $2$ and $6$ problems for \MOEADDE{}, \RMOEA{}, \NSGAIII{} and \NSGAII{} respectively.
+%
+Remarkably, \AVSDMOEAD{} is quite superior in both the total deterioration and in the score generated from the pair-wise
+statistical tests.
+%
+In fact, its deterioration for the entire problem set is just $0.006$.
+%
+Beating all the state-of-the-art algorithms in such a large number of problem benchmarks is a quite significant achievement, and shows
+the robustness of \AVSDMOEAD{}.
+%This might occurs since that \RMOEA{} takes into account a greater number of weight vectors, in some problems it allows the allocation of solutions in regions that contributes in a better way to \HV{}.
+%
+%In addition, \AVSDMOEAD{} is also quite superior than the remaining methods in terms of the mean \HV{} ratio when considering the whole
+%set of benchmark problems.
+%
+Our results show that the superiority of \AVSDMOEAD{} persists, and even increases, when 
+problems with three objective functions are considered.
+%
+%In fact the \HV{} ratio values attained by \AVSDMOEAD{} in each problem is not worst than the reported by \MOEADDE{} and \NSGAIII{} 
+%with three objectives, such methods incorporated the same number of weight vectors.
+%
+%Although that the performance of \VSDMOEAD{} can be affected by the distribution of the weight vectors, its overall \HV{} ratio values are quite better.
+%
+%To prove those arguments, in the supplementary material is shown a variant of our proposal \AVSDMOEAD{} in which is incorporated an external archive based in the \RR{} indicator.
+%
+%\AVSDMOEAD{} was remarkable superior than the state-of-the-art \MOEAS{} with two and three objectives in both total deterioration ($0.160$ and $0.006$) and term of total wins and loses ($78$ and $74$ wins).
+
+
+
+\begin{figure}[t]
+\centering
+\begin{tabular}{l}
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG5-figure0.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG5-figure1.eps}\\[0cm]%[-0.14cm] 
+\end{tabular}
+\caption{Diversity of distance variables (top) and mean of \HV{} ratios (bottom) vs. elapsed time in the bi-objective WFG5 test problem. The results reported were taken from $35$ runs.}\label{fig:WFG5_Diversity}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\begin{tabular}{l}
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_UF5-figure0.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_UF5-figure1.eps}\\[0cm]%[-0.14cm] 
+\end{tabular}
+\caption{Diversity of distance variables (top) and mean of \HV{} ratios (bottom) vs. elapsed time in the bi-objective UF5 test problem. The results reported were taken from $35$ runs.}\label{fig:UF5_Diversity}
+\end{figure}
+
+We can better understand the reasons behind the benefits of \AVSDMOEAD{} against the state-of-the-art \MOEAS{}
+by analyzing the evolution of the \HV{} values and the diversity.
+%
+Note that in some \MOPS{}, variables can be classified into two types: 
+distance variables and position variables.
+%
+A variable $x_i$ is a distance variable when for all $x$, modifying $x_i$ results in a new solution 
+that dominates $x$, is equivalent to $x$, or is dominated by $x$.
+%
+Differently, if $x_i$ is a position variable, modifying $x_i$ in $x$ always results in a vector that is 
+incomparable or equivalent to $x$~\cite{huband2006review}.
+%
+This is important because in some cases, \MOEAS{} do not maintain a large enough diversity in the distance
+variables~\cite{castillo2017multi}, so analyzing the diversity trend for these kinds of variables provides a useful
+insight into the dynamics of the population.
+
+In order to show the behavior of the different schemes, we selected WFG5 and UF5.
+%
+They are complementary in the sense that in WFG5, all the Pareto solutions exhibit constant 
+values for the distant variables, which is not the case in UF5.
+%
+Moreover, in UF5, the optimal regions are isolated in the variable 
+space, meaning that more diversity is required.
+%
+In fact, its Pareto optimal front is discrete and consists of $21$ points.
+%
+For each algorithm, the diversity is calculated as the average Euclidean distance between individuals (\ADI{}) in the population 
+by considering only the distance variables.
+%
+Figures~\ref{fig:WFG5_Diversity} and~\ref{fig:UF5_Diversity} show the evolution of the ADI (top) and the mean of \HV{} (bottom) 
+for WFG5 and UF5, respectively.
+%
+In the WFG5 problem, the distance variables quickly converged to a small region 
+in state-of-the-art \MOEAS{}.
+%
+Thus, the differential evolution operator loses it exploring power and as a result,
+those \MOEAS{} were unable to significantly improve the quality of the approximations as the
+evolution progresses.
+%
+By contrast, in the case of \AVSDMOEAD{}, the decrease in \ADI{} is quite linear until the midpoint of the execution, and
+the increase in \HV{} is gradual.
+%
+The final \HV{} attained by \AVSDMOEAD{} is the largest one, which shows the important benefit
+of gradually decreasing the diversity.
+
+As expected, explicitly promoting diversity is also beneficial for problems with disconnected optimal regions.
+%
+As the data in Figure~\ref{fig:UF5_Diversity} show, the advantage of promoting diversity in the UF5 test 
+problem is clear.
+%
+In this case, state-of-the-art algorithms maintain some degree of diversity in the distance variables for
+the entire search.
+%
+However, a large degree of diversity is required to obtain the 21 optimal solutions, and these \MOEAS{} do not maintain
+the required amount of diversity, and as a result, they miss many of the solutions.
+%
+In the case of \AVSDMOEAD{}, enforcing a large degree of diversity in the initial phases promotes more exploration, 
+which makes it possible to find additional optimal regions.
+%
+Once these regions are located, they are not discarded, meaning that a larger level of diversity is maintained throughout the
+execution.
+%
+This way, \AVSDMOEAD{} not only attained better \HV{} values for the first $10\%$ of the total function evaluations, but 
+it also kept looking for promising regions.
+%
+In fact, its \HV{} values improved significantly until the midpoint of the execution period i.e., the final moment
+when diversity was explicitly promoted.
+%
+Then, an additional increase was obtained due to intensification in the regions identified.
+%
+This analysis shows that the dynamic of the population depends on the problem at hand.
+%
+The behavior of \AVSDMOEAD{} with all the problems tested
+was similar to those already presented.
+%
+Cases where the optimal regions consists of constant values for the distance variables behave like WFG5, whereas
+the behavior in those cases where the optimal regions consist of non-constant values for the distance variables is
+more similar to the UF5 case.
+%
+Note, however, that in these cases, different levels of diversity are required, so the behavior is not as homogeneous.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.75]{images/Graphic-Scalability-2obj_tikz-figure0.eps}
+\caption{Mean of the \HV{} ratio for 35 runs of the two-objective problems for different numbers of variables}\label{fig:scalability-2obj}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.75]{images/Graphic-Scalability-3obj_tikz-figure0.eps}
+\caption{Mean of the \HV{} ratio for 35 runs of the three-objective problems for different numbers of variables} \label{fig:scalability-3obj}
+\end{figure}
+
+\subsection{Analysis of Scalability in the Decision Variables}
+
+In order to gain a better insight into the benefits of our proposal, we present an analysis of the scalability in terms of the number 
+of decision variables.
+%
+Given the computational cost associated with this experiment, it was only performed for 
+the decomposition-based algorithms.
+%
+\AVSDMOEAD{} and \MOEADDE{} were applied to the same benchmark problems as in the previous experiment, 
+but considering $50$, $100$, $250$ and $500$ variables.
+%
+Note that in the WFG test problems, the number of position variables and distance variables must be specified.
+%
+The number of distance variables was set to $42$, $84$, $210$ and $418$ when using $50$, $100$, $250$ and $500$ 
+variables, respectively.
+%
+The remaining decision variables were position variables, meaning there were $8$, $16$, $40$ and $82$ such variables, respectively.
+%
+Thus, the relationship between the number of position and distance variables was kept fixed.
+%
+In addition, the stopping criterion was set to $2.5 \times 10^7$ function evaluations.
+%
+Figures~\ref{fig:scalability-2obj} and~\ref{fig:scalability-3obj} show the mean \HV{} ratio for the selected algorithms, 
+considering the problems with two and three objectives, respectively.
+%
+As expected, the \HV{} ratio decreased as the number of variables increased.
+%
+However, the performance of \AVSDMOEAD{} is quite robust, and its decrease is less pronounced than the one in \MOEADDE{},
+meaning that \AVSDMOEAD{} is more helpful as the complexity increases.
+%
+In fact, in our previous analyses, \AVSDMOEAD{} also stood out in the most complex cases, such
+as WFG8 and UF5.
+%
+
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.75]{images/Graphic-Initial-Distance_tikz-figure0.eps} \\
+\caption{Mean of \HV{} values for all the problems with several initial threshold values}\label{fig:Initial-distance-factor}
+\end{figure}
+
+
+\subsection{Analysis of the Initial Penalty Threshold}
+
+One of the main potential downsides of including a strategy to explicitly promote diversity 
+is that this is usually at the cost of incorporating additional parameters.
+%
+In the case of \AVSDMOEAD{}, it requires setting the initial penalty threshold ($D_I)$.
+%
+Given that in single-objective cases, values close to $0.4$ have yielded proper performance~\cite{romero2018memetic,castillo2019differential},
+$D_I = 0.4$ was used in the above experiment.
+%
+This section provides a more detailed study of the implications of this parameter.
+%
+
+\begin{figure}[t]
+\centering
+\begin{tabular}{l}
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG9-figure0.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_WFG9-figure1.eps}\\[0cm]%[-0.14cm] 
+\end{tabular}
+\caption{Diversity of distance variables (top) and mean of \HV{} ratios (bottom) vs. elapsed time in the two-objective WFG9 test problem. The results reported were taken from $35$ runs.}\label{fig:WFG9_Diversity}
+\end{figure}
+
+
+%\begin{figure}[t]
+%\centering
+%\begin{tabular}{l}
+% \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_UF10-figure0.eps}\\[0cm]%[-0.14cm] 
+% \includegraphics[scale=0.75]{images/Diversity_Long_Term_tikz_UF10-figure1.eps}\\[0cm]%[-0.14cm] 
+%\end{tabular}
+%\caption{Diversity of distance variables (first row) and mean of \HV{} values (second row) vs. elapsed time in the three-objective UF10 test problem. The reported results are taken from $35$ runs.}\label{fig:UF10_Diversity}
+%\end{figure}
+
+In order to better understand the importance of $D_I$, the entire set of benchmark problems was tested with different values
+of $D_I$.
+%
+As in previous experiments, the stopping criterion was set to $2.5 \times 10^7$ function evaluations.
+%
+Since normalized distances are used, the maximum attainable distance between pairs of individuals is $1.0$.
+%
+Also note that setting $D_I$ to $0$ implies not promoting diversity in the variable space.
+%
+Thus, several values in this range were considered.
+%
+Specifically, the values $D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0\}$ were tested.
+%
+Figure~\ref{fig:Initial-distance-factor} shows the mean \HV{} ratio obtained for both the two-objective 
+and the three-objective case with the $D_I$ values tested.
+%
+The \AVSDMOEAD{} performed worst when $D_I$ was set to $0$.
+%
+The \HV{} ratio quickly increased as higher $D_I$ values up to $0.2$ were used.
+%
+Larger values yielded quite similar performances.
+%
+Thus, a wide range of values (from $0.2$ to $1.0$) exhibited very good performance, 
+meaning that the behavior of \AVSDMOEAD{} is quite robust.
+%
+Thus, properly setting this parameter is not a complex task.
+
+In order to better understand the implications of $D_I$ on the dynamics of the population, Figure~\ref{fig:WFG9_Diversity}
+shows, for \AVSDMOEAD{}, the evolution of diversity in the distance variables in the \textsc{wfg9} case for three different values of $D_I$.
+%
+When setting $D_I = 0$, the diversity is reduced quite quickly, which results in premature convergence.
+%
+The result is a hypervolume that is not too high.
+%
+However, when $D_I = 0.4$ and $D_I = 1$ are used, the loss of diversity is slowed down, and the resulting hypervolume is quite large.
+%
+Note that setting $D_I = 1$ promotes greater diversity, so the hypervolume increases slower than when
+$D_I = 0.4$.
+%
+However, the degree of exploration in both cases is enough to yield high-quality solutions.
+%
+The behavior is quite similar in every problem, which explains the stability of the algorithms for
+different values of $D_I$.
+%
+Note that for shorter periods, setting a proper $D_I$ value is probably much more important.
+%
+However, for long-term executions at least, practically any value higher than $0.2$ yields similar solutions,
+which we regard as a highly positive feature.
+
+
+%Thereafter, in a more specifically way, the effect of this parameter is analized in WFG9 and UF10 test problems, in two and three objectives, respectively.
+%
+%In the same way than in the previous experiments, the Figures and~\ref{fig:UF10_Diversity} show the evolution of diversity (top side) and \HV{} ratio (bottom side) among the execution.
+%
+%The WFG9 test problem is multi-modal and deceptive.
+%
+%In addition, the UF10 test problem is highly multi-frontal and can be considered as one of the most challenging problems.
+%
+%Such diagrams belong to \AVSDMOEAD{} with the values $D_I = \{0.0, 0.4, 1.0\}$.
+%
+%Interestingly, the behavior of \AVSDMOEAD{} with $D_I=0.0$ is quite similar than the state-of-the-art \MOEAS{}, which confirms or previous claim.
+%
+%The motivation behind those diagrams is to ilustrate that to achieve a better balance between exploration and exploitation can be the explicit promotion of diversity among the execution.
+%
+%Therefore, those figures show that in multi-objective optimization --depending in each \MOP{}-- there is a relation between the diversity and the quality solutions, in fact visually the shapes of the \ADI{} and \HV{} ratio complement each other.
+%
+%Even more the \HV{} ratio values are constantly improving as the execution time elapses.
+%
+
+

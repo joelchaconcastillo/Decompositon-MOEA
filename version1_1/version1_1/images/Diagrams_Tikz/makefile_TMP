@@ -1,0 +1,13 @@
+rm *pdf *ps *dpth *log *dvi *aux *lock
+for i in Time_tikz
+do
+   latex --shell-escape $i.tex
+ #  ps2pdf -dNOSAFER $i-figure0.ps
+#   ps2pdf -dNOSAFER $i-figure1.ps
+done
+
+
+rm *.ps *dpth *log *dvi *aux *lock
+
+                
+

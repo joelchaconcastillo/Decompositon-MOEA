@@ -1,0 +1,56 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+ymin=0.5,
+ymax=1.1,
+%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
+title={\textit{\textbf{Scalability with Two Objectives}}},
+    xlabel=Number of Decision Variables,
+  ylabel=Mean HV,
+%  xlabel style={yshift=-0.2cm},
+  xticklabel style = {rotate=30},
+  legend style=
+    {cells={anchor=east},legend pos=outer north east,},
+  % enlargelimits = false,
+  xticklabels from table={\ScalabilityTwoObj}{mean},xtick=data]
+  
+\addplot[red,solid,mark=square*] 
+table [y=VSD_MOEA_D,x=X]{\ScalabilityTwoObj};
+\addlegendentry{AVSD-MOEA/D}
+%\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{\ScalabilityTwoObj};
+%\addlegendentry{NSGA-II}]
+%		
+%\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityTwoObj};
+%\addlegendentry{R2-EMOA}]
+    
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityTwoObj};
+\addlegendentry{MOEA/D-DE}]
+\end{axis}
+\end{tikzpicture}
+%\begin{tikzpicture}[scale=0.8]
+%\begin{axis}[
+%%ymin=0.5    ,
+%%ymax=1.1,
+%%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
+%title={\textit{\textbf{Scalability UF5}}},
+%    xlabel=Number of Decision Variables,
+%  ylabel=Mean HV,
+%  xticklabel style = {rotate=30},
+%  legend style=
+%    {cells={anchor=east},legend pos=outer north east,},
+%  % enlargelimits = false,
+%  xticklabels from table={\ScalabilityUFFiveTwoObj}{mean},xtick=data]
+%  
+%\addplot[red,solid,mark=square*] 
+%table [y=VSD_MOEA,x=X]{\ScalabilityUFFiveTwoObj};
+%\addlegendentry{VSD-MOEA}
+%\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{\ScalabilityUFFiveTwoObj};
+%\addlegendentry{NSGA-II}]
+%		
+%\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityUFFiveTwoObj};
+%\addlegendentry{R2-MOEA}]
+%    
+%\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityUFFiveTwoObj};
+%\addlegendentry{MOEA/D}]
+%\end{axis}
+%\end{tikzpicture}
+%\caption{Mean of the \HV{} (35 runs) considering two objectives.}

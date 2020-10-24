@@ -1,0 +1,38 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+title={\textit{\textbf{Mean of the HV Value with Several Initial Threshold Values}}},
+    xlabel=Initial Threshold Value,
+  ylabel=HV,
+%  xlabel style={yshift=-0.2cm},
+  xticklabel style = {rotate=30},
+  legend style=
+    {cells={anchor=east},legend pos=outer north east,},
+  xticklabels from table={\DIHV}{mean},xtick=data]
+  
+\addplot[red,solid,mark=square*] 
+table [y=HV2obj,x=X]{\DIHV};
+\addlegendentry{HV - 2obj}
+\addplot[blue,dotted,mark=triangle*] table[y= HV3obj,x=X]{\DIHV};
+\addlegendentry{HV - 3obj}
+		
+\end{axis}
+\end{tikzpicture}
+%%\begin{tikzpicture}[scale=0.8]
+%%\begin{axis}[
+%%ymin=0.0    ,
+%%ymax=0.1,
+%%title={\textit{\textbf{Mean of the IGD+ Value with Several Initial Distance Factor}}},
+%%    xlabel=Initial Distance Factor,
+%%  ylabel=IGD+,
+%%  xticklabel style = {rotate=30},
+%%  legend style=
+%%    {cells={anchor=east},legend pos=outer north east,},
+%%  xticklabels from table={\DIIGDP}{mean},xtick=data]
+%%\addplot[red,solid,mark=square*] 
+%%table [y=IGD2obj,x=X]{\DIIGDP};
+%%\addlegendentry{IGD+ 2obj}
+%%\addplot[blue,dotted,mark=triangle*] table [y=IGD3obj,x=X]{\DIIGDP};
+%%\addlegendentry{IGD+ 3obj}
+%%\end{axis}
+%%\end{tikzpicture}
+%\caption{Mean of Inidicator Considering All Instances with Several Initial Distance Factors}

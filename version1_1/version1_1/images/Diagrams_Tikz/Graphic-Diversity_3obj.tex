@@ -1,0 +1,153 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+title={\textit{\textbf{Diversity of the Position Variables with Three Objectives}}},
+  xlabel=Function Evaluations,
+  ylabel=ADI,
+%  xlabel style={yshift=-0.2cm},
+ xticklabel style = {rotate=30},
+  legend style=
+   {cells={anchor=east},legend pos=outer north east,}, nodes={scale=0.8, transform shape}    ,
+    %{cells={anchor=east},legend pos=outer north east,},
+  xticklabels from table={\DiversityThreeWFG}{mean},xtick=data]
+ 
+
+\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_Position_50,x=X]{\DiversityThreeWFG};
+	\addlegendentry{VSD-MOEA (50)}
+
+\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_Position_50,x=X]{\DiversityThreeWFG};
+	\addlegendentry{NSGA-II (50)}
+		
+\addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_Position_50,x=X]{\DiversityThreeWFG};
+	\addlegendentry{R2-EMOA (50)}
+    
+\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D_Position_50,x=X]{\DiversityThreeWFG};
+	\addlegendentry{MOEA/D (50)}
+
+
+\addplot[red,solid,mark=square*] table [y=VSD_MOEA_Position_100,x=X]{\DiversityThreeWFG};
+	\addlegendentry{VSD-MOEA (100)}
+
+\addplot[blue,solid,mark=triangle*] table[y= NSGA_II_Position_100,x=X]{\DiversityThreeWFG};
+	\addlegendentry{NSGA-II (100)}
+		
+\addplot[orange,solid,mark=diamond*] table [y= R2_MOEA_Position_100,x=X]{\DiversityThreeWFG};
+	\addlegendentry{R2-EMOA (100)}
+    
+\addplot[black,solid,mark=pentagon*] table [y= MOEA_D_Position_100,x=X]{\DiversityThreeWFG};
+	\addlegendentry{MOEA/D (100)}
+
+
+\addplot[red,loosely dashdotted,mark=square*] table [y=VSD_MOEA_Position_250,x=X]{\DiversityThreeWFG};
+	\addlegendentry{VSD-MOEA (250)}
+
+\addplot[blue,loosely dashdotted,mark=triangle*] table[y= NSGA_II_Position_250,x=X]{\DiversityThreeWFG};
+	\addlegendentry{NSGA-II (250)}
+		
+\addplot[orange,loosely dashdotted,mark=diamond*] table [y= R2_MOEA_Position_250,x=X]{\DiversityThreeWFG};
+	\addlegendentry{R2-EMOA (250)}
+    
+\addplot[black,loosely dashdotted,mark=pentagon*] table [y= MOEA_D_Position_250,x=X]{\DiversityThreeWFG};
+	\addlegendentry{MOEA/D (250)}
+
+
+
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+title={\textit{\textbf{Diversity of the Distance Variables with Three Objectives}}},
+  xlabel=Function Evaluations,
+  ylabel=ADI,
+  xticklabel style = {rotate=30},
+%  xlabel style={yshift=-0.2cm},
+  legend style=
+   {cells={anchor=east},legend pos=outer north east,}, nodes={scale=0.8, transform shape}    ,
+    %{cells={anchor=east},legend pos=outer north east,},
+  xticklabels from table={\DiversityThreeWFG}{mean},xtick=data]
+
+\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_Distance_50,x=X]{\DiversityThreeWFG};
+	\addlegendentry{VSD-MOEA (50)}
+
+%\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_Distance_50,x=X]{\DiversityThreeWFG};
+%	\addlegendentry{NSGA-II (50)}
+		
+\addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_Distance_50,x=X]{\DiversityThreeWFG};
+	\addlegendentry{R2-EMOA (50)}
+    
+%\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D_Distance_50,x=X]{\DiversityThreeWFG};
+%	\addlegendentry{MOEA/D (50)}
+
+
+\addplot[red,solid,mark=square*] table [y=VSD_MOEA_Distance_100,x=X]{\DiversityThreeWFG};
+	\addlegendentry{VSD-MOEA (100)}
+
+%\addplot[blue,solid,mark=triangle*] table[y= NSGA_II_Distance_100,x=X]{\DiversityThreeWFG};
+%	\addlegendentry{NSGA-II (100)}
+		
+\addplot[orange,solid,mark=diamond*] table [y= R2_MOEA_Distance_100,x=X]{\DiversityThreeWFG};
+	\addlegendentry{R2-EMOA (100)}
+    
+%\addplot[black,solid,mark=pentagon*] table [y= MOEA_D_Distance_100,x=X]{\DiversityThreeWFG};
+%	\addlegendentry{MOEA/D (100)}
+
+
+\addplot[red,loosely dashdotted,mark=square*] table [y=VSD_MOEA_Distance_250,x=X]{\DiversityThreeWFG};
+	\addlegendentry{VSD-MOEA (250)}
+
+%\addplot[blue,loosely dashdotted,mark=triangle*] table[y= NSGA_II_Distance_250,x=X]{\DiversityThreeWFG};
+%	\addlegendentry{NSGA-II (250)}
+		
+\addplot[orange,loosely dashdotted,mark=diamond*] table [y= R2_MOEA_Distance_250,x=X]{\DiversityThreeWFG};
+	\addlegendentry{R2-EMOA (250)}
+    
+%\addplot[black,loosely dashdotted,mark=pentagon*] table [y= MOEA_D_Distance_250,x=X]{\DiversityThreeWFG};
+%	\addlegendentry{MOEA/D (250)}
+
+
+
+
+
+\end{axis}
+\end{tikzpicture}
+
+%%\begin{tikzpicture}[scale=0.8]
+%%\begin{axis}[
+%%title={\textit{\textbf{Diversity of the Variables}}},
+%%  xlabel=Generation,
+%%  ylabel=ADI,
+%%  xticklabel style = {rotate=30},
+%%  legend style=
+%%    {cells={anchor=east},legend pos=outer north east,},
+%%  xticklabels from table={\DiversityThreeWFGOne}{mean},xtick=data]
+%%
+%%\addplot[red,dotted,mark=square*] table [y=VSD_MOEA,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{VSD-MOEA}
+%%
+%%\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{NSGA-II}
+%%		
+%%\addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{R2-MOEA}
+%%    
+%%\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{MOEA/D}
+%%
+%%
+%%\addplot[red,solid,mark=square*] table [y=VSD_MOEA,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{VSD-MOEA}
+%%
+%%\addplot[blue,solid,mark=triangle*] table[y= NSGA_II,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{NSGA-II}
+%%		
+%%\addplot[orange,solid,mark=diamond*] table [y= R2_MOEA,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{R2-MOEA}
+%%    
+%%\addplot[black,solid,mark=pentagon*] table [y= MOEA_D,x=X]{\DiversityThreeWFGOne};
+%%\addlegendentry{MOEA/D}
+%%
+%%	
+%%\end{axis}
+%%\end{tikzpicture}
+%\caption{Evolution of Average Distance Individuals of the Problems WFG1-WFG7.}
