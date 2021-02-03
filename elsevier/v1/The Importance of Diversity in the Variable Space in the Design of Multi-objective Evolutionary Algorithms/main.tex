@@ -1,0 +1,265 @@
+%% This is file `elsarticle-template-1-num.tex',
+%%
+%% Copyright 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%%
+%% $Id: elsarticle-template-1-num.tex 149 2009-10-08 05:01:15Z rishi $
+%% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1-num.tex $
+%%
+\documentclass[review,12pt]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% The graphicx package provides the includegraphics command.
+\usepackage{graphicx}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{subcaption}
+%
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+\journal{Applied Soft Computing}
+
+\newcommand{\ASF}{{\sc asf}}
+\newcommand{\CMOGA}{{\sc c-moga}}
+\newcommand{\MOGA}{{\sc moga}}
+\newcommand{\AEPD}{{\sc aepd}}
+\newcommand{\NP}{{\sc np}}
+\newcommand{\RTS}{{\sc rts}}
+\newcommand{\IEEE}{{\sc ieee}}
+\newcommand{\CEC}{{\sc cec}}
+\newcommand{\COMB}{{\sc comb}}
+\newcommand{\PS}{{\sc ps}}
+\newcommand{\DE}{{\sc de}}
+\newcommand{\DCS}{{\sc dcs}}
+\newcommand{\EA}{{\sc ea}}
+\newcommand{\EAS}{{\sc ea}s}
+\newcommand{\GDEIII}{{\sc gde3}}
+\newcommand{\HGSADC}{{\sc hgsadc}}
+\newcommand{\MOEA}{{\sc moea}}
+\newcommand{\MOEAD}{{\sc moea/d}}
+\newcommand{\MOEADDE}{{\sc moea/d-de}}
+\newcommand{\MOEAS}{{\sc moea}s}
+\newcommand{\MOP}{{\sc mop}}
+\newcommand{\MOPS}{{\sc mop}s}
+\newcommand{\NSGA}{{\sc nsga}}
+\newcommand{\NSGAII}{{\sc nsga-ii}}
+\newcommand{\NSGAIII}{{\sc nsga-iii}}
+\newcommand{\IBEA}{{\sc ibea}}
+\newcommand{\VSDMOEA}{{\sc vsd-moea}}
+\newcommand{\VSDMOEAD}{{\sc vsd-moea/d}}
+\newcommand{\AVSDMOEAD}{{\sc avsd-moea/d}}
+\newcommand{\RMOEA}{{\sc r2-emoa}}
+\newcommand{\RR}{{\sc r2}}
+\newcommand{\REMOA}{{\sc r2-emoa}}
+\newcommand{\WFG}{{\sc wfg}}
+\newcommand{\UF}{{\sc uf}}
+\newcommand{\DTLZ}{{\sc dtlz}}
+\newcommand{\AASF}{{\sc aasf}}
+\newcommand{\HV}{{\sc hv}}
+\newcommand{\SBX}{{\sc sbx}}
+\newcommand{\PF}{{\sc pf}}
+\newcommand{\GDEA}{{\sc gdea}}
+\newcommand{\KPone}{{\sc kp1}}
+\newcommand{\KPtwo}{{\sc kp2}}
+\newcommand{\MMEA}{{\sc mmea}}
+\newcommand{\CMAES}{{\sc cma-es}}
+\newcommand{\DIVA}{{\sc diva}}
+\newcommand{\CMOEA}{{\sc c-moea}}
+\newcommand{\UD}{{\sc ud}}
+\newcommand{\GLP}{{\sc glp}}
+\newcommand{\ADI}{{\sc adi}}
+\newcommand{\BTS}{{\sc bt}s}
+\newcommand{\BT}{{\sc bt}}
+
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+\title{The Importance of Diversity in the Variable \\ Space in the Design of Multi-objective \\Evolutionary Algorithms}
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author[label1]{Carlos~Segura}
+\ead{carlos.segura@cimat.mx}
+\author[label1]{Joel~Chacón~Castillo}
+\ead{joel.chacon@cimat.mx}
+\author[label2]{Oliver~Sch\"{u}tze}
+\ead{shuetze@cs.cinvestav.mx}
+
+\address[label1]{Center for Research in Mathematics (CIMAT), Computer Science Department,
+Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mexico}
+
+\address[label2]{Department of Computer Science, CINVESTAV-IPN, Mexico City, Mexico}
+
+%
+%\address{California, United States}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\begin{keyword}
+Diversity, Decomposition, Multi-objective Optimization, Evolutionary Algorithms. 
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+\linenumbers
+\section{Introduction}
+\input{introduction.tex}
+
+\section{Literature Review}
+\label{Sec:LiteratureReview}
+\input{literature.tex}
+
+\section{Proposal}
+\label{Sec:Proposal}
+\input{proposal.tex}
+
+
+\section{Experimental Validation}
+\label{Sec:ExperimentalValidation}
+\input{experimentalvalidation.tex}
+
+\section{Conclusion}
+\label{Sec:Conclusion}
+\input{conclusion.tex}
+
+\section*{Acknowledgments}
+Authors acknowledge the financial support from CONACyT through the ``Ciencia B\'asica'' project no. 285599
+and the support from ``Laboratorio de Superc\'omputo del Bajio'' through the project 300832 from CONACyT.
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}          ==>>  [#]
+%%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
+%%   \citet{key}         ==>>  Author [#]
+
+%% References with bibTeX database:
+
+% \bibliographystyle{model1-num-names}
+
+%% New version of the num-names style
+\bibliographystyle{elsarticle-num-names}
+\bibliography{bibtex/References.bib}
+
+%% Authors are advised to submit their bibtex database files. They are
+%% requested to list a bibtex style file in the manuscript if they do
+%% not want to use model1-num-names.bst.
+
+%% References without bibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-1-num.tex'.

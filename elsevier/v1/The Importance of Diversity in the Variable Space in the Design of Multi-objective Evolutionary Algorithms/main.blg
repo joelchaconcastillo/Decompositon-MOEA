@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: elsarticle-num-names.bst
+Database file #1: bibtex/References.bib.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty pages in chan2005evolutionary
+Warning--can't use both author and editor fields in Hajela:93
+Warning--empty journal in zhang2008multiobjective
+You've used 55 entries,
+            2918 wiz_defined-function locations,
+            946 strings with 16438 characters,
+and the built_in function-call counts, 39363 in all, are:
+= -- 2953
+> -- 1479
+< -- 46
++ -- 576
+- -- 493
+* -- 4433
+:= -- 5343
+add.period$ -- 61
+call.type$ -- 55
+change.case$ -- 437
+chr.to.int$ -- 55
+cite$ -- 58
+duplicate$ -- 2984
+empty$ -- 3003
+format.name$ -- 685
+if$ -- 7511
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 549
+newline$ -- 279
+num.names$ -- 223
+pop$ -- 1070
+preamble$ -- 1
+purify$ -- 437
+quote$ -- 0
+skip$ -- 889
+stack$ -- 0
+substring$ -- 2018
+swap$ -- 2168
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 486
+warning$ -- 3
+while$ -- 280
+width$ -- 0
+write$ -- 763
+(There were 3 warnings)
