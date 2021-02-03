@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  3 FEB 2021 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  3 FEB 2021 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,7 +361,7 @@ File: images/Diversity_Long_Term_tikz_UF5-figure0.eps Graphic file (type eps)
 File: images/Diversity_Long_Term_tikz_UF5-figure1.eps Graphic file (type eps)
 
 <images/Diversity_Long_Term_tikz_UF5-figure1.eps>
-Overfull \hbox (6.05435pt too wide) in paragraph at lines 321--336
+Overfull \hbox (6.05435pt too wide) in paragraph at lines 322--337
 []\OT1/cmr/m/n/12 We can bet-ter un-der-stand the rea-sons be-hind the ben-e-fi
 ts of \OT1/cmr/m/sc/12 avsd-moea/d
  []
@@ -381,7 +381,7 @@ File: images/Diversity_Long_Term_tikz_WFG9-figure0.eps Graphic file (type eps)
 File: images/Diversity_Long_Term_tikz_WFG9-figure1.eps Graphic file (type eps)
 
 <images/Diversity_Long_Term_tikz_WFG9-figure1.eps>
-Overfull \hbox (72.8021pt too wide) in paragraph at lines 488--514
+Overfull \hbox (72.8021pt too wide) in paragraph at lines 489--515
 \OT1/cmr/m/n/12 were con-sid-ered. Specif-i-cally, the val-ues $\OML/cmm/m/it/1
 2 D[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\O
 T1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m
@@ -432,10 +432,10 @@ Underfull \hbox (badness 1057) in paragraph at lines 373--381
 Here is how much of TeX's memory you used:
  4817 strings out of 492983
  70380 string characters out of 6134923
- 182178 words of memory out of 5000000
+ 184178 words of memory out of 5000000
  8268 multiletter control sequences out of 15000+600000
  16000 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,15n,40p,660b,689s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (47 pages, 145024 bytes).
+Output written on main.dvi (47 pages, 147368 bytes).

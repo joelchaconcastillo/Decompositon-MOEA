@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  2 FEB 2021 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  3 FEB 2021 12:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**Graphic-Initial-Distance_tikz.tex
-(./Graphic-Initial-Distance_tikz.tex
+**Diversity_Long_Term_tikz_WFG5.tex
+(./Diversity_Long_Term_tikz_WFG5.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -23,32 +23,16 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks14
-\pgfutil@tempdima=\dimen103
-\pgfutil@tempdimb=\dimen104
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2017/06/05 v1.15 Data Visualization (1.15)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
-ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box26
-(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
-))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
@@ -64,9 +48,29 @@ Package graphics Info: Driver file: dvips.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def
 File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
-\Gin@req@height=\dimen105
-\Gin@req@width=\dimen106
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks15
+\pgfutil@tempdima=\dimen105
+\pgfutil@tempdimb=\dimen106
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
@@ -324,10 +328,6 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-Package: pgfplots 2017/06/05 v1.15 Data Visualization (1.15)
-
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks27
@@ -482,63 +482,109 @@ Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zexternalshared.code.tex))
-PGFPlots: reading {CSV/Scalability_2obj.csv}
-PGFPlots: reading {CSV/Scalability_3obj.csv}
-PGFPlots: reading {CSV/Initial_Distance_Factor_HV.csv}
-\openout3 = `Graphic-Initial-Distance_tikz.auxlock'.
+PGFPlots: reading {CSV/Diversity_HV_Long_Term_WFG5.csv}
 
 
-No file Graphic-Initial-Distance_tikz.aux.
-\openout1 = `Graphic-Initial-Distance_tikz.aux'.
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '12'' on input line 11.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '13'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '14'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '15'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+
+Package pgfplots Warning: Table 'CSV/Diversity_HV_Long_Term_WFG5.csv' has an em
+pty column name; replacing it by '16'' on input line 11.
+
+ [warning /pgfplots/warning/empty column name]
+\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
+
+No file Diversity_Long_Term_tikz_WFG5.aux.
+\openout1 = `Diversity_Long_Term_tikz_WFG5.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.15} (current compat level: 1.3).
 
-(./Graphic-Initial-Distance.tex
-\openout3 = `Graphic-Initial-Distance_tikz-figure0.md5'.
+\openout3 = `Diversity_Long_Term_tikz_WFG5-figure0.md5'.
+
+===== 'mode=convert with system call': Invoking 'latex -shell-escape -halt-on-e
+rror -interaction=batchmode -jobname "Diversity_Long_Term_tikz_WFG5-figure0" "\
+def\tikzexternalrealjob{Diversity_Long_Term_tikz_WFG5}\input{Diversity_Long_Ter
+m_tikz_WFG5}"; dvips -o "Diversity_Long_Term_tikz_WFG5-figure0".ps "Diversity_L
+ong_Term_tikz_WFG5-figure0".dvi; ps2eps "Diversity_Long_Term_tikz_WFG5-figure0.
+ps"' ========
+\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
+
+runsystem(latex -shell-escape -halt-on-error -interaction=batchmode -jobname "D
+iversity_Long_Term_tikz_WFG5-figure0" "\def\tikzexternalrealjob{Diversity_Long_
+Term_tikz_WFG5}\input{Diversity_Long_Term_tikz_WFG5}"; dvips -o "Diversity_Long
+_Term_tikz_WFG5-figure0".ps "Diversity_Long_Term_tikz_WFG5-figure0".dvi; ps2eps
+ "Diversity_Long_Term_tikz_WFG5-figure0.ps")...executed.
+
+\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
+
+File: Diversity_Long_Term_tikz_WFG5-figure0.ps Graphic file (type eps)
+<Diversity_Long_Term_tikz_WFG5-figure0.ps>
+\openout3 = `Diversity_Long_Term_tikz_WFG5-figure1.md5'.
 
 
 ===== 'mode=convert with system call': Invoking 'latex -shell-escape -halt-on-e
-rror -interaction=batchmode -jobname "Graphic-Initial-Distance_tikz-figure0" "\
-def\tikzexternalrealjob{Graphic-Initial-Distance_tikz}\input{Graphic-Initial-Di
-stance_tikz}"; dvips -o "Graphic-Initial-Distance_tikz-figure0".ps "Graphic-Ini
-tial-Distance_tikz-figure0".dvi; ps2eps "Graphic-Initial-Distance_tikz-figure0.
+rror -interaction=batchmode -jobname "Diversity_Long_Term_tikz_WFG5-figure1" "\
+def\tikzexternalrealjob{Diversity_Long_Term_tikz_WFG5}\input{Diversity_Long_Ter
+m_tikz_WFG5}"; dvips -o "Diversity_Long_Term_tikz_WFG5-figure1".ps "Diversity_L
+ong_Term_tikz_WFG5-figure1".dvi; ps2eps "Diversity_Long_Term_tikz_WFG5-figure1.
 ps"' ========
-\openout3 = `Graphic-Initial-Distance_tikz.auxlock'.
+\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
 
-runsystem(latex -shell-escape -halt-on-error -interaction=batchmode -jobname "G
-raphic-Initial-Distance_tikz-figure0" "\def\tikzexternalrealjob{Graphic-Initial
--Distance_tikz}\input{Graphic-Initial-Distance_tikz}"; dvips -o "Graphic-Initia
-l-Distance_tikz-figure0".ps "Graphic-Initial-Distance_tikz-figure0".dvi; ps2eps
- "Graphic-Initial-Distance_tikz-figure0.ps")...executed.
+runsystem(latex -shell-escape -halt-on-error -interaction=batchmode -jobname "D
+iversity_Long_Term_tikz_WFG5-figure1" "\def\tikzexternalrealjob{Diversity_Long_
+Term_tikz_WFG5}\input{Diversity_Long_Term_tikz_WFG5}"; dvips -o "Diversity_Long
+_Term_tikz_WFG5-figure1".ps "Diversity_Long_Term_tikz_WFG5-figure1".dvi; ps2eps
+ "Diversity_Long_Term_tikz_WFG5-figure1.ps")...executed.
 
-\openout3 = `Graphic-Initial-Distance_tikz.auxlock'.
+\openout3 = `Diversity_Long_Term_tikz_WFG5.auxlock'.
 
-File: Graphic-Initial-Distance_tikz-figure0.ps Graphic file (type eps)
-<Graphic-Initial-Distance_tikz-figure0.ps>) [1
+File: Diversity_Long_Term_tikz_WFG5-figure1.ps Graphic file (type eps)
+<Diversity_Long_Term_tikz_WFG5-figure1.ps>
+Overfull \hbox (163.05595pt too wide) in paragraph at lines 21--94
+[][] [] 
+ []
 
-]
-(./Graphic-Initial-Distance_tikz.aux) ) 
+[1
+
+] (./Diversity_Long_Term_tikz_WFG5.aux) ) 
 Here is how much of TeX's memory you used:
- 21288 strings out of 492983
- 580824 string characters out of 6134923
- 745620 words of memory out of 5000000
- 24522 multiletter control sequences out of 15000+600000
+ 21385 strings out of 492983
+ 584015 string characters out of 6134923
+ 745612 words of memory out of 5000000
+ 24625 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,5n,96p,750b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Graphic-Initial-Distance_tikz.dvi (1 page, 5124 bytes).
+Output written on Diversity_Long_Term_tikz_WFG5.dvi (1 page, 5216 bytes).

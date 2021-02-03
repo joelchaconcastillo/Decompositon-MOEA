@@ -6,7 +6,7 @@ rm *pdf *ps *dpth *log *dvi *aux *lock *md5
 #for i in Graphic-Initial-Distance_tikz # Graphic-Scalability-3obj_tikz Graphic-Diversity_2obj_tikz Graphic-Diversity_3obj_tikz Graphic-Scalability-2obj_tikz Time_tikz 
 ##do
 #i=BIAS
-i=Graphic-Initial-Distance_tikz 
+i=Diversity_Long_Term_tikz_WFG5
    latex --shell-escape $i.tex
  #  ps2pdf -dNOSAFER $i-figure0.ps
 #   ps2pdf -dNOSAFER $i-figure1.ps
