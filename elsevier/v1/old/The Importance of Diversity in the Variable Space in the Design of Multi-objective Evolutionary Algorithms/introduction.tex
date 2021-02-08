@@ -1,0 +1,189 @@
+Multi-Objective Evolutionary Algorithms (\MOEAS{}) are one of the most popular approaches 
+for dealing with Multi-Objective Optimization Problems (\MOPS{})~\cite{das2011real, zhou2011multiobjective}.
+%
+\MOEAS{} are usually employed in complex problems where more traditional optimization techniques are not 
+applicable~\cite{Lootsma:99}.
+%
+%TODO: tal y como lo defines no es box-constrained. Quita lo de box-constrained o mejor define las restricciones
+%de caja.
+A continuous box-constrained minimization \MOP{}, which is the case addressed in this paper,
+involves two or more conflicting objectives as defined in (\ref{eqn:main})
+%
+\begin{equation}\label{eqn:main}
+\begin{split}
+&min \quad F(x) = (f_1(x), ..., f_M(x)) \\
+&s.t. \quad x_i^{(L)} \leq x_i \leq x_i^{(U)}
+%&s.t. \quad x \in \Omega.
+\end{split}
+\end{equation}
+
+where $x \in \Re^D$, $D$ is the number of variables,
+and each decision variable $x_i \in \Re$ is constrained by $x_i^{(L)}$ and $x_i^{(U)}$, 
+i.e. the lower bound and the upper bound.
+%$\Omega \subseteq \Re^D$ denotes the decision or variable space, 
+The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$.
+Each solution is mapped to the \textit{objective space} $Y$ with the function $F: \Omega \rightarrow Y \subseteq \Re^M$, 
+which consists of $M$ real-valued objective functions.
+%
+%
+%Decidir quitar estas definiciones porque la introduccion está muy larga
+%
+%Given two solutions $x_1, x_2 \in \Omega$, $x_1$ dominates $x_2$, denoted as $x_1 \prec x_2$, 
+%if and only if $f_i(x_1) \leq f_i(x_2)\ \forall\  i \in \{1,...,M\}$ and 
+%$\exists i \in \{1,...,M\}: \ f_i(x_1) < f_i(x_2)$.
+%
+%A solution $x^*$ is a Pareto-optimal solution if $\not \exists x \in \Omega : x \prec x^*$.
+%
+%The set of Pareto-optimal solutions is called the Pareto-optimal set (\PS{}), and their images are the 
+%Pareto Front (\PF{}).
+%
+The goal of most \MOEAS{} is to find a proper approximation of the Pareto front, i.e., a set of
+solutions whose images are well-distributed and close to the Pareto front~\cite{trivedi2016survey}.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
+
+%Evolutionary Algorithms (\EAS{}) are one of the most popular meta-heuristics employed to tackle 
+%\MOPS{}.
+%
+In recent years, the development of \MOEAS{} has grown dramatically~\cite{van1998multiobjective, coello2007mop}, resulting 
+in effective and broadly applicable algorithms.
+%
+However, some function features provoke significant degradation of the performance of \MOEAS{}~\cite{huband2006review}, 
+meaning that better design principles are still required.
+%
+%TODO: Citar tras taxonomies alguna clasificacion, preferiblemente la de decomposition, dominance, quality.
+Regarding the design of \MOEAS{}, several paths have been explored, resulting in diverse taxonomies~\cite{trivedi2016survey}.
+%
+For instance, principles related to decomposition, dominance and quality metrics are used
+to design \MOEAS{}.
+%
+Current state-of-the-art \MOEAS{} consider in some way the diversity in the objective space.
+%
+In some cases, this is done explicitly through density estimators~\cite{beume:07}, %TODO: Citar algun density estimator
+whereas in other cases,
+%such as in decomposition-based methods 
+this is done indirectly~\cite{zhang2007moea}. 
+%with the use of a diverse set of weights. %TODO: Citar MOEA/D
+%
+Since optimizing most objective space quality indicators implies attaining a well-spread set of solutions in the
+objective space, not considering this kind of diversity would result in fairly ineffective optimizers.
+%
+A quite different condition appears with respect to diversity in the variable space.
+%
+Since objective space quality metrics do not consider at all the diversity in the variable space,
+most \MOEA{} designers disregard this diversity.
+
+Alternatively, %when looking at the best optimizers for other areas of optimization, such as i
+%the single-objective case,
+%it is clear that 
+several state-of-the-art single-objective methods introduce mechanisms to vary the trend of the 
+diversity in the variable space, even if obtaining a diverse
+set of solutions is not the aim of the optimization~\cite{Joel:Crepinsek}.
+%
+Instead, this is done to induce a better balance between exploration and exploitation.
+%
+In fact, the proper management of diversity is considered one of the cornerstones for proper performance~\cite{Herrera-Poyatos:17}.
+%
+Thus, these differences between the design principles applied in single-objective and multi-objective evolutionary 
+algorithms are surprising.
+%
+Moreover, practitioners have shown that modern \MOEAS{} suffer some drawbacks involving stagnation and premature 
+convergence in subsets of variables~\cite{ishibuchi2006comparison, castillo2017multi, buche2003self, lu2002dynamic}.
+%
+As a result, this paper studies the hypothesis that incorporating mechanisms to manage the diversity in the variable space 
+might yield important benefits to the field of multi-objective optimization.
+%
+%TODO: citar ejemplos significativos de niching-based MOEAS{}.
+Note that unlike other proposals, such as niching-based \MOEAS{}~\cite{mahfoud1995niching, srinivas1994muiltiobjective}, we are not interested in obtaining
+a diverse set of solutions in the variable space; rather, we state that the quality of the results in terms of objective-space indicators can be improved further with these
+kinds of mechanisms.
+
+Since controlling diversity in the variable space is 
+so important in single-objective domains to attain a proper balance between exploration and intensification~\cite{lin2009auto},
+a large number of related methods have been devised~\cite{Joel:Crepinsek}. 
+%
+%Esto esta interesante, pero muy largo, lo pasare a la parte de literatura
+%Note that in most cases, similar principles have been used to devise niching methods that try to locate
+%several optima simultaneously and methods that try to properly balance exploration and intesification but with the aim
+%of attaining a single optimum.
+%
+%However, since the aim is quite different, methods that are specific to one of these areas
+%have also been proposed.
+%
+%The applied principles to vary the way diversity evolves are quite assorted so several taxonomies have been proposed.
+%
+%They are classified in~\cite{Joel:Crepinsek} in terms of the involved component that is altered.
+%
+%Some of the most prominent categories that are identified are the following: 
+%selection-based~\cite{Chen:09}, 
+%population-based\cite{koumousis2006saw}, 
+%crossover/mutation-based~\cite{herrera2003fuzzy}, %mitchell1998introduction
+%fitness-based~\cite{Cioppa:07}, 
+%and replacement-based~\cite{segura2015novel}.
+%
+Recent research on single-objective optimization has shown that important advances can be achieved when the
+balance between exploration and intensification is managed by relating the diversity of the population to 
+the stopping criterion and the elapsed execution time.
+%
+Specifically, these methods reduce the importance given to preserving diversity as the end of the optimization
+is approached.
+%
+This principle has been used to find new best-known solutions for the Frequency Assignment Problem 
+(FAP)~\cite{segura2016improving}, to improve further continuous optimizers~\cite{castillo2019differential} and
+to design the winning strategy in the extended round of Google Hash Code 
+2020\footnote{https://codingcompetitions.withgoogle.com/hashcode/}, which featured over $100,000$ participants.
+%
+Thus, we decided to explore the incorporation of this principle into the design of \MOEAS{}.
+%
+%Probably, one of the most important drawbacks of this design principle is that most discussed optimizers require long-term
+%executions to excel.
+%
+%Even if this is the case for \MOEAS{}, there is a niche for these kinds of optimizers, so exploring them is important.
+%Toda la parte de detalles de Evolución Diferencial se me hacían demasiado largas, tal vez para la revisión de literatura sí
+%está bien.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% end paragraph
+
+One of the main problems in incorporating the above principle into the design of \MOEAS{} is that
+measures of the variable and objective spaces must be considered simultaneously.
+%and the relation between them is problem-dependent.
+%
+This design principle is based on reducing the importance of diversity in the variable space as 
+generations evolve, so we maintain this decision and indirectly increase the importance granted to diversity 
+and quality in the objective space as the execution progresses.
+%
+%Esta es demasiado detalle asi que mejor para la propuesta
+%In fact, our proposal behaves as a traditional \MOEA{} during the last half of the optimization, in the sense
+%that the diversity on the variable space is disregarded.
+%
+In order to show the validity of our hypothesis, this paper proposes the
+\textit{Archived Variable Space Diversity MOEA based on Decomposition} (\AVSDMOEAD{}).
+%, which explicitly manage the diversity in the 
+%variable space to properly balance from exploration towards intensification.
+%
+\AVSDMOEAD{} simplifies \MOEADDE{}~\cite{zhang2009performance} by deactivating the dynamical resource allocation
+scheme and disregarding the notion of neighborhood;
+ at the same time, it is extended by including a novel replacement strategy that applies the design principle discussed.
+%
+Our proposal is validated by taking into consideration 
+\MOEADDE{}~\cite{zhang2009performance}, 
+\NSGAII{}~\cite{deb2002fast}, 
+\REMOA{}~\cite{trautmann2013r2} and 
+\NSGAIII{}~\cite{deb2013evolutionary}.
+%Esto lo pasamos para la validación con el fin de acortar
+%which are popular representatives of decomposition-based, dominance-based, indicator-based and hybrid \MOEAS{}, respectively.
+%
+Remarkable benefits are achieved in terms of robustness and scalability.
+
+The rest of this paper is organized as follows.
+%
+Section~\ref{Sec:LiteratureReview} provides a review of \MOEAS{}, diversity management 
+and other related works.
+%
+The \AVSDMOEAD{} proposal is detailed in section~\ref{Sec:Proposal}.
+%
+Section~\ref{Sec:ExperimentalValidation} is devoted to an extensive experimental validation of the novel proposal and
+design principle.
+%
+Finally, conclusions and some lines of future work are presented in section~\ref{Sec:Conclusion}.
+%

@@ -1,0 +1,474 @@
+\begin{thebibliography}{55}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Das et~al.(2011)Das, Maity, Qu, and Suganthan}]{das2011real}
+\bibinfo{author}{S.~Das}, \bibinfo{author}{S.~Maity}, \bibinfo{author}{B.-Y.
+  Qu}, \bibinfo{author}{P.~N. Suganthan},
+\newblock \bibinfo{title}{Real-parameter evolutionary multimodal
+  optimization—a survey of the state-of-the-art},
+\newblock \bibinfo{journal}{Swarm and Evolutionary Computation}
+  \bibinfo{volume}{1} (\bibinfo{year}{2011}) \bibinfo{pages}{71--88}.
+%Type = Article
+\bibitem[{Zhou et~al.(2011)Zhou, Qu, Li, Zhao, Suganthan, and
+  Zhang}]{zhou2011multiobjective}
+\bibinfo{author}{A.~Zhou}, \bibinfo{author}{B.-Y. Qu}, \bibinfo{author}{H.~Li},
+  \bibinfo{author}{S.-Z. Zhao}, \bibinfo{author}{P.~N. Suganthan},
+  \bibinfo{author}{Q.~Zhang},
+\newblock \bibinfo{title}{Multiobjective evolutionary algorithms: A survey of
+  the state of the art},
+\newblock \bibinfo{journal}{Swarm and Evolutionary Computation}
+  \bibinfo{volume}{1} (\bibinfo{year}{2011}) \bibinfo{pages}{32--49}.
+%Type = Inbook
+\bibitem[{Lootsma(1999)}]{Lootsma:99}
+\bibinfo{editor}{F.~A. Lootsma} (Ed.), \bibinfo{title}{Multi-Objective Linear
+  Programming}, \bibinfo{publisher}{Springer US}, \bibinfo{address}{Boston,
+  MA}, \bibinfo{year}{1999}, pp. \bibinfo{pages}{229--257}. \URLprefix
+  \url{https://doi.org/10.1007/978-0-585-28008-0_10}.
+  \DOIprefix\doi{10.1007/978-0-585-28008-0_10}.
+%Type = Article
+\bibitem[{Trivedi et~al.(2016)Trivedi, Srinivasan, Sanyal, and
+  Ghosh}]{trivedi2016survey}
+\bibinfo{author}{A.~Trivedi}, \bibinfo{author}{D.~Srinivasan},
+  \bibinfo{author}{K.~Sanyal}, \bibinfo{author}{A.~Ghosh},
+\newblock \bibinfo{title}{A survey of multiobjective evolutionary algorithms
+  based on decomposition},
+\newblock \bibinfo{journal}{IEEE Transactions on Evolutionary Computation}
+  \bibinfo{volume}{21} (\bibinfo{year}{2016}) \bibinfo{pages}{440--462}.
+%Type = Techreport
+\bibitem[{Van~Veldhuizen and Lamont(1998)}]{van1998multiobjective}
+\bibinfo{author}{D.~A. Van~Veldhuizen}, \bibinfo{author}{G.~B. Lamont},
+  \bibinfo{title}{Multiobjective evolutionary algorithm research: A history and
+  analysis}, \bibinfo{type}{Technical Report}, Citeseer, \bibinfo{year}{1998}.
+%Type = Article
+\bibitem[{Coello et~al.(2007)Coello, Lamont, and Veldhuizen}]{coello2007mop}
+\bibinfo{author}{C.~A.~C. Coello}, \bibinfo{author}{G.~B. Lamont},
+  \bibinfo{author}{D.~A.~V. Veldhuizen},
+\newblock \bibinfo{title}{Mop evolutionary algorithm approaches},
+\newblock \bibinfo{journal}{Evolutionary Algorithms for Solving Multi-Objective
+  Problems: Second Edition}  (\bibinfo{year}{2007}) \bibinfo{pages}{61--130}.
+%Type = Article
+\bibitem[{Huband et~al.(2006)Huband, Hingston, Barone, and
+  While}]{huband2006review}
+\bibinfo{author}{S.~Huband}, \bibinfo{author}{P.~Hingston},
+  \bibinfo{author}{L.~Barone}, \bibinfo{author}{L.~While},
+\newblock \bibinfo{title}{A review of multiobjective test problems and a
+  scalable test problem toolkit},
+\newblock \bibinfo{journal}{IEEE Transactions on Evolutionary Computation}
+  \bibinfo{volume}{10} (\bibinfo{year}{2006}) \bibinfo{pages}{477--506}.
+%Type = Article
+\bibitem[{Beume et~al.(2007)Beume, Naujoks, and Emmerich}]{beume:07}
+\bibinfo{author}{N.~Beume}, \bibinfo{author}{B.~Naujoks},
+  \bibinfo{author}{M.~Emmerich},
+\newblock \bibinfo{title}{{SMS-EMOA}: Multiobjective selection based on
+  dominated hypervolume},
+\newblock \bibinfo{journal}{European Journal of Operational Research}
+  \bibinfo{volume}{181} (\bibinfo{year}{2007}) \bibinfo{pages}{1653--1669}.
+%Type = Article
+\bibitem[{Zhang and Li(2007)}]{zhang2007moea}
+\bibinfo{author}{Q.~Zhang}, \bibinfo{author}{H.~Li},
+\newblock \bibinfo{title}{Moea/d: A multiobjective evolutionary algorithm based
+  on decomposition},
+\newblock \bibinfo{journal}{IEEE Transactions on evolutionary computation}
+  \bibinfo{volume}{11} (\bibinfo{year}{2007}) \bibinfo{pages}{712--731}.
+%Type = Article
+\bibitem[{\v{C}repin\v{s}ek et~al.(2013)\v{C}repin\v{s}ek, Liu, and
+  Mernik}]{Joel:Crepinsek}
+\bibinfo{author}{M.~\v{C}repin\v{s}ek}, \bibinfo{author}{S.-H. Liu},
+  \bibinfo{author}{M.~Mernik},
+\newblock \bibinfo{title}{{Exploration and Exploitation in Evolutionary
+  Algorithms: A Survey}},
+\newblock \bibinfo{journal}{ACM Computing Surveys} \bibinfo{volume}{45}
+  (\bibinfo{year}{2013}) \bibinfo{pages}{35:1--35:33}.
+%Type = Article
+\bibitem[{Herrera{-}Poyatos and Herrera(2017)}]{Herrera-Poyatos:17}
+\bibinfo{author}{A.~Herrera{-}Poyatos}, \bibinfo{author}{F.~Herrera},
+\newblock \bibinfo{title}{Genetic and memetic algorithm with diversity
+  equilibrium based on greedy diversification},
+\newblock \bibinfo{journal}{CoRR} \bibinfo{volume}{abs/1702.03594}
+  (\bibinfo{year}{2017}). \URLprefix \url{http://arxiv.org/abs/1702.03594}.
+  \href{http://arxiv.org/abs/1702.03594}{{\tt arXiv:1702.03594}}.
+%Type = Inproceedings
+\bibitem[{Ishibuchi et~al.(2006)Ishibuchi, Nojima, and
+  Doi}]{ishibuchi2006comparison}
+\bibinfo{author}{H.~Ishibuchi}, \bibinfo{author}{Y.~Nojima},
+  \bibinfo{author}{T.~Doi},
+\newblock \bibinfo{title}{Comparison between single-objective and
+  multi-objective genetic algorithms: Performance comparison and performance
+  measures},
+\newblock in: \bibinfo{booktitle}{2006 IEEE International Conference on
+  Evolutionary Computation}, \bibinfo{organization}{IEEE},
+  \bibinfo{year}{2006}, pp. \bibinfo{pages}{1143--1150}.
+%Type = Inproceedings
+\bibitem[{Castillo et~al.(2017)Castillo, Segura, Aguirre, Miranda, and
+  Le{\'o}n}]{castillo2017multi}
+\bibinfo{author}{J.~C. Castillo}, \bibinfo{author}{C.~Segura},
+  \bibinfo{author}{A.~H. Aguirre}, \bibinfo{author}{G.~Miranda},
+  \bibinfo{author}{C.~Le{\'o}n},
+\newblock \bibinfo{title}{A multi-objective decomposition-based evolutionary
+  algorithm with enhanced variable space diversity control},
+\newblock in: \bibinfo{booktitle}{Proceedings of the Genetic and Evolutionary
+  Computation Conference Companion}, \bibinfo{organization}{ACM},
+  \bibinfo{year}{2017}, pp. \bibinfo{pages}{1565--1571}.
+%Type = Inproceedings
+\bibitem[{B{\"u}che et~al.(2003)B{\"u}che, M{\"u}ller, and
+  Koumoutsakos}]{buche2003self}
+\bibinfo{author}{D.~B{\"u}che}, \bibinfo{author}{S.~M{\"u}ller},
+  \bibinfo{author}{P.~Koumoutsakos},
+\newblock \bibinfo{title}{Self-adaptation for multi-objective evolutionary
+  algorithms},
+\newblock in: \bibinfo{booktitle}{International Conference on Evolutionary
+  Multi-criterion Optimization}, \bibinfo{organization}{Springer},
+  \bibinfo{year}{2003}, pp. \bibinfo{pages}{267--281}.
+%Type = Inproceedings
+\bibitem[{Lu and Yen(2002)}]{lu2002dynamic}
+\bibinfo{author}{H.~Lu}, \bibinfo{author}{G.~G. Yen},
+\newblock \bibinfo{title}{Dynamic population size in multiobjective
+  evolutionary algorithms},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 2002 Congress on
+  Evolutionary Computation. CEC'02 (Cat. No. 02TH8600)},
+  volume~\bibinfo{volume}{2}, \bibinfo{organization}{IEEE},
+  \bibinfo{year}{2002}, pp. \bibinfo{pages}{1648--1653}.
+%Type = Phdthesis
+\bibitem[{Mahfoud(1995)}]{mahfoud1995niching}
+\bibinfo{author}{S.~W. Mahfoud}, \bibinfo{title}{Niching methods for genetic
+  algorithms}, Ph.D. thesis, Citeseer, \bibinfo{year}{1995}.
+%Type = Article
+\bibitem[{Srinivas and Deb(1994)}]{srinivas1994muiltiobjective}
+\bibinfo{author}{N.~Srinivas}, \bibinfo{author}{K.~Deb},
+\newblock \bibinfo{title}{Muiltiobjective optimization using nondominated
+  sorting in genetic algorithms},
+\newblock \bibinfo{journal}{Evolutionary computation} \bibinfo{volume}{2}
+  (\bibinfo{year}{1994}) \bibinfo{pages}{221--248}.
+%Type = Article
+\bibitem[{Lin and Gen(2009)}]{lin2009auto}
+\bibinfo{author}{L.~Lin}, \bibinfo{author}{M.~Gen},
+\newblock \bibinfo{title}{Auto-tuning strategy for evolutionary algorithms:
+  balancing between exploration and exploitation},
+\newblock \bibinfo{journal}{Soft Computing} \bibinfo{volume}{13}
+  (\bibinfo{year}{2009}) \bibinfo{pages}{157--168}.
+%Type = Article
+\bibitem[{Segura et~al.(2016)Segura, Hern{\'a}ndez-Aguirre, Luna, and
+  Alba}]{segura2016improving}
+\bibinfo{author}{C.~Segura}, \bibinfo{author}{A.~Hern{\'a}ndez-Aguirre},
+  \bibinfo{author}{F.~Luna}, \bibinfo{author}{E.~Alba},
+\newblock \bibinfo{title}{Improving diversity in evolutionary algorithms: New
+  best solutions for frequency assignment},
+\newblock \bibinfo{journal}{IEEE Transactions on Evolutionary Computation}
+  \bibinfo{volume}{21} (\bibinfo{year}{2016}) \bibinfo{pages}{539--553}.
+%Type = Article
+\bibitem[{Castillo and Segura(2019)}]{castillo2019differential}
+\bibinfo{author}{J.~C. Castillo}, \bibinfo{author}{C.~Segura},
+\newblock \bibinfo{title}{Differential evolution with enhanced diversity
+  maintenance},
+\newblock \bibinfo{journal}{Optimization Letters}  (\bibinfo{year}{2019})
+  \bibinfo{pages}{1--20}.
+%Type = Inproceedings
+\bibitem[{Zhang et~al.(2009)Zhang, Liu, and Li}]{zhang2009performance}
+\bibinfo{author}{Q.~Zhang}, \bibinfo{author}{W.~Liu}, \bibinfo{author}{H.~Li},
+\newblock \bibinfo{title}{The performance of a new version of {MOEA/D} on
+  {CEC09} unconstrained {MOP} test instances},
+\newblock in: \bibinfo{booktitle}{Evolutionary Computation, 2009. CEC'09. IEEE
+  Congress on}, \bibinfo{organization}{IEEE}, \bibinfo{year}{2009}, pp.
+  \bibinfo{pages}{203--208}.
+%Type = Article
+\bibitem[{Deb et~al.(2002)Deb, Pratap, Agarwal, and Meyarivan}]{deb2002fast}
+\bibinfo{author}{K.~Deb}, \bibinfo{author}{A.~Pratap},
+  \bibinfo{author}{S.~Agarwal}, \bibinfo{author}{T.~Meyarivan},
+\newblock \bibinfo{title}{A fast and elitist multiobjective genetic algorithm:
+  {NSGA-II}},
+\newblock \bibinfo{journal}{IEEE transactions on evolutionary computation}
+  \bibinfo{volume}{6} (\bibinfo{year}{2002}) \bibinfo{pages}{182--197}.
+%Type = Inproceedings
+\bibitem[{Trautmann et~al.(2013)Trautmann, Wagner, and
+  Brockhoff}]{trautmann2013r2}
+\bibinfo{author}{H.~Trautmann}, \bibinfo{author}{T.~Wagner},
+  \bibinfo{author}{D.~Brockhoff},
+\newblock \bibinfo{title}{{R2-EMOA}: Focused multiobjective search using
+  r2-indicator-based selection},
+\newblock in: \bibinfo{booktitle}{International Conference on Learning and
+  Intelligent Optimization}, \bibinfo{organization}{Springer},
+  \bibinfo{year}{2013}, pp. \bibinfo{pages}{70--74}.
+%Type = Article
+\bibitem[{Deb and Jain(2013)}]{deb2013evolutionary}
+\bibinfo{author}{K.~Deb}, \bibinfo{author}{H.~Jain},
+\newblock \bibinfo{title}{An evolutionary many-objective optimization algorithm
+  using reference-point-based nondominated sorting approach, part i: solving
+  problems with box constraints},
+\newblock \bibinfo{journal}{IEEE transactions on evolutionary computation}
+  \bibinfo{volume}{18} (\bibinfo{year}{2013}) \bibinfo{pages}{577--601}.
+%Type = Inproceedings
+\bibitem[{{Liang} et~al.(2016){Liang}, {Yue}, and {Qu}}]{Liang:16}
+\bibinfo{author}{J.~J. {Liang}}, \bibinfo{author}{C.~T. {Yue}},
+  \bibinfo{author}{B.~Y. {Qu}},
+\newblock \bibinfo{title}{Multimodal multi-objective optimization: A
+  preliminary study},
+\newblock in: \bibinfo{booktitle}{2016 IEEE Congress on Evolutionary
+  Computation (CEC)}, \bibinfo{year}{2016}, pp. \bibinfo{pages}{2454--2461}.
+%Type = Article
+\bibitem[{Deb and Tiwari(2008)}]{deb2008omni}
+\bibinfo{author}{K.~Deb}, \bibinfo{author}{S.~Tiwari},
+\newblock \bibinfo{title}{Omni-optimizer: A generic evolutionary algorithm for
+  single and multi-objective optimization},
+\newblock \bibinfo{journal}{European Journal of Operational Research}
+  \bibinfo{volume}{185} (\bibinfo{year}{2008}) \bibinfo{pages}{1062--1087}.
+%Type = Article
+\bibitem[{Cuate and Sch\"utze(2019)}]{cuate2019variation}
+\bibinfo{author}{O.~Cuate}, \bibinfo{author}{O.~Sch\"utze},
+\newblock \bibinfo{title}{Variation rate to maintain diversity in decision
+  space within multi-objective evolutionary algorithms},
+\newblock \bibinfo{journal}{Mathematical and Computational Applications}
+  \bibinfo{volume}{24} (\bibinfo{year}{2019}).
+%Type = Article
+\bibitem[{Pandey et~al.(2014)Pandey, Chaudhary, and
+  Mehrotra}]{pandey2014comparative}
+\bibinfo{author}{H.~M. Pandey}, \bibinfo{author}{A.~Chaudhary},
+  \bibinfo{author}{D.~Mehrotra},
+\newblock \bibinfo{title}{A comparative review of approaches to prevent
+  premature convergence in ga},
+\newblock \bibinfo{journal}{Applied Soft Computing} \bibinfo{volume}{24}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{1047--1077}.
+%Type = Article
+\bibitem[{Mengshoel et~al.(2014)Mengshoel, Gal{\'a}n, and
+  De~Dios}]{mengshoel2014adaptive}
+\bibinfo{author}{O.~J. Mengshoel}, \bibinfo{author}{S.~F. Gal{\'a}n},
+  \bibinfo{author}{A.~De~Dios},
+\newblock \bibinfo{title}{Adaptive generalized crowding for genetic
+  algorithms},
+\newblock \bibinfo{journal}{Information Sciences} \bibinfo{volume}{258}
+  (\bibinfo{year}{2014}) \bibinfo{pages}{140--159}.
+%Type = Inproceedings
+\bibitem[{Harik(1995)}]{harik1995finding}
+\bibinfo{author}{G.~R. Harik},
+\newblock \bibinfo{title}{Finding multimodal solutions using restricted
+  tournament selection.},
+\newblock in: \bibinfo{booktitle}{ICGA}, \bibinfo{year}{1995}, pp.
+  \bibinfo{pages}{24--31}.
+%Type = Article
+\bibitem[{Romero~Ruiz and Segura(2018)}]{romero2018memetic}
+\bibinfo{author}{E.~Romero~Ruiz}, \bibinfo{author}{C.~Segura},
+\newblock \bibinfo{title}{Memetic algorithm with hungarian matching based
+  crossover and diversity preservation},
+\newblock \bibinfo{journal}{Computaci{\'o}n y Sistemas} \bibinfo{volume}{22}
+  (\bibinfo{year}{2018}).
+%Type = Inproceedings
+\bibitem[{Shir et~al.(2009)Shir, Preuss, Naujoks, and
+  Emmerich}]{shir2009enhancing}
+\bibinfo{author}{O.~M. Shir}, \bibinfo{author}{M.~Preuss},
+  \bibinfo{author}{B.~Naujoks}, \bibinfo{author}{M.~Emmerich},
+\newblock \bibinfo{title}{Enhancing decision space diversity in evolutionary
+  multiobjective algorithms},
+\newblock in: \bibinfo{booktitle}{International Conference on Evolutionary
+  Multi-Criterion Optimization}, \bibinfo{organization}{Springer},
+  \bibinfo{year}{2009}, pp. \bibinfo{pages}{95--109}.
+%Type = Article
+\bibitem[{Toffolo and Benini(2003)}]{toffolo2003genetic}
+\bibinfo{author}{A.~Toffolo}, \bibinfo{author}{E.~Benini},
+\newblock \bibinfo{title}{Genetic diversity as an objective in multi-objective
+  evolutionary algorithms},
+\newblock \bibinfo{journal}{Evolutionary computation} \bibinfo{volume}{11}
+  (\bibinfo{year}{2003}) \bibinfo{pages}{151--167}.
+%Type = Inproceedings
+\bibitem[{Chan and Ray(2005)}]{chan2005evolutionary}
+\bibinfo{author}{K.~Chan}, \bibinfo{author}{T.~Ray},
+\newblock \bibinfo{title}{An evolutionary algorithm to maintain diversity in
+  the parametric and the objective space},
+\newblock in: \bibinfo{booktitle}{International Conference on Computational
+  Robotics and Autonomous Systems (CIRAS), Centre for Intelligent Control,
+  National University of Singapore}, \bibinfo{year}{2005}.
+%Type = Article
+\bibitem[{Zhou et~al.(2009)Zhou, Zhang, and Jin}]{zhou2009approximating}
+\bibinfo{author}{A.~Zhou}, \bibinfo{author}{Q.~Zhang},
+  \bibinfo{author}{Y.~Jin},
+\newblock \bibinfo{title}{Approximating the set of pareto-optimal solutions in
+  both the decision and objective spaces by an estimation of distribution
+  algorithm},
+\newblock \bibinfo{journal}{IEEE transactions on evolutionary computation}
+  \bibinfo{volume}{13} (\bibinfo{year}{2009}) \bibinfo{pages}{1167--1189}.
+%Type = Inproceedings
+\bibitem[{Ulrich et~al.(2010)Ulrich, Bader, and
+  Zitzler}]{ulrich2010integrating}
+\bibinfo{author}{T.~Ulrich}, \bibinfo{author}{J.~Bader},
+  \bibinfo{author}{E.~Zitzler},
+\newblock \bibinfo{title}{Integrating decision space diversity into
+  hypervolume-based multiobjective search},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 12th annual conference on
+  Genetic and evolutionary computation}, \bibinfo{organization}{ACM},
+  \bibinfo{year}{2010}, pp. \bibinfo{pages}{455--462}.
+%Type = Book
+\bibitem[{Bechikh et~al.(2016)Bechikh, Datta, and Gupta}]{bechikh2016recent}
+\bibinfo{author}{S.~Bechikh}, \bibinfo{author}{R.~Datta},
+  \bibinfo{author}{A.~Gupta}, \bibinfo{title}{Recent advances in evolutionary
+  multi-objective optimization}, volume~\bibinfo{volume}{20},
+  \bibinfo{publisher}{Springer}, \bibinfo{year}{2016}.
+%Type = Inproceedings
+\bibitem[{Zitzler and K{\"u}nzli(2004)}]{zitzler2004indicator}
+\bibinfo{author}{E.~Zitzler}, \bibinfo{author}{S.~K{\"u}nzli},
+\newblock \bibinfo{title}{Indicator-based selection in multiobjective search},
+\newblock in: \bibinfo{booktitle}{International Conference on Parallel Problem
+  Solving from Nature}, \bibinfo{organization}{Springer}, \bibinfo{year}{2004},
+  pp. \bibinfo{pages}{832--842}.
+%Type = Article
+\bibitem[{Ishibuchi and Murata(1998)}]{ishibuchi1998multi}
+\bibinfo{author}{H.~Ishibuchi}, \bibinfo{author}{T.~Murata},
+\newblock \bibinfo{title}{A multi-objective genetic local search algorithm and
+  its application to flowshop scheduling},
+\newblock \bibinfo{journal}{IEEE Transactions on Systems, Man, and Cybernetics,
+  Part C (Applications and Reviews)} \bibinfo{volume}{28}
+  (\bibinfo{year}{1998}) \bibinfo{pages}{392--403}.
+%Type = Inproceedings
+\bibitem[{Hern{\'a}ndez~G{\'o}mez and
+  Coello~Coello(2015)}]{hernandez2015improved}
+\bibinfo{author}{R.~Hern{\'a}ndez~G{\'o}mez}, \bibinfo{author}{C.~A.
+  Coello~Coello},
+\newblock \bibinfo{title}{Improved metaheuristic based on the r2 indicator for
+  many-objective optimization},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 2015 Annual Conference on
+  Genetic and Evolutionary Computation}, \bibinfo{year}{2015}, pp.
+  \bibinfo{pages}{679--686}.
+%Type = Inproceedings
+\bibitem[{Pescador-Rojas et~al.(2017)Pescador-Rojas, Hern{\'a}ndez~G{\'o}mez,
+  Montero, Rojas-Morales, Riff, and Coello~Coello}]{Pescador:17}
+\bibinfo{author}{M.~Pescador-Rojas},
+  \bibinfo{author}{R.~Hern{\'a}ndez~G{\'o}mez}, \bibinfo{author}{E.~Montero},
+  \bibinfo{author}{N.~Rojas-Morales}, \bibinfo{author}{M.-C. Riff},
+  \bibinfo{author}{C.~A. Coello~Coello},
+\newblock \bibinfo{title}{An overview of weighted and unconstrained scalarizing
+  functions},
+\newblock in: \bibinfo{editor}{H.~Trautmann}, \bibinfo{editor}{G.~Rudolph},
+  \bibinfo{editor}{K.~Klamroth}, \bibinfo{editor}{O.~Sch{\"u}tze},
+  \bibinfo{editor}{M.~Wiecek}, \bibinfo{editor}{Y.~Jin},
+  \bibinfo{editor}{C.~Grimme} (Eds.), \bibinfo{booktitle}{Evolutionary
+  Multi-Criterion Optimization}, \bibinfo{publisher}{Springer International
+  Publishing}, \bibinfo{address}{Cham}, \bibinfo{year}{2017}, pp.
+  \bibinfo{pages}{499--513}.
+%Type = Article
+\bibitem[{Li and Zhang(2009)}]{li2009multiobjective}
+\bibinfo{author}{H.~Li}, \bibinfo{author}{Q.~Zhang},
+\newblock \bibinfo{title}{Multiobjective optimization problems with complicated
+  pareto sets, {MOEA/D} and {NSGA-II}},
+\newblock \bibinfo{journal}{IEEE Transactions on evolutionary computation}
+  \bibinfo{volume}{13} (\bibinfo{year}{2009}) \bibinfo{pages}{284--302}.
+%Type = Article
+\bibitem[{Segura et~al.(2015)Segura, Coello, Segredo, and
+  Aguirre}]{segura2015novel}
+\bibinfo{author}{C.~Segura}, \bibinfo{author}{C.~A.~C. Coello},
+  \bibinfo{author}{E.~Segredo}, \bibinfo{author}{A.~H. Aguirre},
+\newblock \bibinfo{title}{A novel diversity-based replacement strategy for
+  evolutionary algorithms},
+\newblock \bibinfo{journal}{IEEE Transactions on Cybernetics}
+  \bibinfo{volume}{46} (\bibinfo{year}{2015}) \bibinfo{pages}{3233--3246}.
+%Type = Inbook
+\bibitem[{Hajela et~al.(1993)Hajela, Lee, and Lin}]{Hajela:93}
+\bibinfo{author}{P.~Hajela}, \bibinfo{author}{E.~Lee}, \bibinfo{author}{C.-Y.
+  Lin}, \bibinfo{title}{Genetic Algorithms in Structural Topology
+  Optimization}, \bibinfo{publisher}{Springer Netherlands},
+  \bibinfo{address}{Dordrecht}, \bibinfo{year}{1993}, pp.
+  \bibinfo{pages}{117--133}. \URLprefix
+  \url{https://doi.org/10.1007/978-94-011-1804-0_10}.
+  \DOIprefix\doi{10.1007/978-94-011-1804-0_10}.
+%Type = Incollection
+\bibitem[{Deb et~al.(2005)Deb, Thiele, Laumanns, and Zitzler}]{deb2005scalable}
+\bibinfo{author}{K.~Deb}, \bibinfo{author}{L.~Thiele},
+  \bibinfo{author}{M.~Laumanns}, \bibinfo{author}{E.~Zitzler},
+\newblock \bibinfo{title}{Scalable test problems for evolutionary
+  multiobjective optimization},
+\newblock in: \bibinfo{booktitle}{Evolutionary multiobjective optimization},
+  \bibinfo{publisher}{Springer}, \bibinfo{year}{2005}, pp.
+  \bibinfo{pages}{105--145}.
+%Type = Article
+\bibitem[{Zhang et~al.(2008)Zhang, Zhou, Zhao, Suganthan, Liu, and
+  Tiwari}]{zhang2008multiobjective}
+\bibinfo{author}{Q.~Zhang}, \bibinfo{author}{A.~Zhou},
+  \bibinfo{author}{S.~Zhao}, \bibinfo{author}{P.~N. Suganthan},
+  \bibinfo{author}{W.~Liu}, \bibinfo{author}{S.~Tiwari},
+\newblock \bibinfo{title}{Multiobjective optimization test instances for the
+  {CEC} 2009 special session and competition}  (\bibinfo{year}{2008}).
+%Type = Article
+\bibitem[{Li et~al.(2016)Li, Zhang, and Deng}]{li2016biased}
+\bibinfo{author}{H.~Li}, \bibinfo{author}{Q.~Zhang}, \bibinfo{author}{J.~Deng},
+\newblock \bibinfo{title}{Biased multiobjective optimization and decomposition
+  algorithm},
+\newblock \bibinfo{journal}{IEEE transactions on cybernetics}
+  \bibinfo{volume}{47} (\bibinfo{year}{2016}) \bibinfo{pages}{52--66}.
+%Type = Inproceedings
+\bibitem[{Ishibuchi et~al.(2017)Ishibuchi, Imada, Setoguchi, and
+  Nojima}]{ishibuchi2017reference}
+\bibinfo{author}{H.~Ishibuchi}, \bibinfo{author}{R.~Imada},
+  \bibinfo{author}{Y.~Setoguchi}, \bibinfo{author}{Y.~Nojima},
+\newblock \bibinfo{title}{Reference point specification in hypervolume
+  calculation for fair comparison and efficient search},
+\newblock in: \bibinfo{booktitle}{Proceedings of the Genetic and Evolutionary
+  Computation Conference}, \bibinfo{year}{2017}, pp. \bibinfo{pages}{585--592}.
+%Type = Article
+\bibitem[{Li et~al.(2014)Li, Deb, Zhang, and Kwong}]{li2014evolutionary}
+\bibinfo{author}{K.~Li}, \bibinfo{author}{K.~Deb}, \bibinfo{author}{Q.~Zhang},
+  \bibinfo{author}{S.~Kwong},
+\newblock \bibinfo{title}{An evolutionary many-objective optimization algorithm
+  based on dominance and decomposition},
+\newblock \bibinfo{journal}{IEEE Transactions on Evolutionary Computation}
+  \bibinfo{volume}{19} (\bibinfo{year}{2014}) \bibinfo{pages}{694--716}.
+%Type = Article
+\bibitem[{Durillo et~al.(2010)Durillo, Nebro, Coello, Garc{\'\i}a-Nieto, Luna,
+  and Alba}]{durillo2010study}
+\bibinfo{author}{J.~J. Durillo}, \bibinfo{author}{A.~J. Nebro},
+  \bibinfo{author}{C.~A.~C. Coello}, \bibinfo{author}{J.~Garc{\'\i}a-Nieto},
+  \bibinfo{author}{F.~Luna}, \bibinfo{author}{E.~Alba},
+\newblock \bibinfo{title}{A study of multiobjective metaheuristics when solving
+  parameter scalable problems},
+\newblock \bibinfo{journal}{IEEE Transactions on Evolutionary Computation}
+  \bibinfo{volume}{14} (\bibinfo{year}{2010}) \bibinfo{pages}{618--635}.
+%Type = Inproceedings
+\bibitem[{Wagner et~al.(2013)Wagner, Trautmann, and Brockhoff}]{wagner:13}
+\bibinfo{author}{T.~Wagner}, \bibinfo{author}{H.~Trautmann},
+  \bibinfo{author}{D.~Brockhoff},
+\newblock \bibinfo{title}{Preference articulation by means of the r2
+  indicator},
+\newblock in: \bibinfo{booktitle}{International Conference on Evolutionary
+  Multi-Criterion Optimization}, \bibinfo{organization}{Springer},
+  \bibinfo{year}{2013}, pp. \bibinfo{pages}{81--95}.
+%Type = Inproceedings
+\bibitem[{Ishibuchi et~al.(2015)Ishibuchi, Masuda, Tanigaki, and
+  Nojima}]{ishibuchi2015modified}
+\bibinfo{author}{H.~Ishibuchi}, \bibinfo{author}{H.~Masuda},
+  \bibinfo{author}{Y.~Tanigaki}, \bibinfo{author}{Y.~Nojima},
+\newblock \bibinfo{title}{Modified distance calculation in generational
+  distance and inverted generational distance},
+\newblock in: \bibinfo{booktitle}{International conference on evolutionary
+  multi-criterion optimization}, \bibinfo{organization}{Springer},
+  \bibinfo{year}{2015}, pp. \bibinfo{pages}{110--125}.
+%Type = Inproceedings
+\bibitem[{Knowles(2005)}]{knowles2005summary}
+\bibinfo{author}{J.~Knowles},
+\newblock \bibinfo{title}{A summary-attainment-surface plotting method for
+  visualizing the performance of stochastic multiobjective optimizers},
+\newblock in: \bibinfo{booktitle}{5th International Conference on Intelligent
+  Systems Design and Applications (ISDA'05)}, \bibinfo{organization}{IEEE},
+  \bibinfo{year}{2005}, pp. \bibinfo{pages}{552--557}.
+%Type = Inproceedings
+\bibitem[{Fonseca and Fleming(1996)}]{fonseca1996performance}
+\bibinfo{author}{C.~M. Fonseca}, \bibinfo{author}{P.~J. Fleming},
+\newblock \bibinfo{title}{On the performance assessment and comparison of
+  stochastic multiobjective optimizers},
+\newblock in: \bibinfo{booktitle}{International Conference on Parallel Problem
+  Solving from Nature}, \bibinfo{organization}{Springer}, \bibinfo{year}{1996},
+  pp. \bibinfo{pages}{584--593}.
+%Type = Article
+\bibitem[{Deb(1999)}]{deb1999multi}
+\bibinfo{author}{K.~Deb},
+\newblock \bibinfo{title}{Multi-objective genetic algorithms: Problem
+  difficulties and construction of test problems},
+\newblock \bibinfo{journal}{Evolutionary computation} \bibinfo{volume}{7}
+  (\bibinfo{year}{1999}) \bibinfo{pages}{205--230}.
+
+\end{thebibliography}
