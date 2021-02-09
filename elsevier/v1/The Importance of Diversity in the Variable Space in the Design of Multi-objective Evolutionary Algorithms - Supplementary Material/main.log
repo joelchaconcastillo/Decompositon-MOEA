@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Cygwin) (preloaded format=latex 2021.2.7)  8 FEB 2021 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Cygwin) (preloaded format=latex 2021.2.7)  8 FEB 2021 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -339,11 +339,6 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 191
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./content.tex
 (./tablas/Table_IGDP_2obj.tex) (./tablas/Tests_IGDP_2obj.tex)
-
-LaTeX Warning: Reference `tab:StatisticsHV_2obj' on page 1 undefined on input l
-ine 12.
-
-
 Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [] 
  []
@@ -353,48 +348,53 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 
 ] [2]
 
-LaTeX Warning: Reference `tab:Tests_HV_2obj' on page 3 undefined on input line 
-54.
+LaTeX Warning: Reference `tab:StatisticsHV_2obj' on page 3 undefined on input l
+ine 39.
 
-[3] (./tablas/Table_IGDP_3obj.tex) (./tablas/Tests_IGDP_3obj.tex)
+[3]
 
-LaTeX Warning: Reference `tab:StatisticsHV_3obj' on page 4 undefined on input l
-ine 75.
+LaTeX Warning: Reference `tab:Tests_HV_2obj' on page 4 undefined on input line 
+81.
+
+[4] (./tablas/Table_IGDP_3obj.tex) (./tablas/Tests_IGDP_3obj.tex)
+
+LaTeX Warning: Reference `tab:StatisticsHV_3obj' on page 5 undefined on input l
+ine 102.
 
 
-LaTeX Warning: Reference `tab:Tests_HV_3obj' on page 4 undefined on input line 
-75.
+LaTeX Warning: Reference `tab:Tests_HV_3obj' on page 5 undefined on input line 
+102.
 
 
-LaTeX Warning: Reference `fig:attainment' on page 4 undefined on input line 101
+LaTeX Warning: Reference `fig:attainment' on page 5 undefined on input line 128
 .
 
-[4] [5]
-Overfull \hbox (6.05435pt too wide) in paragraph at lines 116--131
+[5] [6]
+Overfull \hbox (6.05435pt too wide) in paragraph at lines 143--158
 []\OT1/cmr/m/n/12 We can bet-ter un-der-stand the rea-sons be-hind the ben-e-fi
 ts of \OT1/cmr/m/sc/12 avsd-moea/d
  []
 
 
-LaTeX Warning: Reference `fig:WFG5_Diversity' on page 6 undefined on input line
- 143.
+LaTeX Warning: Reference `fig:WFG5_Diversity' on page 7 undefined on input line
+ 170.
 
-
-LaTeX Warning: Reference `fig:UF5_Diversity' on page 6 undefined on input line 
-143.
-
-[6]
 
 LaTeX Warning: Reference `fig:UF5_Diversity' on page 7 undefined on input line 
-161.
+170.
 
 [7]
 
-LaTeX Warning: Reference `fig:Initial-distance-factor' on page 8 undefined on i
-nput line 213.
+LaTeX Warning: Reference `fig:UF5_Diversity' on page 8 undefined on input line 
+188.
+
+[8]
+
+LaTeX Warning: Reference `fig:Initial-distance-factor' on page 9 undefined on i
+nput line 240.
 
 
-Overfull \hbox (72.8021pt too wide) in paragraph at lines 200--226
+Overfull \hbox (72.8021pt too wide) in paragraph at lines 227--253
 \OT1/cmr/m/n/12 were con-sid-ered. Specif-i-cally, the val-ues $\OML/cmm/m/it/1
 2 D[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\O
 T1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m
@@ -409,22 +409,21 @@ cmm/m/it/12 :\OT1/cmr/m/n/12 8\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it
 1/cmr/m/n/12 0\OMS/cmsy/m/n/12 g$
  []
 
-[8]
 
 LaTeX Warning: Reference `fig:WFG9_Diversity' on page 9 undefined on input line
- 227.
+ 254.
 
 File: images/BIAS_Full-figure0.eps Graphic file (type eps)
-<images/BIAS_Full-figure0.eps> [9]
+<images/BIAS_Full-figure0.eps> [9] [10]
 
-LaTeX Warning: Reference `fig:attainment_BT' on page 10 undefined on input line
- 287.
+LaTeX Warning: Reference `fig:attainment_BT' on page 11 undefined on input line
+ 314.
 
 
-LaTeX Warning: Reference `fig:attainment_BT' on page 10 undefined on input line
- 295.
+LaTeX Warning: Reference `fig:attainment_BT' on page 11 undefined on input line
+ 322.
 
-) [10] (./main.bbl [11]) [12] (./main.aux)
+) [11] (./main.bbl [12]) [13] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -433,12 +432,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5706 strings out of 481150
- 85302 string characters out of 5913837
- 437594 words of memory out of 5000000
- 22571 multiletter control sequences out of 15000+600000
+ 5707 strings out of 481150
+ 85305 string characters out of 5913837
+ 435594 words of memory out of 5000000
+ 22572 multiletter control sequences out of 15000+600000
  412907 words of font info for 64 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  83i,9n,88p,647b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (12 pages, 56092 bytes).
+Output written on main.dvi (13 pages, 58636 bytes).

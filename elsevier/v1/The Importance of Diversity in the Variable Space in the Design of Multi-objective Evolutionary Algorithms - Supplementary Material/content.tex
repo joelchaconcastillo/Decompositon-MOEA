@@ -1,9 +1,36 @@
+This document is intended to be a supplementary material of the main work titled ``AVSD-MOEA/D The Importance of Diversity in the Variable Space in the Design of Multi-objective Evolutionary Algorithms''.
+%
+Particularly, this extension seeks to complement the results discussed in the main document.
+%
+First, the main section \textit{Performance of \MOEAS{} in long-term executions} in terms of \textit{The Modified Inverted Generational Distance Plus} (\IGD{}+) is presented~\cite{ishibuchi2015modified}.
+%
+Second, a detailed analyses of the \textit{Test Problems with Bias Features} is driven.
+%
+The conclusions found in this document are quite similar to those obtained in the main document.
+
 
 \input{tablas/Table_IGDP_2obj.tex}
 \input{tablas/Tests_IGDP_2obj.tex}
 
 
-\section{Comparison against State-of-the-art \MOEAS{} in long-term executions}
+\section{Comparison against State-of-the-art \MOEAS{} in long-term executions in terms of \IGD{}+ metric}
+
+The \IGD{}+ indicator measures the average distance from each reference point to the nearest dominated region of the solution set.
+%
+Let us denote the reference point set as $Z = \{z_1, z_2, ..., z_{|Z|} \}$ where $z_i$ is a point in the objective space.
+%
+In this context the reference set can be seen as a discretization of the Pareto front.
+%
+Let us denote a solution set $A$ as $A = \{a_1, a_2, .., a_{|A|}\}$ where $a_j$ is a point in the objective space.
+%
+The \IGD{}+ indicator is defined as
+\begin{equation}
+	IGD+(A) = \frac{1}{|Z|} \sum_{i=1}^{|Z|} \min_{j=1}^{|Z|} d^+(z_i, a_j)
+\end{equation}
+where $d^+(z, a) = \sqrt{(max\{ \})}$ 
+
+The basic idea in the \IGD{}+ is to calculate the distance from each reference point to the dominated region by a solution set.
+
 One of the aims behind the design of \AVSDMOEAD{} is to profit from long-term executions.
 %
 Therefore, in this section we present the results attained by the different algorithms when setting 
