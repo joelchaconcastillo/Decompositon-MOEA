@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Cygwin) (preloaded format=latex 2021.2.7)  8 FEB 2021 00:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Cygwin) (preloaded format=latex 2021.2.7)  8 FEB 2021 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -304,7 +304,11 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen180
 \bframebox=\box64
 LaTeX Info: Redefining \\ on input line 3056.
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `tab:Tests_IGDP_2obj' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
@@ -325,8 +329,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 191
 .
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 191
@@ -335,7 +338,20 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 191
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./content.tex
-(./tablas/Table_HV_2obj.tex) (./tablas/Tests_HV_2obj.tex)
+(./tablas/Table_IGDP_2obj.tex
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
+0.
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
+) (./tablas/Tests_IGDP_2obj.tex)
+
+LaTeX Warning: Reference `tab:StatisticsHV_2obj' on page 1 undefined on input l
+ine 12.
+
+
 Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [] 
  []
@@ -343,7 +359,20 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [1
 
 
-] [2] [3] (./tablas/Table_HV_3obj.tex) (./tablas/Tests_HV_3obj.tex)
+] [2]
+
+LaTeX Warning: Reference `tab:Tests_HV_2obj' on page 3 undefined on input line 
+54.
+
+[3] (./tablas/Table_IGDP_3obj.tex) (./tablas/Tests_IGDP_3obj.tex)
+
+LaTeX Warning: Reference `tab:StatisticsHV_3obj' on page 4 undefined on input l
+ine 75.
+
+
+LaTeX Warning: Reference `tab:Tests_HV_3obj' on page 4 undefined on input line 
+75.
+
 
 LaTeX Warning: Reference `fig:attainment' on page 4 undefined on input line 101
 .
@@ -406,14 +435,17 @@ LaTeX Warning: Reference `fig:attainment_BT' on page 10 undefined on input line
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 5703 strings out of 481150
- 85179 string characters out of 5913837
- 440594 words of memory out of 5000000
- 22568 multiletter control sequences out of 15000+600000
+ 5726 strings out of 481150
+ 85605 string characters out of 5913837
+ 438594 words of memory out of 5000000
+ 22588 multiletter control sequences out of 15000+600000
  412907 words of font info for 64 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 83i,9n,88p,645b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,9n,88p,647b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (12 pages, 57080 bytes).
+Output written on main.dvi (12 pages, 56792 bytes).
