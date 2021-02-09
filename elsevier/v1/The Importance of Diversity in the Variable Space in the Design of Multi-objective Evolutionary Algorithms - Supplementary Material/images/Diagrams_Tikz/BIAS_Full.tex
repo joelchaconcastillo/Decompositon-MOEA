@@ -1,0 +1,57 @@
+\documentclass{article}
+%\usepackage{tikz}
+
+\usepackage{pgfplots,pgfplotstable}
+%\usepackage[pdftex]{graphicx} 
+% set up externalization
+\usetikzlibrary{external}
+
+\pgfplotsset{compat=1.3}
+
+\pgfplotstableread[col sep = comma]{CSV/BIAS_Full.csv}\data
+
+\tikzset{external/system call={latex \tikzexternalcheckshellescape -halt-on-error
+-interaction=batchmode -jobname "\image" "\texsource";
+dvips -o "\image".ps "\image".dvi;
+ps2eps "\image.ps"}}
+\tikzexternalize
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+height=0.35\textwidth,
+ width=0.8\textwidth,
+title={\textit{\textbf{Performance of the BT Problems Taking Into Consideration Severeal Biasses}}},
+  xlabel=Bias,
+  ylabel=Mean HV,
+tick label style={
+                /pgf/number format/fixed,
+                /pgf/number format/fixed zerofill,
+                /pgf/number format/precision=1
+            },
+%xticklabels={,,},
+  xticklabel style = {rotate=30},
+  legend style=
+    {cells={anchor=east},legend pos=outer north east,}, nodes={scale=0.8, transform shape}    ,
+  xticklabels from table={\data}{mean},xtick=data]
+ 
+\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_D,x=X]{\data};
+	\addlegendentry{AVSD-MOEA/D}
+
+\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\data};
+	\addlegendentry{MOEA/D-DE}
+
+\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{\data};
+	\addlegendentry{NSGA-II}
+
+\addplot[orange,dotted,mark=otimes*] table[y= NSGA_III,x=X]{\data};
+	\addlegendentry{NSGA-III}
+	
+\addplot[brown,dotted,mark=diamond*] table [y= R2_EMOA,x=X]{\data};
+	\addlegendentry{R2-EMOA}
+
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
